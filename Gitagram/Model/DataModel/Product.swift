@@ -27,7 +27,7 @@ struct Product : Identifiable {
     }
     
     //新規Productのイニシャライザ
-    init(productName: String, title: String, content: String, imagePath: String, developerId: DeveloperID) {
+    init(title: String, content: String, imagePath: String, developerId: DeveloperID) {
         self.id = ProductID(id: UUID())
         self.title = title
         self.content = content

@@ -22,6 +22,13 @@ struct Developer : Identifiable {
         self.imagePath = imagePath
     }
     
+    init(name: String, gitHubURL: String, imagePath: String) {
+        self.id = DeveloperID(id: UUID())
+        self.name = name
+        self.gitHubURL = gitHubURL
+        self.imagePath = imagePath
+    }
+    
     struct ID : Identifiable, Hashable, Codable {
         let id: UUID
         
