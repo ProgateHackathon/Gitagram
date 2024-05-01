@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8CE2BE131B6005C18D7 /* Developer.swift */; };
+		103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8D02BE1CDE2005C18D7 /* Product.swift */; };
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE82BDFAFBB00C179F8 /* ContentView.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		103BD8CE2BE131B6005C18D7 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		103BD8D02BE1CDE2005C18D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EE82BDFAFBB00C179F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				103BD8CE2BE131B6005C18D7 /* Developer.swift */,
+				103BD8D02BE1CDE2005C18D7 /* Product.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
+				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
 				10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 			);
