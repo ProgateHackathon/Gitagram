@@ -10,7 +10,7 @@ import Foundation
 class PostProductUseCase {
     let repository: ProductRepositoryProtocol = UseCaseDI.productRepository
     
-    func execute(product: Product) {
+    func execute(product: Product) async {
         return repository.create(object: product)
     }
 }

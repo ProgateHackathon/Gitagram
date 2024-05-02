@@ -10,7 +10,7 @@ import Foundation
 class GetProductListUseCase {
     let repository: ProductRepositoryProtocol = UseCaseDI.productRepository
     
-    func execute() -> [Product] {
+    func execute() async -> [Product] {
         return repository.getAll()
     }
 }

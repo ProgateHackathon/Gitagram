@@ -11,7 +11,7 @@ import UIKit
 class GetDeveloperImageUseCase {
     let developerImageRepository: DeveloperImageRepositoryProtocol = UseCaseDI.developerImageRepository
     
-    func execute(id: Developer.ID) -> UIImage {
+    func execute(id: Developer.ID) async -> UIImage {
         return developerImageRepository.fetchImage(id: id)!
     }
 }

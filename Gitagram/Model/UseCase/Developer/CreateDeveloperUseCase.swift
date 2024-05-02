@@ -10,7 +10,7 @@ import Foundation
 class CreateDeveloperUseCase {
     private let developerRepository = UseCaseDI.developerRepository
     
-    func execute(developer: Developer) {
+    func execute(developer: Developer) async {
         developerRepository.create(object: developer)
     }
 }
