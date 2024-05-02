@@ -16,22 +16,26 @@
 		103BF3712BE39C3E00818544 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3702BE39C3E00818544 /* FirebaseFirestoreSwift */; };
 		103BF3732BE39C3E00818544 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3722BE39C3E00818544 /* FirebaseStorage */; };
 		103BF3752BE39C3E00818544 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3742BE39C3E00818544 /* FirebaseStorageCombine-Community */; };
-		103BF3772BE39D3F00818544 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 103BF3762BE39D3F00818544 /* GoogleService-Info.plist */; };
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE82BDFAFBB00C179F8 /* ContentView.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
+		7218DBCA2BE30C3B001E93CA /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7218DBC92BE30C3B001E93CA /* MatchingView.swift */; };
+		72C95C152BE39C51005361D0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C95C142BE39C51005361D0 /* CardView.swift */; };
+		72F6C2A22BE3B05F008A94B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72F6C2A12BE3B05F008A94B6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		103BD8CE2BE131B6005C18D7 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		103BD8D02BE1CDE2005C18D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		103BF3762BE39D3F00818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EE82BDFAFBB00C179F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7218DBC92BE30C3B001E93CA /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
+		72C95C142BE39C51005361D0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		72F6C2A12BE3B05F008A94B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,9 @@
 		10472EE52BDFAFBB00C179F8 /* Gitagram */ = {
 			isa = PBXGroup;
 			children = (
+				72F6C2A12BE3B05F008A94B6 /* GoogleService-Info.plist */,
+				7218DBC72BE30BF1001E93CA /* Pages */,
 				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
-				103BF3762BE39D3F00818544 /* GoogleService-Info.plist */,
 				10472EF52BDFAFE500C179F8 /* Model */,
 				10472EF42BDFAFD700C179F8 /* View */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
@@ -110,32 +115,25 @@
 			isa = PBXGroup;
 			children = (
 				103BD8CD2BE12CAD005C18D7 /* DataModel */,
-				10472EF82BDFB01600C179F8 /* UseCase */,
-				10472EF72BDFB00600C179F8 /* Repository */,
-				10472EF62BDFAFFC00C179F8 /* Client */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		10472EF62BDFAFFC00C179F8 /* Client */ = {
+		7218DBC72BE30BF1001E93CA /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				7218DBC82BE30C02001E93CA /* MatchingPage */,
 			);
-			path = Client;
+			path = Pages;
 			sourceTree = "<group>";
 		};
-		10472EF72BDFB00600C179F8 /* Repository */ = {
+		7218DBC82BE30C02001E93CA /* MatchingPage */ = {
 			isa = PBXGroup;
 			children = (
+				7218DBC92BE30C3B001E93CA /* MatchingView.swift */,
+				72C95C142BE39C51005361D0 /* CardView.swift */,
 			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		10472EF82BDFB01600C179F8 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UseCase;
+			path = MatchingPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +208,7 @@
 			files = (
 				10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */,
 				10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */,
-				103BF3772BE39D3F00818544 /* GoogleService-Info.plist in Resources */,
+				72F6C2A22BE3B05F008A94B6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +222,8 @@
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
 				10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */,
+				7218DBCA2BE30C3B001E93CA /* MatchingView.swift in Sources */,
+				72C95C152BE39C51005361D0 /* CardView.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ55RU4U3A;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -387,7 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ55RU4U3A;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

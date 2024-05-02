@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCq8x6buww8IF-UH9u5uYMwjBLCVwuMFyY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>946131618857</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.shuto.Gitagram</string>
+	<key>PROJECT_ID</key>
+	<string>gitagram-ef516</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gitagram-ef516.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:946131618857:ios:538ce71de83abc44b5a038</string>
+</dict>
+</plist>
