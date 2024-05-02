@@ -8,11 +8,13 @@
 import Foundation
 
 class DummyDeveloperRepository : DeveloperRepositoryProtocol {
-    public static let dummyDeveloper  = Developer(name: "developer1")
+    private static let dummyDeveloper  = Developer(name: "developer1")
     private static let dummyDeveloper2 = Developer(name: "developer2")
     private static let dummyDeveloper3 = Developer(name: "developer3")
     private static let dummyDeveloper4 = Developer(name: "developer3")
     private static let dummyDeveloper5 = Developer(name: "developer3")
+    
+    public static var currentDeveloper: Developer = Developer(name: "unknown")
     
     private var developerStore: [Developer] = [
         dummyDeveloper,
@@ -27,6 +29,7 @@ class DummyDeveloperRepository : DeveloperRepositoryProtocol {
     }
     
     func create(object: Developer) {
+        DummyDeveloperRepository.currentDeveloper = object
         developerStore.append(object)
     }
     

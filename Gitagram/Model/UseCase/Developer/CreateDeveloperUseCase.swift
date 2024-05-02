@@ -10,7 +10,8 @@ import Foundation
 class CreateDeveloperUseCase {
     private let developerRepository = UseCaseDI.developerRepository
     
-    func execute(developer: Developer) async {
-        developerRepository.create(object: developer)
+    func execute(githubId name: String) async {
+        let newDeveloper = Developer(name: name)
+        developerRepository.create(object: newDeveloper)
     }
 }

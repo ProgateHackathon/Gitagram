@@ -8,11 +8,11 @@
 import Foundation
 
 class DummyProductRepository : ProductRepositoryProtocol {
-    private static let dummyDeveloper  = Developer(name: "developer1", gitHubURL: "https://github.com/urassh", imagePath: "dummy_developer")
-    private static let dummyDeveloper2 = Developer(name: "developer2", gitHubURL: "https://github.com/urassh", imagePath: "dummy_developer")
-    private static let dummyDeveloper3 = Developer(name: "developer3", gitHubURL: "https://github.com/urassh", imagePath: "dummy_developer")
-    private static let dummyDeveloper4 = Developer(name: "developer3", gitHubURL: "https://github.com/urassh", imagePath: "dummy_developer")
-    private static let dummyDeveloper5 = Developer(name: "developer3", gitHubURL: "https://github.com/urassh", imagePath: "dummy_developer")
+    private static let dummyDeveloper  = Developer(name: "developer1")
+    private static let dummyDeveloper2 = Developer(name: "developer2")
+    private static let dummyDeveloper3 = Developer(name: "developer3")
+    private static let dummyDeveloper4 = Developer(name: "developer3")
+    private static let dummyDeveloper5 = Developer(name: "developer3")
     
     private var productStore: [Product] = [
         Product(title: "product_1", content: "content", imagePath: "dummy_product", developerId: dummyDeveloper.id),
