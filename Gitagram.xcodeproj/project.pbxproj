@@ -41,6 +41,7 @@
 		104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */; };
 		23C6B6B12BE44EE800149E8D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6B02BE44EE800149E8D /* AccountView.swift */; };
 		23C6B6B52BE45F9300149E8D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6B42BE45F9300149E8D /* AccountViewModel.swift */; };
+		23C6B6BB2BE4D05300149E8D /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6BA2BE4D05300149E8D /* TakeScreenShotUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeveloperUseCase.swift; sourceTree = "<group>"; };
 		23C6B6B02BE44EE800149E8D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		23C6B6B42BE45F9300149E8D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		23C6B6BA2BE4D05300149E8D /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				103BD8CD2BE12CAD005C18D7 /* DataModel */,
 				10472EF82BDFB01600C179F8 /* UseCase */,
+				23C6B6B92BE4D02C00149E8D /* Util */,
 				10472EF72BDFB00600C179F8 /* Repository */,
 				10472EF62BDFAFFC00C179F8 /* Client */,
 			);
@@ -252,6 +255,14 @@
 				23C6B6B02BE44EE800149E8D /* AccountView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		23C6B6B92BE4D02C00149E8D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				23C6B6BA2BE4D05300149E8D /* TakeScreenShotUseCase.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C6B6BB2BE4D05300149E8D /* TakeScreenShotUseCase.swift in Sources */,
 				103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,

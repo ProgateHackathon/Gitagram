@@ -7,6 +7,8 @@
 
 import CoreMotion
 import CoreGraphics
+import CoreImage.CIFilterBuiltins
+import SwiftUI
 
 class AccountViewModel: ObservableObject {
     
@@ -61,6 +63,46 @@ class AccountViewModel: ObservableObject {
         self.middleImageOpacity = middleImageOpacity
         self.frontImageOpacitry = frontImageOpacty
     }
+}
+
+class QRViewModel: ObservableObject {
+    
+    func QRroundedImage(image: UIImage, cornerRadius: CGFloat) -> UIImage {
+        //縁角丸にする
+        UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+        let rect = CGRect(origin: .zero, size: image.size)
+        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
+        image.draw(in: rect)
+        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return roundedImage ?? UIImage()
+    }
+    
+    func generateQRWithRoundedCorners(from string: String, size: CGSize, cornerRadius: CGFloat) -> UIImage {
+        //QRコード生成
+        let context = CIContext()
+        let filter = CIFilter.qrCodeGenerator()
+        let data = Data(string.utf8)
+        filter.setValue(data, forKey: "inputMessage")
+        if let outputimage = filter.outputImage {
+            let cgImage = context.createCGImage(outputimage, from: outputimage.extent)!
+            let outputSize = CGRect(origin: .zero, size: size)
+            UIGraphicsBeginImageContextWithOptions(size, false, 0)
+            guard let graphicsContext = UIGraphicsGetCurrentContext() else {
+                return UIImage()
+            }
+            graphicsContext.interpolationQuality = .none
+            graphicsContext.draw(cgImage, in: outputSize)
+            let qrImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            if let roundedQRImage = qrImage {
+                return QRroundedImage(image: roundedQRImage, cornerRadius: cornerRadius)
+            }
+        }
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
+    }
+
 }
 
 extension Double {

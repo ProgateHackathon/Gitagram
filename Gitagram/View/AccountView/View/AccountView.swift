@@ -15,11 +15,13 @@ struct AccountFrameView: View {
     @State private var github = "https://github.com/"
     @State private var githubtext = ""
     @State private var alltext = ""
+    
+    @State private var developer = Developer(githubId: "unknown")
     //QRコードのためのURL作成
     
     var body: some View {
         ZStack {
-            AccountView(text: $alltext)
+            AccountView()
             RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                 .stroke(.white, lineWidth: 1)
         }
@@ -34,33 +36,16 @@ struct AccountFrameView: View {
         }
         Text(alltext)
         Button("Take Screenshot") {
-            takeScreenshot()
+            TakeScreenshot()
         }
         .padding()
-    }
-    func takeScreenshot() {
-        guard let window = UIApplication.shared.windows.first else { return }
-        
-        // UIキャプチャセッションを開始
-        let screen = window.rootViewController?.view.bounds
-        UIGraphicsBeginImageContextWithOptions(screen!.size, false, 0)
-        window.drawHierarchy(in: screen!, afterScreenUpdates: true)
-        let screenshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        // 取得したスクリーンショットがnilでないことを確認
-        guard let image = screenshot else { return }
-        
-        // PNGデータを写真フォルダに保存
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
 }
 
 
 struct AccountView: View {
     
-    @StateObject var lenticulationManager = AccountViewModel()
-    @Binding var text:String
+    @StateObject var viewmodel = AccountViewModel()
     
     var body: some View {
         ZStack {
@@ -73,55 +58,18 @@ struct AccountView: View {
             //真ん中
                 .resizable()
                 .ignoresSafeArea()
-                .opacity(lenticulationManager.middleImageOpacity)
+                .opacity(viewmodel.middleImageOpacity)
                 .cornerRadius(20)
             Image("kirakira")
             //右に傾ける
                 .resizable()
                 .ignoresSafeArea()
-                .opacity(lenticulationManager.frontImageOpacitry)
+                .opacity(viewmodel.frontImageOpacitry)
                 .cornerRadius(20)
-            Image(uiImage: generateQRWithRoundedCorners(from: text, size: CGSize(width: 200, height: 200), cornerRadius: 10))
         }
     }
 }
 
-
-func QRroundedImage(image: UIImage, cornerRadius: CGFloat) -> UIImage {
-    //縁角丸にする
-    UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
-    let rect = CGRect(origin: .zero, size: image.size)
-    UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-    image.draw(in: rect)
-    let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    return roundedImage ?? UIImage()
-}
-
-func generateQRWithRoundedCorners(from string: String, size: CGSize, cornerRadius: CGFloat) -> UIImage {
-    //QRコード生成
-    let context = CIContext()
-    let filter = CIFilter.qrCodeGenerator()
-    let data = Data(string.utf8)
-    filter.setValue(data, forKey: "inputMessage")
-    if let outputimage = filter.outputImage {
-        let cgImage = context.createCGImage(outputimage, from: outputimage.extent)!
-        let outputSize = CGRect(origin: .zero, size: size)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        guard let graphicsContext = UIGraphicsGetCurrentContext() else {
-            return UIImage()
-        }
-        graphicsContext.interpolationQuality = .none
-        graphicsContext.draw(cgImage, in: outputSize)
-        let qrImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        if let roundedQRImage = qrImage {
-            return QRroundedImage(image: roundedQRImage, cornerRadius: cornerRadius)
-        }
-    }
-    return UIImage(systemName: "xmark.circle") ?? UIImage()
-}
 
 #Preview {
     AccountFrameView()
