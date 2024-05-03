@@ -19,12 +19,12 @@ struct Developer : Identifiable {
         gitHubURL + ".png"
     }
         
-    init(id: DeveloperID, name: String) {
+    init(id: DeveloperID, githubId name: String) {
         self.id = id
         self.name = name
     }
     
-    init(name: String) {
+    init(githubId name: String) {
         self.id = DeveloperID(id: UUID())
         self.name = name
     }
