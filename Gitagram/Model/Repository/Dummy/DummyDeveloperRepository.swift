@@ -21,7 +21,8 @@ class DummyDeveloperRepository : DeveloperRepositoryProtocol {
         dummyDeveloper2,
         dummyDeveloper3,
         dummyDeveloper4,
-        dummyDeveloper5
+        dummyDeveloper5,
+        currentDeveloper
     ]
     
     func getAll() -> [Developer] {
