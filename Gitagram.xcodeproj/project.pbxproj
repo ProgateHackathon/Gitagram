@@ -169,7 +169,6 @@
 				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
 				10472EF52BDFAFE500C179F8 /* Model */,
 				10472EF42BDFAFD700C179F8 /* View */,
-				23C6B6B62BE4BBB600149E8D /* AccountView */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
 				10472EEC2BDFAFBD00C179F8 /* Preview Content */,
 			);
@@ -188,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				10472EE82BDFAFBB00C179F8 /* ContentView.swift */,
+				23C6B6B62BE4BBB600149E8D /* AccountView */,
 			);
 			path = View;
 			sourceTree = "<group>";
