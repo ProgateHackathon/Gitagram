@@ -41,6 +41,7 @@
 		23C6B6B12BE44EE800149E8D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6B02BE44EE800149E8D /* AccountView.swift */; };
 		23C6B6B52BE45F9300149E8D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6B42BE45F9300149E8D /* AccountViewModel.swift */; };
 		23C6B6BB2BE4D05300149E8D /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6BA2BE4D05300149E8D /* TakeScreenShotUseCase.swift */; };
+		23C6B6BE2BE4FC4500149E8D /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6B6BC2BE4FC4400149E8D /* QRCodeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		23C6B6B02BE44EE800149E8D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		23C6B6B42BE45F9300149E8D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		23C6B6BA2BE4D05300149E8D /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
+		23C6B6BC2BE4FC4400149E8D /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +215,7 @@
 		10472EF72BDFB00600C179F8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				10DB6BB72BE4CEEC0023131F /* QRCode */,
+				23C6B6BD2BE4FC4400149E8D /* QRCode */,
 				103BD8F42BE242D7005C18D7 /* Dummy */,
 			);
 			path = Repository;
@@ -261,6 +263,14 @@
 				23C6B6BA2BE4D05300149E8D /* TakeScreenShotUseCase.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		23C6B6BD2BE4FC4400149E8D /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				23C6B6BC2BE4FC4400149E8D /* QRCodeRepository.swift */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,11 +362,11 @@
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
-				10DB6BB92BE4CF010023131F /* QRCodeRepository.swift in Sources */,
 				104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */,
 				103BD8FE2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift in Sources */,
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
+				23C6B6BE2BE4FC4500149E8D /* QRCodeRepository.swift in Sources */,
 				10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */,
 				23C6B6B52BE45F9300149E8D /* AccountViewModel.swift in Sources */,
 				23C6B6B12BE44EE800149E8D /* AccountView.swift in Sources */,
