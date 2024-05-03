@@ -11,7 +11,7 @@ class CreateDeveloperUseCase {
     private let developerRepository = UseCaseDI.developerRepository
     
     func execute(githubId name: String) async {
-        let newDeveloper = Developer(name: name)
+        let newDeveloper = Developer(githubId: name)
         developerRepository.create(object: newDeveloper)
     }
 }
