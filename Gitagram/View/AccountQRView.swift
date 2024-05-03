@@ -14,8 +14,7 @@ struct AccountFrameView: View {
     @State private var github = "https://github.com/"
     @State private var githubtext = ""
     @State private var alltext = ""
-    
-    @State private var shareImage: UIImage? = nil
+
     @State private var image: UIImage?
     
     var body: some View {
