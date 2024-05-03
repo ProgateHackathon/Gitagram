@@ -13,7 +13,6 @@
 		103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8D62BE21DDD005C18D7 /* GetProductListUseCase.swift */; };
 		103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8DA2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift */; };
 		103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8DE2BE2227D005C18D7 /* QRCodeProtocol.swift */; };
-		103BD8E42BE223B6005C18D7 /* DummyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E32BE223B6005C18D7 /* DummyGenerator.swift */; };
 		103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E52BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift */; };
 		103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */; };
 		103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E92BE23FA0005C18D7 /* UseCaseDI.swift */; };
@@ -49,7 +48,6 @@
 		103BD8D62BE21DDD005C18D7 /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
 		103BD8DA2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepositoryProtocol.swift; sourceTree = "<group>"; };
 		103BD8DE2BE2227D005C18D7 /* QRCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeProtocol.swift; sourceTree = "<group>"; };
-		103BD8E32BE223B6005C18D7 /* DummyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyGenerator.swift; sourceTree = "<group>"; };
 		103BD8E52BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperRepositoryProtocol.swift; sourceTree = "<group>"; };
 		103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProductRepository.swift; sourceTree = "<group>"; };
 		103BD8E92BE23FA0005C18D7 /* UseCaseDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDI.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			children = (
 				103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */,
 				103BD8F22BE241CF005C18D7 /* DummyDeveloperRepository.swift */,
-				103BD8E32BE223B6005C18D7 /* DummyGenerator.swift */,
 				103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */,
 				103BD9012BE255EF005C18D7 /* DummyProductImageRepository.swift */,
 			);
@@ -334,7 +331,6 @@
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
-				103BD8E42BE223B6005C18D7 /* DummyGenerator.swift in Sources */,
 				103BD8F32BE241CF005C18D7 /* DummyDeveloperRepository.swift in Sources */,
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
 				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
