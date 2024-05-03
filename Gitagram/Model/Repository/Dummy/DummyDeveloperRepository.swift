@@ -8,13 +8,13 @@
 import Foundation
 
 class DummyDeveloperRepository : DeveloperRepositoryProtocol {
-    private static let dummyDeveloper  = Developer(name: "developer1")
-    private static let dummyDeveloper2 = Developer(name: "developer2")
-    private static let dummyDeveloper3 = Developer(name: "developer3")
-    private static let dummyDeveloper4 = Developer(name: "developer3")
-    private static let dummyDeveloper5 = Developer(name: "developer3")
+    private static let dummyDeveloper  = Developer(githubId: "developer1")
+    private static let dummyDeveloper2 = Developer(githubId: "developer2")
+    private static let dummyDeveloper3 = Developer(githubId: "developer3")
+    private static let dummyDeveloper4 = Developer(githubId: "developer3")
+    private static let dummyDeveloper5 = Developer(githubId: "developer3")
     
-    public static var currentDeveloper: Developer = Developer(name: "unknown")
+    public static var currentDeveloper: Developer = Developer(githubId: "unknown")
     
     private var developerStore: [Developer] = [
         dummyDeveloper,
