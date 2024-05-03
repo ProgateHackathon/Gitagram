@@ -12,40 +12,34 @@ struct AccountFrameView: View {
     private static let cardCornerRadius: CGFloat = 20
     private static let cardSize: CGSize = .init(width: 367, height: 512)
     //カードの大きさ
-    @State private var github = "https://github.com/"
-    @State private var githubtext = ""
-    @State private var alltext = ""
     
-    @State private var developer = Developer(githubId: "unknown")
-    //QRコードのためのURL作成
+    @State var QRImage:UIImage
+    
     
     var body: some View {
         ZStack {
-            AccountView()
+            AccountView(QRImage: QRImage)
             RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                 .stroke(.white, lineWidth: 1)
         }
         .frame(width: Self.cardSize.width, height: Self.cardSize.height)
         .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 20)
         .padding(50)
-        HStack{
-            Spacer()
-            TextField("ユーザーID", text: $githubtext, onEditingChanged: { _ in
-                self.alltext = self.github + self.githubtext
-            })
-        }
-        Text(alltext)
         Button("Take Screenshot") {
             TakeScreenshot()
         }
         .padding()
+        
+        //QRCodeView(qrCodeImage: QRImage, cornerRadius: 20)
     }
 }
 
 
 struct AccountView: View {
     
-    @StateObject var viewmodel = AccountViewModel()
+    @StateObject var Accountviewmodel = AccountViewModel()
+    @StateObject var QRviewModel = QRViewModel()
+    let QRImage:UIImage
     
     var body: some View {
         ZStack {
@@ -54,23 +48,53 @@ struct AccountView: View {
                 .resizable()
                 .ignoresSafeArea()
                 .cornerRadius(20)
-            Image("middle")
+            GradationView()
             //真ん中
-                .resizable()
+                //.resizable()
                 .ignoresSafeArea()
-                .opacity(viewmodel.middleImageOpacity)
+                .opacity(Accountviewmodel.middleImageOpacity)
                 .cornerRadius(20)
             Image("kirakira")
             //右に傾ける
                 .resizable()
                 .ignoresSafeArea()
-                .opacity(viewmodel.frontImageOpacitry)
+                .opacity(Accountviewmodel.frontImageOpacitry)
                 .cornerRadius(20)
+            QRCodeView()
+        }
+    }
+}
+
+struct GradationView:View {
+    let gradient = Gradient(stops: [.init(color: Color.purple, location: 0.0), .init(color: Color.pink, location: 1.2)])
+    var body: some View {
+        LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
+struct QRCodeView: View {
+    let qrGenerator = GetDeveloperQRCodeUseCase()
+    let developer = Developer(githubId: "urassh")
+    let cornerRadius: CGFloat = 10 // 丸みの半径を設定
+
+    var qrCode: UIImage {
+        qrGenerator.execute(developer: developer)
+    }
+
+    var body: some View {
+        ZStack{
+            Image(uiImage: qrCode)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200)
+                .cornerRadius(cornerRadius) // 丸みを設定
+                .padding() // パディングを追加
         }
     }
 }
 
 
+
 #Preview {
-    AccountFrameView()
+    AccountFrameView(QRImage: UIImage())
 }

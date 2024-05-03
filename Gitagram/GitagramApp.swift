@@ -23,7 +23,7 @@ struct GitagramApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AccountFrameView()
+            AccountFrameView(QRImage: UIImage())
         }
     }
 }
