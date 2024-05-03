@@ -11,11 +11,11 @@ import CoreImage.CIFilterBuiltins
 struct AccountFrameView: View {
     private static let cardCornerRadius: CGFloat = 20
     private static let cardSize: CGSize = .init(width: 367, height: 512)
+    //カードの大きさ
     @State private var github = "https://github.com/"
     @State private var githubtext = ""
     @State private var alltext = ""
-
-    @State private var image: UIImage?
+    //QRコードのためのURL作成
     
     var body: some View {
         ZStack {
@@ -37,12 +37,6 @@ struct AccountFrameView: View {
             takeScreenshot()
         }
         .padding()
-        if let image = image {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .padding()
-        }
     }
     func takeScreenshot() {
         guard let window = UIApplication.shared.windows.first else { return }
@@ -59,16 +53,13 @@ struct AccountFrameView: View {
         
         // PNGデータを写真フォルダに保存
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        
-        // スクリーンショットを表示
-        self.image = image
     }
 }
 
 
 struct AccountView: View {
     
-    @StateObject var lenticulationManager = AccountQRViewModel()
+    @StateObject var lenticulationManager = AccountViewModel()
     @Binding var text:String
     
     var body: some View {
@@ -97,6 +88,7 @@ struct AccountView: View {
 
 
 func QRroundedImage(image: UIImage, cornerRadius: CGFloat) -> UIImage {
+    //縁角丸にする
     UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
     let rect = CGRect(origin: .zero, size: image.size)
     UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
@@ -107,6 +99,7 @@ func QRroundedImage(image: UIImage, cornerRadius: CGFloat) -> UIImage {
 }
 
 func generateQRWithRoundedCorners(from string: String, size: CGSize, cornerRadius: CGFloat) -> UIImage {
+    //QRコード生成
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
     let data = Data(string.utf8)

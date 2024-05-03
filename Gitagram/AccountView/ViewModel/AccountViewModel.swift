@@ -8,7 +8,7 @@
 import CoreMotion
 import CoreGraphics
 
-class AccountQRViewModel: ObservableObject {
+class AccountViewModel: ObservableObject {
     
     @Published var middleImageOpacity: CGFloat = 1
     @Published var frontImageOpacitry: CGFloat = 0
@@ -70,7 +70,7 @@ extension Double {
     }
 }
 
-extension AccountQRViewModel {
+extension AccountViewModel {
     
     enum DeviceAttitudeState {
         case flat
