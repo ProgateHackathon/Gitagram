@@ -12,5 +12,5 @@ class UseCaseDI {
     static let developerImageRepository = DummyDeveloperImageRepository()
     static let productRepository: ProductRepositoryProtocol = DummyProductRepository()
     static let productImageRepository = DummyProductImageRepository()
-    static let qrRepository: QRCodeProtocol = DummyGenerator()
+    static let qrRepository: QRCodeProtocol = QRCodeRepository()
 }
