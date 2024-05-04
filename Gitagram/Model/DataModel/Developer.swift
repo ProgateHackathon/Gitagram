@@ -12,11 +12,11 @@ struct Developer : Identifiable, Codable {
     
     let id: DeveloperID
     let name: String
-    var gitHubURL: URL {
-        URL("https://github.com/\(name)")
+    var gitHubURL: String {
+        "https://github.com/\(name)"
     }
-    var imageURL: String {
-        gitHubURL + ".png"
+    var imageURL: URL {
+        URL(gitHubURL + ".png")
     }
         
     init(id: DeveloperID, githubId name: String) {
