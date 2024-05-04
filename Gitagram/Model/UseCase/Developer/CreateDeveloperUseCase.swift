@@ -12,6 +12,6 @@ class CreateDeveloperUseCase {
     
     func execute(githubId name: String) async {
         let newDeveloper = Developer(githubId: name)
-        developerRepository.create(object: newDeveloper)
+        await developerRepository.create(object: newDeveloper)
     }
 }

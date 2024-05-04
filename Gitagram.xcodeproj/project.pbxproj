@@ -45,6 +45,7 @@
 		105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */; };
 		105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6332BE5F116004356D8 /* RepositoryDI.swift */; };
 		105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6362BE5F188004356D8 /* DeveloperRepository.swift */; };
+		105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		105FC6332BE5F116004356D8 /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 		105FC6362BE5F188004356D8 /* DeveloperRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperRepository.swift; sourceTree = "<group>"; };
+		105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginDeveloperUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				103BD8F02BE2415F005C18D7 /* CreateDeveloperUseCase.swift */,
 				103BD8F72BE2538C005C18D7 /* GetDeveloperImageUseCase.swift */,
 				104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */,
+				105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */,
 			);
 			path = Developer;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
 				103BD8F32BE241CF005C18D7 /* DummyDeveloperRepository.swift in Sources */,
+				105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */,
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
 				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
 				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
