@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 protocol ProductImageClientProtocol {
-    func saveImage(product_id: String, image: UIImage)
-    func getImage(product_id: String) -> UIImage?
+    func uploadImage(product_id: String, image: UIImage)
+    func downloadImage(product_id: String) async -> UIImage?
 }

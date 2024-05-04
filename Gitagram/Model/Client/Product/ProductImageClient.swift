@@ -13,7 +13,7 @@ class ProductImageClient : ProductImageClientProtocol {
     private let storage = Storage.storage()
     private let STORAGE_URL = "gs://gitagram-ef516.appspot.com/products"
     
-    func saveImage(product_id: String, image: UIImage) {
+    func uploadImage(product_id: String, image: UIImage) {
         let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
         guard let jpegData = convertToJpegData(uiImage: image) else {
             print("画像の変換に失敗しました")
@@ -23,8 +23,17 @@ class ProductImageClient : ProductImageClientProtocol {
         ref.putData(jpegData as Data)
     }
     
-    func getImage(product_id: String) -> UIImage? {
-        <#code#>
+    func downloadImage(product_id: String) async -> UIImage? {
+        let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
+        var resultImage: UIImage? = nil
+        
+        ref.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            guard let imageData = data else { return }
+            guard let uiImage = UIImage(data: imageData) else { return }
+            resultImage = uiImage
+        }
+        
+        return resultImage
     }
     
     private func convertToJpegData(uiImage: UIImage) -> NSData? {
