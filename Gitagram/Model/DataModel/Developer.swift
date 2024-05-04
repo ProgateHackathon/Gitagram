@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Developer : Identifiable {
+struct Developer : Identifiable, Codable {
     typealias DeveloperID = Developer.ID
     
     let id: DeveloperID
@@ -38,24 +38,6 @@ struct Developer : Identifiable {
         
         init(id uuid: UUID) {
             self.id = uuid
-        }
-    }
-}
-
-extension Developer : Encodable {
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-    }
-    
-    func encode(to encoder: any Encoder) throws {
-        do {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(id.id, forKey: .id)
-            try container.encode(name, forKey: .name)
-        } catch {
-            print("エンコードできん...!! : \(error)")
-            throw error
         }
     }
 }

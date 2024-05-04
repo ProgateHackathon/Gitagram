@@ -42,6 +42,7 @@
 		105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */; };
 		105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */; };
 		105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */; };
+		105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
 		105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClientProtocol.swift; sourceTree = "<group>"; };
+		105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		10472EF62BDFAFFC00C179F8 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				105FC6302BE5E693004356D8 /* Developer */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -279,6 +282,14 @@
 				105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		105FC6302BE5E693004356D8 /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+				105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */,
+			);
+			path = Developer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +396,7 @@
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
 				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
 				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
+				105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */,
 				103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */,
 				105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */,
 				103BD8D52BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift in Sources */,
