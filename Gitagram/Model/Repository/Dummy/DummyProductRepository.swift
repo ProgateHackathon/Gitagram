@@ -15,11 +15,11 @@ class DummyProductRepository : ProductRepositoryProtocol {
     private static let dummyDeveloper5 = Developer(githubId: "developer3")
     
     private var productStore: [Product] = [
-        Product(title: "product_1", content: "content", imagePath: "dummy_product", developerId: dummyDeveloper.id),
-        Product(title: "product_2", content: "content", imagePath: "dummy_product", developerId: dummyDeveloper2.id),
-        Product(title: "product_3", content: "content", imagePath: "dummy_product", developerId: dummyDeveloper3.id),
-        Product(title: "product_4", content: "content", imagePath: "dummy_product", developerId: dummyDeveloper3.id),
-        Product(title: "product_5", content: "content", imagePath: "dummy_product", developerId: dummyDeveloper3.id)
+        Product(title: "product_1", content: "content", developerId: dummyDeveloper.id),
+        Product(title: "product_2", content: "content", developerId: dummyDeveloper2.id),
+        Product(title: "product_3", content: "content", developerId: dummyDeveloper3.id),
+        Product(title: "product_4", content: "content", developerId: dummyDeveloper3.id),
+        Product(title: "product_5", content: "content", developerId: dummyDeveloper3.id)
     ]
     
     func getAll() -> [Product] {

@@ -11,6 +11,6 @@ class GetProductListUseCase {
     let repository: ProductRepositoryProtocol = UseCaseDI.productRepository
     
     func execute() async -> [Product] {
-        return repository.getAll()
+        return await repository.getAll()
     }
 }
