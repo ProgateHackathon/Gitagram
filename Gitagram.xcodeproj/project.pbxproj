@@ -53,6 +53,9 @@
 		72D772282BE6255900BD7915 /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772272BE6255900BD7915 /* SwipeActionIndicatorView.swift */; };
 		72D7722A2BE6257400BD7915 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772292BE6257400BD7915 /* MatchingViewModel.swift */; };
 		72D7722E2BE628C500BD7915 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7722D2BE628C500BD7915 /* MatchingView.swift */; };
+		105FC6402BE61009004356D8 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC63F2BE61009004356D8 /* ProductClient.swift */; };
+		105FC6422BE6101D004356D8 /* ProductClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */; };
+		105FC6452BE62BC1004356D8 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6442BE62BC1004356D8 /* ProductRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		72D772272BE6255900BD7915 /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		72D772292BE6257400BD7915 /* MatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
 		72D7722D2BE628C500BD7915 /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
+		105FC63F2BE61009004356D8 /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
+		105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClientProtocol.swift; sourceTree = "<group>"; };
+		105FC6442BE62BC1004356D8 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +236,7 @@
 		10472EF62BDFAFFC00C179F8 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				105FC63E2BE60E58004356D8 /* Product */,
 				105FC6302BE5E693004356D8 /* Developer */,
 			);
 			path = Client;
@@ -238,6 +245,7 @@
 		10472EF72BDFB00600C179F8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				105FC6432BE62584004356D8 /* Product */,
 				105FC6352BE5F179004356D8 /* Developer */,
 				105FC62D2BE5E503004356D8 /* Protocol */,
 				105FC62B2BE5DE7F004356D8 /* QRCode */,
@@ -304,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */,
+				105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -352,6 +361,20 @@
 				72D7721B2BE624CB00BD7915 /* SizeConstants.swift */,
 			);
 			path = Utils;
+		105FC63E2BE60E58004356D8 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				105FC63F2BE61009004356D8 /* ProductClient.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		105FC6432BE62584004356D8 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				105FC6442BE62BC1004356D8 /* ProductRepository.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +465,7 @@
 				105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */,
 				72D7722E2BE628C500BD7915 /* MatchingView.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
+				105FC6422BE6101D004356D8 /* ProductClientProtocol.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
@@ -450,6 +474,7 @@
 				105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */,
 				72D772202BE6250700BD7915 /* CardView.swift in Sources */,
 				72D7721C2BE624CB00BD7915 /* SizeConstants.swift in Sources */,
+				105FC6452BE62BC1004356D8 /* ProductRepository.swift in Sources */,
 				103BD8FE2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift in Sources */,
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
@@ -459,6 +484,7 @@
 				72D772242BE6253100BD7915 /* SwipeActionButtonsView.swift in Sources */,
 				105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */,
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
+				105FC6402BE61009004356D8 /* ProductClient.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
 				105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */,

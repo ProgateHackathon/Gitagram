@@ -9,4 +9,5 @@ import Foundation
 
 class RepositoryDI {
     public static let developerClient = DeveloperClient()
+    public static let productClient = ProductClient()
 }
