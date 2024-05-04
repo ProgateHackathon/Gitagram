@@ -10,17 +10,21 @@ import SwiftUI
 
 
 struct CardStackView: View {
-    @StateObject var viewModel = MatchingViewModel()
-    
+    @ObservedObject var viewModel: MatchingViewModel
+    @State var finish = false
     var body: some View {
         VStack(spacing:16){
             ZStack{
+                Text("画面左上のリロードボタンを押してね！")
                 ForEach(viewModel.cardModels){ cardData in
                     CardView(viewModel: viewModel, cardData: cardData)
                 }
             }
+            .onChange(of: finish){
+                
+            }
             if !viewModel.cardModels.isEmpty{
-                SwipeActionButtonsView(viewModel: viewModel )
+                SwipeActionButtonsView(viewModel: viewModel)
             }
             
         }
@@ -28,5 +32,5 @@ struct CardStackView: View {
 }
 
 #Preview {
-    CardStackView()
+    CardStackView(viewModel:MatchingViewModel())
 }

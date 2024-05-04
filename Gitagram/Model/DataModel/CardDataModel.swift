@@ -13,4 +13,6 @@ struct CardDataModel : Identifiable {
     let product : Product
     let productImage: UIImage
     let developer : Developer
+    let  title: String
+    let discription: String
 }

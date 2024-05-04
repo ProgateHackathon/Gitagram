@@ -20,6 +20,7 @@ struct CardView: View {
     
     var body: some View {
         ZStack(alignment: .bottom){
+            
             ZStack(alignment: .top) {
                 AsyncImage(url: cardData.developer.imageURL) { image in
                     image
@@ -29,9 +30,14 @@ struct CardView: View {
                 } placeholder: {
                     ProgressView()
                 }
+              
+                
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
+
+
             }
+            UserInfoView(cardData: cardData)
         }
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)

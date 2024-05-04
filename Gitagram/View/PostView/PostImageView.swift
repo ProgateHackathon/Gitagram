@@ -17,7 +17,8 @@ struct PostImageView: View {
     @State private var selectedPhoto: PhotosPickerItem?
     @Binding var title: String
     @Binding var discription: String
-
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack{
             ProgressView("", value: 1)
@@ -61,6 +62,7 @@ struct PostImageView: View {
 
             Button(action: {
                 next.toggle()
+                UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
                 
             }, label: {
                 Text("保存")

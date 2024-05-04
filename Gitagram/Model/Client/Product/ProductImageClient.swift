@@ -32,6 +32,7 @@ class ProductImageClient : ProductImageClientProtocol {
             guard let uiImage = UIImage(data: imageData) else { return }
             resultImage = uiImage
         }
+        print("DDD", resultImage as Any,product_id)
         
         return resultImage
     }

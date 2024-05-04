@@ -53,16 +53,14 @@
 		105FC6582BE66AAB004356D8 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC64F2BE66AAB004356D8 /* MatchingView.swift */; };
 		105FC6592BE66AAB004356D8 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6502BE66AAB004356D8 /* MatchingViewModel.swift */; };
 		105FC65B2BE66AC8004356D8 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65A2BE66AC8004356D8 /* CardDataModel.swift */; };
-		7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7892BE673A100E9C4DC /* PostView.swift */; };
-		7253F78D2BE679F400E9C4DC /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */; };
-		7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */; };
-		7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */; };
 		105FC65D2BE67D6A004356D8 /* ProductImageClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */; };
 		105FC65F2BE68048004356D8 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65E2BE68048004356D8 /* ProductImageClient.swift */; };
 		105FC6612BE688D6004356D8 /* ProductImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6602BE688D6004356D8 /* ProductImageRepository.swift */; };
 		7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7892BE673A100E9C4DC /* PostView.swift */; };
 		7253F78D2BE679F400E9C4DC /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */; };
 		7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */; };
+		7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */; };
+		7253F7962BE6B40200E9C4DC /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7952BE6B40200E9C4DC /* UserInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,16 +104,14 @@
 		105FC64F2BE66AAB004356D8 /* MatchingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		105FC6502BE66AAB004356D8 /* MatchingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
 		105FC65A2BE66AC8004356D8 /* CardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
-		7253F7892BE673A100E9C4DC /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
-		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
-		7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClientProtocol.swift; sourceTree = "<group>"; };
 		105FC65E2BE68048004356D8 /* ProductImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
 		105FC6602BE688D6004356D8 /* ProductImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageRepository.swift; sourceTree = "<group>"; };
 		7253F7892BE673A100E9C4DC /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
 		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
+		7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		7253F7952BE6B40200E9C4DC /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +358,7 @@
 				105FC6472BE66AAB004356D8 /* CardView.swift */,
 				105FC6482BE66AAB004356D8 /* SwipeActionButtonsView.swift */,
 				105FC6492BE66AAB004356D8 /* SwipeActionIndicatorView.swift */,
+				7253F7952BE6B40200E9C4DC /* UserInfoView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -515,6 +512,7 @@
 				105FC6552BE66AAB004356D8 /* SwipeActionIndicatorView.swift in Sources */,
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
+				7253F7962BE6B40200E9C4DC /* UserInfoView.swift in Sources */,
 				103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */,
 				105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */,
 				105FC6542BE66AAB004356D8 /* SwipeActionButtonsView.swift in Sources */,

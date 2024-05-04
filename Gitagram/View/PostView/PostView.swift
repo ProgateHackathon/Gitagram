@@ -69,6 +69,6 @@ struct PostView: View {
 
 #Preview {
 
-    PostView(developer: Developer(from: "saki" as! Decoder))
+    PostView(developer: Developer(githubId: "am2525nyan"))
 
 }
