@@ -7,18 +7,21 @@
 
 import SwiftUI
 
+enum SwipeAction {
+    case reject
+    case like
+}
+
 struct CardView: View {
     @ObservedObject var viewModel: MatchingViewModel
     @State private var xoffset: CGFloat = 0
     @State private var degrees: Double = 0
-    
-    let model: CardDataModel
+    let cardData: CardDataModel
     
     var body: some View {
-        
         ZStack(alignment: .bottom){
             ZStack(alignment: .top) {
-                Image(model.user.profileImageURLs)
+                Image(uiImage: cardData.developerImage)
                     .resizable()
                     .scaledToFill()
                     .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
@@ -40,55 +43,48 @@ struct CardView: View {
         )
     }
 }
-private extension CardView{
-    
+
+private extension CardView {
     func returnToCenter(){
         xoffset = 0
         degrees = 0
     }
     func swipeRight(){
-        withAnimation{
-            xoffset  = 500
+        withAnimation {
+            xoffset = 500
             degrees = 12
-        }completion: {
-            viewModel.removeCard(model)
+        } completion: {
+            viewModel.removeCard(cardData.product)
         }
     }
     
     func swipeLeft(){
-        withAnimation{
-            xoffset  = -500
+        withAnimation {
+            xoffset = -500
             degrees = -12
-            
-        }completion: {
-            viewModel.removeCard(model)
+        } completion: {
+            viewModel.removeCard(cardData.product)
         }
     }
     
     func onReceiveSwipeAction(_ action: SwipeAction? ){
-        guard let action else{
-            return
-        }
+        guard let action else{ return }
+        guard let topProductCardID = viewModel.cardModels.last?.product.id else { return }
         
-        let topCard = viewModel.cardModels.last
-        if topCard == model{
-            
-            switch action{
+        if topProductCardID == cardData.product.id {
+            switch action {
             case.reject:
                 swipeLeft()
                 
             case .like:
                 swipeRight()
-                
             }
         }
     }
 }
 
-
 private extension CardView{
-    func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value){
-        
+    func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value) {
         xoffset = value.translation.width
         degrees = Double(value.translation.width / 25)
         
@@ -96,20 +92,12 @@ private extension CardView{
     
     func onDragEnded(_ value:  _ChangedGesture<DragGesture>.Value){
         let width = value.translation.width
+        let isRightSwipe = width >= SizeConstants.screenCutof
         
-        if abs(width) <= abs(SizeConstants.screenCutof){
-            
+        if abs(width) <= abs(SizeConstants.screenCutof) {
             returnToCenter()
         }
-        if width >= SizeConstants.screenCutof{
-            swipeRight()
-        }else{
-            swipeLeft()
-        }
         
+        isRightSwipe ? swipeRight() : swipeLeft()
     }
-    
-}
-#Preview {
-    CardView(viewModel: MatchingViewModel(service: CardService()), model: CardDataModel(user: MockData.users[1]))
 }

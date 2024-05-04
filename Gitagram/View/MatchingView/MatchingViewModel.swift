@@ -14,12 +14,8 @@ class MatchingViewModel: ObservableObject {
     
     init(){
         Task {
-            await fetchCardModel()
+            self.cardModels =  await fetchCardInfomation()
         }
-    }
-    
-    func fetchCardModel() async {
-        self.cardModels =  await fetchCardInfomation()
     }
 
     func removeCard(_  product: Product){

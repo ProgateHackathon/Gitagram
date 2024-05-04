@@ -43,7 +43,3 @@ struct SwipeActionButtonsView: View {
         }
     }
 }
-
-#Preview {
-    SwipeActionButtonsView(viewModel: MatchingViewModel(service: CardService()))
-}
