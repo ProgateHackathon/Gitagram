@@ -44,6 +44,7 @@
 		105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */; };
 		105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */; };
 		105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6332BE5F116004356D8 /* RepositoryDI.swift */; };
+		105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6362BE5F188004356D8 /* DeveloperRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClientProtocol.swift; sourceTree = "<group>"; };
 		105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		105FC6332BE5F116004356D8 /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
+		105FC6362BE5F188004356D8 /* DeveloperRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 		10472EF72BDFB00600C179F8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				105FC6352BE5F179004356D8 /* Developer */,
 				105FC62D2BE5E503004356D8 /* Protocol */,
 				105FC62B2BE5DE7F004356D8 /* QRCode */,
 				103BD8F42BE242D7005C18D7 /* Dummy */,
@@ -291,6 +294,14 @@
 			isa = PBXGroup;
 			children = (
 				105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */,
+			);
+			path = Developer;
+			sourceTree = "<group>";
+		};
+		105FC6352BE5F179004356D8 /* Developer */ = {
+			isa = PBXGroup;
+			children = (
+				105FC6362BE5F188004356D8 /* DeveloperRepository.swift */,
 			);
 			path = Developer;
 			sourceTree = "<group>";
@@ -380,6 +391,7 @@
 			files = (
 				105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */,
 				103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */,
+				105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,

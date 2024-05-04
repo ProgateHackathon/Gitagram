@@ -8,9 +8,9 @@
 import Foundation
 
 protocol DeveloperRepositoryProtocol {
-    func getAll() -> [Developer]
-    func create(object: Developer)
-    func get(id: Developer.ID) -> Developer?
-    func update(id: Developer.ID, with newDeveloper: Developer)
-    func delete(id: Developer.ID)
+    func create(object: Developer) async
+    func get(id: Developer.ID) async -> Developer?
+    func getLoginDeveloper() async -> Developer?
+    func update(id: Developer.ID, with newDeveloper: Developer) async
+    func delete(id: Developer.ID) async
 }
