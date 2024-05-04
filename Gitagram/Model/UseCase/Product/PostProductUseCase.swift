@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 class PostProductUseCase {
     let repository: ProductRepositoryProtocol = UseCaseDI.productRepository
     
-    func execute(product: Product) async {
+    func execute(product: Product, productImage: UIImage) async {
         return repository.create(object: product)
     }
 }
