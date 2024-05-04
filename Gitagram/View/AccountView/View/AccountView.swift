@@ -29,7 +29,7 @@ struct AccountFrameView: View {
                 QRView(inputText: $inputText)
                 .padding()
                 VStack {
-                    IDView() // IDViewを追加
+                    IDView(inputText: inputText) // IDViewを追加
                 }
             }
             .padding(50)
@@ -91,8 +91,15 @@ struct AccountView: View {
 
 
 struct IDView:View {
+    //@State static var inputText = ""
+    @State private var inputText:String
+    init(inputText: String) {
+        self._inputText = State(initialValue: inputText) // 初期値を設定
+    }
+    
     var body: some View {
-        IDDesignView()
+        
+        IDDesignView(inputText:$inputText)
     }
 }
 
