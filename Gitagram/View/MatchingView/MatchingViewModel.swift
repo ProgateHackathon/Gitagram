@@ -8,36 +8,41 @@
 import Foundation
 
 @MainActor
-
-class MatchingViewModel: ObservableObject{
-
+class MatchingViewModel: ObservableObject {
     @Published var cardModels = [CardDataModel]()
     @Published var  buttonSwipeAction: SwipeAction?
-    private var service = CardService()
-
-    init(service: CardService){
-        self.service = service
+    
+    init(){
         Task {
             await fetchCardModel()
         }
     }
-    func fetchCardModel()async{
-        do{
-            self.cardModels = try await service.fetchCardModels()
-        }catch{
-            print("エラーだよ\(error)")
-        }
+    
+    func fetchCardModel() async {
+        self.cardModels =  await fetchCardInfomation()
     }
 
-    func removeCard(_  card: CardDataModel){
+    func removeCard(_  product: Product){
         Task{
            try await Task.sleep(nanoseconds: 500_000_000)
-            guard let index = cardModels.firstIndex(where: { $0.id == card.id  })else{
-                return
-            }
+            guard let index = cardModels.firstIndex(where: { $0.product.id == product.id }) else { return }
             cardModels.remove(at: index)
         }
-
     }
-
+    
+    private func fetchCardInfomation() async -> [CardDataModel] {
+        var cardList = [CardDataModel]()
+        let products = await GetProductListUseCase().execute()
+        
+        for product in products {
+            guard let developer      = await GetDeveloperUseCase().execute(id: product.developerId)      else { continue }
+            guard let developerImage = await GetDeveloperImageUseCase().execute(id: product.developerId) else { continue }
+            guard let productImage   = await GetProductImageUseCase().execute(id: product.id)            else { continue }
+            
+            let cardData = CardDataModel(product: product, productImage: productImage, developer: developer, developerImage: developerImage)
+            cardList.append(cardData)
+        }
+        
+        return cardList
+    }
 }

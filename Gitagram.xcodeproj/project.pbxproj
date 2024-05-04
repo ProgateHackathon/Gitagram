@@ -47,7 +47,6 @@
 		105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */; };
 		72D772102BE6240F00BD7915 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7720F2BE6240F00BD7915 /* CardDataModel.swift */; };
 		72D772132BE6243400BD7915 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772122BE6243400BD7915 /* SwipeAction.swift */; };
-		72D772152BE6245300BD7915 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772142BE6245300BD7915 /* User.swift */; };
 		72D772182BE6247400BD7915 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772172BE6247400BD7915 /* CardService.swift */; };
 		72D7721A2BE6249200BD7915 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772192BE6249200BD7915 /* MockData.swift */; };
 		72D7721C2BE624CB00BD7915 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7721B2BE624CB00BD7915 /* SizeConstants.swift */; };
@@ -94,7 +93,6 @@
 		105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginDeveloperUseCase.swift; sourceTree = "<group>"; };
 		72D7720F2BE6240F00BD7915 /* CardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
 		72D772122BE6243400BD7915 /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
-		72D772142BE6245300BD7915 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72D772172BE6247400BD7915 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		72D772192BE6249200BD7915 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		72D7721B2BE624CB00BD7915 /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 			children = (
 				72D7720F2BE6240F00BD7915 /* CardDataModel.swift */,
 				72D772122BE6243400BD7915 /* SwipeAction.swift */,
-				72D772142BE6245300BD7915 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -470,7 +467,6 @@
 				105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */,
 				72D7722E2BE628C500BD7915 /* MatchingView.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
-				72D772152BE6245300BD7915 /* User.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
