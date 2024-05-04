@@ -23,7 +23,7 @@ struct GitagramApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PostView()
+            MatchingView()
         }
     }
 }
