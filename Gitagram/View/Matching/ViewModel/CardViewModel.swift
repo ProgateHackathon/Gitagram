@@ -10,6 +10,7 @@ import Foundation
 @MainActor
 class CardViewModel: ObservableObject{
     @Published var cardModels = [CardModel]()
+    @Published var  buttonSwipeAction: SwipeAction?
     
     private var service = CardService()
     init(service: CardService){
@@ -28,10 +29,13 @@ class CardViewModel: ObservableObject{
         
     }
     func removeCard(_  card: CardModel){
-        guard let index = cardModels.firstIndex(where: { $0.id == card.id  })else{
-            return
+        Task{
+           try await Task.sleep(nanoseconds: 500_000_000)
+            guard let index = cardModels.firstIndex(where: { $0.id == card.id  })else{
+                return
+            }
+            cardModels.remove(at: index)
         }
-        cardModels.remove(at: index)
     }
 
 }
