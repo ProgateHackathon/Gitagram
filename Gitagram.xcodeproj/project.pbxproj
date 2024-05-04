@@ -18,7 +18,6 @@
 		103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E92BE23FA0005C18D7 /* UseCaseDI.swift */; };
 		103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8EB2BE2406D005C18D7 /* PostProductUseCase.swift */; };
 		103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F02BE2415F005C18D7 /* CreateDeveloperUseCase.swift */; };
-		103BD8F32BE241CF005C18D7 /* DummyDeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F22BE241CF005C18D7 /* DummyDeveloperRepository.swift */; };
 		103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F72BE2538C005C18D7 /* GetDeveloperImageUseCase.swift */; };
 		103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F92BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift */; };
 		103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */; };
@@ -60,7 +59,6 @@
 		103BD8E92BE23FA0005C18D7 /* UseCaseDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDI.swift; sourceTree = "<group>"; };
 		103BD8EB2BE2406D005C18D7 /* PostProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProductUseCase.swift; sourceTree = "<group>"; };
 		103BD8F02BE2415F005C18D7 /* CreateDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeveloperUseCase.swift; sourceTree = "<group>"; };
-		103BD8F22BE241CF005C18D7 /* DummyDeveloperRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDeveloperRepository.swift; sourceTree = "<group>"; };
 		103BD8F72BE2538C005C18D7 /* GetDeveloperImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeveloperImageUseCase.swift; sourceTree = "<group>"; };
 		103BD8F92BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperImageRepositoryProtocol.swift; sourceTree = "<group>"; };
 		103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDeveloperImageRepository.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */,
-				103BD8F22BE241CF005C18D7 /* DummyDeveloperRepository.swift */,
 				103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */,
 				103BD9012BE255EF005C18D7 /* DummyProductImageRepository.swift */,
 			);
@@ -410,7 +407,6 @@
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
-				103BD8F32BE241CF005C18D7 /* DummyDeveloperRepository.swift in Sources */,
 				105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */,
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
 				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
