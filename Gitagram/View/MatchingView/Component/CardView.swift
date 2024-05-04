@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-
-
-
 struct CardView: View {
     @ObservedObject var viewModel: MatchingViewModel
     @State private var xoffset: CGFloat = 0
     @State private var degrees: Double = 0
     
-    let model: CardModel
+    let model: CardDataModel
     
     var body: some View {
         
@@ -88,15 +85,6 @@ private extension CardView{
     }
 }
 
-private extension CardView{
-    
-    var user: User{        
-        return model.user
-    }
-    var imageCount: Int{
-        return user.profileImageURLs.count
-    }
-}
 
 private extension CardView{
     func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value){
@@ -123,5 +111,5 @@ private extension CardView{
     
 }
 #Preview {
-    CardView(viewModel: MatchingViewModel(service: CardService()), model: CardModel(user: MockData.users[1]))
+    CardView(viewModel: MatchingViewModel(service: CardService()), model: CardDataModel(user: MockData.users[1]))
 }

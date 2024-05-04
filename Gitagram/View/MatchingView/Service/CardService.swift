@@ -8,9 +8,9 @@
 import Foundation
 struct CardService{
 
-    func fetchCardModels() async throws -> [CardModel]{
+    func fetchCardModels() async throws -> [CardDataModel]{
         let users = MockData.users
-        return users.map({CardModel(user: $0)})
+        return users.map({CardDataModel(user: $0)})
     }
 }
 

@@ -45,7 +45,7 @@
 		105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6332BE5F116004356D8 /* RepositoryDI.swift */; };
 		105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6362BE5F188004356D8 /* DeveloperRepository.swift */; };
 		105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */; };
-		72D772102BE6240F00BD7915 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7720F2BE6240F00BD7915 /* CardModel.swift */; };
+		72D772102BE6240F00BD7915 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7720F2BE6240F00BD7915 /* CardDataModel.swift */; };
 		72D772132BE6243400BD7915 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772122BE6243400BD7915 /* SwipeAction.swift */; };
 		72D772152BE6245300BD7915 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772142BE6245300BD7915 /* User.swift */; };
 		72D772182BE6247400BD7915 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772172BE6247400BD7915 /* CardService.swift */; };
@@ -92,7 +92,7 @@
 		105FC6332BE5F116004356D8 /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 		105FC6362BE5F188004356D8 /* DeveloperRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperRepository.swift; sourceTree = "<group>"; };
 		105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginDeveloperUseCase.swift; sourceTree = "<group>"; };
-		72D7720F2BE6240F00BD7915 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		72D7720F2BE6240F00BD7915 /* CardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
 		72D772122BE6243400BD7915 /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		72D772142BE6245300BD7915 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72D772172BE6247400BD7915 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
@@ -358,7 +358,7 @@
 		72D7720E2BE6240400BD7915 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				72D7720F2BE6240F00BD7915 /* CardModel.swift */,
+				72D7720F2BE6240F00BD7915 /* CardDataModel.swift */,
 				72D772122BE6243400BD7915 /* SwipeAction.swift */,
 				72D772142BE6245300BD7915 /* User.swift */,
 			);
@@ -499,7 +499,7 @@
 				72D772282BE6255900BD7915 /* SwipeActionIndicatorView.swift in Sources */,
 				105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */,
 				103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */,
-				72D772102BE6240F00BD7915 /* CardModel.swift in Sources */,
+				72D772102BE6240F00BD7915 /* CardDataModel.swift in Sources */,
 				105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */,
 				103BD8D52BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift in Sources */,
 				103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */,
