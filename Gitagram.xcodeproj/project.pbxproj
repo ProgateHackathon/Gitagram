@@ -45,6 +45,8 @@
 		105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6332BE5F116004356D8 /* RepositoryDI.swift */; };
 		105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6362BE5F188004356D8 /* DeveloperRepository.swift */; };
 		105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */; };
+		105FC6402BE61009004356D8 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC63F2BE61009004356D8 /* ProductClient.swift */; };
+		105FC6422BE6101D004356D8 /* ProductClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		105FC6332BE5F116004356D8 /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 		105FC6362BE5F188004356D8 /* DeveloperRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperRepository.swift; sourceTree = "<group>"; };
 		105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLoginDeveloperUseCase.swift; sourceTree = "<group>"; };
+		105FC63F2BE61009004356D8 /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
+		105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClientProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,7 @@
 		10472EF62BDFAFFC00C179F8 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				105FC63E2BE60E58004356D8 /* Product */,
 				105FC6302BE5E693004356D8 /* Developer */,
 			);
 			path = Client;
@@ -286,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */,
+				105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -304,6 +310,14 @@
 				105FC6362BE5F188004356D8 /* DeveloperRepository.swift */,
 			);
 			path = Developer;
+			sourceTree = "<group>";
+		};
+		105FC63E2BE60E58004356D8 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				105FC63F2BE61009004356D8 /* ProductClient.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +407,7 @@
 				103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */,
 				105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
+				105FC6422BE6101D004356D8 /* ProductClientProtocol.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
@@ -405,6 +420,7 @@
 				103BD9022BE255EF005C18D7 /* DummyProductImageRepository.swift in Sources */,
 				105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */,
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
+				105FC6402BE61009004356D8 /* ProductClient.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
 				105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */,
