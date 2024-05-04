@@ -16,7 +16,7 @@ struct PostView: View {
             
             VStack{
                 ProgressView("", value: 0.3)
-                
+                    .padding(.top,37)
                     .padding()
                     .tint(Color.pink)
                 
