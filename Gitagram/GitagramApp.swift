@@ -24,7 +24,7 @@ struct GitagramApp: App {
     var body: some Scene {
         WindowGroup {
             //後々tabbarにかえる
-           CardView()
+        CardStackView()
         }
     }
 }

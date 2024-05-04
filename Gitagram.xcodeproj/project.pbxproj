@@ -24,6 +24,12 @@
 		72C95C152BE39C51005361D0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C95C142BE39C51005361D0 /* CardView.swift */; };
 		72D771F02BE4037600BD7915 /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771EF2BE4037600BD7915 /* SwipeActionIndicatorView.swift */; };
 		72D771F22BE5DBAF00BD7915 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771F12BE5DBAF00BD7915 /* SizeConstants.swift */; };
+		72D771F42BE5DE5700BD7915 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771F32BE5DE5700BD7915 /* CardStackView.swift */; };
+		72D771F62BE5E29D00BD7915 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771F52BE5E29D00BD7915 /* User.swift */; };
+		72D771F82BE5E35D00BD7915 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771F72BE5E35D00BD7915 /* CardModel.swift */; };
+		72D771FA2BE5E3EA00BD7915 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771F92BE5E3EA00BD7915 /* CardViewModel.swift */; };
+		72D771FC2BE5E47C00BD7915 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771FB2BE5E47C00BD7915 /* CardService.swift */; };
+		72D771FE2BE5E60500BD7915 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D771FD2BE5E60500BD7915 /* MockData.swift */; };
 		72F6C2A22BE3B05F008A94B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72F6C2A12BE3B05F008A94B6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +45,12 @@
 		72C95C142BE39C51005361D0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		72D771EF2BE4037600BD7915 /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		72D771F12BE5DBAF00BD7915 /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
+		72D771F32BE5DE5700BD7915 /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		72D771F52BE5E29D00BD7915 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72D771F72BE5E35D00BD7915 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		72D771F92BE5E3EA00BD7915 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		72D771FB2BE5E47C00BD7915 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		72D771FD2BE5E60500BD7915 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		72F6C2A12BE3B05F008A94B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +150,12 @@
 				72C95C142BE39C51005361D0 /* CardView.swift */,
 				72D771EF2BE4037600BD7915 /* SwipeActionIndicatorView.swift */,
 				72D771F12BE5DBAF00BD7915 /* SizeConstants.swift */,
+				72D771F32BE5DE5700BD7915 /* CardStackView.swift */,
+				72D771F52BE5E29D00BD7915 /* User.swift */,
+				72D771F72BE5E35D00BD7915 /* CardModel.swift */,
+				72D771F92BE5E3EA00BD7915 /* CardViewModel.swift */,
+				72D771FB2BE5E47C00BD7915 /* CardService.swift */,
+				72D771FD2BE5E60500BD7915 /* MockData.swift */,
 			);
 			path = MatchingPage;
 			sourceTree = "<group>";
@@ -226,12 +244,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
+				72D771F82BE5E35D00BD7915 /* CardModel.swift in Sources */,
+				72D771FC2BE5E47C00BD7915 /* CardService.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
 				10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */,
+				72D771FE2BE5E60500BD7915 /* MockData.swift in Sources */,
+				72D771F42BE5DE5700BD7915 /* CardStackView.swift in Sources */,
 				7218DBCA2BE30C3B001E93CA /* MatchingView.swift in Sources */,
 				72C95C152BE39C51005361D0 /* CardView.swift in Sources */,
 				72D771F02BE4037600BD7915 /* SwipeActionIndicatorView.swift in Sources */,
+				72D771FA2BE5E3EA00BD7915 /* CardViewModel.swift in Sources */,
 				72D771F22BE5DBAF00BD7915 /* SizeConstants.swift in Sources */,
+				72D771F62BE5E29D00BD7915 /* User.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

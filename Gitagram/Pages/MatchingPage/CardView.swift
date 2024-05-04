@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CardView: View {
+    @ObservedObject var viewModel: CardViewModel
     @State private var xoffset: CGFloat = 0
     @State private var degrees: Double = 0
+    
+    let model: CardModel
     
     var body: some View {
         ZStack(alignment: .bottom){
@@ -18,9 +21,10 @@ struct CardView: View {
             ZStack(alignment: .top) {
              
                     
-                Image("sampleImage")
+                Image(model.user.profileImageURLs)
                     .resizable()
                     .scaledToFill()
+                    .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
                 
                    
                 SwipeActionIndicatorView(xofset: $xoffset)
@@ -44,6 +48,32 @@ struct CardView: View {
 }
 
 private extension CardView{
+    func returnToCenter(){
+        xoffset = 0
+        degrees = 0
+    }
+    func swipeRight(){
+        xoffset  = 500
+        degrees = 12
+    viewModel.removeCard(model)
+    }
+    func swipeLeft(){
+        xoffset  = -500
+        degrees = -12
+        viewModel.removeCard(model)
+    }
+}
+
+private extension CardView{
+    var user: User{
+        return model.user
+    }
+    var imageCount: Int{
+        return user.profileImageURLs.count
+    }
+}
+
+private extension CardView{
     func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value){
         xoffset = value.translation.width
         degrees = Double(value.translation.width / 25)
@@ -52,14 +82,20 @@ private extension CardView{
         let width = value.translation.width
         
         if abs(width) <= abs(SizeConstants.screenCutof){
-            xoffset = 0
-            degrees = 0
+          returnToCenter()
+           
         }
+        if width >= SizeConstants.screenCutof{
+         swipeRight()
+        }else{
+            swipeLeft()
+        }
+        
     }
 }
 
 
 
 #Preview {
-    CardView()
+    CardView(viewModel: CardViewModel(service: CardService()), model: CardModel(user: MockData.users[1]))
 }
