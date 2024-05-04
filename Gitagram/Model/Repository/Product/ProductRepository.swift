@@ -11,7 +11,7 @@ class ProductRepository : ProductRepositoryProtocol {
     private let repositoryClient = RepositoryDI.productClient
     
     func getAll() async -> [Product] {
-        repositoryClient.getAll()
+        await repositoryClient.getAll()
     }
     
     func create(object: Product) {
@@ -19,7 +19,7 @@ class ProductRepository : ProductRepositoryProtocol {
     }
     
     func get(id: Product.ID) async -> Product? {
-        repositoryClient.get(product_id: id)
+        await repositoryClient.get(product_id: id)
     }
     
     func update(id: Product.ID, with newProduct: Product) {
@@ -27,6 +27,6 @@ class ProductRepository : ProductRepositoryProtocol {
     }
     
     func delete(id: Product.ID) {
-        repository.delete(id: id)
+        repositoryClient.delete(product_id: id)
     }
 }
