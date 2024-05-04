@@ -31,11 +31,10 @@ class MatchingViewModel: ObservableObject {
         let products = await GetProductListUseCase().execute()
         
         for product in products {
-            guard let developer      = await GetDeveloperUseCase().execute(id: product.developerId)      else { continue }
-            guard let developerImage = await GetDeveloperImageUseCase().execute(id: product.developerId) else { continue }
-            guard let productImage   = await GetProductImageUseCase().execute(id: product.id)            else { continue }
+            guard let developer      = await GetDeveloperUseCase().execute(id: product.developerId) else { continue }
+            guard let productImage   = await GetProductImageUseCase().execute(id: product.id)       else { continue }
             
-            let cardData = CardDataModel(product: product, productImage: productImage, developer: developer, developerImage: developerImage)
+            let cardData = CardDataModel(product: product, productImage: productImage, developer: developer)
             cardList.append(cardData)
         }
         
