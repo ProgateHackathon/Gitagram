@@ -10,6 +10,7 @@ import SwiftUI
 struct PostDiscriptionView: View {
     @State var discription = ""
     @State var next = false
+    @Binding var title : String
     
     var body: some View {
         VStack{
@@ -34,7 +35,7 @@ struct PostDiscriptionView: View {
                 .padding(.leading,10)
             Divider()
             Spacer()
-            NavigationLink("", destination: PostImageView(),isActive: $next)
+            NavigationLink("", destination: PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription),isActive: $next)
             Button(action: {
                 next.toggle()
             }, label: {
@@ -58,5 +59,5 @@ struct PostDiscriptionView: View {
 
 
 #Preview {
-    PostDiscriptionView()
+    PostDiscriptionView(title: .constant(""))
 }

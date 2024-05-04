@@ -60,6 +60,7 @@
 		7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7892BE673A100E9C4DC /* PostView.swift */; };
 		7253F78D2BE679F400E9C4DC /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */; };
 		7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */; };
+		7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		7253F7892BE673A100E9C4DC /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
 		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
+		7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 		7253F7902BE680D300E9C4DC /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				105FC6592BE66AAB004356D8 /* MatchingViewModel.swift in Sources */,
 				105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */,
 				103BD8D52BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift in Sources */,
+				7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */,
 				105FC6562BE66AAB004356D8 /* User.swift in Sources */,
 				103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */,
 				105FC6532BE66AAB004356D8 /* CardView.swift in Sources */,
@@ -674,9 +678,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = 98BL22S53Y;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "リポジトリの写真を撮影します";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -705,9 +710,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = 98BL22S53Y;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "リポジトリの写真を撮影します";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

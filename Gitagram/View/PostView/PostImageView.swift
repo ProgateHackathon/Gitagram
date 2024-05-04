@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct PostImageView: View {
     
-    @State var discription = ""
     @State var next = false
-    
+    @State var developer: Developer
+    @State var showImagePicker = false
+    @State var image: UIImage?
+    @State private var selectedPhoto: PhotosPickerItem?
+    @Binding var title: String
+    @Binding var discription: String
+
+
     var body: some View {
         VStack{
             ProgressView("", value: 1)
@@ -29,37 +36,29 @@ struct PostImageView: View {
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
             Spacer()
-            
-            Button(action: {
-                //ここで画像アップロードする
-            }, label: {
+            PhotosPicker(selection: $selectedPhoto,matching: .images){
+                
                 HStack{
                     Image(systemName: "photo.badge.plus")
                     Text("画像のアップロード")
                 }
+                .padding(.horizontal,40)
+                .padding(.vertical,15)
                 
-                    .padding(.horizontal,40)
-                    .padding(.vertical,15)
+                .foregroundColor(.black)
+                .background(Color.white)
                 
-                    .foregroundColor(.black)
-                    .background(Color.white)
-                
-                    .cornerRadius(35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                            .stroke(Color(Color(red: 0.82, green: 0.6, blue: 0.97)), lineWidth: 3)
-                    )
-                
-            })
-            
-            
+                .cornerRadius(35)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color(Color(red: 0.82, green: 0.6, blue: 0.97)), lineWidth: 3)
+                )
+            }
+                .onChange(of: selectedPhoto) { selectedPhoto in
+                    Task { await loadImageFromSelectedPhoto(photo: selectedPhoto) }
+                }
             
             .padding(.bottom,20)
-            
-            
-            
-            
-            
             Button(action: {
                 next.toggle()
                 
@@ -78,12 +77,38 @@ struct PostImageView: View {
         }
         .onChange(of: next){
             //ここで保存だよ
+            Task{
+                do{
+                    await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id), productImage: (image ?? UIImage(named: "back"))!
+                )}
+            }
+            
+        }
+        .onChange(of: showImagePicker){
+            
+                 
         }
         
+        .onAppear(){
+            Task{
+                do{
+                    
+                    developer = await GetLoginDeveloperUseCase().execute()!
+                }
+                
+            }
+            
+        }
+        
+    }
+    private func loadImageFromSelectedPhoto(photo: PhotosPickerItem?) async {
+        if let data = try? await photo?.loadTransferable(type: Data.self) {
+            self.image = UIImage(data: data)
+        }
     }
     
 }
 
 #Preview {
-    PostImageView()
+    PostImageView(developer: Developer(githubId: "am2525nyan"), title: .constant(""), discription: .constant(""))
 }

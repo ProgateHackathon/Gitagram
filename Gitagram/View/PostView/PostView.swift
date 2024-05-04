@@ -10,7 +10,7 @@ import SwiftUI
 struct PostView: View {
     @State var title = ""
     @State var next = false
-    @State var developer : Developer
+   
     var body: some View {
         NavigationView {
             
@@ -35,13 +35,12 @@ struct PostView: View {
                     .padding(.leading,10)
                 Divider()
                 Spacer()
-                NavigationLink("", destination: PostDiscriptionView(),isActive: $next)
+                NavigationLink("", destination: PostDiscriptionView( title: $title),isActive: $next)
                 Button(action: {
                     next.toggle()
                 }, label: {
                     Text("次へ")
-                    
-                    
+
                         .padding(.horizontal,120)
                         .padding(.vertical,15)
                         .font(.system(size: 10, weight: .medium, design: .default))
@@ -52,19 +51,10 @@ struct PostView: View {
                 })
             }
         }
-        .onAppear(){
-            Task{
-                do{
-                    await GetLoginDeveloperUseCase().execute()
-                }
-               
-            }
-         
-        }
        
     }
 }
 
 #Preview {
-    PostView(developer: Developer(from: "saki"))
+    PostView()
 }
