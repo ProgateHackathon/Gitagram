@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct CardStackView: View {
-    @StateObject var ViewModel = CardViewModel(service: CardService())
+    @StateObject var ViewModel = MatchingViewModel(service: CardService())
     var body: some View {
         VStack(spacing:16){
             ZStack{
@@ -21,8 +21,7 @@ struct CardStackView: View {
             if !ViewModel.cardModels.isEmpty{
                 SwipeActionButtonsView(viewModel: ViewModel )
             }
-
-
+            
         }
     }
 }

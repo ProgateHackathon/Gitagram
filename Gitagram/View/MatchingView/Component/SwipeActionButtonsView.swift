@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SwipeActionButtonsView: View {
-    @ObservedObject var viewModel: CardViewModel
+    @ObservedObject var viewModel: MatchingViewModel
     var body: some View {
         HStack(spacing: 32){
             Button{
@@ -45,5 +45,5 @@ struct SwipeActionButtonsView: View {
 }
 
 #Preview {
-    SwipeActionButtonsView(viewModel: CardViewModel(service: CardService()))
+    SwipeActionButtonsView(viewModel: MatchingViewModel(service: CardService()))
 }

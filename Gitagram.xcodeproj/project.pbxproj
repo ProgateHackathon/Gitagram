@@ -55,7 +55,8 @@
 		72D772202BE6250700BD7915 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7721F2BE6250700BD7915 /* CardView.swift */; };
 		72D772242BE6253100BD7915 /* SwipeActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772232BE6253100BD7915 /* SwipeActionButtonsView.swift */; };
 		72D772282BE6255900BD7915 /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772272BE6255900BD7915 /* SwipeActionIndicatorView.swift */; };
-		72D7722A2BE6257400BD7915 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772292BE6257400BD7915 /* CardViewModel.swift */; };
+		72D7722A2BE6257400BD7915 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D772292BE6257400BD7915 /* MatchingViewModel.swift */; };
+		72D7722E2BE628C500BD7915 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7722D2BE628C500BD7915 /* MatchingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +102,8 @@
 		72D7721F2BE6250700BD7915 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		72D772232BE6253100BD7915 /* SwipeActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionButtonsView.swift; sourceTree = "<group>"; };
 		72D772272BE6255900BD7915 /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
-		72D772292BE6257400BD7915 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		72D772292BE6257400BD7915 /* MatchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
+		72D7722D2BE628C500BD7915 /* MatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,12 +334,12 @@
 		72D772092BE6237300BD7915 /* MatchingView */ = {
 			isa = PBXGroup;
 			children = (
+				72D7722D2BE628C500BD7915 /* MatchingView.swift */,
 				72D772162BE6246100BD7915 /* Service */,
 				72D772112BE6242500BD7915 /* Utils */,
 				72D7720E2BE6240400BD7915 /* Model */,
 				72D7720D2BE623B800BD7915 /* Component */,
-				72D7721D2BE624E600BD7915 /* CardStackView.swift */,
-				72D772292BE6257400BD7915 /* CardViewModel.swift */,
+				72D772292BE6257400BD7915 /* MatchingViewModel.swift */,
 			);
 			path = MatchingView;
 			sourceTree = "<group>";
@@ -345,6 +347,7 @@
 		72D7720D2BE623B800BD7915 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				72D7721D2BE624E600BD7915 /* CardStackView.swift */,
 				72D7721F2BE6250700BD7915 /* CardView.swift */,
 				72D772232BE6253100BD7915 /* SwipeActionButtonsView.swift */,
 				72D772272BE6255900BD7915 /* SwipeActionIndicatorView.swift */,
@@ -465,12 +468,13 @@
 				105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */,
 				103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */,
 				105FC6372BE5F188004356D8 /* DeveloperRepository.swift in Sources */,
+				72D7722E2BE628C500BD7915 /* MatchingView.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
 				72D772152BE6245300BD7915 /* User.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
-				72D7722A2BE6257400BD7915 /* CardViewModel.swift in Sources */,
+				72D7722A2BE6257400BD7915 /* MatchingViewModel.swift in Sources */,
 				104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */,
 				105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */,
 				72D772202BE6250700BD7915 /* CardView.swift in Sources */,
