@@ -13,7 +13,7 @@ struct AccountFrameView: View {
     private static let cardSize: CGSize = .init(width: 367, height: 512)
     
     @State private var isSharing: Bool = false
-    
+    @State private var inputText:String
     @State var QRImage: UIImage
     
     var body: some View {
@@ -26,7 +26,7 @@ struct AccountFrameView: View {
                 }
                 .frame(width: Self.cardSize.width, height: Self.cardSize.height)
                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 20)
-                QRCodeView()
+                QRView(inputText: $inputText)
                 .padding()
                 VStack {
                     IDView() // IDViewを追加
@@ -47,6 +47,17 @@ struct AccountFrameView: View {
             })
         }
     }
+    
+    func captureViewAsImage() -> UIImage {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+        let hostingController = UIHostingController(rootView: OneAccountFrameView(inputText: "", QRImage: UIImage()))
+            window.rootViewController = hostingController
+            window.makeKeyAndVisible()
+            
+            let image = hostingController.view.asImage()
+            
+            return image
+        }
 }
 struct AccountView: View {
     
@@ -91,14 +102,8 @@ struct CardBackGroundView:View {
     }
 }
 
-struct QRCodeView: View {
-    var body: some View {
-        QRView()
-    }
-}
-
 
 
 #Preview {
-    OneAccountFrameView(QRImage: UIImage())
+    OneAccountFrameView(inputText: "", QRImage: UIImage())
 }
