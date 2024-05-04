@@ -57,6 +57,9 @@
 		105FC6582BE66AAB004356D8 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC64F2BE66AAB004356D8 /* MatchingView.swift */; };
 		105FC6592BE66AAB004356D8 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6502BE66AAB004356D8 /* MatchingViewModel.swift */; };
 		105FC65B2BE66AC8004356D8 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65A2BE66AC8004356D8 /* CardDataModel.swift */; };
+		7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7892BE673A100E9C4DC /* PostView.swift */; };
+		7253F78D2BE679F400E9C4DC /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */; };
+		7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +107,9 @@
 		105FC64F2BE66AAB004356D8 /* MatchingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		105FC6502BE66AAB004356D8 /* MatchingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
 		105FC65A2BE66AC8004356D8 /* CardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
+		7253F7892BE673A100E9C4DC /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
+		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,7 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7253F78A2BE673A100E9C4DC /* PostView */,
 				105FC6512BE66AAB004356D8 /* MatchingView */,
 				105FC6242BE5DE30004356D8 /* AccountView */,
 			);
@@ -390,6 +397,24 @@
 			path = MatchingView;
 			sourceTree = "<group>";
 		};
+		7253F78A2BE673A100E9C4DC /* PostView */ = {
+			isa = PBXGroup;
+			children = (
+				7253F7902BE680D300E9C4DC /* Component */,
+				7253F7892BE673A100E9C4DC /* PostView.swift */,
+				7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */,
+				7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */,
+			);
+			path = PostView;
+			sourceTree = "<group>";
+		};
+		7253F7902BE680D300E9C4DC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,7 +537,10 @@
 				105FC6562BE66AAB004356D8 /* User.swift in Sources */,
 				103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */,
 				105FC6532BE66AAB004356D8 /* CardView.swift in Sources */,
+				7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */,
+				7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */,
 				105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */,
+				7253F78D2BE679F400E9C4DC /* PostDiscriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
