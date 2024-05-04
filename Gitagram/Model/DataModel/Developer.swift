@@ -12,8 +12,8 @@ struct Developer : Identifiable, Codable {
     
     let id: DeveloperID
     let name: String
-    var gitHubURL: String {
-        "https://github.com/\(name)"
+    var gitHubURL: URL {
+        URL("https://github.com/\(name)")
     }
     var imageURL: String {
         gitHubURL + ".png"
