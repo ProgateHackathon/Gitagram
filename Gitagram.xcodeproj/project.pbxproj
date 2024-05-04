@@ -14,16 +14,12 @@
 		103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8DA2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift */; };
 		103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8DE2BE2227D005C18D7 /* QRCodeProtocol.swift */; };
 		103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E52BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift */; };
-		103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */; };
 		103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8E92BE23FA0005C18D7 /* UseCaseDI.swift */; };
 		103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8EB2BE2406D005C18D7 /* PostProductUseCase.swift */; };
 		103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F02BE2415F005C18D7 /* CreateDeveloperUseCase.swift */; };
-		103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F72BE2538C005C18D7 /* GetDeveloperImageUseCase.swift */; };
 		103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8F92BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift */; };
-		103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */; };
 		103BD8FE2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8FD2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift */; };
 		103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD8FF2BE255B7005C18D7 /* GetProductImageUseCase.swift */; };
-		103BD9022BE255EF005C18D7 /* DummyProductImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103BD9012BE255EF005C18D7 /* DummyProductImageRepository.swift */; };
 		103BF3692BE39C3E00818544 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3682BE39C3E00818544 /* FirebaseDatabase */; };
 		103BF36B2BE39C3E00818544 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36A2BE39C3E00818544 /* FirebaseDatabaseSwift */; };
 		103BF36D2BE39C3E00818544 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36C2BE39C3E00818544 /* FirebaseFirestore */; };
@@ -70,16 +66,12 @@
 		103BD8DA2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepositoryProtocol.swift; sourceTree = "<group>"; };
 		103BD8DE2BE2227D005C18D7 /* QRCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeProtocol.swift; sourceTree = "<group>"; };
 		103BD8E52BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperRepositoryProtocol.swift; sourceTree = "<group>"; };
-		103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProductRepository.swift; sourceTree = "<group>"; };
 		103BD8E92BE23FA0005C18D7 /* UseCaseDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseDI.swift; sourceTree = "<group>"; };
 		103BD8EB2BE2406D005C18D7 /* PostProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProductUseCase.swift; sourceTree = "<group>"; };
 		103BD8F02BE2415F005C18D7 /* CreateDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeveloperUseCase.swift; sourceTree = "<group>"; };
-		103BD8F72BE2538C005C18D7 /* GetDeveloperImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeveloperImageUseCase.swift; sourceTree = "<group>"; };
 		103BD8F92BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperImageRepositoryProtocol.swift; sourceTree = "<group>"; };
-		103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDeveloperImageRepository.swift; sourceTree = "<group>"; };
 		103BD8FD2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageRepositoryProtocol.swift; sourceTree = "<group>"; };
 		103BD8FF2BE255B7005C18D7 /* GetProductImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductImageUseCase.swift; sourceTree = "<group>"; };
-		103BD9012BE255EF005C18D7 /* DummyProductImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProductImageRepository.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
@@ -167,21 +159,10 @@
 			children = (
 				103BD8D42BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift */,
 				103BD8F02BE2415F005C18D7 /* CreateDeveloperUseCase.swift */,
-				103BD8F72BE2538C005C18D7 /* GetDeveloperImageUseCase.swift */,
 				104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */,
 				105FC6382BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift */,
 			);
 			path = Developer;
-			sourceTree = "<group>";
-		};
-		103BD8F42BE242D7005C18D7 /* Dummy */ = {
-			isa = PBXGroup;
-			children = (
-				103BD8E72BE22B91005C18D7 /* DummyProductRepository.swift */,
-				103BD8FB2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift */,
-				103BD9012BE255EF005C18D7 /* DummyProductImageRepository.swift */,
-			);
-			path = Dummy;
 			sourceTree = "<group>";
 		};
 		10472EDA2BDFAFBB00C179F8 = {
@@ -257,7 +238,6 @@
 				105FC6352BE5F179004356D8 /* Developer */,
 				105FC62D2BE5E503004356D8 /* Protocol */,
 				105FC62B2BE5DE7F004356D8 /* QRCode */,
-				103BD8F42BE242D7005C18D7 /* Dummy */,
 				105FC6332BE5F116004356D8 /* RepositoryDI.swift */,
 			);
 			path = Repository;
@@ -492,7 +472,6 @@
 				105FC6422BE6101D004356D8 /* ProductClientProtocol.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				105FC6572BE66AAB004356D8 /* SizeConstants.swift in Sources */,
-				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
 				104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */,
 				105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */,
@@ -503,7 +482,6 @@
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
 				103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */,
-				103BD9022BE255EF005C18D7 /* DummyProductImageRepository.swift in Sources */,
 				105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */,
 				105FC6542BE66AAB004356D8 /* SwipeActionButtonsView.swift in Sources */,
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
@@ -513,11 +491,9 @@
 				105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */,
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
 				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
-				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
 				105FC6612BE688D6004356D8 /* ProductImageRepository.swift in Sources */,
 				105FC6522BE66AAB004356D8 /* CardStackView.swift in Sources */,
 				105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */,
-				103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */,
 				105FC6592BE66AAB004356D8 /* MatchingViewModel.swift in Sources */,
 				105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */,
 				103BD8D52BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift in Sources */,
