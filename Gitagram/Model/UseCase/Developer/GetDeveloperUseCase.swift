@@ -9,9 +9,8 @@ import Foundation
 
 class GetDeveloperUseCase {
     private let developerRepository = UseCaseDI.developerRepository
-    private let dummyDeveloper  = DummyDeveloperRepository.currentDeveloper
     
-    func execute() async -> Developer? {
-        developerRepository.get(id: dummyDeveloper.id)
+    func execute(id: Developer.ID) async -> Developer? {
+        await developerRepository.get(id: id)
     }
 }
