@@ -225,6 +225,7 @@
 		10472EF72BDFB00600C179F8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				105FC6432BE62584004356D8 /* Product */,
 				105FC6352BE5F179004356D8 /* Developer */,
 				105FC62D2BE5E503004356D8 /* Protocol */,
 				105FC62B2BE5DE7F004356D8 /* QRCode */,
@@ -316,6 +317,13 @@
 			isa = PBXGroup;
 			children = (
 				105FC63F2BE61009004356D8 /* ProductClient.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		105FC6432BE62584004356D8 /* Product */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Product;
 			sourceTree = "<group>";

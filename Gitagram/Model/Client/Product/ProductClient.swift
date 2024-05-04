@@ -56,7 +56,6 @@ class ProductClient : ProductClientProtocol {
         } catch {
             print("Error writing document: \(error)")
         }
-
     }
     
     func delete(product_id: Product.ID) {
