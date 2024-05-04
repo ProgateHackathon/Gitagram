@@ -62,6 +62,7 @@
 		7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */; };
 		7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */; };
 		105FC65D2BE67D6A004356D8 /* ProductImageClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */; };
+		105FC65F2BE68048004356D8 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65E2BE68048004356D8 /* ProductImageClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClientProtocol.swift; sourceTree = "<group>"; };
+		105FC65E2BE68048004356D8 /* ProductImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				105FC63F2BE61009004356D8 /* ProductClient.swift */,
+				105FC65E2BE68048004356D8 /* ProductImageClient.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */,
 				105FC6452BE62BC1004356D8 /* ProductRepository.swift in Sources */,
 				103BD8FE2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift in Sources */,
+				105FC65F2BE68048004356D8 /* ProductImageClient.swift in Sources */,
 				105FC6552BE66AAB004356D8 /* SwipeActionIndicatorView.swift in Sources */,
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
