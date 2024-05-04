@@ -63,6 +63,7 @@
 		7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */; };
 		105FC65D2BE67D6A004356D8 /* ProductImageClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */; };
 		105FC65F2BE68048004356D8 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65E2BE68048004356D8 /* ProductImageClient.swift */; };
+		105FC6612BE688D6004356D8 /* ProductImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6602BE688D6004356D8 /* ProductImageRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClientProtocol.swift; sourceTree = "<group>"; };
 		105FC65E2BE68048004356D8 /* ProductImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
+		105FC6602BE688D6004356D8 /* ProductImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				105FC6442BE62BC1004356D8 /* ProductRepository.swift */,
+				105FC6602BE688D6004356D8 /* ProductImageRepository.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
 				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
 				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
+				105FC6612BE688D6004356D8 /* ProductImageRepository.swift in Sources */,
 				105FC6522BE66AAB004356D8 /* CardStackView.swift in Sources */,
 				105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */,
 				103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */,
