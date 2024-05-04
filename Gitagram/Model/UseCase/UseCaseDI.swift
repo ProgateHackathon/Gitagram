@@ -9,8 +9,7 @@ import Foundation
 
 class UseCaseDI {
     static let developerRepository = DeveloperRepository()
-    static let developerImageRepository = DummyDeveloperImageRepository()
     static let productRepository: ProductRepositoryProtocol = ProductRepository()
-    static let productImageRepository = DummyProductImageRepository()
+    static let productImageRepository = ProductImageRepository()
     static let qrRepository: QRCodeProtocol = QRCodeRepository()
 }
