@@ -34,11 +34,13 @@
 		103BF3752BE39C3E00818544 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3742BE39C3E00818544 /* FirebaseStorageCombine-Community */; };
 		103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 103BF37A2BE3B17000818544 /* GoogleService-Info.plist */; };
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
-		10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE82BDFAFBB00C179F8 /* ContentView.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */; };
-		10DB6BB92BE4CF010023131F /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DB6BB82BE4CF010023131F /* QRCodeRepository.swift */; };
+		105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6202BE5DE30004356D8 /* AccountView.swift */; };
+		105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6222BE5DE30004356D8 /* AccountViewModel.swift */; };
+		105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */; };
+		105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,11 +65,13 @@
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
-		10472EE82BDFAFBB00C179F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeveloperUseCase.swift; sourceTree = "<group>"; };
-		10DB6BB82BE4CF010023131F /* QRCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
+		105FC6202BE5DE30004356D8 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		105FC6222BE5DE30004356D8 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
+		105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +185,7 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				10472EE82BDFAFBB00C179F8 /* ContentView.swift */,
+				105FC6242BE5DE30004356D8 /* AccountView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,7 +211,7 @@
 		10472EF72BDFB00600C179F8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				10DB6BB72BE4CEEC0023131F /* QRCode */,
+				105FC62B2BE5DE7F004356D8 /* QRCode */,
 				103BD8F42BE242D7005C18D7 /* Dummy */,
 			);
 			path = Repository;
@@ -216,6 +220,7 @@
 		10472EF82BDFB01600C179F8 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				105FC6282BE5DE4F004356D8 /* Util */,
 				103BD8EE2BE24127005C18D7 /* Developer */,
 				103BD8ED2BE240BD005C18D7 /* Product */,
 				103BD8D22BE21CBA005C18D7 /* Protocol */,
@@ -224,10 +229,43 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		10DB6BB72BE4CEEC0023131F /* QRCode */ = {
+		105FC6212BE5DE30004356D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				10DB6BB82BE4CF010023131F /* QRCodeRepository.swift */,
+				105FC6202BE5DE30004356D8 /* AccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		105FC6232BE5DE30004356D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				105FC6222BE5DE30004356D8 /* AccountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		105FC6242BE5DE30004356D8 /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				105FC6212BE5DE30004356D8 /* View */,
+				105FC6232BE5DE30004356D8 /* ViewModel */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		105FC6282BE5DE4F004356D8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		105FC62B2BE5DE7F004356D8 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -315,17 +353,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */,
 				103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */,
 				103BD8F12BE2415F005C18D7 /* CreateDeveloperUseCase.swift in Sources */,
 				103BD8CF2BE131B6005C18D7 /* Developer.swift in Sources */,
 				103BD8E82BE22B91005C18D7 /* DummyProductRepository.swift in Sources */,
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
-				10DB6BB92BE4CF010023131F /* QRCodeRepository.swift in Sources */,
 				104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */,
+				105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */,
 				103BD8FE2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift in Sources */,
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
-				10472EE92BDFAFBB00C179F8 /* ContentView.swift in Sources */,
 				103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */,
 				103BD9022BE255EF005C18D7 /* DummyProductImageRepository.swift in Sources */,
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
@@ -333,8 +371,10 @@
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
 				103BD8F32BE241CF005C18D7 /* DummyDeveloperRepository.swift in Sources */,
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
+				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
 				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
 				103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */,
+				105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */,
 				103BD8D52BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift in Sources */,
 				103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */,
 			);
@@ -470,9 +510,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ55RU4U3A;
+				DEVELOPMENT_TEAM = 98BL22S53Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -499,9 +541,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ55RU4U3A;
+				DEVELOPMENT_TEAM = 98BL22S53Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
