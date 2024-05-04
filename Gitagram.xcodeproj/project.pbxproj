@@ -43,6 +43,7 @@
 		105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */; };
 		105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */; };
 		105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */; };
+		105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6332BE5F116004356D8 /* RepositoryDI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClientProtocol.swift; sourceTree = "<group>"; };
 		105FC6312BE5E6A4004356D8 /* DeveloperClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
+		105FC6332BE5F116004356D8 /* RepositoryDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				105FC62D2BE5E503004356D8 /* Protocol */,
 				105FC62B2BE5DE7F004356D8 /* QRCode */,
 				103BD8F42BE242D7005C18D7 /* Dummy */,
+				105FC6332BE5F116004356D8 /* RepositoryDI.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */,
 				103BD8D52BE21D35005C18D7 /* GetDeveloperQRCodeUseCase.swift in Sources */,
 				103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */,
+				105FC6342BE5F116004356D8 /* RepositoryDI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
