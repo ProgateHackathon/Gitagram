@@ -12,14 +12,14 @@ struct OneAccountFrameView: View {
     private static let cardSize: CGSize = .init(width: 367, height: 512)
     
     @State private var isSharing: Bool = false
-    @State private var inputText:String
+    @State private var inputText:String // ここでは初期化しない
     @State var QRImage: UIImage
     
+    // inputTextの初期化はinit内で行う
     init(inputText: String, QRImage: UIImage) {
-        self._inputText = State(initialValue: inputText)
+        self._inputText = State(initialValue: inputText) // 初期値を設定
         self.QRImage = QRImage
     }
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -31,7 +31,7 @@ struct OneAccountFrameView: View {
                 .frame(width: Self.cardSize.width, height: Self.cardSize.height)
                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 20)
                 QRView(inputText: $inputText)
-                .padding()
+                    .padding()
                 VStack {
                     Spacer() // 上部のスペーサーを追加
                     IDView() // IDViewを追加
