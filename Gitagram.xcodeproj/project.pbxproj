@@ -57,6 +57,7 @@
 		105FC6582BE66AAB004356D8 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC64F2BE66AAB004356D8 /* MatchingView.swift */; };
 		105FC6592BE66AAB004356D8 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6502BE66AAB004356D8 /* MatchingViewModel.swift */; };
 		105FC65B2BE66AC8004356D8 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65A2BE66AC8004356D8 /* CardDataModel.swift */; };
+		105FC65D2BE67D6A004356D8 /* ProductImageClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		105FC64F2BE66AAB004356D8 /* MatchingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		105FC6502BE66AAB004356D8 /* MatchingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
 		105FC65A2BE66AC8004356D8 /* CardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
+		105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClientProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 			children = (
 				105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */,
 				105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */,
+				105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105FC65D2BE67D6A004356D8 /* ProductImageClientProtocol.swift in Sources */,
 				105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */,
 				105FC6582BE66AAB004356D8 /* MatchingView.swift in Sources */,
 				103BD8FA2BE25415005C18D7 /* DeveloperImageRepositoryProtocol.swift in Sources */,
