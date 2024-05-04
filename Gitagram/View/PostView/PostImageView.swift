@@ -18,7 +18,6 @@ struct PostImageView: View {
     @Binding var title: String
     @Binding var discription: String
 
-
     var body: some View {
         VStack{
             ProgressView("", value: 1)
@@ -37,7 +36,7 @@ struct PostImageView: View {
                 .padding(.bottom,30)
             Spacer()
             PhotosPicker(selection: $selectedPhoto,matching: .images){
-                
+
                 HStack{
                     Image(systemName: "photo.badge.plus")
                     Text("画像のアップロード")
@@ -59,6 +58,7 @@ struct PostImageView: View {
                 }
             
             .padding(.bottom,20)
+
             Button(action: {
                 next.toggle()
                 

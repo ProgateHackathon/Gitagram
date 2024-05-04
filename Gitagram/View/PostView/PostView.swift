@@ -10,13 +10,14 @@ import SwiftUI
 struct PostView: View {
     @State var title = ""
     @State var next = false
-   
+    @State var developer : Developer
     var body: some View {
         NavigationView {
             
             VStack{
                 ProgressView("", value: 0.3)
                     .padding(.top,37)
+
                     .padding()
                     .tint(Color.pink)
                 
@@ -36,6 +37,7 @@ struct PostView: View {
                 Divider()
                 Spacer()
                 NavigationLink("", destination: PostDiscriptionView( title: $title),isActive: $next)
+
                 Button(action: {
                     next.toggle()
                 }, label: {
@@ -51,10 +53,22 @@ struct PostView: View {
                 })
             }
         }
+
+        .onAppear(){
+            Task{
+                do{
+                    await GetLoginDeveloperUseCase().execute()
+                }
+               
+            }
+         
+        }
        
     }
 }
 
 #Preview {
-    PostView()
+
+    PostView(developer: Developer(from: "saki" as! Decoder))
+
 }

@@ -60,6 +60,9 @@
 		105FC65D2BE67D6A004356D8 /* ProductImageClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */; };
 		105FC65F2BE68048004356D8 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC65E2BE68048004356D8 /* ProductImageClient.swift */; };
 		105FC6612BE688D6004356D8 /* ProductImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6602BE688D6004356D8 /* ProductImageRepository.swift */; };
+		7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F7892BE673A100E9C4DC /* PostView.swift */; };
+		7253F78D2BE679F400E9C4DC /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */; };
+		7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +113,9 @@
 		105FC65C2BE67D6A004356D8 /* ProductImageClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClientProtocol.swift; sourceTree = "<group>"; };
 		105FC65E2BE68048004356D8 /* ProductImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
 		105FC6602BE688D6004356D8 /* ProductImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageRepository.swift; sourceTree = "<group>"; };
+		7253F7892BE673A100E9C4DC /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		7253F78C2BE679F400E9C4DC /* PostDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
+		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
