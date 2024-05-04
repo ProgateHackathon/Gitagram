@@ -41,6 +41,7 @@
 		105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6222BE5DE30004356D8 /* AccountViewModel.swift */; };
 		105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */; };
 		105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */; };
+		105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		105FC6222BE5DE30004356D8 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
 		105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
+		105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClientProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 		10472EF72BDFB00600C179F8 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				105FC62D2BE5E503004356D8 /* Protocol */,
 				105FC62B2BE5DE7F004356D8 /* QRCode */,
 				103BD8F42BE242D7005C18D7 /* Dummy */,
 			);
@@ -268,6 +271,14 @@
 				105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		105FC62D2BE5E503004356D8 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +377,7 @@
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
 				103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */,
 				103BD9022BE255EF005C18D7 /* DummyProductImageRepository.swift in Sources */,
+				105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */,
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
