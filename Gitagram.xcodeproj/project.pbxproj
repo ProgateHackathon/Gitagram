@@ -66,6 +66,7 @@
 		722E848C2BE73A2A007163D4 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* SheetViewModel.swift */; };
 		722E848D2BE73A2A007163D4 /* TextCute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* TextCute.swift */; };
 		722E84902BE73A42007163D4 /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* AllView.swift */; };
+		722E84922BE73B8C007163D4 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84912BE73B8C007163D4 /* PostURLView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		722E84852BE73A29007163D4 /* SheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
 		722E84862BE73A29007163D4 /* TextCute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCute.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* AllView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
+		722E84912BE73B8C007163D4 /* PostURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				722E848F2BE73A42007163D4 /* TabView */,
 				722E841C2BE73614007163D4 /* frankfrt.ttf */,
 				722E841A2BE7360C007163D4 /* InputformView */,
+				722E84882BE73A29007163D4 /* AccountView */,
 				722E84132BE73601007163D4 /* PostView */,
 				722E84042BE735EA007163D4 /* MatchingView */,
 			);
@@ -223,7 +226,6 @@
 		722E84042BE735EA007163D4 /* MatchingView */ = {
 			isa = PBXGroup;
 			children = (
-				722E84882BE73A29007163D4 /* AccountView */,
 				722E83FD2BE735EA007163D4 /* Component */,
 				722E83FF2BE735EA007163D4 /* Model */,
 				722E84012BE735EA007163D4 /* Utils */,
@@ -245,9 +247,10 @@
 			isa = PBXGroup;
 			children = (
 				722E840F2BE73601007163D4 /* Component */,
-				722E84102BE73601007163D4 /* PostDiscriptionView.swift */,
-				722E84112BE73601007163D4 /* PostImageView.swift */,
 				722E84122BE73601007163D4 /* PostView.swift */,
+				722E84102BE73601007163D4 /* PostDiscriptionView.swift */,
+				722E84912BE73B8C007163D4 /* PostURLView.swift */,
+				722E84112BE73601007163D4 /* PostImageView.swift */,
 			);
 			path = PostView;
 			sourceTree = "<group>";
@@ -448,7 +451,8 @@
 				722E84832BE73A29007163D4 /* View */,
 				722E84872BE73A29007163D4 /* ViewModel */,
 			);
-			path = AccountView;
+			name = AccountView;
+			path = MatchingView/AccountView;
 			sourceTree = "<group>";
 		};
 		722E848F2BE73A42007163D4 /* TabView */ = {
@@ -550,6 +554,7 @@
 				722E84732BE7365F007163D4 /* GetDeveloperQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
+				722E84922BE73B8C007163D4 /* PostURLView.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,

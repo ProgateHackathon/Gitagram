@@ -15,21 +15,24 @@ struct Product : Identifiable, Codable {
     let title: String
     let content: String
     let developerId: DeveloperID
+    let url: String
     
     //既にIDが生成されている場合のイニシャライザ
-    init(id: ProductID, title: String, content: String, developerId: DeveloperID) {
+    init(id: ProductID, title: String, content: String, developerId: DeveloperID, url: String) {
         self.id = id
         self.title = title
         self.content = content
         self.developerId = developerId
+        self.url = url
     }
     
     //新規Productのイニシャライザ
-    init(title: String, content: String, developerId: DeveloperID) {
+    init(title: String, content: String, developerId: DeveloperID, url: String) {
         self.id = ProductID(id: UUID())
         self.title = title
         self.content = content
         self.developerId = developerId
+        self.url = url
     }
     
     struct ID : Identifiable, Hashable, Codable {
