@@ -13,11 +13,20 @@ struct UserInfoView: View {
         VStack(alignment: .leading){ 
           
             HStack{
-                //アイコン
-//                Image("back")
-//                    .frame(width: 60,height: 60)
-//                    .clipShape(Circle())
-//                    
+            
+                AsyncImage(url: cardData.developer.imageURL) { image in
+                    image
+                        .resizable()
+                        .frame(width: 60,height: 60)
+                        .clipShape(Circle())
+
+                     
+                } placeholder: {
+                    ProgressView()
+                }
+              
+                
+                    
                 Text(cardData.developer.name)
                     .font(. title)
                     .fontWeight(.semibold)

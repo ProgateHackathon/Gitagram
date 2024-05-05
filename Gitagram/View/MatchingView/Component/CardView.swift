@@ -22,14 +22,11 @@ struct CardView: View {
         ZStack(alignment: .bottom){
             
             ZStack(alignment: .top) {
-                AsyncImage(url: cardData.developer.imageURL) { image in
-                    image
+                Image(uiImage: cardData.productImage)
                         .resizable()
                         .scaledToFill()
                         .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
-                } placeholder: {
-                    ProgressView()
-                }
+               
               
                 
                 

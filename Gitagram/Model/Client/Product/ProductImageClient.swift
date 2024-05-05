@@ -19,25 +19,39 @@ class ProductImageClient : ProductImageClientProtocol {
             print("画像の変換に失敗しました")
             return
         }
-        
         ref.putData(jpegData as Data)
     }
     
     func downloadImage(product_id: String) async -> UIImage? {
+        let storage = Storage.storage()
         let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
-        var resultImage: UIImage? = nil
         
-        ref.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            guard let imageData = data else { return }
-            guard let uiImage = UIImage(data: imageData) else { return }
-            resultImage = uiImage
+        do {
+            let data = try await withUnsafeThrowingContinuation { (continuation: UnsafeContinuation<Data, Error>) in
+                ref.getData(maxSize: 100 * 1024 * 1024) { data, error in
+                    if let error = error {
+                        continuation.resume(throwing: error)
+                    } else if let data = data {
+                        continuation.resume(returning: data)
+                    }
+                }
+            }
+            
+            
+            
+            let image = UIImage(data: data)
+            return image
+          
+        } catch {
+            print("Error occurred! : \(error)")
+            return nil
         }
-        print("DDD", resultImage as Any,product_id)
         
-        return resultImage
     }
+
+
     
     private func convertToJpegData(uiImage: UIImage) -> NSData? {
-        return uiImage.jpegData(compressionQuality: 1.0) as? NSData
+        return uiImage.jpegData(compressionQuality: 0.3) as? NSData
     }
 }
