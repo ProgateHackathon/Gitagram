@@ -32,8 +32,6 @@
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */; };
-		105FC6252BE5DE30004356D8 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6202BE5DE30004356D8 /* AccountView.swift */; };
-		105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6222BE5DE30004356D8 /* AccountViewModel.swift */; };
 		105FC6292BE5DE4F004356D8 /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */; };
 		105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */; };
 		105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */; };
@@ -44,6 +42,13 @@
 		105FC6402BE61009004356D8 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC63F2BE61009004356D8 /* ProductClient.swift */; };
 		105FC6422BE6101D004356D8 /* ProductClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */; };
 		105FC6452BE62BC1004356D8 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6442BE62BC1004356D8 /* ProductRepository.swift */; };
+		233AD2D02BE66B9500B1EC92 /* OneAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD2C52BE66B9500B1EC92 /* OneAccountView.swift */; };
+		233AD2D12BE66B9500B1EC92 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD2C72BE66B9500B1EC92 /* AccountView.swift */; };
+		233AD2D32BE66B9500B1EC92 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD2CA2BE66B9500B1EC92 /* AccountViewModel.swift */; };
+		233AD2D42BE66B9500B1EC92 /* TextCute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD2CB2BE66B9500B1EC92 /* TextCute.swift */; };
+		233AD2D52BE66B9500B1EC92 /* frankfrt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233AD2CE2BE66B9500B1EC92 /* frankfrt.ttf */; };
+		233AD2D72BE66CDD00B1EC92 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD2D62BE66CDD00B1EC92 /* SheetViewModel.swift */; };
+		233AD2DD2BE6718500B1EC92 /* InputFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233AD2DC2BE6718500B1EC92 /* InputFormView.swift */; };
 		105FC6522BE66AAB004356D8 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6462BE66AAB004356D8 /* CardStackView.swift */; };
 		105FC6532BE66AAB004356D8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6472BE66AAB004356D8 /* CardView.swift */; };
 		105FC6542BE66AAB004356D8 /* SwipeActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105FC6482BE66AAB004356D8 /* SwipeActionButtonsView.swift */; };
@@ -85,8 +90,6 @@
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		104D41262BE3DC37005793A6 /* GetDeveloperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeveloperUseCase.swift; sourceTree = "<group>"; };
-		105FC6202BE5DE30004356D8 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		105FC6222BE5DE30004356D8 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		105FC6272BE5DE4F004356D8 /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
 		105FC62A2BE5DE7F004356D8 /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		105FC62E2BE5E51C004356D8 /* DeveloperClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperClientProtocol.swift; sourceTree = "<group>"; };
@@ -97,6 +100,14 @@
 		105FC63F2BE61009004356D8 /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		105FC6412BE6101D004356D8 /* ProductClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClientProtocol.swift; sourceTree = "<group>"; };
 		105FC6442BE62BC1004356D8 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		233AD2C52BE66B9500B1EC92 /* OneAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneAccountView.swift; sourceTree = "<group>"; };
+		233AD2C72BE66B9500B1EC92 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		233AD2CA2BE66B9500B1EC92 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		233AD2CB2BE66B9500B1EC92 /* TextCute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCute.swift; sourceTree = "<group>"; };
+		233AD2CE2BE66B9500B1EC92 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
+		233AD2D62BE66CDD00B1EC92 /* SheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
+		233AD2D82BE66DE900B1EC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		233AD2DC2BE6718500B1EC92 /* InputFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
 		105FC6462BE66AAB004356D8 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
 		105FC6472BE66AAB004356D8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		105FC6482BE66AAB004356D8 /* SwipeActionButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionButtonsView.swift; sourceTree = "<group>"; };
@@ -198,10 +209,11 @@
 		10472EE52BDFAFBB00C179F8 /* Gitagram */ = {
 			isa = PBXGroup;
 			children = (
+				233AD2D82BE66DE900B1EC92 /* Info.plist */,
 				103BF37A2BE3B17000818544 /* GoogleService-Info.plist */,
 				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
 				10472EF52BDFAFE500C179F8 /* Model */,
-				10472EF42BDFAFD700C179F8 /* View */,
+				233AD2CF2BE66B9500B1EC92 /* View */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
 				10472EEC2BDFAFBD00C179F8 /* Preview Content */,
 			);
@@ -270,31 +282,6 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		105FC6212BE5DE30004356D8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				105FC6202BE5DE30004356D8 /* AccountView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		105FC6232BE5DE30004356D8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				105FC6222BE5DE30004356D8 /* AccountViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		105FC6242BE5DE30004356D8 /* AccountView */ = {
-			isa = PBXGroup;
-			children = (
-				105FC6212BE5DE30004356D8 /* View */,
-				105FC6232BE5DE30004356D8 /* ViewModel */,
-			);
-			path = AccountView;
-			sourceTree = "<group>";
-		};
 		105FC6282BE5DE4F004356D8 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +342,74 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
+		233AD2C62BE66B9500B1EC92 /* Variation */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2C52BE66B9500B1EC92 /* OneAccountView.swift */,
+			);
+			path = Variation;
+			sourceTree = "<group>";
+		};
+		233AD2C92BE66B9500B1EC92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2C62BE66B9500B1EC92 /* Variation */,
+				233AD2C72BE66B9500B1EC92 /* AccountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		233AD2CC2BE66B9500B1EC92 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2CA2BE66B9500B1EC92 /* AccountViewModel.swift */,
+				233AD2CB2BE66B9500B1EC92 /* TextCute.swift */,
+				233AD2D62BE66CDD00B1EC92 /* SheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		233AD2CD2BE66B9500B1EC92 /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2C92BE66B9500B1EC92 /* View */,
+				233AD2CC2BE66B9500B1EC92 /* ViewModel */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		233AD2CF2BE66B9500B1EC92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2D92BE6714300B1EC92 /* InputformView */,
+				233AD2CE2BE66B9500B1EC92 /* frankfrt.ttf */,
+				233AD2CD2BE66B9500B1EC92 /* AccountView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		233AD2D92BE6714300B1EC92 /* InputformView */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2DA2BE6715500B1EC92 /* View */,
+				233AD2DB2BE6715B00B1EC92 /* ViewModel */,
+			);
+			path = InputformView;
+			sourceTree = "<group>";
+		};
+		233AD2DA2BE6715500B1EC92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				233AD2DC2BE6718500B1EC92 /* InputFormView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		233AD2DB2BE6715B00B1EC92 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 		105FC64A2BE66AAB004356D8 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +540,7 @@
 			files = (
 				10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */,
 				10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */,
+				233AD2D52BE66B9500B1EC92 /* frankfrt.ttf in Resources */,
 				103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +565,7 @@
 				103BD8D12BE1CDE2005C18D7 /* Product.swift in Sources */,
 				104D41272BE3DC38005793A6 /* GetDeveloperUseCase.swift in Sources */,
 				105FC62C2BE5DE7F004356D8 /* QRCodeRepository.swift in Sources */,
+				233AD2D42BE66B9500B1EC92 /* TextCute.swift in Sources */,
 				105FC6452BE62BC1004356D8 /* ProductRepository.swift in Sources */,
 				103BD8FE2BE2558D005C18D7 /* ProductImageRepositoryProtocol.swift in Sources */,
 				105FC65F2BE68048004356D8 /* ProductImageClient.swift in Sources */,
@@ -516,14 +573,22 @@
 				103BD8D72BE21DDD005C18D7 /* GetProductListUseCase.swift in Sources */,
 				103BD8DB2BE21EB0005C18D7 /* ProductRepositoryProtocol.swift in Sources */,
 				103BD8DF2BE2227D005C18D7 /* QRCodeProtocol.swift in Sources */,
+				103BD9022BE255EF005C18D7 /* DummyProductImageRepository.swift in Sources */,
+				233AD2DD2BE6718500B1EC92 /* InputFormView.swift in Sources */,
 				105FC62F2BE5E51C004356D8 /* DeveloperClientProtocol.swift in Sources */,
 				105FC6542BE66AAB004356D8 /* SwipeActionButtonsView.swift in Sources */,
 				103BD9002BE255B7005C18D7 /* GetProductImageUseCase.swift in Sources */,
 				105FC6402BE61009004356D8 /* ProductClient.swift in Sources */,
+				233AD2D02BE66B9500B1EC92 /* OneAccountView.swift in Sources */,
+				233AD2D12BE66B9500B1EC92 /* AccountView.swift in Sources */,
+				233AD2D32BE66B9500B1EC92 /* AccountViewModel.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				103BD8EA2BE23FA0005C18D7 /* UseCaseDI.swift in Sources */,
 				105FC6392BE5F6F7004356D8 /* GetLoginDeveloperUseCase.swift in Sources */,
 				103BD8E62BE2269D005C18D7 /* DeveloperRepositoryProtocol.swift in Sources */,
+				103BD8F82BE2538C005C18D7 /* GetDeveloperImageUseCase.swift in Sources */,
+				105FC6322BE5E6A4004356D8 /* DeveloperClient.swift in Sources */,
+				103BD8FC2BE254A1005C18D7 /* DummyDeveloperImageRepository.swift in Sources */,
 				105FC6262BE5DE30004356D8 /* AccountViewModel.swift in Sources */,
 				105FC6612BE688D6004356D8 /* ProductImageRepository.swift in Sources */,
 				105FC6522BE66AAB004356D8 /* CardStackView.swift in Sources */,
@@ -534,6 +599,7 @@
 				7253F7942BE68B8D00E9C4DC /* ImagePickerView.swift in Sources */,
 				105FC6562BE66AAB004356D8 /* User.swift in Sources */,
 				103BD8EC2BE2406D005C18D7 /* PostProductUseCase.swift in Sources */,
+				233AD2D72BE66CDD00B1EC92 /* SheetViewModel.swift in Sources */,
 				105FC6532BE66AAB004356D8 /* CardView.swift in Sources */,
 				7253F78F2BE67B8C00E9C4DC /* PostImageView.swift in Sources */,
 				7253F78B2BE673A100E9C4DC /* PostView.swift in Sources */,
@@ -675,6 +741,7 @@
 				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gitagram/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "リポジトリの写真を撮影します";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";
@@ -707,6 +774,7 @@
 				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gitagram/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "リポジトリの写真を撮影します";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";

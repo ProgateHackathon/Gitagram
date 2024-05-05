@@ -23,7 +23,8 @@ struct GitagramApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MatchingView()
+            @State var inputText = ""
+            InputFormView()
         }
     }
 }
