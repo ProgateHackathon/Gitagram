@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct InputFormView: View {
+    @State private var inputText = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack {
+                TextField("ここに文字を入力", text: $inputText)
+                Text("GithubID:\(inputText)")
+                QRView(inputText: $inputText) // QRView を利用し、inputText をバインディングとして渡す
+                NavigationLink(destination: OneAccountFrameView(inputText: "", QRImage: UIImage())) { // ⬅︎
+                    Text("オレンジ") // リンクのデザインを指定
+                } // NavigationLink
+            }
+        }
     }
 }
 
-#Preview {
-    InputFormView()
-}

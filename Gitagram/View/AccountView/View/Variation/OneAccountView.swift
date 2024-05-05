@@ -12,8 +12,13 @@ struct OneAccountFrameView: View {
     private static let cardSize: CGSize = .init(width: 367, height: 512)
     
     @State private var isSharing: Bool = false
-    
+    @State private var inputText:String
     @State var QRImage: UIImage
+    
+    init(inputText: String, QRImage: UIImage) {
+        self._inputText = State(initialValue: inputText)
+        self.QRImage = QRImage
+    }
     
     var body: some View {
         NavigationView {
@@ -25,7 +30,7 @@ struct OneAccountFrameView: View {
                 }
                 .frame(width: Self.cardSize.width, height: Self.cardSize.height)
                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 20)
-                QRCodeView()
+                QRView(inputText: $inputText)
                 .padding()
                 VStack {
                     Spacer() // 上部のスペーサーを追加
@@ -43,12 +48,11 @@ struct OneAccountFrameView: View {
                     }
                 }
             }
-            .sheet(isPresented: $isSharing, content: {
-                ShareSheet(activityItems: [captureViewAsImage()])
-            })
         }
     }
 }
+
+
 
 struct GradationView: View {
     let gradient = Gradient(stops: [.init(color: Color(red: 0.3, green: 0.0, blue: 0.8), location: 0.0), .init(color: Color(red: 0.8, green: 0.0, blue: 0.3), location: 1.2)])
@@ -69,32 +73,33 @@ struct IDDesignView:View {
             .padding(.top, -160)
     }
 }
-struct QRView:View {
+struct QRView: View {
+    @Binding var inputText: String // 外部から inputText の値を受け取る
     let qrGenerator = GetDeveloperQRCodeUseCase()
-    let developer = Developer(githubId: "urassh")
     let cornerRadius: CGFloat = 10 // 丸みの半径を設定
 
     var qrCode: UIImage {
-        qrGenerator.execute(developer: developer)
+        let developer = Developer(githubId: inputText) // inputText を使用して Developer インスタンスを作成
+        return qrGenerator.execute(developer: developer)
     }
 
     var body: some View {
         ZStack{
             Rectangle()
-                .fill(.white)
-                .frame(width: 250,height: 250)
+                .fill(Color.white)
+                .frame(width: 250, height: 250)
                 .cornerRadius(20)
             Image(uiImage: qrCode)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
-                .cornerRadius(cornerRadius) // 丸みを設定
-                .padding() // パディングを追加
+                .cornerRadius(cornerRadius)
+                .padding()
         }
     }
 }
 
 
 #Preview {
-    OneAccountFrameView(QRImage: UIImage())
+    OneAccountFrameView(inputText: "", QRImage: UIImage())
 }
