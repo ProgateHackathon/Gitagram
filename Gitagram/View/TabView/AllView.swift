@@ -12,11 +12,13 @@ struct AllView: View {
         TabView{
             PageOneView() //1枚目の子ビュー
                 .tabItem {
-                    Image(systemName: "1.circle.fill") //タブバーの①
+                    Image(systemName: "drop")
+                    Text("まっち")//タブバーの①
                 }
             PageTwoView() //2枚目の子ビュー
                 .tabItem {
-                    Image(systemName: "2.circle.fill") //タブバーの②
+                    Image(systemName: "person.crop.circle.badge.plus")
+                    Text("こ〜かん")//タブバーの②
                 }
         }
     }
