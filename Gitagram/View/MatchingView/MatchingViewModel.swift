@@ -14,6 +14,7 @@ class MatchingViewModel: ObservableObject {
     @Published var  buttonSwipeAction: SwipeAction?
     
     
+    
     init(){
         Task {
             self.cardModels =  await fetchCardInfomation()
@@ -45,4 +46,5 @@ class MatchingViewModel: ObservableObject {
         
         return cardList
     }
+
 }
