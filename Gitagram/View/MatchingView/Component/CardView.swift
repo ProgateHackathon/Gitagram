@@ -20,18 +20,21 @@ struct CardView: View {
     
     var body: some View {
         ZStack(alignment: .bottom){
+            
             ZStack(alignment: .top) {
-                AsyncImage(url: cardData.developer.imageURL) { image in
-                    image
+                Image(uiImage: cardData.productImage)
                         .resizable()
                         .scaledToFill()
                         .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
-                } placeholder: {
-                    ProgressView()
-                }
+               
+              
+                
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
+
+
             }
+            UserInfoView(cardData: cardData)
         }
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)

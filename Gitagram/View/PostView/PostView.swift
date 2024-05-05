@@ -67,3 +67,8 @@ struct PostView: View {
     }
 }
 
+#Preview {
+
+    PostView(developer: Developer(githubId: "am2525nyan"))
+
+}
