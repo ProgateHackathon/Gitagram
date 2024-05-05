@@ -81,7 +81,7 @@ struct PostImageView: View {
             //ここで保存だよ
             Task{
                 do{
-                    await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id), productImage: (image ?? UIImage(named: "back"))!
+                 await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id), productImage: (image ?? UIImage(named: "back"))!
                 )}
             }
             

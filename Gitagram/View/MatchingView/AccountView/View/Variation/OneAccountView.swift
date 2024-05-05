@@ -34,7 +34,7 @@ struct OneAccountFrameView: View {
                     .padding()
                 VStack {
                     Spacer() // 上部のスペーサーを追加
-                    IDView() // IDViewを追加
+                    IDView(inputText: inputText)
                     Spacer() // 下部のスペーサーを追加
                 }
             }
@@ -62,8 +62,10 @@ struct GradationView: View {
 }
 
 struct IDDesignView:View {
+    @Binding var inputText: String // @Binding で inputText を受け取る
+    
     var body: some View {
-        Text("@Rino1011")
+        Text("@\(inputText)")
             .foregroundColor(Color(red: 0.5, green: 0.0, blue: 1.0))
             .underline()
             .stroke(color: .white, width: 3)
