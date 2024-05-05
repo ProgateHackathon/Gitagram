@@ -10,8 +10,10 @@ import UIKit
 
 class PostProductUseCase {
     let repository: ProductRepositoryProtocol = UseCaseDI.productRepository
+    let imageRepository: ProductImageRepositoryProtocol = UseCaseDI.productImageRepository
     
     func execute(product: Product, productImage: UIImage) async {
+        imageRepository.storeImage(id: product.id, uiImage: productImage)
         return repository.create(object: product)
     }
 }
