@@ -115,7 +115,6 @@
 		7253F78E2BE67B8C00E9C4DC /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		7253F7932BE68B8D00E9C4DC /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		7253F7952BE6B40200E9C4DC /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		233AD2C52BE66B9500B1EC92 /* OneAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneAccountView.swift; sourceTree = "<group>"; };
 		233AD2C72BE66B9500B1EC92 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		233AD2CA2BE66B9500B1EC92 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
@@ -124,8 +123,6 @@
 		233AD2D62BE66CDD00B1EC92 /* SheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
 		233AD2D82BE66DE900B1EC92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		233AD2DC2BE6718500B1EC92 /* InputFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
-=======
->>>>>>> 2d30d54 (connect-firebase)
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
