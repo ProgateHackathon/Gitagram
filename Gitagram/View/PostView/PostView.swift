@@ -67,8 +67,3 @@ struct PostView: View {
     }
 }
 
-#Preview {
-
-    PostView(developer: Developer(from: "saki" as! Decoder))
-
-}
