@@ -28,7 +28,7 @@ struct MatchingView: View {
                           }
         }
         .sheet(isPresented: $addripository){
-            PostView()
+            PostView(developer: Developer(githubId: "am2525nyan"))
         }
     }
 }
