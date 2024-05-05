@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct AllView: View {
+    let hostDeveloper: Developer
+    
     var body: some View {
         TabView{
             PageOneView() //1枚目の子ビュー
                 .tabItem {
-                    Image(systemName: "drop")
-                    Text("まっち")//タブバーの①
+                    Image(systemName: "1.circle.fill") //タブバーの①
                 }
-            PageTwoView() //2枚目の子ビュー
+            PageTwoView(hostDeveloper: hostDeveloper) //2枚目の子ビュー
                 .tabItem {
-                    Image(systemName: "person.crop.circle.badge.plus")
-                    Text("こ〜かん")//タブバーの②
+                    Image(systemName: "2.circle.fill") //タブバーの②
                 }
         }
     }
@@ -31,11 +31,9 @@ struct PageOneView:View {
 }
 
 struct PageTwoView:View {
+    let hostDeveloper: Developer
+    
     var body: some View {
-        OneAccountFrameView(inputText: "", QRImage: UIImage())
+        OneAccountFrameView(developer: hostDeveloper)
     }
-}
-
-#Preview {
-    AllView()
 }
