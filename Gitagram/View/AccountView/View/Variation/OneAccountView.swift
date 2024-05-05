@@ -16,22 +16,24 @@ struct OneAccountFrameView: View {
     @State var QRImage: UIImage
     
     // inputTextの初期化はinit内で行う
-    init(inputText: String, QRImage: UIImage) {
-        self._inputText = State(initialValue: inputText) // 初期値を設定
-        self.QRImage = QRImage
+    init(developer: Developer) {
+        self._inputText = State(initialValue: developer.name) // 初期値を設定
+        self.QRImage = GetDeveloperQRCodeUseCase().execute(developer: developer)
     }
+    
     var body: some View {
         NavigationView {
             ZStack {
                 ZStack {
-                    AccountView(QRImage: QRImage)
+                    AccountView()
                     RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                         .stroke(Color.white, lineWidth: 1)
                 }
                 .frame(width: Self.cardSize.width, height: Self.cardSize.height)
                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 20)
+                
                 QRView(inputText: $inputText)
-                    .padding()
+                
                 VStack {
                     Spacer() // 上部のスペーサーを追加
                     IDView(inputText: inputText)
@@ -69,10 +71,10 @@ struct IDDesignView:View {
             .foregroundColor(Color(red: 0.5, green: 0.0, blue: 1.0))
             .underline()
             .stroke(color: .white, width: 3)
-            .font(.custom("Frankfurt", size: 65))
-            .rotationEffect(.degrees(-3))
+            .font(.custom("Frankfurt", size: 40))
+            .rotationEffect(.degrees(0))
             .padding(.bottom, 10)
-            .padding(.top, -160)
+            .padding(.top, 350)
     }
 }
 struct QRView: View {
@@ -99,9 +101,4 @@ struct QRView: View {
                 .padding()
         }
     }
-}
-
-
-#Preview {
-    OneAccountFrameView(inputText: "", QRImage: UIImage())
 }

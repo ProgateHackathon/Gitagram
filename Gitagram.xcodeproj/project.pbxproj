@@ -15,7 +15,6 @@
 		103BF3732BE39C3E00818544 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3722BE39C3E00818544 /* FirebaseStorage */; };
 		103BF3752BE39C3E00818544 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3742BE39C3E00818544 /* FirebaseStorageCombine-Community */; };
 		103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 103BF37A2BE3B17000818544 /* GoogleService-Info.plist */; };
-		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
@@ -31,7 +30,6 @@
 		722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84102BE73601007163D4 /* PostDiscriptionView.swift */; };
 		722E84162BE73601007163D4 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84112BE73601007163D4 /* PostImageView.swift */; };
 		722E84172BE73601007163D4 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84122BE73601007163D4 /* PostView.swift */; };
-		722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84182BE7360C007163D4 /* InputFormView.swift */; };
 		722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84392BE7365F007163D4 /* DeveloperClient.swift */; };
 		722E84652BE7365F007163D4 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843B2BE7365F007163D4 /* ProductClient.swift */; };
 		722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843C2BE7365F007163D4 /* ProductImageClient.swift */; };
@@ -60,19 +58,21 @@
 		722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E845D2BE7365F007163D4 /* QRCodeProtocol.swift */; };
 		722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E845F2BE7365F007163D4 /* TakeScreenShotUseCase.swift */; };
 		722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84612BE7365F007163D4 /* UseCaseDI.swift */; };
-		722E84892BE73A2A007163D4 /* OneAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84802BE73A29007163D4 /* OneAccountView.swift */; };
-		722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84822BE73A29007163D4 /* AccountView.swift */; };
-		722E848B2BE73A2A007163D4 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84842BE73A29007163D4 /* AccountViewModel.swift */; };
-		722E848C2BE73A2A007163D4 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* SheetViewModel.swift */; };
-		722E848D2BE73A2A007163D4 /* TextCute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* TextCute.swift */; };
-		722E84902BE73A42007163D4 /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* AllView.swift */; };
 		722E84922BE73B8C007163D4 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84912BE73B8C007163D4 /* PostURLView.swift */; };
+		72D668E12BE75A1500FFAF07 /* OneAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668D82BE75A1500FFAF07 /* OneAccountView.swift */; };
+		72D668E22BE75A1500FFAF07 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668DA2BE75A1500FFAF07 /* AccountView.swift */; };
+		72D668E32BE75A1500FFAF07 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668DC2BE75A1500FFAF07 /* AccountViewModel.swift */; };
+		72D668E42BE75A1500FFAF07 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668DD2BE75A1500FFAF07 /* SheetViewModel.swift */; };
+		72D668E52BE75A1500FFAF07 /* TextCute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668DE2BE75A1500FFAF07 /* TextCute.swift */; };
+		72D668E92BE75A2700FFAF07 /* InputFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668E62BE75A2700FFAF07 /* InputFormView.swift */; };
+		72D668EB2BE75A3700FFAF07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668EA2BE75A3700FFAF07 /* ContentView.swift */; };
+		72D668ED2BE75A6C00FFAF07 /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668EC2BE75A6C00FFAF07 /* AllView.swift */; };
+		72D668EF2BE75AC100FFAF07 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D668EE2BE75AC100FFAF07 /* GitagramApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -88,7 +88,6 @@
 		722E84102BE73601007163D4 /* PostDiscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
 		722E84112BE73601007163D4 /* PostImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		722E84122BE73601007163D4 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		722E84182BE7360C007163D4 /* InputFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
 		722E841C2BE73614007163D4 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
 		722E84392BE7365F007163D4 /* DeveloperClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		722E843B2BE7365F007163D4 /* ProductClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
@@ -118,13 +117,16 @@
 		722E845D2BE7365F007163D4 /* QRCodeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeProtocol.swift; sourceTree = "<group>"; };
 		722E845F2BE7365F007163D4 /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
 		722E84612BE7365F007163D4 /* UseCaseDI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseDI.swift; sourceTree = "<group>"; };
-		722E84802BE73A29007163D4 /* OneAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneAccountView.swift; sourceTree = "<group>"; };
-		722E84822BE73A29007163D4 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		722E84842BE73A29007163D4 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
-		722E84852BE73A29007163D4 /* SheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
-		722E84862BE73A29007163D4 /* TextCute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCute.swift; sourceTree = "<group>"; };
-		722E848E2BE73A42007163D4 /* AllView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
 		722E84912BE73B8C007163D4 /* PostURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
+		72D668D82BE75A1500FFAF07 /* OneAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneAccountView.swift; sourceTree = "<group>"; };
+		72D668DA2BE75A1500FFAF07 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		72D668DC2BE75A1500FFAF07 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		72D668DD2BE75A1500FFAF07 /* SheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
+		72D668DE2BE75A1500FFAF07 /* TextCute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCute.swift; sourceTree = "<group>"; };
+		72D668E62BE75A2700FFAF07 /* InputFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
+		72D668EA2BE75A3700FFAF07 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72D668EC2BE75A6C00FFAF07 /* AllView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
+		72D668EE2BE75AC100FFAF07 /* GitagramApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +166,8 @@
 		10472EE52BDFAFBB00C179F8 /* Gitagram */ = {
 			isa = PBXGroup;
 			children = (
+				72D668EE2BE75AC100FFAF07 /* GitagramApp.swift */,
 				103BF37A2BE3B17000818544 /* GoogleService-Info.plist */,
-				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
 				722E84632BE7365F007163D4 /* Model */,
 				10472EF42BDFAFD700C179F8 /* View */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
@@ -185,10 +187,11 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72D668EA2BE75A3700FFAF07 /* ContentView.swift */,
+				72D668E82BE75A2700FFAF07 /* InputformView */,
+				72D668E02BE75A1500FFAF07 /* AccountView */,
 				722E848F2BE73A42007163D4 /* TabView */,
 				722E841C2BE73614007163D4 /* frankfrt.ttf */,
-				722E841A2BE7360C007163D4 /* InputformView */,
-				722E84882BE73A29007163D4 /* AccountView */,
 				722E84132BE73601007163D4 /* PostView */,
 				722E84042BE735EA007163D4 /* MatchingView */,
 			);
@@ -253,22 +256,6 @@
 				722E84112BE73601007163D4 /* PostImageView.swift */,
 			);
 			path = PostView;
-			sourceTree = "<group>";
-		};
-		722E84192BE7360C007163D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				722E84182BE7360C007163D4 /* InputFormView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		722E841A2BE7360C007163D4 /* InputformView */ = {
-			isa = PBXGroup;
-			children = (
-				722E84192BE7360C007163D4 /* View */,
-			);
-			path = InputformView;
 			sourceTree = "<group>";
 		};
 		722E843A2BE7365F007163D4 /* Developer */ = {
@@ -418,49 +405,65 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		722E84812BE73A29007163D4 /* Variation */ = {
+		722E848F2BE73A42007163D4 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				722E84802BE73A29007163D4 /* OneAccountView.swift */,
+				72D668EC2BE75A6C00FFAF07 /* AllView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		72D668D92BE75A1500FFAF07 /* Variation */ = {
+			isa = PBXGroup;
+			children = (
+				72D668D82BE75A1500FFAF07 /* OneAccountView.swift */,
 			);
 			path = Variation;
 			sourceTree = "<group>";
 		};
-		722E84832BE73A29007163D4 /* View */ = {
+		72D668DB2BE75A1500FFAF07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				722E84812BE73A29007163D4 /* Variation */,
-				722E84822BE73A29007163D4 /* AccountView.swift */,
+				72D668D92BE75A1500FFAF07 /* Variation */,
+				72D668DA2BE75A1500FFAF07 /* AccountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		722E84872BE73A29007163D4 /* ViewModel */ = {
+		72D668DF2BE75A1500FFAF07 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				722E84842BE73A29007163D4 /* AccountViewModel.swift */,
-				722E84852BE73A29007163D4 /* SheetViewModel.swift */,
-				722E84862BE73A29007163D4 /* TextCute.swift */,
+				72D668DC2BE75A1500FFAF07 /* AccountViewModel.swift */,
+				72D668DD2BE75A1500FFAF07 /* SheetViewModel.swift */,
+				72D668DE2BE75A1500FFAF07 /* TextCute.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		722E84882BE73A29007163D4 /* AccountView */ = {
+		72D668E02BE75A1500FFAF07 /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
-				722E84832BE73A29007163D4 /* View */,
-				722E84872BE73A29007163D4 /* ViewModel */,
+				72D668DB2BE75A1500FFAF07 /* View */,
+				72D668DF2BE75A1500FFAF07 /* ViewModel */,
 			);
-			name = AccountView;
-			path = MatchingView/AccountView;
+			path = AccountView;
 			sourceTree = "<group>";
 		};
-		722E848F2BE73A42007163D4 /* TabView */ = {
+		72D668E72BE75A2700FFAF07 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				722E848E2BE73A42007163D4 /* AllView.swift */,
+				72D668E62BE75A2700FFAF07 /* InputFormView.swift */,
 			);
-			path = TabView;
+			path = View;
+			sourceTree = "<group>";
+		};
+		72D668E82BE75A2700FFAF07 /* InputformView */ = {
+			isa = PBXGroup;
+			children = (
+				72D668E72BE75A2700FFAF07 /* View */,
+			);
+			name = InputformView;
+			path = ../../../../../Downloads/View/InputformView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,46 +559,47 @@
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
 				722E84922BE73B8C007163D4 /* PostURLView.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
+				72D668E32BE75A1500FFAF07 /* AccountViewModel.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,
+				72D668E42BE75A1500FFAF07 /* SheetViewModel.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
 				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
+				72D668ED2BE75A6C00FFAF07 /* AllView.swift in Sources */,
 				722E840A2BE735EA007163D4 /* User.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
 				722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */,
-				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
+				72D668E22BE75A1500FFAF07 /* AccountView.swift in Sources */,
 				722E84052BE735EA007163D4 /* CardStackView.swift in Sources */,
 				722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */,
 				722E840C2BE735EA007163D4 /* MatchingView.swift in Sources */,
 				722E847B2BE7365F007163D4 /* ProductImageRepositoryProtocol.swift in Sources */,
-				722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */,
 				722E84772BE7365F007163D4 /* GetProductListUseCase.swift in Sources */,
-				722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */,
 				722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */,
 				722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */,
 				722E84162BE73601007163D4 /* PostImageView.swift in Sources */,
+				72D668EF2BE75AC100FFAF07 /* GitagramApp.swift in Sources */,
 				722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */,
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,
 				722E84722BE7365F007163D4 /* CreateDeveloperUseCase.swift in Sources */,
 				722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */,
-				722E848B2BE73A2A007163D4 /* AccountViewModel.swift in Sources */,
+				72D668E52BE75A1500FFAF07 /* TextCute.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
-				722E848C2BE73A2A007163D4 /* SheetViewModel.swift in Sources */,
 				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
 				722E846D2BE7365F007163D4 /* DeveloperClientProtocol.swift in Sources */,
+				72D668EB2BE75A3700FFAF07 /* ContentView.swift in Sources */,
 				722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */,
 				722E846C2BE7365F007163D4 /* ProductRepository.swift in Sources */,
 				722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */,
 				722E847A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift in Sources */,
-				722E84902BE73A42007163D4 /* AllView.swift in Sources */,
-				722E84892BE73A2A007163D4 /* OneAccountView.swift in Sources */,
 				722E84652BE7365F007163D4 /* ProductClient.swift in Sources */,
+				72D668E92BE75A2700FFAF07 /* InputFormView.swift in Sources */,
 				722E84692BE7365F007163D4 /* Product.swift in Sources */,
-				722E848D2BE73A2A007163D4 /* TextCute.swift in Sources */,
+				72D668E12BE75A1500FFAF07 /* OneAccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
