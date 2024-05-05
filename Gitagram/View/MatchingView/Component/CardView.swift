@@ -22,11 +22,15 @@ struct CardView: View {
         ZStack(alignment: .bottom){
             
             ZStack(alignment: .top) {
-                Image(uiImage: cardData.productImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
-               
+              
+                if cardData.productImage != nil{
+                    Image(uiImage: cardData.productImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                }else{
+                    ProgressView()
+                }
               
                 
                 

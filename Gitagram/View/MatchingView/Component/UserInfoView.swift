@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserInfoView: View {
     let cardData: CardDataModel
+    @Environment(\.openURL) var openURL
     var body: some View {
         VStack(alignment: .leading){ 
           
@@ -40,6 +41,7 @@ struct UserInfoView: View {
                 Text(cardData.title)
                     .font(.title)
                     .fontWeight(.heavy)
+            
               
                 Spacer()
                 Button(action: {
@@ -55,6 +57,17 @@ struct UserInfoView: View {
             Text(cardData.discription)
                 .font(.subheadline)
                 .lineLimit(2)
+            Button(action: {
+                openURL(URL(string: cardData.product.url)!)
+               
+               
+            }, label: {
+                Text(cardData.product.url)
+                    .font(.headline)
+                    .lineLimit(2)
+            })
+       
+              
         }
        
         .foregroundStyle(.white)

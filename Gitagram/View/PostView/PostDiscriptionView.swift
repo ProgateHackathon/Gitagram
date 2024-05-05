@@ -15,12 +15,12 @@ struct PostDiscriptionView: View {
     var body: some View {
         VStack{
             ProgressView("", value: 0.6)
-               
-                                .padding()
-                                .tint(Color.pink)
-                                
-                                .cornerRadius(8)
-                                .scaleEffect(1.3)
+                .padding(.top,5)
+                
+                .tint(Color.pink)
+            
+                .cornerRadius(8)
+                .scaleEffect(1.3)
             
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -31,17 +31,17 @@ struct PostDiscriptionView: View {
             
             TextField("リポジトリの説明を入力してね", text: $discription)
                 .frame(alignment: .leading)
-               
+            
                 .padding(.leading,10)
             Divider()
             Spacer()
-            NavigationLink("", destination: PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription),isActive: $next)
+            NavigationLink("", destination: PostURLView(title: $title, discription: $discription, developer: Developer(githubId: "")),isActive:$next)
             Button(action: {
                 next.toggle()
             }, label: {
                 Text("次へ")
-           
-              
+                
+                
                     .padding(.horizontal,120)
                     .padding(.vertical,15)
                     .font(.system(size: 10, weight: .medium, design: .default))
@@ -51,6 +51,7 @@ struct PostDiscriptionView: View {
                     .padding(.bottom,20)
             })
         }
+      
         
     }
     
