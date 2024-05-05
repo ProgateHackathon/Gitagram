@@ -18,6 +18,7 @@
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
+		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
 		722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */; };
@@ -74,6 +75,8 @@
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
 		722E83F92BE735EA007163D4 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionButtonsView.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		10472EE52BDFAFBB00C179F8 /* Gitagram */ = {
 			isa = PBXGroup;
 			children = (
+				23B6E52E2BE7540F0049200B /* Info.plist */,
 				103BF37A2BE3B17000818544 /* GoogleService-Info.plist */,
 				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
 				722E84632BE7365F007163D4 /* Model */,
@@ -183,8 +187,10 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				722E848F2BE73A42007163D4 /* TabView */,
 				722E841C2BE73614007163D4 /* frankfrt.ttf */,
+				23B6E52C2BE73C1D0049200B /* ContentView.swift */,
+				722E84882BE73A29007163D4 /* AccountView */,
+				722E848F2BE73A42007163D4 /* TabView */,
 				722E841A2BE7360C007163D4 /* InputformView */,
 				722E84132BE73601007163D4 /* PostView */,
 				722E84042BE735EA007163D4 /* MatchingView */,
@@ -223,7 +229,6 @@
 		722E84042BE735EA007163D4 /* MatchingView */ = {
 			isa = PBXGroup;
 			children = (
-				722E84882BE73A29007163D4 /* AccountView */,
 				722E83FD2BE735EA007163D4 /* Component */,
 				722E83FF2BE735EA007163D4 /* Model */,
 				722E84012BE735EA007163D4 /* Utils */,
@@ -585,6 +590,7 @@
 				722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */,
 				722E846C2BE7365F007163D4 /* ProductRepository.swift in Sources */,
 				722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */,
+				23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */,
 				722E847A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift in Sources */,
 				722E84902BE73A42007163D4 /* AllView.swift in Sources */,
 				722E84892BE73A2A007163D4 /* OneAccountView.swift in Sources */,
@@ -724,9 +730,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = TVH687AC7F;
+				DEVELOPMENT_TEAM = 98BL22S53Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gitagram/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "リポジトリの写真を撮影します";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";
@@ -756,9 +764,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = TVH687AC7F;
+				DEVELOPMENT_TEAM = 98BL22S53Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gitagram/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "リポジトリの写真を撮影します";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "保存するよ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "保存するよ";

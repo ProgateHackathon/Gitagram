@@ -20,7 +20,7 @@ struct AccountFrameView: View {
         NavigationView {
             ZStack {
                 ZStack {
-                    AccountView(QRImage: QRImage)
+                    AccountView()
                     RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                         .stroke(Color.white, lineWidth: 1)
                 }
@@ -50,7 +50,7 @@ struct AccountFrameView: View {
     
     func captureViewAsImage() -> UIImage {
             let window = UIWindow(frame: UIScreen.main.bounds)
-        let hostingController = UIHostingController(rootView: OneAccountFrameView(inputText: "", QRImage: UIImage()))
+        let hostingController = UIHostingController(rootView: OneAccountFrameView(developer: Developer(githubId: "")))
             window.rootViewController = hostingController
             window.makeKeyAndVisible()
             
@@ -60,10 +60,7 @@ struct AccountFrameView: View {
         }
 }
 struct AccountView: View {
-    
     @StateObject var Accountviewmodel = AccountViewModel()
-    @StateObject var QRviewModel = QRViewModel()
-    let QRImage:UIImage
     
     var body: some View {
         ZStack {
@@ -109,8 +106,8 @@ struct CardBackGroundView:View {
     }
 }
 
-
-
-#Preview {
-    OneAccountFrameView(inputText: "", QRImage: UIImage())
-}
+//
+//
+//#Preview {
+//    OneAccountFrameView(inputText: "", QRImage: UIImage())
+//}
