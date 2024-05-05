@@ -1,4 +1,11 @@
 //
+//  TwoAccountView.swift
+//  Gitagram
+//
+//  Created by 伊藤璃乃 on 2024/05/05.
+//
+
+//
 //  AccountQRView.swift
 //  Gitagram
 //
@@ -8,7 +15,7 @@
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
-struct AccountFrameView: View {
+struct SeccondAccountFrameView: View {
     private static let cardCornerRadius: CGFloat = 20
     private static let cardSize: CGSize = .init(width: 367, height: 512)
     
@@ -20,7 +27,7 @@ struct AccountFrameView: View {
         NavigationView {
             ZStack {
                 ZStack {
-                    AccountView(QRImage: QRImage)
+                    SeccondAccountView(QRImage: QRImage)
                     RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                         .stroke(Color.white, lineWidth: 1)
                 }
@@ -29,7 +36,7 @@ struct AccountFrameView: View {
                 QRView(inputText: $inputText)
                 .padding()
                 VStack {
-                    IDView(inputText: inputText) // IDViewを追加
+                    SeccondIDView(inputText: inputText) // IDViewを追加
                 }
             }
             .padding(50)
@@ -38,7 +45,7 @@ struct AccountFrameView: View {
     }
 
 }
-struct AccountView: View {
+struct SeccondAccountView: View {
     
     @StateObject var Accountviewmodel = AccountViewModel()
     @StateObject var QRviewModel = QRViewModel()
@@ -51,7 +58,7 @@ struct AccountView: View {
                 .resizable()
                 .ignoresSafeArea()
                 .cornerRadius(20)
-            CardBackGroundView()
+            SeccondCardBackGroundView()
             //真ん中
                 //.resizable()
                 .ignoresSafeArea()
@@ -69,7 +76,7 @@ struct AccountView: View {
 }
 
 
-struct IDView:View {
+struct SeccondIDView:View {
     //@State static var inputText = ""
     @State private var inputText:String
     init(inputText: String) {
@@ -78,15 +85,17 @@ struct IDView:View {
     
     var body: some View {
         
-        IDDesignView(inputText:$inputText)
+        TwoIDDesignView(inputText:$inputText)
     }
 }
 
-struct CardBackGroundView:View {
+struct SeccondCardBackGroundView:View {
     var body: some View {
-        GradationView()
+        BackView()
     }
 }
+
+
 #Preview {
     OneAccountFrameView(inputText: "", QRImage: UIImage())
 }

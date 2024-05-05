@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>frankfrt.ttf</string>
+		<string>SourceSerif4-VariableFont_opsz,wght.ttf</string>
 	</array>
 </dict>
 </plist>

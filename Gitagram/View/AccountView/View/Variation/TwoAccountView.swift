@@ -6,7 +6,7 @@
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
-struct OneAccountFrameView: View {
+struct TwoAccountFrameView: View {
     //
     private static let cardCornerRadius: CGFloat = 20
     private static let cardSize: CGSize = .init(width: 367, height: 512)
@@ -24,7 +24,7 @@ struct OneAccountFrameView: View {
         NavigationView {
             ZStack {
                 ZStack {
-                    AccountView(QRImage: QRImage)
+                    SeccondAccountView(QRImage: QRImage)
                     RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                         .stroke(Color.white, lineWidth: 1)
                 }
@@ -34,7 +34,7 @@ struct OneAccountFrameView: View {
                     .padding()
                 VStack {
                     Spacer() // 上部のスペーサーを追加
-                    IDView(inputText: inputText)
+                    SeccondIDView(inputText: inputText)
                     Spacer() // 下部のスペーサーを追加
                 }
             }
@@ -69,54 +69,25 @@ struct OneAccountFrameView: View {
 
 
 
-struct GradationView: View {
-    let gradient = Gradient(stops: [.init(color: Color(red: 0.3, green: 0.0, blue: 0.8), location: 0.0), .init(color: Color(red: 0.8, green: 0.0, blue: 0.3), location: 1.2)])
+struct BackView: View {
     var body: some View {
-        LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing)
+        Color(red: 0.02, green: 0, blue: 0.42)
     }
 }
 
-struct IDDesignView:View {
+struct TwoIDDesignView:View {
     @Binding var inputText: String // @Binding で inputText を受け取る
     
     var body: some View {
         Text("@\(inputText)")
-            .foregroundColor(Color(red: 0.5, green: 0.0, blue: 1.0))
-            .underline()
-            .stroke(color: .white, width: 3)
-            .font(.custom("Frankfurt", size: 65))
-            .rotationEffect(.degrees(-3))
+            .foregroundColor(Color(red: 1.0, green: 1.0, blue: 1.0))
+            .font(.custom("Source Serif 4", size: 50))
+            //.underline()
             .padding(.bottom, 10)
-            .padding(.top, -160)
+            .padding(.top, 350)
     }
 }
-struct QRView: View {
-    @Binding var inputText: String // 外部から inputText の値を受け取る
-    let qrGenerator = GetDeveloperQRCodeUseCase()
-    let cornerRadius: CGFloat = 10 // 丸みの半径を設定
-
-    var qrCode: UIImage {
-        let developer = Developer(githubId: inputText) // inputText を使用して Developer インスタンスを作成
-        return qrGenerator.execute(developer: developer)
-    }
-
-    var body: some View {
-        ZStack{
-            Rectangle()
-                .fill(Color.white)
-                .frame(width: 250, height: 250)
-                .cornerRadius(20)
-            Image(uiImage: qrCode)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 200, height: 200)
-                .cornerRadius(cornerRadius)
-                .padding()
-        }
-    }
-}
-
 
 #Preview {
-    OneAccountFrameView(inputText: "", QRImage: UIImage())
+    TwoAccountFrameView(inputText: "", QRImage: UIImage())
 }
