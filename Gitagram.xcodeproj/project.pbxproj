@@ -30,7 +30,6 @@
 		722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */; };
 		722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */; };
 		722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FC2BE735EA007163D4 /* UserInfoView.swift */; };
-		722E840A2BE735EA007163D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FE2BE735EA007163D4 /* User.swift */; };
 		722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84002BE735EA007163D4 /* SizeConstants.swift */; };
 		722E840C2BE735EA007163D4 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84022BE735EA007163D4 /* MatchingView.swift */; };
 		722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84032BE735EA007163D4 /* MatchingViewModel.swift */; };
@@ -93,7 +92,6 @@
 		722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionButtonsView.swift; sourceTree = "<group>"; };
 		722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		722E83FC2BE735EA007163D4 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
-		722E83FE2BE735EA007163D4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		722E84002BE735EA007163D4 /* SizeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
 		722E84022BE735EA007163D4 /* MatchingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		722E84032BE735EA007163D4 /* MatchingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
@@ -229,14 +227,6 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		722E83FF2BE735EA007163D4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				722E83FE2BE735EA007163D4 /* User.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		722E84012BE735EA007163D4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				722E83FD2BE735EA007163D4 /* Component */,
-				722E83FF2BE735EA007163D4 /* Model */,
 				722E84012BE735EA007163D4 /* Utils */,
 				722E84022BE735EA007163D4 /* MatchingView.swift */,
 				722E84032BE735EA007163D4 /* MatchingViewModel.swift */,
@@ -563,7 +552,6 @@
 				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
-				722E840A2BE735EA007163D4 /* User.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
 				10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
