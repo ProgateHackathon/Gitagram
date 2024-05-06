@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GetLoginDeveloperUseCase {
+actor GetLoginDeveloperUseCase {
     private let developerRepository = UseCaseDI.developerRepository
     
     func execute() async -> Developer? {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AllView: View {
+struct HomeView: View {
     let hostDeveloper: Developer
     
     var body: some View {
