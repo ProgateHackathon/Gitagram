@@ -8,11 +8,10 @@
 import Foundation
 import UIKit
 
-class GetDeveloperQRCodeUseCase {
+class GetQRCodeUseCase {
     private let generator : QRCodeProtocol = UseCaseDI.qrRepository
     
-    func execute(developer: Developer) -> UIImage {
-        let url = developer.gitHubURL
-        return generator.generate(text: url)
+    func execute(inputText: String) -> UIImage {
+        return generator.generate(text: inputText)
     }
 }

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var inputText = ""
-        @State private var develop: Developer? = nil // Developer? に変更
+        @State private var developer: Developer? = nil
 
         var body: some View {
             VStack {
-                if develop == nil {
-                    InputFormView(developer: $develop)
+                if developer == nil {
+                    InputFormView(developer: $developer)
                 } else {
-                    AllView(hostDeveloper: develop!)
+                    AllView(hostDeveloper: developer!)
                 }
             }
         }

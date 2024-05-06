@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261AFE2BE8FCF2007D1606 /* PostURLView.swift */; };
+		10261B012BE93EC4007D1606 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B002BE93EC4007D1606 /* QRView.swift */; };
+		10261B032BE941C3007D1606 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B022BE941C3007D1606 /* RichText.swift */; };
+		10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B042BE9427C007D1606 /* GradationBackView.swift */; };
+		10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B062BE94520007D1606 /* KiraKiraView.swift */; };
+		10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B092BE94695007D1606 /* AccountViewModel.swift */; };
 		103BF3692BE39C3E00818544 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3682BE39C3E00818544 /* FirebaseDatabase */; };
 		103BF36B2BE39C3E00818544 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36A2BE39C3E00818544 /* FirebaseDatabaseSwift */; };
 		103BF36D2BE39C3E00818544 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36C2BE39C3E00818544 /* FirebaseFirestore */; };
@@ -49,7 +54,7 @@
 		722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E844C2BE7365F007163D4 /* QRCodeRepository.swift */; };
 		722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E844E2BE7365F007163D4 /* RepositoryDI.swift */; };
 		722E84722BE7365F007163D4 /* CreateDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84502BE7365F007163D4 /* CreateDeveloperUseCase.swift */; };
-		722E84732BE7365F007163D4 /* GetDeveloperQRCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84512BE7365F007163D4 /* GetDeveloperQRCodeUseCase.swift */; };
+		722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84512BE7365F007163D4 /* GetQRCodeUseCase.swift */; };
 		722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84522BE7365F007163D4 /* GetDeveloperUseCase.swift */; };
 		722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84532BE7365F007163D4 /* GetLoginDeveloperUseCase.swift */; };
 		722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84552BE7365F007163D4 /* GetProductImageUseCase.swift */; };
@@ -62,16 +67,20 @@
 		722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E845D2BE7365F007163D4 /* QRCodeProtocol.swift */; };
 		722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E845F2BE7365F007163D4 /* TakeScreenShotUseCase.swift */; };
 		722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84612BE7365F007163D4 /* UseCaseDI.swift */; };
-		722E84892BE73A2A007163D4 /* OneAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84802BE73A29007163D4 /* OneAccountView.swift */; };
 		722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84822BE73A29007163D4 /* AccountView.swift */; };
-		722E848B2BE73A2A007163D4 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84842BE73A29007163D4 /* AccountViewModel.swift */; };
-		722E848C2BE73A2A007163D4 /* SheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* SheetViewModel.swift */; };
-		722E848D2BE73A2A007163D4 /* TextCute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* TextCute.swift */; };
+		722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84842BE73A29007163D4 /* KiraKiraViewModel.swift */; };
+		722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* ShareSheet.swift */; };
+		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* AllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* AllView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10261AFE2BE8FCF2007D1606 /* PostURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
+		10261B002BE93EC4007D1606 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		10261B022BE941C3007D1606 /* RichText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
+		10261B042BE9427C007D1606 /* GradationBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradationBackView.swift; sourceTree = "<group>"; };
+		10261B062BE94520007D1606 /* KiraKiraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraView.swift; sourceTree = "<group>"; };
+		10261B092BE94695007D1606 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
@@ -109,7 +118,7 @@
 		722E844C2BE7365F007163D4 /* QRCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeRepository.swift; sourceTree = "<group>"; };
 		722E844E2BE7365F007163D4 /* RepositoryDI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDI.swift; sourceTree = "<group>"; };
 		722E84502BE7365F007163D4 /* CreateDeveloperUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDeveloperUseCase.swift; sourceTree = "<group>"; };
-		722E84512BE7365F007163D4 /* GetDeveloperQRCodeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDeveloperQRCodeUseCase.swift; sourceTree = "<group>"; };
+		722E84512BE7365F007163D4 /* GetQRCodeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetQRCodeUseCase.swift; sourceTree = "<group>"; };
 		722E84522BE7365F007163D4 /* GetDeveloperUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDeveloperUseCase.swift; sourceTree = "<group>"; };
 		722E84532BE7365F007163D4 /* GetLoginDeveloperUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLoginDeveloperUseCase.swift; sourceTree = "<group>"; };
 		722E84552BE7365F007163D4 /* GetProductImageUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProductImageUseCase.swift; sourceTree = "<group>"; };
@@ -122,11 +131,10 @@
 		722E845D2BE7365F007163D4 /* QRCodeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeProtocol.swift; sourceTree = "<group>"; };
 		722E845F2BE7365F007163D4 /* TakeScreenShotUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeScreenShotUseCase.swift; sourceTree = "<group>"; };
 		722E84612BE7365F007163D4 /* UseCaseDI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseDI.swift; sourceTree = "<group>"; };
-		722E84802BE73A29007163D4 /* OneAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneAccountView.swift; sourceTree = "<group>"; };
 		722E84822BE73A29007163D4 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		722E84842BE73A29007163D4 /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
-		722E84852BE73A29007163D4 /* SheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewModel.swift; sourceTree = "<group>"; };
-		722E84862BE73A29007163D4 /* TextCute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCute.swift; sourceTree = "<group>"; };
+		722E84842BE73A29007163D4 /* KiraKiraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiraKiraViewModel.swift; sourceTree = "<group>"; };
+		722E84852BE73A29007163D4 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* AllView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10261B082BE94625007D1606 /* KiraKira */ = {
+			isa = PBXGroup;
+			children = (
+				10261B062BE94520007D1606 /* KiraKiraView.swift */,
+				722E84842BE73A29007163D4 /* KiraKiraViewModel.swift */,
+			);
+			path = KiraKira;
+			sourceTree = "<group>";
+		};
 		10472EDA2BDFAFBB00C179F8 = {
 			isa = PBXGroup;
 			children = (
@@ -260,18 +277,10 @@
 			path = PostView;
 			sourceTree = "<group>";
 		};
-		722E84192BE7360C007163D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				722E84182BE7360C007163D4 /* InputFormView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		722E841A2BE7360C007163D4 /* InputformView */ = {
 			isa = PBXGroup;
 			children = (
-				722E84192BE7360C007163D4 /* View */,
+				722E84182BE7360C007163D4 /* InputFormView.swift */,
 			);
 			path = InputformView;
 			sourceTree = "<group>";
@@ -363,7 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				722E84502BE7365F007163D4 /* CreateDeveloperUseCase.swift */,
-				722E84512BE7365F007163D4 /* GetDeveloperQRCodeUseCase.swift */,
+				722E84512BE7365F007163D4 /* GetQRCodeUseCase.swift */,
 				722E84522BE7365F007163D4 /* GetDeveloperUseCase.swift */,
 				722E84532BE7365F007163D4 /* GetLoginDeveloperUseCase.swift */,
 			);
@@ -423,38 +432,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		722E84812BE73A29007163D4 /* Variation */ = {
+		722E84832BE73A29007163D4 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				722E84802BE73A29007163D4 /* OneAccountView.swift */,
+				722E84862BE73A29007163D4 /* StrokeBackground.swift */,
+				722E84852BE73A29007163D4 /* ShareSheet.swift */,
+				10261B002BE93EC4007D1606 /* QRView.swift */,
+				10261B022BE941C3007D1606 /* RichText.swift */,
+				10261B042BE9427C007D1606 /* GradationBackView.swift */,
 			);
-			path = Variation;
-			sourceTree = "<group>";
-		};
-		722E84832BE73A29007163D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				722E84812BE73A29007163D4 /* Variation */,
-				722E84822BE73A29007163D4 /* AccountView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		722E84872BE73A29007163D4 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				722E84842BE73A29007163D4 /* AccountViewModel.swift */,
-				722E84852BE73A29007163D4 /* SheetViewModel.swift */,
-				722E84862BE73A29007163D4 /* TextCute.swift */,
-			);
-			path = ViewModel;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		722E84882BE73A29007163D4 /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
-				722E84832BE73A29007163D4 /* View */,
-				722E84872BE73A29007163D4 /* ViewModel */,
+				722E84822BE73A29007163D4 /* AccountView.swift */,
+				10261B092BE94695007D1606 /* AccountViewModel.swift */,
+				10261B082BE94625007D1606 /* KiraKira */,
+				722E84832BE73A29007163D4 /* Component */,
 			);
 			path = AccountView;
 			sourceTree = "<group>";
@@ -551,21 +547,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				722E84792BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift in Sources */,
+				10261B012BE93EC4007D1606 /* QRView.swift in Sources */,
 				722E846F2BE7365F007163D4 /* ProductImageClientProtocol.swift in Sources */,
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
-				722E84732BE7365F007163D4 /* GetDeveloperQRCodeUseCase.swift in Sources */,
+				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
+				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
 				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
+				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E840A2BE735EA007163D4 /* User.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
+				10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
 				722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */,
@@ -585,10 +585,11 @@
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,
 				722E84722BE7365F007163D4 /* CreateDeveloperUseCase.swift in Sources */,
 				722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */,
-				722E848B2BE73A2A007163D4 /* AccountViewModel.swift in Sources */,
+				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
-				722E848C2BE73A2A007163D4 /* SheetViewModel.swift in Sources */,
+				722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */,
+				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
 				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
 				722E846D2BE7365F007163D4 /* DeveloperClientProtocol.swift in Sources */,
 				722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */,
@@ -597,10 +598,9 @@
 				23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */,
 				722E847A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift in Sources */,
 				722E84902BE73A42007163D4 /* AllView.swift in Sources */,
-				722E84892BE73A2A007163D4 /* OneAccountView.swift in Sources */,
 				722E84652BE7365F007163D4 /* ProductClient.swift in Sources */,
 				722E84692BE7365F007163D4 /* Product.swift in Sources */,
-				722E848D2BE73A2A007163D4 /* TextCute.swift in Sources */,
+				722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

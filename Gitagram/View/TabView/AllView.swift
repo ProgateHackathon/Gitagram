@@ -12,28 +12,14 @@ struct AllView: View {
     
     var body: some View {
         TabView{
-            PageOneView() //1枚目の子ビュー
+            MatchingView()
                 .tabItem {
-                    Image(systemName: "1.circle.fill") //タブバーの①
+                    Image(systemName: "1.circle.fill")
                 }
-            PageTwoView(hostDeveloper: hostDeveloper) //2枚目の子ビュー
+            AccountView(developer: hostDeveloper)
                 .tabItem {
-                    Image(systemName: "2.circle.fill") //タブバーの②
+                    Image(systemName: "2.circle.fill")
                 }
         }
-    }
-} // View
-
-struct PageOneView:View {
-    var body: some View {
-        MatchingView()
-    }
-}
-
-struct PageTwoView:View {
-    let hostDeveloper: Developer
-    
-    var body: some View {
-        OneAccountFrameView(developer: hostDeveloper)
     }
 }
