@@ -1,42 +1,44 @@
 //
-//  PostView.swift
+//  PostURLView.swift
 //  Gitagram
 //
-//  Created by saki on 2024/05/04.
+//  Created by saki on 2024/05/05.
 //
 
 import SwiftUI
 
-struct PostView: View {
-    @State var title = ""
+
+
+struct PostURLView: View {
+    @Binding var title: String
+    @Binding var discription: String
+
     @State var next = false
     @State var developer : Developer
+    @State var url = ""
     var body: some View {
-        NavigationView {
+      
             
             VStack{
                 ProgressView("", value: 0.3)
-                    .padding(.top,37)
-
-                    .padding()
                     .tint(Color.pink)
                 
                     .cornerRadius(8)
                     .scaleEffect(1.3)
                 
-                Text("リポジトリの名前は？")
+                Text("リポジトリのリンクは？")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading,10)
-                    .padding(.top, 80)
+                    .padding(.top, 65)
                     .font(.system(size: 30, weight: .black, design: .default))
                     .padding(.bottom,30)
                 
-                TextField("リポジトリの名前を入力してね", text: $title)
+                TextField("リポジトリのURLを入力してね", text: $url)
                     .frame(alignment: .leading)
                     .padding(.leading,10)
                 Divider()
                 Spacer()
-                NavigationLink("", destination: PostDiscriptionView( title: $title),isActive: $next)
+                NavigationLink("", destination: PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription, url: $url),isActive:$next)
 
                 Button(action: {
                     next.toggle()
@@ -52,7 +54,7 @@ struct PostView: View {
                         .padding(.bottom,20)
                 })
             }
-        }
+           
 
         .onAppear(){
             Task{
@@ -65,10 +67,4 @@ struct PostView: View {
         }
        
     }
-}
-
-#Preview {
-
-    PostView(developer: Developer(githubId: "am2525nyan"))
-
 }

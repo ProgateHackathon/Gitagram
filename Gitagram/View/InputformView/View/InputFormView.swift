@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct InputFormView: View {
+    @Binding var developer: Developer?
     @State private var inputText = ""
     
     var body: some View {
-        NavigationView {
             VStack {
                 Spacer()
                     .padding(.top,100)
@@ -24,7 +24,13 @@ struct InputFormView: View {
                     Spacer().frame(width: 70) // さらに左に移動するための余白
                 }
                 .padding(.bottom,300)
-                NavigationLink(destination: OneAccountFrameView(inputText: inputText, QRImage: UIImage())) {
+                Button(action: {
+                    Task{
+                        await CreateDeveloperUseCase().execute(githubId: inputText)
+                        developer = await GetLoginDeveloperUseCase().execute()
+                        print(developer)
+                    }
+                }, label: {
                     Text("次へ")
                         .bold()
                         .padding()
@@ -32,10 +38,10 @@ struct InputFormView: View {
                         .foregroundColor(Color.white)
                         .background(Color.blue)
                         .cornerRadius(25)
-                }
+                })
                 Spacer()
             }
-        }
+        
     }
 }
 
@@ -49,10 +55,4 @@ struct UnderlineTextFieldStyle: TextFieldStyle {
                 .overlay(Rectangle().frame(height: 1).padding(.top, 35))
         }
     }
-}
-
-
-
-#Preview {
-    InputFormView()
 }

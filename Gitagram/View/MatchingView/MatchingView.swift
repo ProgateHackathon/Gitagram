@@ -9,27 +9,50 @@ import SwiftUI
 
 struct MatchingView: View {
     @State var addripository = false
+    @State var reload = false
+    @ObservedObject var viewModel = MatchingViewModel()
     var body: some View {
         
         NavigationView {
             
-            CardStackView()
-                .navigationTitle("Gitagram")
-                          .navigationBarTitleDisplayMode(.inline)
-                          .toolbar {
-                              // ナビゲーションバーの右側にボタンを配置します。
-                              ToolbarItem(placement: .navigationBarTrailing) {
-                                  Button {
-                                      addripository.toggle()
-                                  } label: {
-                                      Image(systemName: "plus.circle")
-                                  }
-                              }
-                          }
+            CardStackView(viewModel: MatchingViewModel())
+             
+               
+                .toolbar {
+                    ToolbarItem(placement: .navigation) {
+                                      Image("logo")
+                                           .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                           .padding(.vertical, 5)
+                                 }
+                    // ナビゲーションバーの右側にボタンを配置します。
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            addripository.toggle()
+                        } label: {
+                            Image(systemName: "plus.circle")
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            reload.toggle()
+                            
+                        } label: {
+                            Image(systemName: "repeat.1.ar")
+                        }
+                    }
+                }
         }
         .sheet(isPresented: $addripository){
-            PostView()
+            PostView(developer: Developer(githubId: "am2525nyan"))
         }
+        .onChange(of: reload){
+            Task {
+                viewModel.cardModels = await viewModel.fetchCardInfomation()
+            }
+          
+        }
+        
     }
 }
 

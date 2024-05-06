@@ -17,12 +17,14 @@ struct PostImageView: View {
     @State private var selectedPhoto: PhotosPickerItem?
     @Binding var title: String
     @Binding var discription: String
-
+    @Binding var url: String
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         VStack{
             ProgressView("", value: 1)
             
-                .padding()
+            
                 .tint(Color.pink)
             
                 .cornerRadius(8)
@@ -61,6 +63,7 @@ struct PostImageView: View {
 
             Button(action: {
                 next.toggle()
+                UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
                 
             }, label: {
                 Text("保存")
@@ -79,15 +82,12 @@ struct PostImageView: View {
             //ここで保存だよ
             Task{
                 do{
-                    await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id), productImage: (image ?? UIImage(named: "back"))!
+                    await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id, url: url), productImage: (image ?? UIImage(named: "back"))!
                 )}
             }
             
         }
-        .onChange(of: showImagePicker){
-            
-                 
-        }
+    
         
         .onAppear(){
             Task{
@@ -110,5 +110,5 @@ struct PostImageView: View {
 }
 
 #Preview {
-    PostImageView(developer: Developer(githubId: "am2525nyan"), title: .constant(""), discription: .constant(""))
+    PostImageView(developer: Developer(githubId: "am2525nyan"), title: .constant(""), discription: .constant(""), url: .constant(""))
 }
