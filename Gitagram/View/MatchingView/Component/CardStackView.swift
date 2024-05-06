@@ -15,7 +15,13 @@ struct CardStackView: View {
     var body: some View {
         VStack(spacing:16){
             ZStack{
-                Text("画面左上のリロードボタンを押してね！")
+                VStack(alignment: .center){
+                    Text("全部見終わったよ！\n左上のリロードボタンを押してね！")
+                      
+                }
+                
+               
+                
                 ForEach(viewModel.cardModels){ cardData in
                     CardView(viewModel: viewModel, cardData: cardData)
                 }

@@ -16,9 +16,15 @@ struct MatchingView: View {
         NavigationView {
             
             CardStackView(viewModel: MatchingViewModel())
-                .navigationTitle("Gitagram")
-                .navigationBarTitleDisplayMode(.inline)
+             
+               
                 .toolbar {
+                    ToolbarItem(placement: .navigation) {
+                                      Image("logo")
+                                           .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                           .padding(.vertical, 5)
+                                 }
                     // ナビゲーションバーの右側にボタンを配置します。
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {

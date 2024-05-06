@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261AFE2BE8FCF2007D1606 /* PostURLView.swift */; };
 		103BF3692BE39C3E00818544 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3682BE39C3E00818544 /* FirebaseDatabase */; };
 		103BF36B2BE39C3E00818544 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36A2BE39C3E00818544 /* FirebaseDatabaseSwift */; };
 		103BF36D2BE39C3E00818544 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36C2BE39C3E00818544 /* FirebaseFirestore */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10261AFE2BE8FCF2007D1606 /* PostURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		722E84132BE73601007163D4 /* PostView */ = {
 			isa = PBXGroup;
 			children = (
+				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
 				722E840F2BE73601007163D4 /* Component */,
 				722E84102BE73601007163D4 /* PostDiscriptionView.swift */,
 				722E84112BE73601007163D4 /* PostImageView.swift */,
@@ -569,6 +572,7 @@
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				722E84052BE735EA007163D4 /* CardStackView.swift in Sources */,
 				722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */,
+				10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */,
 				722E840C2BE735EA007163D4 /* MatchingView.swift in Sources */,
 				722E847B2BE7365F007163D4 /* ProductImageRepositoryProtocol.swift in Sources */,
 				722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */,

@@ -16,17 +16,22 @@ struct CardView: View {
     @ObservedObject var viewModel: MatchingViewModel
     @State private var xoffset: CGFloat = 0
     @State private var degrees: Double = 0
+    @Environment(\.openURL) var openURL
     let cardData: CardDataModel
     
     var body: some View {
         ZStack(alignment: .bottom){
             
             ZStack(alignment: .top) {
-                Image(uiImage: cardData.productImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
-               
+              
+                if cardData.productImage != nil{
+                    Image(uiImage: cardData.productImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                }else{
+                    ProgressView()
+                }
               
                 
                 
@@ -63,6 +68,7 @@ private extension CardView {
             degrees = 12
         } completion: {
             viewModel.removeCard(cardData.product)
+            openLink(url: cardData.product.url)
         }
     }
     
@@ -92,6 +98,10 @@ private extension CardView {
 }
 
 private extension CardView{
+    
+    func openLink(url: String){
+        openURL(URL(string: url)!)
+    }
     func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value) {
         xoffset = value.translation.width
         degrees = Double(value.translation.width / 25)
