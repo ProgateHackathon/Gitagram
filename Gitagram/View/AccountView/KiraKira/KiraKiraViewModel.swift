@@ -10,8 +10,7 @@ import CoreGraphics
 import CoreImage.CIFilterBuiltins
 import SwiftUI
 
-class AccountViewModel: ObservableObject {
-    
+class KiraKiraViewModel: ObservableObject {
     @Published var middleImageOpacity: CGFloat = 1
     @Published var frontImageOpacitry: CGFloat = 0
     
@@ -65,35 +64,13 @@ class AccountViewModel: ObservableObject {
     }
 }
 
-class QRViewModel: ObservableObject {
-    
-    func QRroundedImage(qrCode: UIImage, cornerRadius: CGFloat) -> UIImage {
-        let qrGenerator = GetDeveloperQRCodeUseCase()
-        let developer  = Developer(githubId: "urassh")
-        let qrCode: UIImage = qrGenerator.execute(developer: developer)
-        //縁角丸にする
-        UIGraphicsBeginImageContextWithOptions(qrCode.size, false, qrCode.scale)
-        let rect = CGRect(origin: .zero, size: qrCode.size)
-        UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
-        qrCode.draw(in: rect)
-        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return roundedImage ?? UIImage()
-    }
-    
-}
-
-
-
 extension Double {
-    
     func convertedRadianToDegree() -> Double {
         return self * 180 / Double.pi
     }
 }
 
-extension AccountViewModel {
-    
+extension KiraKiraViewModel {
     enum DeviceAttitudeState {
         case flat
         case forward(degree: Double)

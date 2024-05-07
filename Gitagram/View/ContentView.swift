@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var inputText = ""
-        @State private var develop: Developer? = nil // Developer? に変更
-
-        var body: some View {
-            VStack {
-                if develop == nil {
-                    InputFormView(developer: $develop)
+    @State private var developer: Developer? = nil
+    @State private var isLoading: Bool = true
+    
+    var body: some View {
+        VStack {
+            if isLoading {
+                ProgressView()
+            } else {
+                if let host = developer {
+                    HomeView(hostDeveloper: host)
                 } else {
-                    AllView(hostDeveloper: develop!)
+                    InputFormView(developer: $developer)
                 }
             }
         }
+        .onAppear {
+            Task {
+                developer = await GetLoginDeveloperUseCase().execute()
+                isLoading = false
+            }
+        }
+    }
 }
 
 #Preview {
