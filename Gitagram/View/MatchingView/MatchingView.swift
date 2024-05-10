@@ -8,50 +8,49 @@
 import SwiftUI
 
 struct MatchingView: View {
-    @State var addripository = false
-    @State var reload = false
+    @State var showAddRepository = false
     @ObservedObject var viewModel = MatchingViewModel()
+    
     var body: some View {
-        
         NavigationView {
-            
-            CardStackView(viewModel: MatchingViewModel())
-             
-               
-                .toolbar {
-                    ToolbarItem(placement: .navigation) {
-                                      Image("logo")
-                                           .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                           .padding(.vertical, 5)
-                                 }
-                    // ナビゲーションバーの右側にボタンを配置します。
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            addripository.toggle()
-                        } label: {
-                            Image(systemName: "plus.circle")
+            if viewModel.isLoading {
+                ProgressView()
+            } else {
+                CardStackView(viewModel: viewModel)
+                    .toolbar {
+                        ToolbarItem(placement: .navigation) {
+                            Image("logo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.vertical, 5)
+                         }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button {
+                                showAddRepository.toggle()
+                            } label: {
+                                Image(systemName: "plus.circle")
+                            }
+                        }
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button {
+                                Task {
+                                    await viewModel.getRepository()
+                                }
+                            } label: {
+                                Image(systemName: "repeat.1.ar")
+                            }
                         }
                     }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            reload.toggle()
-                            
-                        } label: {
-                            Image(systemName: "repeat.1.ar")
-                        }
-                    }
-                }
+            }
         }
-        .sheet(isPresented: $addripository){
+        .sheet(isPresented: $showAddRepository) {
             PostView(developer: Developer(githubId: "am2525nyan"))
         }
-        .onChange(of: reload){
+        .onAppear(perform: {
             Task {
-                viewModel.cardModels = await viewModel.fetchCardInfomation()
+                await viewModel.getRepository()
             }
-          
-        }
+        })
         
     }
 }

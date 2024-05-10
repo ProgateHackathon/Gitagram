@@ -17,19 +17,16 @@ struct CardStackView: View {
             ZStack{
                 VStack(alignment: .center){
                     Text("全部見終わったよ！\n左上のリロードボタンを押してね！")
-                      
                 }
                 
-               
-                
-                ForEach(viewModel.cardModels){ cardData in
-                    CardView(viewModel: viewModel, cardData: cardData)
+                ForEach(viewModel.repositories){ repository in
+                    CardView(viewModel: viewModel, cardData: repository)
                 }
             }
             .onChange(of: finish){
                 
             }
-            if !viewModel.cardModels.isEmpty{
+            if viewModel.isNotRepositoryEmpty() {
                 SwipeActionButtonsView(viewModel: viewModel)
             }
             

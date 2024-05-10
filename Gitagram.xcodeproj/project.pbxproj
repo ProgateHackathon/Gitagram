@@ -13,6 +13,7 @@
 		10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B042BE9427C007D1606 /* GradationBackView.swift */; };
 		10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B062BE94520007D1606 /* KiraKiraView.swift */; };
 		10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B092BE94695007D1606 /* AccountViewModel.swift */; };
+		10261B0E2BEE607A007D1606 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B0D2BEE607A007D1606 /* IndicatorView.swift */; };
 		103BF3692BE39C3E00818544 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3682BE39C3E00818544 /* FirebaseDatabase */; };
 		103BF36B2BE39C3E00818544 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36A2BE39C3E00818544 /* FirebaseDatabaseSwift */; };
 		103BF36D2BE39C3E00818544 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36C2BE39C3E00818544 /* FirebaseFirestore */; };
@@ -80,6 +81,7 @@
 		10261B042BE9427C007D1606 /* GradationBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradationBackView.swift; sourceTree = "<group>"; };
 		10261B062BE94520007D1606 /* KiraKiraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraView.swift; sourceTree = "<group>"; };
 		10261B092BE94695007D1606 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		10261B0D2BEE607A007D1606 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				722E84002BE735EA007163D4 /* SizeConstants.swift */,
+				10261B0D2BEE607A007D1606 /* IndicatorView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				10261B012BE93EC4007D1606 /* QRView.swift in Sources */,
 				722E846F2BE7365F007163D4 /* ProductImageClientProtocol.swift in Sources */,
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
+				10261B0E2BEE607A007D1606 /* IndicatorView.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
