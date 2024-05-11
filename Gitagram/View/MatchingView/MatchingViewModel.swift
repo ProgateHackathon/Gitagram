@@ -33,7 +33,6 @@ class MatchingViewModel: ObservableObject {
     public func getRepository() async {
         isLoading = true
         repositories = await fetchCardInfomation()
-        print("count: \(repositories.count)")
         isLoading = false
     }
     
