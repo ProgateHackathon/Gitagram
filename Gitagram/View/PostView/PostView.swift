@@ -13,14 +13,11 @@ struct PostView: View {
     @State var developer : Developer
     var body: some View {
         NavigationView {
-            
             VStack{
                 ProgressView("", value: 0.3)
                     .padding(.top,37)
-
                     .padding()
                     .tint(Color.pink)
-                
                     .cornerRadius(8)
                     .scaleEffect(1.3)
                 
@@ -42,7 +39,6 @@ struct PostView: View {
                     next.toggle()
                 }, label: {
                     Text("次へ")
-
                         .padding(.horizontal,120)
                         .padding(.vertical,15)
                         .font(.system(size: 10, weight: .medium, design: .default))
@@ -53,22 +49,14 @@ struct PostView: View {
                 })
             }
         }
-
         .onAppear(){
             Task{
-                do{
-                    await GetLoginDeveloperUseCase().execute()
+                if let host =  await GetLoginDeveloperUseCase().execute() {
+                    developer = host
+                } else {
+                    ContentView()
                 }
-               
             }
-         
         }
-       
     }
-}
-
-#Preview {
-
-    PostView(developer: Developer(githubId: "am2525nyan"))
-
 }

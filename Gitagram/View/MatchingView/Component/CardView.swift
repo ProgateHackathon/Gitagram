@@ -21,24 +21,15 @@ struct CardView: View {
     
     var body: some View {
         ZStack(alignment: .bottom){
-            
             ZStack(alignment: .top) {
-              
-                if cardData.productImage != nil{
-                    Image(uiImage: cardData.productImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
-                }else{
-                    ProgressView()
-                }
-              
-                
+                Image(uiImage: cardData.productImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
-
-
             }
+            
             UserInfoView(cardData: cardData)
         }
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
@@ -82,8 +73,8 @@ private extension CardView {
     }
     
     func onReceiveSwipeAction(_ action: SwipeAction? ){
-        guard let action else{ return }
-        guard let topProductCardID = viewModel.cardModels.last?.product.id else { return }
+        guard let action else { return }
+        guard let topProductCardID = viewModel.getLastRepository()?.product.id else { return }
         
         if topProductCardID == cardData.product.id {
             switch action {
