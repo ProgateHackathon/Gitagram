@@ -14,11 +14,13 @@ struct HomeView: View {
         TabView{
             MatchingView()
                 .tabItem {
-                    Image(systemName: "1.circle.fill")
+                    Image(systemName: "drop")
+                    Text("まっち")//タブバーの①
                 }
             AccountView(developer: hostDeveloper)
                 .tabItem {
-                    Image(systemName: "2.circle.fill")
+                    Image(systemName: "person.crop.circle.badge.plus")
+                    Text("こ〜かん")//タブバーの②
                 }
         }
     }
