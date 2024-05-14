@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct hashTagView: View {
+struct HashTagView: View {
     @State var tagWord = ""
     var body: some View {
         HStack{
@@ -27,5 +27,5 @@ struct hashTagView: View {
 }
 
 #Preview {
-    hashTagView()
+    HashTagView()
 }
