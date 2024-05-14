@@ -33,7 +33,7 @@ struct CardView: View {
                 
                 UserInfoView(cardData: cardData)
                 HStack(){
-                    hashTagView()
+                    HashTagView()
                 }
                 .padding(.leading, 15)
                 .padding(.bottom, 15)

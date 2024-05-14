@@ -71,7 +71,7 @@
 		722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* ShareSheet.swift */; };
 		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
-		72B3DB412BF2F928008BE7F9 /* hashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* hashTagView.swift */; };
+		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,7 +135,7 @@
 		722E84852BE73A29007163D4 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		72B3DB402BF2F928008BE7F9 /* hashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hashTagView.swift; sourceTree = "<group>"; };
+		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +225,7 @@
 				722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */,
 				722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */,
 				722E83FC2BE735EA007163D4 /* UserInfoView.swift */,
-				72B3DB402BF2F928008BE7F9 /* hashTagView.swift */,
+				72B3DB402BF2F928008BE7F9 /* HashTagView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -543,7 +543,7 @@
 				722E846F2BE7365F007163D4 /* ProductImageClientProtocol.swift in Sources */,
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
-				72B3DB412BF2F928008BE7F9 /* hashTagView.swift in Sources */,
+				72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
