@@ -260,9 +260,9 @@
 		722E84132BE73601007163D4 /* PostView */ = {
 			isa = PBXGroup;
 			children = (
-				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
 				722E840F2BE73601007163D4 /* Component */,
 				722E84102BE73601007163D4 /* PostDiscriptionView.swift */,
+				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
 				722E84112BE73601007163D4 /* PostImageView.swift */,
 				722E84122BE73601007163D4 /* PostView.swift */,
 			);

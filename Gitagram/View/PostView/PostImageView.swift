@@ -33,7 +33,7 @@ struct PostImageView: View {
             Text("リポジトリの画像を貼ろう")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
-                .padding(.top, 80)
+            
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
             Spacer()

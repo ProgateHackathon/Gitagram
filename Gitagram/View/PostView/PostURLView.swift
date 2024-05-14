@@ -38,11 +38,10 @@ struct PostURLView: View {
                     .padding(.leading,10)
                 Divider()
                 Spacer()
-                NavigationLink("", destination: PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription, url: $url),isActive:$next)
+                NavigationLink{
+                    PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription, url: $url)
 
-                Button(action: {
-                    next.toggle()
-                }, label: {
+                }label:{
                     Text("次へ")
 
                         .padding(.horizontal,120)
@@ -52,7 +51,8 @@ struct PostURLView: View {
                         .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
                         .cornerRadius(30)
                         .padding(.bottom,20)
-                })
+                }
+              
             }
            
 

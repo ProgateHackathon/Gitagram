@@ -11,6 +11,7 @@ struct PostView: View {
     @State var title = ""
     @State var next = false
     @State var developer : Developer
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -33,11 +34,9 @@ struct PostView: View {
                     .padding(.leading,10)
                 Divider()
                 Spacer()
-                NavigationLink("", destination: PostDiscriptionView( title: $title),isActive: $next)
-
-                Button(action: {
-                    next.toggle()
-                }, label: {
+                NavigationLink{
+                    PostDiscriptionView( title: $title)
+                }label:{
                     Text("次へ")
                         .padding(.horizontal,120)
                         .padding(.vertical,15)
@@ -46,7 +45,9 @@ struct PostView: View {
                         .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
                         .cornerRadius(30)
                         .padding(.bottom,20)
-                })
+                }
+
+               
             }
         }
         .onAppear(){

@@ -25,7 +25,7 @@ struct PostDiscriptionView: View {
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
-                .padding(.top, 80)
+               
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
             
@@ -35,21 +35,18 @@ struct PostDiscriptionView: View {
                 .padding(.leading,10)
             Divider()
             Spacer()
-            NavigationLink("", destination: PostURLView(title: $title, discription: $discription, developer: Developer(githubId: "")),isActive:$next)
-            Button(action: {
-                next.toggle()
-            }, label: {
+            NavigationLink{
+                PostURLView(title: $title, discription: $discription, developer: Developer(githubId: ""))
+            } label: {
                 Text("次へ")
-                
-                
                     .padding(.horizontal,120)
                     .padding(.vertical,15)
                     .font(.system(size: 10, weight: .medium, design: .default))
                     .foregroundColor(.white)
                     .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
                     .cornerRadius(30)
-                    .padding(.bottom,20)
-            })
+                   
+            }
         }
       
         
