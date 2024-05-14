@@ -53,9 +53,7 @@ struct UserInfoView: View {
         }
         .foregroundStyle(.white)
         .padding()
-        .background(
-            LinearGradient(colors: [.clear,.black], startPoint: .top , endPoint: .bottom)
-        )
+        
     }
 }
 

@@ -23,14 +23,26 @@ struct CardView: View {
         ZStack(alignment: .bottom){
             ZStack(alignment: .top) {
                 Image(uiImage: cardData.productImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
             }
+            VStack(alignment: .leading){
+                
+                UserInfoView(cardData: cardData)
+                HStack(){
+                    HashTagView()
+                }
+                .padding(.leading, 15)
+                .padding(.bottom, 15)
+                .frame(alignment: .leading)
+            }
+            .background(
+                LinearGradient(colors: [.clear,.black], startPoint: .top , endPoint: .bottom)
+            )
             
-            UserInfoView(cardData: cardData)
         }
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)
@@ -110,3 +122,4 @@ private extension CardView{
         isRightSwipe ? swipeRight() : swipeLeft()
     }
 }
+
