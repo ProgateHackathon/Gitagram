@@ -23,12 +23,11 @@ struct PostImageView: View {
     var body: some View {
         VStack{
             ProgressView("", value: 1)
-            
-            
                 .tint(Color.pink)
             
                 .cornerRadius(8)
                 .scaleEffect(1.3)
+                .padding(.bottom, 20)
             
             Text("リポジトリの画像を貼ろう")
                 .frame(maxWidth: .infinity, alignment: .leading)
