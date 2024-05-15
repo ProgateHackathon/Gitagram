@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HashTagView: View {
     @State var tagWord = ""
+    
     var body: some View {
         HStack{
             Text("#")

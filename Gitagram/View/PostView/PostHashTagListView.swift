@@ -1,18 +1,22 @@
 //
-//  PostURLView.swift
+//  PostHashTagView.swift
 //  Gitagram
 //
-//  Created by saki on 2024/05/05.
+//  Created by saki on 2024/05/15.
 //
 
 import SwiftUI
 
-struct PostURLView: View {
+struct PostHashTagListView: View {
     @Binding var title: String
     @Binding var discription: String
     @State var next = false
     @State var developer : Developer
     @State var url = ""
+    @State var hashTagList = [String]()
+    let grids = Array(repeating: GridItem(.fixed(80)), count: 4)
+        
+  
     var body: some View {
       
             
@@ -23,19 +27,27 @@ struct PostURLView: View {
                     .scaleEffect(1.3)
                     .padding(.bottom, 20)
                 
-                Text("リポジトリのリンクは？")
+                Text("どんなリポジトリ？")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading,10)
                     .font(.system(size: 30, weight: .black, design: .default))
                     .padding(.bottom,30)
                 
-                TextField("リポジトリのURLを入力してね", text: $url)
+                TextField("リポジトリのハッシュタグを選択してね", text: $url)
                     .frame(alignment: .leading)
                     .padding(.leading,10)
                 Divider()
+                LazyVGrid(columns: grids) {
+                    ForEach($hashTagList, id: \.self) { hashtag in
+                        PostHashTagView(tagWord: hashtag)
+                    }
+                }
+                
+        
+               
                 Spacer()
                 NavigationLink{
-                    PostHashTagListView(title: $title, discription: $discription, developer: Developer(githubId: ""))
+                    PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription, url: $url)
 
                 }label:{
                     Text("次へ")
@@ -50,6 +62,22 @@ struct PostURLView: View {
                 }
               
             }
+           
+
+        .onAppear(){
+            Task{
+                do{
+                   //ここでハッシュタグ一覧を保存
+                    hashTagList = ["Swift","Kotlin","Flutter","Ruby","React","next.js","Ruby on rails"]
+                }
+               
+            }
+         
+        }
        
     }
+}
+
+#Preview {
+    PostHashTagListView(title: .constant(""), discription: .constant("aa"), developer: Developer(githubId: "am2525nyan"))
 }
