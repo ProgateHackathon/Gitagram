@@ -16,16 +16,17 @@ struct PostView: View {
         NavigationView {
             VStack{
                 ProgressView("", value: 0.3)
-                    .padding(.top,37)
                     .padding()
                     .tint(Color.pink)
                     .cornerRadius(8)
                     .scaleEffect(1.3)
+                    .padding(.top, 40)
+                    .padding(.bottom, 20)
                 
                 Text("リポジトリの名前は？")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading,10)
-                    .padding(.top, 80)
+                   
                     .font(.system(size: 30, weight: .black, design: .default))
                     .padding(.bottom,30)
                 

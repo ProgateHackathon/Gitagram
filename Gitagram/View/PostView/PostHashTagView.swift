@@ -1,13 +1,13 @@
 //
-//  PostURLView.swift
+//  PostHashTagView.swift
 //  Gitagram
 //
-//  Created by saki on 2024/05/05.
+//  Created by saki on 2024/05/15.
 //
 
 import SwiftUI
 
-struct PostURLView: View {
+struct PostHashTagView: View {
     @Binding var title: String
     @Binding var discription: String
     @State var next = false
@@ -23,19 +23,19 @@ struct PostURLView: View {
                     .scaleEffect(1.3)
                     .padding(.bottom, 20)
                 
-                Text("リポジトリのリンクは？")
+                Text("どんなリポジトリ？")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading,10)
                     .font(.system(size: 30, weight: .black, design: .default))
                     .padding(.bottom,30)
                 
-                TextField("リポジトリのURLを入力してね", text: $url)
+                TextField("リポジトリのハッシュタグを選択してね", text: $url)
                     .frame(alignment: .leading)
                     .padding(.leading,10)
                 Divider()
                 Spacer()
                 NavigationLink{
-                    PostHashTagView(title: $title, discription: $discription, developer: Developer(githubId: ""))
+                    PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription, url: $url)
 
                 }label:{
                     Text("次へ")
@@ -50,6 +50,21 @@ struct PostURLView: View {
                 }
               
             }
+           
+
+        .onAppear(){
+            Task{
+                do{
+                   //ここでハッシュタグを保存
+                }
+               
+            }
+         
+        }
        
     }
+}
+
+#Preview {
+    PostHashTagView(title: .constant(""), discription: .constant("aa"), developer: Developer(githubId: "am2525nyan"))
 }

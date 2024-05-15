@@ -15,12 +15,11 @@ struct PostDiscriptionView: View {
     var body: some View {
         VStack{
             ProgressView("", value: 0.6)
-                .padding(.top,5)
-                
                 .tint(Color.pink)
             
                 .cornerRadius(8)
                 .scaleEffect(1.3)
+                .padding(.bottom, 20)
             
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -28,6 +27,7 @@ struct PostDiscriptionView: View {
                
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
+            
             
             TextField("リポジトリの説明を入力してね", text: $discription)
                 .frame(alignment: .leading)
