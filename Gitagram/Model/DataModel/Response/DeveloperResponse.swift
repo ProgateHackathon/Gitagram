@@ -15,4 +15,8 @@ struct DeveloperResponse : Identifiable, Codable {
         self.id = developer.id.toUUID
         self.name = developer.name
     }
+    
+    func toDeveloper() -> Developer {
+        return Developer(id: Developer.DeveloperID(id: id), githubId: name)
+    }
 }
