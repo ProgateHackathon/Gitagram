@@ -156,6 +156,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10177A332BFA13EF00BA6078 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				722E843F2BE7365F007163D4 /* CardDataModel.swift */,
+				722E84402BE7365F007163D4 /* Developer.swift */,
+				722E84412BE7365F007163D4 /* Product.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		10261B082BE94625007D1606 /* KiraKira */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,9 +316,7 @@
 		722E84422BE7365F007163D4 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				722E843F2BE7365F007163D4 /* CardDataModel.swift */,
-				722E84402BE7365F007163D4 /* Developer.swift */,
-				722E84412BE7365F007163D4 /* Product.swift */,
+				10177A332BFA13EF00BA6078 /* Entity */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
