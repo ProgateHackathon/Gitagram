@@ -8,6 +8,6 @@
 import Foundation
 
 protocol DeveloperClientProtocol {
-    func create(developer: Developer) async
-    func get(developer_id: String) async -> Developer?
+    func create(developer: DeveloperResponse) async
+    func get(developer_id: UUID) async -> DeveloperResponse?
 }
