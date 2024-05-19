@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product : Identifiable, Codable {
+struct Product : Identifiable {
     typealias ProductID = Product.ID
     typealias DeveloperID = Developer.DeveloperID
     
@@ -35,11 +35,15 @@ struct Product : Identifiable, Codable {
         self.url = url
     }
     
-    struct ID : Identifiable, Hashable, Codable {
+    struct ID : Identifiable, Hashable {
         let id: UUID
         
         var toString: String {
             return id.uuidString
+        }
+        
+        var toUUID: UUID {
+            return id
         }
         
         init(id uuid: UUID) {

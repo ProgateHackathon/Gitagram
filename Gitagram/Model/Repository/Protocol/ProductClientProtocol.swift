@@ -8,9 +8,9 @@
 import Foundation
 
 protocol ProductClientProtocol {
-    func getAll() async -> [Product]
-    func create(product: Product)
-    func get(product_id: Product.ID) async -> Product?
-    func update(product_id: Product.ID, with newProduct: Product)
-    func delete(product_id: Product.ID)
+    func getAll() async -> [ProductResponse]
+    func create(product: ProductResponse)
+    func get(product_id: UUID) async -> ProductResponse?
+    func update(product_id: UUID, with newProduct: ProductResponse)
+    func delete(product_id: UUID)
 }
