@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10177A352BFA148500BA6078 /* ProductResponse.swift */; };
+		10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */; };
 		10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261AFE2BE8FCF2007D1606 /* PostURLView.swift */; };
 		10261B012BE93EC4007D1606 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B002BE93EC4007D1606 /* QRView.swift */; };
 		10261B032BE941C3007D1606 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B022BE941C3007D1606 /* RichText.swift */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		10177A352BFA148500BA6078 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperResponse.swift; sourceTree = "<group>"; };
 		10261AFE2BE8FCF2007D1606 /* PostURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
 		10261B002BE93EC4007D1606 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		10261B022BE941C3007D1606 /* RichText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				10177A352BFA148500BA6078 /* ProductResponse.swift */,
+				10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
+				10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */,
 				722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */,
 				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
 				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
