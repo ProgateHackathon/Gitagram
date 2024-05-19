@@ -32,6 +32,10 @@ struct Developer : Identifiable, Codable {
     struct ID : Identifiable, Hashable, Codable {
         let id: UUID
         
+        var toUUID: UUID {
+            id
+        }
+        
         var toString: String {
             return id.uuidString
         }
