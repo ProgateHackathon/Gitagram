@@ -74,6 +74,7 @@
 		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
 		72B3DB432BF42D2F008BE7F9 /* PostHashTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */; };
 		72B3DB452BF49B48008BE7F9 /* PostHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB442BF49B48008BE7F9 /* PostHashTagView.swift */; };
+		72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagListView.swift; sourceTree = "<group>"; };
 		72B3DB442BF49B48008BE7F9 /* PostHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagView.swift; sourceTree = "<group>"; };
+		72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				722E84632BE7365F007163D4 /* Model */,
 				10472EF42BDFAFD700C179F8 /* View */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
+				72B3DB462BF50DEC008BE7F9 /* Utils */,
 				10472EEC2BDFAFBD00C179F8 /* Preview Content */,
 			);
 			path = Gitagram;
@@ -461,6 +464,14 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		72B3DB462BF50DEC008BE7F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -601,6 +612,7 @@
 				722E84652BE7365F007163D4 /* ProductClient.swift in Sources */,
 				722E84692BE7365F007163D4 /* Product.swift in Sources */,
 				722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */,
+				72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

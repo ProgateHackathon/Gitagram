@@ -7,8 +7,10 @@
 
 import SwiftUI
 struct PostHashTagView: View {
-    
     @Binding var tagWord: String
+    @State var StringColor = "#FFFFFF"//16新数のcolorのstring
+    @State var color = UIColor(ciColor: .red)
+    
     var body: some View {
         HStack{
             Text("#")
@@ -19,9 +21,16 @@ struct PostHashTagView: View {
         .padding(4)
         .padding(.horizontal, 5)
         .minimumScaleFactor(0.2)
-        .background(Color(red: CGFloat.random(in: 0.7...1), green: CGFloat.random(in: 0.7...1), blue: CGFloat.random(in: 0.7...1)).gradient)
+        .background(Color(color).gradient)
         .cornerRadius(50)
+        .onAppear {
+            //ここでハッシュタグモデルから色を持ってきて代入する、一旦ランダム
+            //変換
+    //        color = UIColor(hex: StringColor) ?? UIColor(hex: "#FFFFFF")!
+            color = UIColor(red: CGFloat.random(in: 0.7...1), green: CGFloat.random(in: 0.7...1), blue: CGFloat.random(in: 0.7...1), alpha: 1)
+        }
     }
+     
     
 }
 

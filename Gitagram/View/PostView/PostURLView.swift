@@ -35,7 +35,7 @@ struct PostURLView: View {
                 Divider()
                 Spacer()
                 NavigationLink{
-                    PostHashTagListView(title: $title, discription: $discription, developer: Developer(githubId: ""))
+                    PostHashTagListView(title: $title, discription: $discription, developer: Developer(githubId: ""), url: $url)
 
                 }label:{
                     Text("次へ")
