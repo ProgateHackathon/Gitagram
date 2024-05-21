@@ -73,7 +73,7 @@
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
 		728E75B22BFC4A3B003D4C93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 728E75B12BFC4A3B003D4C93 /* Lottie */; };
 		728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E75B32BFC5139003D4C93 /* LottieView.swift */; };
-		728E75BA2BFC61A0003D4C93 /* LottieProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = 728E75B92BFC61A0003D4C93 /* LottieProgress.json */; };
+		728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = 728E75C12BFC7BAE003D4C93 /* LottieProgress.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,7 +138,7 @@
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		728E75B32BFC5139003D4C93 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		728E75B92BFC61A0003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
+		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +188,10 @@
 		10472EE52BDFAFBB00C179F8 /* Gitagram */ = {
 			isa = PBXGroup;
 			children = (
-				728E75B92BFC61A0003D4C93 /* LottieProgress.json */,
 				23B6E52E2BE7540F0049200B /* Info.plist */,
 				103BF37A2BE3B17000818544 /* GoogleService-Info.plist */,
 				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
+				728E75C12BFC7BAE003D4C93 /* LottieProgress.json */,
 				722E84632BE7365F007163D4 /* Model */,
 				10472EF42BDFAFD700C179F8 /* View */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
@@ -532,8 +532,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */,
 				10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */,
-				728E75BA2BFC61A0003D4C93 /* LottieProgress.json in Resources */,
 				10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */,
 				103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */,
 			);
