@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10177A352BFA148500BA6078 /* ProductResponse.swift */; };
+		10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */; };
 		10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261AFE2BE8FCF2007D1606 /* PostURLView.swift */; };
 		10261B012BE93EC4007D1606 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B002BE93EC4007D1606 /* QRView.swift */; };
 		10261B032BE941C3007D1606 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B022BE941C3007D1606 /* RichText.swift */; };
@@ -75,6 +77,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10177A352BFA148500BA6078 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperResponse.swift; sourceTree = "<group>"; };
 		10261AFE2BE8FCF2007D1606 /* PostURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
 		10261B002BE93EC4007D1606 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		10261B022BE941C3007D1606 /* RichText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
@@ -156,6 +160,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10177A332BFA13EF00BA6078 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				722E843F2BE7365F007163D4 /* CardDataModel.swift */,
+				722E84402BE7365F007163D4 /* Developer.swift */,
+				722E84412BE7365F007163D4 /* Product.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		10177A342BFA141600BA6078 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				10177A352BFA148500BA6078 /* ProductResponse.swift */,
+				10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		10261B082BE94625007D1606 /* KiraKira */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,9 +329,8 @@
 		722E84422BE7365F007163D4 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				722E843F2BE7365F007163D4 /* CardDataModel.swift */,
-				722E84402BE7365F007163D4 /* Developer.swift */,
-				722E84412BE7365F007163D4 /* Product.swift */,
+				10177A342BFA141600BA6078 /* Response */,
+				10177A332BFA13EF00BA6078 /* Entity */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -552,6 +574,7 @@
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,
+				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
 				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
@@ -580,6 +603,7 @@
 				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
+				10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */,
 				722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */,
 				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
 				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,

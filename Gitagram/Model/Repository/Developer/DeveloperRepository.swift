@@ -14,11 +14,15 @@ class DeveloperRepository : DeveloperRepositoryProtocol {
     
     func create(object: Developer) async {
         UserDefaults.standard.set(object.id.toString, forKey: SIGNIN_DEVELOPER_KEY)
-        await developerClient.create(developer: object)
+        await developerClient.create(developer: DeveloperResponse(from: object))
     }
     
     func get(id: Developer.ID) async -> Developer? {
-        await developerClient.get(developer_id: id.toString)
+        if let response = await developerClient.get(developer_id: id.toUUID) {
+            return response.toDeveloper()
+        }
+        
+        return nil
     }
     
     func getLoginDeveloper() async -> Developer? {
