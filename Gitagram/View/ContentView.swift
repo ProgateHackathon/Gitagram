@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct ContentView: View {
     @State private var developer: Developer? = nil
@@ -14,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if isLoading {
-                ProgressView()
+                LottieView(filename: "LottieProgress")
             } else {
                 if let host = developer {
                     HomeView(hostDeveloper: host)

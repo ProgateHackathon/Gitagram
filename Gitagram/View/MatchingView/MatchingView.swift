@@ -14,7 +14,7 @@ struct MatchingView: View {
     var body: some View {
         NavigationView {
             if viewModel.isLoading {
-                ProgressView()
+                LottieView(filename: "LottieProgress")
             } else {
                 CardStackView(viewModel: viewModel)
                     .toolbar {
