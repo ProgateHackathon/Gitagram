@@ -17,7 +17,7 @@ struct PostHashTagListView: View {
     let grids = Array(repeating: GridItem(.fixed(80)), count: 4)
     @State private var bgColor =
     Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
-    
+    @State var StringColor = ""
     var body: some View {
         
         VStack{
@@ -44,7 +44,8 @@ struct PostHashTagListView: View {
                     })
                     .padding(10)
                     Button {
-                        //ここでfirebaseにタグを保存
+                        let stringColor = UIColor(bgColor).toHexString()
+                        //ここでfirebaseにタグを保存して、hashタグリストを更新
                         print("追加ボタン")
                     } label: {
                         Text("追加")
@@ -56,7 +57,10 @@ struct PostHashTagListView: View {
         
             LazyVGrid(columns: grids) {
                 ForEach($hashTagList, id: \.self) { hashtag in
-                    PostHashTagView(tagWord: hashtag)
+                    PostHashTagView(tagWord: hashtag, StringColor: $StringColor)
+                        .onAppear(){
+                            //ここで色を取得して渡す
+                        }
                 }
             }
             Spacer()
@@ -80,7 +84,7 @@ struct PostHashTagListView: View {
         .onAppear(){
             Task{
                 do{
-                    //ここでハッシュタグ一覧と色を取得
+                    //ここでハッシュタグを取得
                     hashTagList = ["Swift","Kotlin","Flutter","Ruby","React","next.js","Ruby on rails"]
                 }
                 
@@ -89,6 +93,7 @@ struct PostHashTagListView: View {
         }
         
     }
+   
 }
 
 #Preview {

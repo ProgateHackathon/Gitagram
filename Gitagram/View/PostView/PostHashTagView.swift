@@ -8,9 +8,8 @@
 import SwiftUI
 struct PostHashTagView: View {
     @Binding var tagWord: String
-    @State var StringColor = "#FFFFFF"//16新数のcolorのstring
+    @Binding var StringColor : String//16新数のcolorのstring
     @State var color = UIColor(ciColor: .red)
-    
     var body: some View {
         HStack{
             Text("#")
