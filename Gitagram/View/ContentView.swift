@@ -16,6 +16,7 @@ struct ContentView: View {
         VStack {
             if isLoading {
                 LottieView(filename: "LottieProgress")
+                    .frame(width: 400,height: 400)
             } else {
                 if let host = developer {
                     HomeView(hostDeveloper: host)

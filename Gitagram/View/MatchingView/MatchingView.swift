@@ -15,6 +15,7 @@ struct MatchingView: View {
         NavigationView {
             if viewModel.isLoading {
                 LottieView(filename: "LottieProgress")
+                    .frame(width: 400,height: 400)
             } else {
                 CardStackView(viewModel: viewModel)
                     .toolbar {

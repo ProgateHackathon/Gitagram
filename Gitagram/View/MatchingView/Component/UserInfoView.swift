@@ -20,6 +20,7 @@ struct UserInfoView: View {
                         .clipShape(Circle())
                 } placeholder: {
                     LottieView(filename: "LottieProgress")
+                        .frame(width: 400,height: 400)
                 }
                     
                 Text(cardData.developer.name)
