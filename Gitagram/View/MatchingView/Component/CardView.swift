@@ -99,7 +99,6 @@ private extension CardView{
             openURL((URL(string: url))!)
         }else{
             isShowAlert.toggle()
-            print("a")
         }
        
     }

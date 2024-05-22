@@ -29,7 +29,6 @@ struct CardStackView: View {
             }
             .alert("エラー", isPresented: $isShowAlert) {
                 Button("OK") {
-                print("URlないよ")
                 }
             } message: {
                 Text("URLがありません")
