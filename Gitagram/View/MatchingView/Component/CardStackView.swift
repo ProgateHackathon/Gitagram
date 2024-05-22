@@ -12,6 +12,7 @@ import SwiftUI
 struct CardStackView: View {
     @ObservedObject var viewModel: MatchingViewModel
     @State var finish = false
+    @State var isShowAlert = false
     var body: some View {
         VStack(spacing:16){
             ZStack{
@@ -20,11 +21,18 @@ struct CardStackView: View {
                 }
                 
                 ForEach(viewModel.repositories){ repository in
-                    CardView(viewModel: viewModel, cardData: repository)
+                    CardView(viewModel: viewModel, isShowAlert: $isShowAlert, cardData: repository)
                 }
             }
             .onChange(of: finish){
                 
+            }
+            .alert("エラー", isPresented: $isShowAlert) {
+                Button("OK") {
+                print("URlないよ")
+                }
+            } message: {
+                Text("URLがありません")
             }
             if viewModel.isNotRepositoryEmpty() {
                 SwipeActionButtonsView(viewModel: viewModel)
