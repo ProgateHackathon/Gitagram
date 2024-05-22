@@ -19,6 +19,7 @@ struct PostImageView: View {
     @Binding var discription: String
     @Binding var url: String
     @Environment(\.dismiss) private var dismiss
+    @State var selectImage: Image? = nil
     
     var body: some View {
         VStack{
@@ -37,8 +38,17 @@ struct PostImageView: View {
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
             Spacer()
+            if let image = selectImage {
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+                    .cornerRadius(15)
+                    .padding()
+        
+            }
             PhotosPicker(selection: $selectedPhoto,matching: .images){
-
+                
                 HStack{
                     Image(systemName: "photo.badge.plus")
                     Text("画像のアップロード")
@@ -55,12 +65,24 @@ struct PostImageView: View {
                         .stroke(Color(Color(red: 0.82, green: 0.6, blue: 0.97)), lineWidth: 3)
                 )
             }
-                .onChange(of: selectedPhoto) { selectedPhoto in
-                    Task { await loadImageFromSelectedPhoto(photo: selectedPhoto) }
+            .onChange(of: selectedPhoto) { selectedPhoto in
+                Task {
+                    await loadImageFromSelectedPhoto(photo: selectedPhoto)
                 }
-            
+            }
+            .onChange(of: selectedPhoto) { newItem in
+                if let newItem = newItem {
+                                    Task {
+                                        if let data = try? await newItem.loadTransferable(type: Data.self),
+                                           let uiImage = UIImage(data: data) {
+                                            selectImage = Image(uiImage: uiImage)
+                                        }
+                                    }
+                                }
+            }
             .padding(.bottom,20)
-
+            
+          
             Button(action: {
                 next.toggle()
                 UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
@@ -83,11 +105,11 @@ struct PostImageView: View {
             Task{
                 do{
                     await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id, url: url), productImage: (image ?? UIImage(named: "back"))!
-                )}
+                    )}
             }
             
         }
-    
+        
         
         .onAppear(){
             Task{
@@ -99,6 +121,7 @@ struct PostImageView: View {
             }
             
         }
+        
         
     }
     private func loadImageFromSelectedPhoto(photo: PhotosPickerItem?) async {
