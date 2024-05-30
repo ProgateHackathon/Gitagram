@@ -98,7 +98,7 @@ private extension CardView{
         if url != ""{
             openURL((URL(string: url))!)
         }else{
-            isShowAlert.toggle()
+            isShowAlert = true
         }
        
     }
