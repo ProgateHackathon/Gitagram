@@ -19,7 +19,8 @@ struct UserInfoView: View {
                         .frame(width: 60,height: 60)
                         .clipShape(Circle())
                 } placeholder: {
-                    ProgressView()
+                    LottieView(filename: "LottieProgress")
+                        .frame(width: 400,height: 400)
                 }
                     
                 Text(cardData.developer.name)
