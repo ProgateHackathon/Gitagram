@@ -73,6 +73,7 @@
 		722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* ShareSheet.swift */; };
 		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
+		72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		722E84852BE73A29007163D4 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +398,7 @@
 				722E84552BE7365F007163D4 /* GetProductImageUseCase.swift */,
 				722E84562BE7365F007163D4 /* GetProductListUseCase.swift */,
 				722E84572BE7365F007163D4 /* PostProductUseCase.swift */,
+				72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
 				10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */,
 				722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */,
+				72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */,
 				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
 				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
 				722E846D2BE7365F007163D4 /* DeveloperClientProtocol.swift in Sources */,

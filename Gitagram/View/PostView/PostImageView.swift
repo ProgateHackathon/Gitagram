@@ -45,7 +45,7 @@ struct PostImageView: View {
                     .frame(width: 300, height: 300)
                     .cornerRadius(15)
                     .padding()
-        
+                
             }
             PhotosPicker(selection: $selectedPhoto,matching: .images){
                 
@@ -66,23 +66,21 @@ struct PostImageView: View {
                 )
             }
             .onChange(of: selectedPhoto) { selectedPhoto in
-                Task {
-                    await loadImageFromSelectedPhoto(photo: selectedPhoto)
+                if let selectedPhoto = selectedPhoto{
+                    Task {
+                        self.image = await LoadImageFromLibraryUseCase().execute(selectedPhoto)
+                    }
+                    Task {
+                        if let data = try? await selectedPhoto.loadTransferable(type: Data.self),
+                           let uiImage = UIImage(data: data) {
+                            selectImage = Image(uiImage: uiImage)
+                        }
+                    }
                 }
-            }
-            .onChange(of: selectedPhoto) { newItem in
-                if let newItem = newItem {
-                                    Task {
-                                        if let data = try? await newItem.loadTransferable(type: Data.self),
-                                           let uiImage = UIImage(data: data) {
-                                            selectImage = Image(uiImage: uiImage)
-                                        }
-                                    }
-                                }
             }
             .padding(.bottom,20)
             
-          
+            
             Button(action: {
                 next.toggle()
                 UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
