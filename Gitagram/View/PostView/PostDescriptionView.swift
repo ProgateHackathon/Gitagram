@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct PostDiscriptionView: View {
+struct PostDescriptionView: View {
     @State var discription = ""
-    @State var next = false
     @Binding var title : String
     
     var body: some View {
@@ -24,19 +23,17 @@ struct PostDiscriptionView: View {
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
-               
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
             
             
             TextField("リポジトリの説明を入力してね", text: $discription)
                 .frame(alignment: .leading)
-            
                 .padding(.leading,10)
             Divider()
             Spacer()
             NavigationLink{
-                PostURLView(title: $title, discription: $discription, developer: Developer(githubId: ""))
+                PostURLView(title: $title, discription: $discription)
             } label: {
                 Text("次へ")
                     .padding(.horizontal,120)
@@ -57,5 +54,5 @@ struct PostDiscriptionView: View {
 
 
 #Preview {
-    PostDiscriptionView(title: .constant(""))
+    PostDescriptionView(title: .constant(""))
 }

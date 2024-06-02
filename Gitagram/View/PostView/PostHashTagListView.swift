@@ -10,14 +10,14 @@ import SwiftUI
 struct PostHashTagListView: View {
     @Binding var title: String
     @Binding var discription: String
-    @State var next = false
-    @State var developer : Developer
     @Binding var url : String
     @State var hashTagList = [String]()
     let grids = Array(repeating: GridItem(.fixed(80)), count: 4)
-    @State private var bgColor =
-    Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
+    @State private var bgColor = Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
     @State var StringColor = ""
+    @State var pickHashtag = ""
+
+   
     var body: some View {
         
         VStack{
@@ -35,7 +35,7 @@ struct PostHashTagListView: View {
             
             
             
-            TextField("リポジトリのハッシュタグを選択してね", text: $url)
+            TextField("リポジトリのハッシュタグを選択してね", text: $pickHashtag)
             VStack{
                 Divider()
                 HStack{
@@ -56,16 +56,19 @@ struct PostHashTagListView: View {
             }
         
             LazyVGrid(columns: grids) {
-                ForEach($hashTagList, id: \.self) { hashtag in
-                    PostHashTagView(tagWord: hashtag, StringColor: $StringColor)
-                        .onAppear(){
-                            //ここで色を取得して渡す
-                        }
-                }
-            }
+                       ForEach($hashTagList, id: \.self) { $hashtag in
+                           PostHashTagView(tagWord: $hashtag, StringColor: $StringColor)
+                               .onAppear {
+                                   // ここで色を取得して渡す
+                               }
+                               .onTapGesture {
+                                   pickHashtag = hashtag
+                               }
+                       }
+                   }
             Spacer()
             NavigationLink{
-                PostImageView(developer: Developer(githubId: ""), title: $title, discription: $discription, url: $url)
+                PostImageView(title: $title, discription: $discription, url: $url)
                 
             }label:{
                 Text("次へ")
@@ -97,5 +100,5 @@ struct PostHashTagListView: View {
 }
 
 #Preview {
-    PostHashTagListView(title: .constant(""), discription: .constant("aa"), developer: Developer(githubId: "am2525nyan"), url: .constant(""))
+    PostHashTagListView(title: .constant(""), discription: .constant("aa"),  url: .constant(""))
 }

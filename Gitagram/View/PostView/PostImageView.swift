@@ -10,8 +10,7 @@ import PhotosUI
 
 struct PostImageView: View {
     
-    @State var next = false
-    @State var developer: Developer
+    @State var developer = Developer(githubId: "")
     @State var showImagePicker = false
     @State var image: UIImage?
     @State private var selectedPhoto: PhotosPickerItem?
@@ -37,7 +36,7 @@ struct PostImageView: View {
                 .padding(.bottom,30)
             Spacer()
             PhotosPicker(selection: $selectedPhoto,matching: .images){
-
+                
                 HStack{
                     Image(systemName: "photo.badge.plus")
                     Text("画像のアップロード")
@@ -54,14 +53,19 @@ struct PostImageView: View {
                         .stroke(Color(Color(red: 0.82, green: 0.6, blue: 0.97)), lineWidth: 3)
                 )
             }
-                .onChange(of: selectedPhoto) { selectedPhoto in
-                    Task { await loadImageFromSelectedPhoto(photo: selectedPhoto) }
-                }
+            .onChange(of: selectedPhoto) { selectedPhoto in
+                Task { await loadImageFromSelectedPhoto(photo: selectedPhoto) }
+            }
             
             .padding(.bottom,20)
-
+            
             Button(action: {
-                next.toggle()
+                Task{
+                    do{
+                        await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id, url: url), productImage: (image ?? UIImage(named: "back"))!
+                        )}
+                }
+                
                 UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
                 
             }, label: {
@@ -77,16 +81,6 @@ struct PostImageView: View {
                 
             })
         }
-        .onChange(of: next){
-            //ここで保存だよ
-            Task{
-                do{
-                    await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id, url: url), productImage: (image ?? UIImage(named: "back"))!
-                )}
-            }
-            
-        }
-    
         
         .onAppear(){
             Task{

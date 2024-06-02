@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PostView: View {
     @State var title = ""
-    @State var next = false
     @State var developer : Developer
     
     var body: some View {
@@ -36,7 +35,7 @@ struct PostView: View {
                 Divider()
                 Spacer()
                 NavigationLink{
-                    PostDiscriptionView( title: $title)
+                    PostDescriptionView( title: $title)
                 }label:{
                     Text("次へ")
                         .padding(.horizontal,120)
