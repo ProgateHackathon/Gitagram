@@ -14,10 +14,15 @@ struct PostHashTagListView: View {
     @State var hashTagList = [String]()
     let grids = Array(repeating: GridItem(.fixed(80)), count: 4)
     @State private var bgColor = Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
-    @State var StringColor = ""
+    @State var stringColor = ""
     @State var pickHashtag = ""
-
-   
+    @State var pickStringColor = ""
+    @State var colorList = [""]
+    @State var firstIndex = 0
+    @State var hashTags = [hashTagModel]()
+    
+    
+    
     var body: some View {
         
         VStack{
@@ -34,38 +39,24 @@ struct PostHashTagListView: View {
                 .padding(.bottom,30)
             
             
+            if pickHashtag != ""{
+                PostHashTagView(tagWord: $pickHashtag, StringColor: $pickStringColor)
+            }
             
-            TextField("リポジトリのハッシュタグを選択してね", text: $pickHashtag)
-            VStack{
-                Divider()
-                HStack{
-                    ColorPicker(selection: $bgColor, label: {
-                        Text("色を選択")
-                    })
-                    .padding(10)
-                    Button {
-                        let stringColor = UIColor(bgColor).toHexString()
-                        //ここでfirebaseにタグを保存して、hashタグリストを更新
-                        print("追加ボタン")
-                    } label: {
-                        Text("追加")
-                            .padding(20)
-                    }
-                    
+            LazyVGrid(columns: grids) {
+                ForEach($hashTags, id: \.self) { $hashtag in
+                    PostHashTagView(tagWord: $hashtag.name, StringColor: $hashtag.color)
+                      
+                        .onTapGesture {
+                            pickHashtag = hashtag.name
+                            stringColor =  hashtag.color
+                      
+                            pickStringColor = stringColor
+                           
+                            
+                        }
                 }
             }
-        
-            LazyVGrid(columns: grids) {
-                       ForEach($hashTagList, id: \.self) { $hashtag in
-                           PostHashTagView(tagWord: $hashtag, StringColor: $StringColor)
-                               .onAppear {
-                                   // ここで色を取得して渡す
-                               }
-                               .onTapGesture {
-                                   pickHashtag = hashtag
-                               }
-                       }
-                   }
             Spacer()
             NavigationLink{
                 PostImageView(title: $title, discription: $discription, url: $url)
@@ -87,8 +78,19 @@ struct PostHashTagListView: View {
         .onAppear(){
             Task{
                 do{
+                    hashTags = [
+                        hashTagModel(name: "Swift", color:  "ffc0cb"),
+                        hashTagModel(name: "Kotlin", color:  "fffacd"),
+                        hashTagModel(name: "Flutter", color: "b0c4de"),
+                        hashTagModel(name: "Ruby", color:  "ffdab9"),
+                        hashTagModel(name: "React", color:  "f08080"),
+                        hashTagModel(name: "next.js", color:  "87cefa"),
+                        hashTagModel(name: "Ruby on rails", color:  "e0ffff")
+                    ]
+
                     //ここでハッシュタグを取得
                     hashTagList = ["Swift","Kotlin","Flutter","Ruby","React","next.js","Ruby on rails"]
+                    colorList = ["ffc0cb","fffacd","b0c4de","ffdab9","f08080","87cefa","e0ffff"]
                 }
                 
             }
@@ -96,7 +98,14 @@ struct PostHashTagListView: View {
         }
         
     }
-   
+    
+}
+//仮のモデル
+struct hashTagModel: Identifiable, Hashable {
+    var id = UUID()
+    var name : String
+    var color : String
+    
 }
 
 #Preview {

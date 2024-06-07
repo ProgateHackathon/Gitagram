@@ -20,13 +20,12 @@ struct PostHashTagView: View {
         .padding(4)
         .padding(.horizontal, 5)
         .minimumScaleFactor(0.2)
-        .background(Color(color).gradient)
+        .background(Color( UIColor(hex: StringColor) ?? UIColor(hex: "#FFFFFF")!).gradient)
         .cornerRadius(50)
         .onAppear {
             //ここでハッシュタグモデルから色を持ってきて代入する、一旦ランダム
             //変換
-    //        color = UIColor(hex: StringColor) ?? UIColor(hex: "#FFFFFF")!
-            color = UIColor(red: CGFloat.random(in: 0.7...1), green: CGFloat.random(in: 0.7...1), blue: CGFloat.random(in: 0.7...1), alpha: 1)
+     
         }
     }
      
