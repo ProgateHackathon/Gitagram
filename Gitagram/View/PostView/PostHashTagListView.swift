@@ -41,18 +41,22 @@ struct PostHashTagListView: View {
             
             if pickHashtag != ""{
                 PostHashTagView(tagWord: $pickHashtag, StringColor: $pickStringColor)
+            }else{
+              Text("一番あうハッシュタグを選択してください")
+                    .frame(height: 26)
+                    .foregroundStyle(Color.gray)
             }
             
             LazyVGrid(columns: grids) {
                 ForEach($hashTags, id: \.self) { $hashtag in
                     PostHashTagView(tagWord: $hashtag.name, StringColor: $hashtag.color)
-                      
+                    
                         .onTapGesture {
                             pickHashtag = hashtag.name
                             stringColor =  hashtag.color
-                      
+                            
                             pickStringColor = stringColor
-                           
+                            
                             
                         }
                 }
@@ -87,7 +91,7 @@ struct PostHashTagListView: View {
                         hashTagModel(name: "next.js", color:  "87cefa"),
                         hashTagModel(name: "Ruby on rails", color:  "e0ffff")
                     ]
-
+                    
                     //ここでハッシュタグを取得
                     hashTagList = ["Swift","Kotlin","Flutter","Ruby","React","next.js","Ruby on rails"]
                     colorList = ["ffc0cb","fffacd","b0c4de","ffdab9","f08080","87cefa","e0ffff"]

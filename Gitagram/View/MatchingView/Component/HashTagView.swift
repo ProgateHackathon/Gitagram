@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HashTagView: View {
-    @State var tagWord = ""
+    @Binding var tagWord :String
     
     var body: some View {
         HStack{
@@ -20,13 +20,11 @@ struct HashTagView: View {
         
         .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
         .cornerRadius(50)
-        .onAppear(){
-            tagWord = "swift"
-        }
+       
     }
     
 }
 
 #Preview {
-    HashTagView()
+    HashTagView(tagWord: .constant("swift"))
 }

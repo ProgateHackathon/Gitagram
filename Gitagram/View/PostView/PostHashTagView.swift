@@ -32,6 +32,3 @@ struct PostHashTagView: View {
     
 }
 
-#Preview {
-    HashTagView()
-}
