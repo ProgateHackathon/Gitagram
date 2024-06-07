@@ -16,7 +16,7 @@ struct PostURLView: View {
     var body: some View {
         
         VStack{
-            ProgressView("", value: 0.3)
+            ProgressView("", value: 0.6)
                 .tint(Color.pink)
                 .cornerRadius(8)
                 .scaleEffect(1.3)

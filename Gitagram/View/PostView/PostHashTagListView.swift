@@ -26,7 +26,7 @@ struct PostHashTagListView: View {
     var body: some View {
         
         VStack{
-            ProgressView("", value: 0.3)
+            ProgressView("", value: 0.8)
                 .tint(Color.pink)
                 .cornerRadius(8)
                 .scaleEffect(1.3)

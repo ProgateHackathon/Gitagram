@@ -13,7 +13,7 @@ struct PostDescriptionView: View {
     
     var body: some View {
         VStack{
-            ProgressView("", value: 0.6)
+            ProgressView("", value: 0.4)
                 .tint(Color.pink)
             
                 .cornerRadius(8)

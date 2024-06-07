@@ -14,7 +14,7 @@ struct PostView: View {
     var body: some View {
         NavigationView {
             VStack{
-                ProgressView("", value: 0.3)
+                ProgressView("", value: 0.2)
                     .padding()
                     .tint(Color.pink)
                     .cornerRadius(8)
