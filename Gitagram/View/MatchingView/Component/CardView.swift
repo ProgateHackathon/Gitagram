@@ -17,6 +17,8 @@ struct CardView: View {
     @State private var xoffset: CGFloat = 0
     @State private var degrees: Double = 0
     @Environment(\.openURL) var openURL
+    @Binding var isShowAlert: Bool
+
     let cardData: CardDataModel
     
     var body: some View {
@@ -32,6 +34,7 @@ struct CardView: View {
             
             UserInfoView(cardData: cardData)
         }
+      
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)
         })
@@ -45,6 +48,7 @@ struct CardView: View {
                 .onChanged(onDragchanged)
                 .onEnded(onDragEnded)
         )
+  
     }
 }
 
@@ -91,7 +95,12 @@ private extension CardView {
 private extension CardView{
     
     func openLink(url: String){
-        openURL(URL(string: url)!)
+        if url != ""{
+            openURL((URL(string: url))!)
+        }else{
+            isShowAlert = true
+        }
+       
     }
     func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value) {
         xoffset = value.translation.width
