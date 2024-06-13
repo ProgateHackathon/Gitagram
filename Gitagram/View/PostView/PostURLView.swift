@@ -26,9 +26,15 @@ struct PostURLView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
                 .font(.system(size: 30, weight: .black, design: .default))
+                .padding(.bottom,10)
+            Text("https://github.com/ユーザー名/の後を入力してね！")
+                .tint(.primary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading,10)
+                .font(.system(size: 12, weight: .regular, design: .default))
                 .padding(.bottom,30)
             
-            TextField("リポジトリのURLを入力してね", text: $url)
+            TextField("名前を入力してね！", text: $url)
                 .frame(alignment: .leading)
                 .padding(.leading,10)
             Divider()
@@ -37,7 +43,7 @@ struct PostURLView: View {
                     Task{
                         do{
                             
-                            developer = await GetLoginDeveloperUseCase().execute()!
+                    //        developer = await GetLoginDeveloperUseCase().execute()!
                         }
                         
                     }
@@ -68,4 +74,7 @@ struct PostURLView: View {
         
         
     }
+}
+#Preview {
+    PostURLView(title: .constant(""), discription: .constant(""), urlLink: "", url: "", developer: Developer(githubId: "am25"))
 }
