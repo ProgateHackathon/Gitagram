@@ -20,7 +20,7 @@ struct PostView: View {
                     .cornerRadius(8)
                     .scaleEffect(1.3)
                     .padding(.top, 40)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                 
                 Text("リポジトリの名前は？")
                     .frame(maxWidth: .infinity, alignment: .leading)
