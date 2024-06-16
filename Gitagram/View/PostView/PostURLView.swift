@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostURLView: View {
-    @State var cardData: CardDataModel
+    @State var cardData: CardData
     @State var url: String = ""
     
     var body: some View {

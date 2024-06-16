@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostHashTagView: View {
-    @State var cardData: CardDataModel
+    @State var cardData: CardData
     @State var pickHashTag: HashTag = .Empty()
     @State var hashTags = [
         HashTag(name: "Swift", color:  "ffc0cb"),

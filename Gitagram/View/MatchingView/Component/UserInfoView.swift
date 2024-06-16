@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserInfoView: View {
-    let cardData: CardDataModel
+    let cardData: CardData
     @Environment(\.openURL) var openURL
     
     var body: some View {

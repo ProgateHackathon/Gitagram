@@ -44,7 +44,7 @@
 		722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84392BE7365F007163D4 /* DeveloperClient.swift */; };
 		722E84652BE7365F007163D4 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843B2BE7365F007163D4 /* ProductClient.swift */; };
 		722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843C2BE7365F007163D4 /* ProductImageClient.swift */; };
-		722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843F2BE7365F007163D4 /* CardDataModel.swift */; };
+		722E84672BE7365F007163D4 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843F2BE7365F007163D4 /* CardData.swift */; };
 		722E84682BE7365F007163D4 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84402BE7365F007163D4 /* Developer.swift */; };
 		722E84692BE7365F007163D4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84412BE7365F007163D4 /* Product.swift */; };
 		722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84432BE7365F007163D4 /* DeveloperRepository.swift */; };
@@ -113,7 +113,7 @@
 		722E84392BE7365F007163D4 /* DeveloperClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		722E843B2BE7365F007163D4 /* ProductClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		722E843C2BE7365F007163D4 /* ProductImageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
-		722E843F2BE7365F007163D4 /* CardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
+		722E843F2BE7365F007163D4 /* CardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		722E84402BE7365F007163D4 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		722E84412BE7365F007163D4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		722E84432BE7365F007163D4 /* DeveloperRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperRepository.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		10177A332BFA13EF00BA6078 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				722E843F2BE7365F007163D4 /* CardDataModel.swift */,
+				722E843F2BE7365F007163D4 /* CardData.swift */,
 				722E84402BE7365F007163D4 /* Developer.swift */,
 				722E84412BE7365F007163D4 /* Product.swift */,
 				10502C6D2C1E850700097342 /* HashTag.swift */,
@@ -625,7 +625,7 @@
 				10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */,
 				722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */,
 				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
-				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
+				722E84672BE7365F007163D4 /* CardData.swift in Sources */,
 				722E846D2BE7365F007163D4 /* DeveloperClientProtocol.swift in Sources */,
 				722E84152BE73601007163D4 /* PostDescriptionView.swift in Sources */,
 				722E846C2BE7365F007163D4 /* ProductRepository.swift in Sources */,

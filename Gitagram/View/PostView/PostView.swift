@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostView: View {
-    @State var cardData: CardDataModel = .Empty()
+    @State var cardData: CardData = .Empty()
     @State var title: String = ""
     
     var body: some View {

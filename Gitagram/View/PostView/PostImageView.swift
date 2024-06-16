@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct PostImageView: View {
-    @State var cardData: CardDataModel
+    @State var cardData: CardData
     @State var showImagePicker = false
     @State var selectedPhoto: PhotosPickerItem?
     @Environment(\.dismiss) private var dismiss

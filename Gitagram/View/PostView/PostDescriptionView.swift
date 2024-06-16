@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostDescriptionView: View {
-    @State var cardData: CardDataModel
+    @State var cardData: CardData
     @State var description = ""
     
     var body: some View {

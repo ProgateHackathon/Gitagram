@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct CardDataModel : Identifiable {
+struct CardData : Identifiable {
     var id: UUID = UUID()
     let product : Product
     let productImage: UIImage
