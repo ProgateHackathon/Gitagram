@@ -21,6 +21,7 @@ struct CardView: View {
     
     var body: some View {
         ZStack(alignment: .bottom){
+            
             ZStack(alignment: .top) {
                 Image(uiImage: cardData.productImage)
                     .resizable()
