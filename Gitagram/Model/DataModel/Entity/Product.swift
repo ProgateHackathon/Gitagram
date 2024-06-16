@@ -83,7 +83,7 @@ struct Product : Identifiable {
         }
         
         static func Empty() -> Self {
-            return Product.ID(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!)
+            return Self(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!)
         }
         
         func isEmpty() -> Bool {
