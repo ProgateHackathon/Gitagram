@@ -65,3 +65,7 @@ struct PostView: View {
         }
     }
 }
+
+#Preview {
+    PostView()
+}

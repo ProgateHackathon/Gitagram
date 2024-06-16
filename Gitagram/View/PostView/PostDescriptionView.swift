@@ -51,3 +51,7 @@ struct PostDescriptionView: View {
         }
     }
 }
+
+#Preview {
+    PostDescriptionView(cardData: .Empty())
+}

@@ -49,5 +49,4 @@ class MatchingViewModel: ObservableObject {
         
         return cardList
     }
-
 }

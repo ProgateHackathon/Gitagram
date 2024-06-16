@@ -83,3 +83,7 @@ struct PostImageView: View {
         return nil
     }
 }
+
+#Preview {
+    PostImageView(cardData: .Empty())
+}

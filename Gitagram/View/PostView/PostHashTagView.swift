@@ -95,3 +95,7 @@ struct HashTagComponent: View {
             .cornerRadius(50)
     }
 }
+
+#Preview {
+    PostHashTagView(cardData: .Empty())
+}
