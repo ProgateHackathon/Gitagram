@@ -22,4 +22,12 @@ struct CardDataModel : Identifiable {
         let invalid = product.isEmpty() || developer.isEmpty()
         return !invalid
     }
+    
+    func setDeveloper(from developer: Developer) -> Self {
+        Self(product: product, productImage: productImage, developer: developer)
+    }
+    
+    func setProduct(from product: Product) -> Self {
+        Self(product: product, productImage: productImage, developer: developer)
+    }
 }
