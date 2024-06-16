@@ -76,7 +76,6 @@
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
 		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
 		72B3DB432BF42D2F008BE7F9 /* PostHashTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */; };
-		72B3DB452BF49B48008BE7F9 /* PostHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB442BF49B48008BE7F9 /* PostHashTagView.swift */; };
 		72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,7 +145,6 @@
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagListView.swift; sourceTree = "<group>"; };
-		72B3DB442BF49B48008BE7F9 /* PostHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagView.swift; sourceTree = "<group>"; };
 		72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,7 +297,6 @@
 				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
 				72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */,
 				722E84112BE73601007163D4 /* PostImageView.swift */,
-				72B3DB442BF49B48008BE7F9 /* PostHashTagView.swift */,
 			);
 			path = PostView;
 			sourceTree = "<group>";
@@ -587,7 +584,6 @@
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
-				72B3DB452BF49B48008BE7F9 /* PostHashTagView.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,

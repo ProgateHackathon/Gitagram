@@ -8,23 +8,21 @@
 import SwiftUI
 
 struct PostHashTagListView: View {
-    @Binding var title: String
-    @Binding var discription: String
-    @Binding var url : String
-    @State var hashTagList = [String]()
+    @State var cardData: CardDataModel
+    @State var pickHashTag: HashTag = .Empty()
+    @State var hashTags = [
+        HashTag(name: "Swift", color:  "ffc0cb"),
+        HashTag(name: "Kotlin", color:  "fffacd"),
+        HashTag(name: "Flutter", color: "b0c4de"),
+        HashTag(name: "Ruby", color:  "ffdab9"),
+        HashTag(name: "React", color:  "f08080"),
+        HashTag(name: "next.js", color:  "87cefa"),
+        HashTag(name: "Ruby on rails", color:  "e0ffff")
+    ]
+    
     let grids = Array(repeating: GridItem(.fixed(80)), count: 4)
-    @State private var bgColor = Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
-    @State var stringColor = ""
-    @State var pickHashtag = ""
-    @State var pickStringColor = ""
-    @State var colorList = [""]
-    @State var firstIndex = 0
-    @State var hashTags = [hashTagModel]()
-    
-    
     
     var body: some View {
-        
         VStack{
             ProgressView("", value: 0.8)
                 .tint(Color.pink)
@@ -38,32 +36,29 @@ struct PostHashTagListView: View {
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
             
-            
-            if pickHashtag != ""{
-                PostHashTagView(tagWord: $pickHashtag, StringColor: $pickStringColor)
-            }else{
-              Text("一番あうハッシュタグを選択してください")
-                    .frame(height: 26)
-                    .foregroundStyle(Color.gray)
+            if pickHashTag.isEmpty() {
+                Text("一番あうハッシュタグを選択してください")
+                      .frame(height: 26)
+                      .foregroundStyle(Color.gray)
+            } else {
+                HashTagComponent(hashTag: pickHashTag)
             }
             
             LazyVGrid(columns: grids) {
-                ForEach($hashTags, id: \.self) { $hashtag in
-                    PostHashTagView(tagWord: $hashtag.name, StringColor: $hashtag.color)
-                    
+                ForEach(hashTags) { hashTag in
+                    HashTagComponent(hashTag: hashTag)
                         .onTapGesture {
-                            pickHashtag = hashtag.name
-                            stringColor =  hashtag.color
-                            
-                            pickStringColor = stringColor
-                            
-                            
+                            pickHashTag = hashTag
+                            let product = cardData.product.setHashTag(from: [hashTag])
+                            cardData = cardData.setProduct(from: product)
                         }
                 }
             }
+            
             Spacer()
+            
             NavigationLink{
-                PostImageView(title: $title, discription: $discription, url: $url)
+                PostImageView(cardData: cardData)
                 
             }label:{
                 Text("次へ")
@@ -75,43 +70,29 @@ struct PostHashTagListView: View {
                     .cornerRadius(30)
                     .padding(.bottom,20)
             }
-            
         }
-        
-        
-        .onAppear(){
+        .onAppear {
             Task{
-                do{
-                    hashTags = [
-                        hashTagModel(name: "Swift", color:  "ffc0cb"),
-                        hashTagModel(name: "Kotlin", color:  "fffacd"),
-                        hashTagModel(name: "Flutter", color: "b0c4de"),
-                        hashTagModel(name: "Ruby", color:  "ffdab9"),
-                        hashTagModel(name: "React", color:  "f08080"),
-                        hashTagModel(name: "next.js", color:  "87cefa"),
-                        hashTagModel(name: "Ruby on rails", color:  "e0ffff")
-                    ]
-                    
-                    //ここでハッシュタグを取得
-                    hashTagList = ["Swift","Kotlin","Flutter","Ruby","React","next.js","Ruby on rails"]
-                    colorList = ["ffc0cb","fffacd","b0c4de","ffdab9","f08080","87cefa","e0ffff"]
-                }
-                
+                ///TODO: ここでハッシュタグを全種類取得する
             }
-            
         }
-        
     }
-    
-}
-//仮のモデル
-struct hashTagModel: Identifiable, Hashable {
-    var id = UUID()
-    var name : String
-    var color : String
-    
 }
 
-#Preview {
-    PostHashTagListView(title: .constant(""), discription: .constant("aa"),  url: .constant(""))
+struct HashTagComponent: View {
+    let hashTag: HashTag
+    
+    var color: UIColor {
+        UIColor(hex: hashTag.color) ?? UIColor.white
+    }
+    
+    var body: some View {
+        Text("#" + hashTag.name)
+            .frame(height: 18)
+            .padding(4)
+            .padding(.horizontal, 5)
+            .minimumScaleFactor(0.2)
+            .background(Color(uiColor: color).gradient)
+            .cornerRadius(50)
+    }
 }
