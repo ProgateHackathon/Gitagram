@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PostHashTagListView: View {
+struct PostHashTagView: View {
     @State var cardData: CardDataModel
     @State var pickHashTag: HashTag = .Empty()
     @State var hashTags = [

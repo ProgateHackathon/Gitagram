@@ -45,7 +45,7 @@ struct PostURLView: View {
             Spacer()
             
             NavigationLink{
-                PostHashTagListView(cardData: cardData)
+                PostHashTagView(cardData: cardData)
             }label:{
                 Text("次へ")
                     .padding(.horizontal,120)

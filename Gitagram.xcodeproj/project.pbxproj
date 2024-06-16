@@ -75,7 +75,7 @@
 		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
 		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
-		72B3DB432BF42D2F008BE7F9 /* PostHashTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */; };
+		72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */; };
 		72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,7 +144,7 @@
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
-		72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagListView.swift; sourceTree = "<group>"; };
+		72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagView.swift; sourceTree = "<group>"; };
 		72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,7 +295,7 @@
 				722E84122BE73601007163D4 /* PostView.swift */,
 				722E84102BE73601007163D4 /* PostDescriptionView.swift */,
 				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
-				72B3DB422BF42D2F008BE7F9 /* PostHashTagListView.swift */,
+				72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */,
 				722E84112BE73601007163D4 /* PostImageView.swift */,
 			);
 			path = PostView;
@@ -603,7 +603,7 @@
 				722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				722E84052BE735EA007163D4 /* CardStackView.swift in Sources */,
-				72B3DB432BF42D2F008BE7F9 /* PostHashTagListView.swift in Sources */,
+				72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */,
 				722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */,
 				10502C6E2C1E850700097342 /* HashTag.swift in Sources */,
 				10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */,
