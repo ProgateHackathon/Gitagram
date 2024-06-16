@@ -13,6 +13,13 @@ struct CardDataModel : Identifiable {
     let product : Product
     let productImage: UIImage
     let developer : Developer
-    let  title: String
-    let discription: String
+    
+    static func Empty() -> Self {
+        Self(product: Product.Empty(), productImage: UIImage("back"), developer: Developer.Empty())
+    }
+    
+    func isComplete() -> Bool {
+        let invalid = product.isEmpty() || developer.isEmpty()
+        return !invalid
+    }
 }
