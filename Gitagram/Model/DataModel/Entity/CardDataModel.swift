@@ -30,4 +30,8 @@ struct CardDataModel : Identifiable {
     func setProduct(from product: Product) -> Self {
         Self(product: product, productImage: productImage, developer: developer)
     }
+    
+    func setImage(from image: UIImage) -> Self {
+        Self(product: product, productImage: image, developer: developer)
+    }
 }
