@@ -26,7 +26,7 @@ class MatchingViewModel: ObservableObject {
         repositories.last
     }
     
-    public func isNotRepositoryEmpty() -> Bool {
+    public func isExistRepository() -> Bool {
         !repositories.isEmpty
     }
     

@@ -26,7 +26,7 @@ struct CardStackView: View {
             .onChange(of: finish){
                 
             }
-            if viewModel.isNotRepositoryEmpty() {
+            if viewModel.isExistRepository() {
                 SwipeActionButtonsView(viewModel: viewModel)
             }
             
