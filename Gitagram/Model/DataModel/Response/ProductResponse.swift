@@ -23,6 +23,6 @@ struct ProductResponse : Identifiable, Codable {
     }
     
     func toProduct() -> Product {
-        return Product(id: Product.ID(id: id), title: title, content: content, developerId: Developer.ID(id: developerId), url: url)
+        return Product(id: Product.ID(id: id), title: title, content: content, developerId: Developer.ID(id: developerId), url: url, hashTags: [])
     }
 }

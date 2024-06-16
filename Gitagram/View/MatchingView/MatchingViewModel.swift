@@ -11,7 +11,7 @@ import UIKit
 @MainActor
 class MatchingViewModel: ObservableObject {
     @Published var isLoading = true
-    @Published var repositories: [CardDataModel] = []
+    @Published var repositories: [CardData] = []
     @Published var buttonSwipeAction: SwipeAction?
 
     func removeCard(_  product: Product){
@@ -22,11 +22,11 @@ class MatchingViewModel: ObservableObject {
         }
     }
     
-    public func getLastRepository() -> CardDataModel? {
+    public func getLastRepository() -> CardData? {
         repositories.last
     }
     
-    public func isNotRepositoryEmpty() -> Bool {
+    public func isExistRepository() -> Bool {
         !repositories.isEmpty
     }
     
@@ -36,20 +36,17 @@ class MatchingViewModel: ObservableObject {
         isLoading = false
     }
     
-    private func fetchCardInfomation() async -> [CardDataModel] {
-        var cardList = [CardDataModel]()
+    private func fetchCardInfomation() async -> [CardData] {
+        var cardList = [CardData]()
         let products = await GetProductListUseCase().execute()
         
         for product in products {
-            guard let developer      = await GetDeveloperUseCase().execute(id: product.developerId) else { continue }
-            guard let productImage   = await GetProductImageUseCase().execute(id: product.id)       else { continue }
-            let title = product.title
-            let discription = product.content
-            let cardData = CardDataModel(product: product, productImage: productImage, developer: developer,title: title,discription: discription)
+            guard let developer    = await GetDeveloperUseCase().execute(id: product.developerId) else { continue }
+            guard let productImage = await GetProductImageUseCase().execute(id: product.id)       else { continue }
+            let cardData = CardData(product: product, productImage: productImage, developer: developer)
             cardList.append(cardData)
         }
         
         return cardList
     }
-
 }

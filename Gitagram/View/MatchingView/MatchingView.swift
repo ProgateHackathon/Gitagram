@@ -44,7 +44,7 @@ struct MatchingView: View {
             }
         }
         .sheet(isPresented: $showAddRepository) {
-            PostView(developer: Developer(githubId: "am2525nyan"))
+            PostView()
         }
         .onAppear(perform: {
             Task {

@@ -17,7 +17,7 @@ struct CardView: View {
     @State private var xoffset: CGFloat = 0
     @State private var degrees: Double = 0
     @Environment(\.openURL) var openURL
-    let cardData: CardDataModel
+    let cardData: CardData
     
     var body: some View {
         ZStack(alignment: .bottom){

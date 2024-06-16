@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PostView: View {
-    @State var title = ""
-    @State var developer : Developer
+    @State var cardData: CardData = .Empty()
+    @State var title: String = ""
     
     var body: some View {
         NavigationView {
@@ -25,17 +25,23 @@ struct PostView: View {
                 Text("リポジトリの名前は？")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading,10)
-                   
                     .font(.system(size: 30, weight: .black, design: .default))
                     .padding(.bottom,30)
                 
                 TextField("リポジトリの名前を入力してね", text: $title)
                     .frame(alignment: .leading)
                     .padding(.leading,10)
+                    .onChange(of: title) {
+                        let product = cardData.product.setTitle(from: title)
+                        cardData = cardData.setProduct(from: product)
+                    }
+                
                 Divider()
+                
                 Spacer()
+                
                 NavigationLink{
-                    PostDescriptionView( title: $title)
+                    PostDescriptionView(cardData: cardData)
                 }label:{
                     Text("次へ")
                         .padding(.horizontal,120)
@@ -46,18 +52,20 @@ struct PostView: View {
                         .cornerRadius(30)
                         .padding(.bottom,20)
                 }
-
-               
             }
         }
         .onAppear(){
             Task{
-                if let host =  await GetLoginDeveloperUseCase().execute() {
-                    developer = host
+                if let host = await GetLoginDeveloperUseCase().execute() {
+                    cardData = cardData.setDeveloper(from: host)
                 } else {
                     ContentView()
                 }
             }
         }
     }
+}
+
+#Preview {
+    PostView()
 }
