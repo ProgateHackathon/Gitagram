@@ -15,7 +15,7 @@ struct CardDataModel : Identifiable {
     let developer : Developer
     
     static func Empty() -> Self {
-        Self(product: Product.Empty(), productImage: UIImage("back"), developer: Developer.Empty())
+        Self(product: Product.Empty(), productImage: UIImage(named: "back")!, developer: Developer.Empty())
     }
     
     func isComplete() -> Bool {
