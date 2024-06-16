@@ -50,5 +50,4 @@ struct PostDescriptionView: View {
             }
         }
     }
-    
 }

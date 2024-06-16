@@ -35,8 +35,11 @@ struct PostView: View {
                         let product = cardData.product.setTitle(from: title)
                         cardData = cardData.setProduct(from: product)
                     }
+                
                 Divider()
+                
                 Spacer()
+                
                 NavigationLink{
                     PostDescriptionView(cardData: cardData)
                 }label:{

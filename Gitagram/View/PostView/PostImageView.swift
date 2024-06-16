@@ -62,7 +62,6 @@ struct PostImageView: View {
                 }
                 
                 UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
-                
             }, label: {
                 Text("保存")
                     .padding(.horizontal,120)
@@ -72,7 +71,6 @@ struct PostImageView: View {
                     .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
                     .cornerRadius(30)
                     .padding(.bottom,20)
-                
             })
         }
     }

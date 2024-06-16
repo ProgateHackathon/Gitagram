@@ -59,7 +59,6 @@ struct PostHashTagView: View {
             
             NavigationLink{
                 PostImageView(cardData: cardData)
-                
             }label:{
                 Text("次へ")
                     .padding(.horizontal,120)
