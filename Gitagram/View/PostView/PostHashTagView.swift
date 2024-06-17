@@ -80,7 +80,7 @@ struct PostHashTagView: View {
 
 struct HashTagComponent: View {
     let hashTag: HashTag
-    
+
     var color: UIColor {
         UIColor(hex: hashTag.color) ?? UIColor.white
     }
