@@ -13,12 +13,30 @@ struct LoginView: View {
    
     
     var body: some View {
-        Button(action: {
-            performOAuthLoginFlow(provider: AuthProvider(rawValue: "GitHub")! )
-        }, label: {
-            Text("githubログイン")
-        })
-        
+        VStack{
+            Text("Gitagram")
+                .font(.custom("Shrikhand-Regular", size: 60))
+            Text("へようこそ！")
+                .font(.title2)
+                .padding(.bottom,60)
+            Button(action: {
+                performOAuthLoginFlow(provider: AuthProvider(rawValue: "GitHub")! )
+            }, label: {
+                HStack{
+                    Image("github-mark-white")
+                        .resizable()
+                        .frame(width: 20,height: 20)
+                    Text("githubログイン")
+                        .foregroundStyle(Color.white)
+                }
+                .padding(6)
+                .padding(.horizontal,3)
+                .background(Color(red: 0.141, green: 0.16, blue: 0.180))
+                .cornerRadius(12)
+                
+            })
+            
+        }
     }
     
     private func performOAuthLoginFlow(provider: AuthProvider) {
