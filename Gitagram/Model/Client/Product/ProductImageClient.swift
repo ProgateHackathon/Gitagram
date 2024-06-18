@@ -23,7 +23,10 @@ class ProductImageClient : ProductImageClientProtocol {
     }
     
     func downloadImage(product_id: String) async -> UIImage? {
-        let storage = Storage.storage()
+        if let cachedImage = getCachedImage(product_id: product_id) {
+            return cachedImage
+        }
+        
         let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
         
         do {
@@ -37,11 +40,12 @@ class ProductImageClient : ProductImageClientProtocol {
                 }
             }
             
-            
-            
-            let image = UIImage(data: data)
-            return image
-          
+            if let image = UIImage(data: data) {
+                cacheImage(product_id: product_id, image: image)
+                return image
+            } else {
+                return nil
+            }
         } catch {
             print("Error occurred! : \(error)")
             return nil
@@ -49,9 +53,27 @@ class ProductImageClient : ProductImageClientProtocol {
         
     }
 
-
-    
     private func convertToJpegData(uiImage: UIImage) -> NSData? {
         return uiImage.jpegData(compressionQuality: 0.3) as? NSData
+    }
+    
+    private func getCachedImage(product_id: String) -> UIImage? {
+        let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let fileURL = cacheDirectory.appendingPathComponent(product_id, isDirectory: false)
+        
+        if let imageData = try? Data(contentsOf: fileURL) {
+            return UIImage(data: imageData)
+        }
+        
+        return nil
+    }
+        
+    private func cacheImage(product_id: String, image: UIImage) {
+        let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let fileURL = cacheDirectory.appendingPathComponent(product_id)
+        
+        if let imageData = image.jpegData(compressionQuality: 1.0) {
+            try? imageData.write(to: fileURL)
+        }
     }
 }
