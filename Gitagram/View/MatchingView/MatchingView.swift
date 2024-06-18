@@ -13,7 +13,7 @@ struct MatchingView: View {
     
     @State var pickHashTag = false
     @State var StringColor = "FFFFFF"//16新数のcolorのstring
-  
+    
     var body: some View {
         NavigationView {
             if viewModel.isLoading {
@@ -42,10 +42,10 @@ struct MatchingView: View {
                             }
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Button {
-                                  pickHashTag = true
+                                    pickHashTag = true
                                 } label:{
                                     Image(systemName: "tag")
-                                  
+                                    
                                 }
                             }
                         }
@@ -59,7 +59,7 @@ struct MatchingView: View {
             PickHashTagView()
                 .presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.medium])
-          
+            
         }
         .onAppear(perform: {
             Task {

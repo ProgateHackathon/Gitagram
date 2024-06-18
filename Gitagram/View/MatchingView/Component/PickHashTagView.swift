@@ -23,14 +23,14 @@ struct PickHashTagView: View {
     @State var searchText = ""
     
     var filteredHashtags: [HashTag] {
-          if searchText.isEmpty {
-              return hashTags
-          } else {
-              return hashTags.filter { $0.name.lowercased().contains(searchText.lowercased()) }
-          }
-      }
+        if searchText.isEmpty {
+            return hashTags
+        } else {
+            return hashTags.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+    }
     @Environment(\.dismiss) private var dismiss
-@State var tapTag = ""
+    @State var tapTag = ""
     var body: some View {
         NavigationView {
             ZStack{
@@ -40,30 +40,30 @@ struct PickHashTagView: View {
                 VStack{
                     
                     LazyVGrid(columns: columns, spacing: 10) {
-                                          ForEach(filteredHashtags) { hashTag in
-                                              HashTagComponent(hashTag: hashTag)
-                                                  .scaleEffect(CGSize(width: 1.7, height: 1.7))
-                                                  .foregroundColor(.black)
-                                                  .padding()
-                                                  .onTapGesture {
-                                                      tapTag = hashTag.name
-                                                    dismiss()
-                                                  }
-                                          }
-                                      }
+                        ForEach(filteredHashtags) { hashTag in
+                            HashTagComponent(hashTag: hashTag)
+                                .scaleEffect(CGSize(width: 1.7, height: 1.7))
+                                .foregroundColor(.black)
+                                .padding()
+                                .onTapGesture {
+                                    tapTag = hashTag.name
+                                    dismiss()
+                                }
+                        }
+                    }
                 }
-   
+                
                 .padding(.horizontal, 40)
             }
         }
         .searchable(text: $searchText)
-       
-       
+        
+        
         .onAppear(){
             UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 0.3)
-   
+            
         }
-     
+        
         
         
     }
