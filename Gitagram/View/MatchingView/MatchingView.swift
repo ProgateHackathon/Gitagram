@@ -23,12 +23,7 @@ struct MatchingView: View {
                     
                     CardStackView(viewModel: viewModel)
                         .toolbar {
-                            ToolbarItem(placement: .navigation) {
-                                Image("logo")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.vertical, 5)
-                            }
+                            
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button {
                                     showAddRepository.toggle()
@@ -49,7 +44,7 @@ struct MatchingView: View {
                                 Button {
                                   pickHashTag = true
                                 } label:{
-                                   Text("タグ選択")
+                                    Image(systemName: "tag")
                                   
                                 }
                             }
@@ -62,8 +57,8 @@ struct MatchingView: View {
         }
         .sheet(isPresented: $pickHashTag) {
             PickHashTagView()
-                .presentationBackground(.thinMaterial)
-                .presentationDetents([.medium, .large])
+                .presentationBackground(.ultraThinMaterial)
+                .presentationDetents([.medium])
           
         }
         .onAppear(perform: {
