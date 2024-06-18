@@ -79,6 +79,7 @@
 		7279530D2C21DF2700788394 /* Shrikhand-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7279530C2C21DF2700788394 /* Shrikhand-Regular.otf */; };
 		7279530F2C21E3C400788394 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279530E2C21E3C400788394 /* LoginViewModel.swift */; };
 		727953112C21E4D200788394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727953102C21E4D200788394 /* Assets.xcassets */; };
+		727953142C21EA3100788394 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727953132C21EA3100788394 /* AuthProvider.swift */; };
 		728E75B22BFC4A3B003D4C93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 728E75B12BFC4A3B003D4C93 /* Lottie */; };
 		728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E75B32BFC5139003D4C93 /* LottieView.swift */; };
 		728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = 728E75C12BFC7BAE003D4C93 /* LottieProgress.json */; };
@@ -151,6 +152,7 @@
 		7279530C2C21DF2700788394 /* Shrikhand-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shrikhand-Regular.otf"; sourceTree = "<group>"; };
 		7279530E2C21E3C400788394 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		727953102C21E4D200788394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		727953132C21EA3100788394 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		728E75B32BFC5139003D4C93 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
 		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 		727952EF2C21B9DC00788394 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				727953122C21EA2600788394 /* Utils */,
 				727952F02C21B9ED00788394 /* LoginView.swift */,
 				7279530E2C21E3C400788394 /* LoginViewModel.swift */,
 			);
@@ -521,6 +524,14 @@
 				727952F72C21DA1700788394 /* frankfrt.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		727953122C21EA2600788394 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				727953132C21EA3100788394 /* AuthProvider.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,6 +666,7 @@
 				722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */,
 				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
+				727953142C21EA3100788394 /* AuthProvider.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
 				727952F12C21B9ED00788394 /* LoginView.swift in Sources */,
 				10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */,
