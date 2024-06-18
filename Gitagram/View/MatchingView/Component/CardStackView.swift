@@ -12,9 +12,11 @@ import SwiftUI
 struct CardStackView: View {
     @ObservedObject var viewModel: MatchingViewModel
     @State var finish = false
+
     var body: some View {
         VStack(spacing:16){
             ZStack{
+                
                 VStack(alignment: .center){
                     Text("全部見終わったよ！\n左上のリロードボタンを押してね！")
                 }
