@@ -20,8 +20,9 @@ struct QRView: View {
         ZStack{
             Rectangle()
                 .fill(Color.white)
-                .frame(width: 250, height: 250)
-                .cornerRadius(20)
+                .frame(width: 220, height: 220)
+                .cornerRadius(cornerRadius)
+                .stroke(color: .TextFrameBrownColor, width: 2)
             Image(uiImage: qrCode)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -29,5 +30,10 @@ struct QRView: View {
                 .cornerRadius(cornerRadius)
                 .padding()
         }
+        .background(Color("FrameBrownColor"))
     }
 }
+#Preview {
+    AccountView(developer: Developer(githubId: "Rino1011"))
+}
+

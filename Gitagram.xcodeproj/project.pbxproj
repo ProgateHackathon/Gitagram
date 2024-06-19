@@ -26,6 +26,8 @@
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
+		233F66BA2C232BEC008A0F69 /* frankfrt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233F66B92C232BEB008A0F69 /* frankfrt.ttf */; };
+		233F66BD2C234B92008A0F69 /* AccountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66BC2C234B92008A0F69 /* AccountCardView.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -73,10 +75,10 @@
 		722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* ShareSheet.swift */; };
 		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
-		72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */; };
 		728E75B22BFC4A3B003D4C93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 728E75B12BFC4A3B003D4C93 /* Lottie */; };
 		728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E75B32BFC5139003D4C93 /* LottieView.swift */; };
 		728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = 728E75C12BFC7BAE003D4C93 /* LottieProgress.json */; };
+		72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		233F66B92C232BEB008A0F69 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
+		233F66BC2C234B92008A0F69 /* AccountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardView.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -108,7 +112,6 @@
 		722E84112BE73601007163D4 /* PostImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		722E84122BE73601007163D4 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		722E84182BE7360C007163D4 /* InputFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
-		722E841C2BE73614007163D4 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
 		722E84392BE7365F007163D4 /* DeveloperClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		722E843B2BE7365F007163D4 /* ProductClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		722E843C2BE7365F007163D4 /* ProductImageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
@@ -142,9 +145,9 @@
 		722E84852BE73A29007163D4 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 		728E75B32BFC5139003D4C93 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
+		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,7 +239,7 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				722E841C2BE73614007163D4 /* frankfrt.ttf */,
+				233F66B92C232BEB008A0F69 /* frankfrt.ttf */,
 				23B6E52C2BE73C1D0049200B /* ContentView.swift */,
 				722E84882BE73A29007163D4 /* AccountView */,
 				722E848F2BE73A42007163D4 /* HomeView */,
@@ -246,6 +249,14 @@
 				728E75B32BFC5139003D4C93 /* LottieView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		233F66BB2C234B64008A0F69 /* CardDesign */ = {
+			isa = PBXGroup;
+			children = (
+				233F66BC2C234B92008A0F69 /* AccountCardView.swift */,
+			);
+			path = CardDesign;
 			sourceTree = "<group>";
 		};
 		722E83FD2BE735EA007163D4 /* Component */ = {
@@ -469,6 +480,7 @@
 		722E84882BE73A29007163D4 /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
+				233F66BB2C234B64008A0F69 /* CardDesign */,
 				722E84822BE73A29007163D4 /* AccountView.swift */,
 				10261B092BE94695007D1606 /* AccountViewModel.swift */,
 				10261B082BE94625007D1606 /* KiraKira */,
@@ -560,6 +572,7 @@
 				728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */,
 				10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */,
 				10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */,
+				233F66BA2C232BEC008A0F69 /* frankfrt.ttf in Resources */,
 				103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +618,7 @@
 				722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */,
 				722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */,
 				722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */,
+				233F66BD2C234B92008A0F69 /* AccountCardView.swift in Sources */,
 				722E84162BE73601007163D4 /* PostImageView.swift in Sources */,
 				722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */,
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,

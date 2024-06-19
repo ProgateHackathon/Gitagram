@@ -1,52 +1,62 @@
-//
-//  AccountQRView.swift
-//  Gitagram
-//
-//  Created by 伊藤璃乃 on 2024/05/03.
-//
-
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
 struct AccountView: View {
     private static let cardCornerRadius: CGFloat = 20
-    private static let cardSize: CGSize = .init(width: 367, height: 512)
+    private static let cardSize: CGSize = .init(width: 360, height: 480)
     private let viewModel = AccountViewModel()
     
     @State private var isSharing: Bool = false
     @State var developer: Developer
+    @State private var nowCard = 0
     
     var body: some View {
         NavigationView {
-            ZStack {
-                ZStack {
-                    KiraKiraView()
-                    RoundedRectangle(cornerRadius: Self.cardCornerRadius)
-                        .stroke(Color.white, lineWidth: 1)
-                }
-                .frame(width: Self.cardSize.width, height: Self.cardSize.height)
-                .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 20)
-                
-                QRView(inputText: developer.gitHubURL)
-                    .padding()
-                
-                RichText(inputText: developer.name)
-            }
-            .padding(50)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        isSharing.toggle()
-                    }) {
-                        Image(systemName: "square.and.arrow.up")
+            ZStack{
+                VStack{
+                    HStack{
+                        Spacer()
+                        Text("Gitagram")
+                            .font(.title)
+                        Spacer()
+                            .frame(width: 90)
+                        Button(action: {
+                            isSharing.toggle()
+                        }) {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                        Spacer()
+                            .frame(width: 30)
                     }
+                    Picker("What is your favorite color?", selection: $nowCard) {
+                        Text("1").tag(0)
+                        Text("2").tag(1)
+                        Text("3").tag(2)
+                    }
+                    .pickerStyle(.segmented)
+                    
+                    Spacer()
+                }
+                
+                if nowCard == 0 {
+                    AccountCardTypeOneView(developer: developer)
+                } else if nowCard == 1 {
+                    Text("two")
+                } else if nowCard == 2 {
+                    Text("three")
                 }
             }
-            .sheet(isPresented: $isSharing, content: {
-                ShareSheet(activityItems: [viewModel.captureViewAsImage()])
-            })
+            
+            Spacer()
+                .frame(height: 580)
         }
+        .sheet(isPresented: $isSharing, content: {
+            ShareSheet(activityItems: [viewModel.captureViewAsImage()])
+        })
     }
 }
 
+#Preview {
+    AccountView(developer: Developer(githubId: "Rino1011"))
+}
 
