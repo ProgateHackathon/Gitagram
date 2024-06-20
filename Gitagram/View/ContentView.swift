@@ -17,10 +17,11 @@ struct ContentView: View {
             if isLoading {
                 LottieView(filename: "LottieProgress")
                     .frame(width: 400,height: 400)
-            } else {
-              
-                HomeView(hostDeveloper:developer!)
-               
+            } else{
+                if developer != nil{
+                    HomeView(hostDeveloper:developer!)
+                }
+
             }
         }
         .onAppear {
