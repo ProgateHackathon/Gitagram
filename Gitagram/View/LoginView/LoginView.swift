@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 struct LoginView: View {
-    private let viewModel = LoginViewModel()
+    @StateObject var viewModel = LoginViewModel()
     var body: some View {
         VStack{
             Text("Gitagram")
@@ -17,7 +17,7 @@ struct LoginView: View {
                 .font(.title2)
                 .padding(.bottom,60)
             Button(action: {
-                viewModel.performOAuthLoginFlow(provider: AuthProvider(rawValue: "GitHub")! )
+                viewModel.performOAuthLoginFlow()
             }, label: {
                 HStack{
                     Image("github-mark-white")
