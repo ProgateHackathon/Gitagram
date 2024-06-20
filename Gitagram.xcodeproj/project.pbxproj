@@ -29,6 +29,7 @@
 		10502C6E2C1E850700097342 /* HashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10502C6D2C1E850700097342 /* HashTag.swift */; };
 		10D526252C243731004E66EA /* HashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526242C243726004E66EA /* HashTagResponse.swift */; };
 		10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */; };
+		10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526292C243864004E66EA /* HashTagClient.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -99,6 +100,7 @@
 		10502C6D2C1E850700097342 /* HashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag.swift; sourceTree = "<group>"; };
 		10D526242C243726004E66EA /* HashTagResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagResponse.swift; sourceTree = "<group>"; };
 		10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClientProtocol.swift; sourceTree = "<group>"; };
+		10D526292C243864004E66EA /* HashTagClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClient.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		10D526212C243693004E66EA /* HashTag */ = {
 			isa = PBXGroup;
 			children = (
+				10D526292C243864004E66EA /* HashTagClient.swift */,
 			);
 			path = HashTag;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,
 				722E84722BE7365F007163D4 /* CreateDeveloperUseCase.swift in Sources */,
 				722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */,
+				10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */,
 				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
