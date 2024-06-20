@@ -16,7 +16,7 @@ public class TagProductClient : TagProductClientProtocol {
         let ref = db.collection(COLLECTION)
         
         do {
-            let query = ref.whereField("product_id", isEqualTo: product_id)
+            let query = ref.whereField("product_id", isEqualTo: product_id.uuidString)
             let snapshot = try await query.getDocuments()
             
             let tagIDs: [UUID] = snapshot.documents.compactMap { document in
@@ -38,7 +38,7 @@ public class TagProductClient : TagProductClientProtocol {
         let ref = db.collection(COLLECTION)
         
         do {
-            let query = ref.whereField("tag_id", isEqualTo: hashTag_id)
+            let query = ref.whereField("tag_id", isEqualTo: hashTag_id.uuidString)
             let snapshot = try await query.getDocuments()
             
             let productIDs: [UUID] = snapshot.documents.compactMap { document in
@@ -69,7 +69,7 @@ public class TagProductClient : TagProductClientProtocol {
     func deleteTag(from hashTag_id: UUID) {
         let ref = db.collection(COLLECTION)
         
-        let query = ref.whereField("tag_id", isEqualTo: hashTag_id)
+        let query = ref.whereField("tag_id", isEqualTo: hashTag_id.uuidString)
         query.getDocuments() { (querySnapshot, err) in
             guard (err != nil) else { return }
             for document in querySnapshot!.documents {
@@ -81,7 +81,7 @@ public class TagProductClient : TagProductClientProtocol {
     func deleteProduct(from product_id: UUID) {
         let ref = db.collection(COLLECTION)
         
-        let query = ref.whereField("product_id", isEqualTo: product_id)
+        let query = ref.whereField("product_id", isEqualTo: product_id.uuidString)
         query.getDocuments() { (querySnapshot, err) in
             guard (err != nil) else { return }
             for document in querySnapshot!.documents {
