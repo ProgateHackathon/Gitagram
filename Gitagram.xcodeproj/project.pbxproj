@@ -27,6 +27,7 @@
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		10502C6E2C1E850700097342 /* HashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10502C6D2C1E850700097342 /* HashTag.swift */; };
+		10D526252C243731004E66EA /* HashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526242C243726004E66EA /* HashTagResponse.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -95,6 +96,7 @@
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10502C6D2C1E850700097342 /* HashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag.swift; sourceTree = "<group>"; };
+		10D526242C243726004E66EA /* HashTagResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagResponse.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		10177A342BFA141600BA6078 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				10D526242C243726004E66EA /* HashTagResponse.swift */,
 				10177A352BFA148500BA6078 /* ProductResponse.swift */,
 				10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */,
 			);
@@ -248,6 +251,13 @@
 				722E84042BE735EA007163D4 /* MatchingView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		10D526212C243693004E66EA /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HashTag;
 			sourceTree = "<group>";
 		};
 		722E83FD2BE735EA007163D4 /* Component */ = {
@@ -332,6 +342,7 @@
 		722E843E2BE7365F007163D4 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				10D526212C243693004E66EA /* HashTag */,
 				722E843A2BE7365F007163D4 /* Developer */,
 				722E843D2BE7365F007163D4 /* Product */,
 			);
@@ -591,6 +602,7 @@
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
 				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
+				10D526252C243731004E66EA /* HashTagResponse.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				727952E92C1FF0B000788394 /* PickHashTagView.swift in Sources */,
