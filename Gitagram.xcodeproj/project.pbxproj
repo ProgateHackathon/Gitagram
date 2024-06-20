@@ -32,6 +32,8 @@
 		10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526292C243864004E66EA /* HashTagClient.swift */; };
 		10D5262C2C2439C1004E66EA /* HashTagRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */; };
 		10D5262F2C243A2E004E66EA /* HashTagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5262E2C243A28004E66EA /* HashTagRepository.swift */; };
+		10D526312C243CB6004E66EA /* TagProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526302C243CAE004E66EA /* TagProductClient.swift */; };
+		10D526332C243CE6004E66EA /* HashTagProductClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -105,6 +107,8 @@
 		10D526292C243864004E66EA /* HashTagClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClient.swift; sourceTree = "<group>"; };
 		10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagRepositoryProtocol.swift; sourceTree = "<group>"; };
 		10D5262E2C243A28004E66EA /* HashTagRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagRepository.swift; sourceTree = "<group>"; };
+		10D526302C243CAE004E66EA /* TagProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagProductClient.swift; sourceTree = "<group>"; };
+		10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagProductClientProtocol.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 		10D526212C243693004E66EA /* HashTag */ = {
 			isa = PBXGroup;
 			children = (
+				10D526302C243CAE004E66EA /* TagProductClient.swift */,
 				10D526292C243864004E66EA /* HashTagClient.swift */,
 			);
 			path = HashTag;
@@ -448,6 +453,7 @@
 		722E845E2BE7365F007163D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */,
 				10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */,
 				722E84592BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift */,
 				722E845A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift */,
@@ -634,6 +640,7 @@
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
+				10D526332C243CE6004E66EA /* HashTagProductClientProtocol.swift in Sources */,
 				10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
@@ -649,6 +656,7 @@
 				722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */,
 				10D5262C2C2439C1004E66EA /* HashTagRepositoryProtocol.swift in Sources */,
 				722E84772BE7365F007163D4 /* GetProductListUseCase.swift in Sources */,
+				10D526312C243CB6004E66EA /* TagProductClient.swift in Sources */,
 				722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */,
 				722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */,
 				10D5262F2C243A2E004E66EA /* HashTagRepository.swift in Sources */,
