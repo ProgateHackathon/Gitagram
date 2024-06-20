@@ -28,6 +28,7 @@
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		10502C6E2C1E850700097342 /* HashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10502C6D2C1E850700097342 /* HashTag.swift */; };
 		10D526252C243731004E66EA /* HashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526242C243726004E66EA /* HashTagResponse.swift */; };
+		10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -97,6 +98,7 @@
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10502C6D2C1E850700097342 /* HashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag.swift; sourceTree = "<group>"; };
 		10D526242C243726004E66EA /* HashTagResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagResponse.swift; sourceTree = "<group>"; };
+		10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClientProtocol.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 		722E844B2BE7365F007163D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */,
 				722E84482BE7365F007163D4 /* DeveloperClientProtocol.swift */,
 				722E84492BE7365F007163D4 /* ProductClientProtocol.swift */,
 				722E844A2BE7365F007163D4 /* ProductImageClientProtocol.swift */,
@@ -597,6 +600,7 @@
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */,
+				10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
