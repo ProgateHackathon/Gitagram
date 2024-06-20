@@ -33,7 +33,6 @@ class LoginViewModel: ObservableObject {
                 
                 self.gitHubLoader.fetchGitHubUsername(accessToken: accessToken.accessToken!) { username in
                     if let username = username {
-                        // ユーザー名を使用した処理をここに記述
                         print("GitHubのユーザー名: \(username)")
                         Task{
                             await CreateDeveloperUseCase().execute(githubId: username)

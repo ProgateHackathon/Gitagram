@@ -8,7 +8,6 @@ import Foundation
 import FirebaseAuth
 
 class GitHubLoader: ObservableObject {
-    // GitHub APIからユーザー情報を取得する関数
     func fetchGitHubUsername(accessToken: String, completion: @escaping (String?) -> Void) {
         let url = URL(string: "https://api.github.com/user")!
         var request = URLRequest(url: url)
