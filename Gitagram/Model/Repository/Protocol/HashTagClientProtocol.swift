@@ -10,4 +10,5 @@ import Foundation
 protocol HashTagClientProtocol {
     func getAll() async -> [HashTagResponse]
     func get(hashtag_id: UUID) async -> HashTagResponse?
+    func create(hashTag: HashTagResponse)
 }

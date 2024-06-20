@@ -35,4 +35,13 @@ class HashTagClient : HashTagClientProtocol {
         
         return nil
     }
+    
+    func create(hashtag: HashTagResponse) {
+        do {
+            try db.collection(COLLECTION).document(hashtag.id.uuidString).setData(from: hashtag)
+            print("Document successfully written!")
+        } catch {
+            print("Error writing document: \(error)")
+        }
+    }
 }
