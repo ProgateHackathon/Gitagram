@@ -18,11 +18,9 @@ struct ContentView: View {
                 LottieView(filename: "LottieProgress")
                     .frame(width: 400,height: 400)
             } else {
-                if let host = developer {
-                    HomeView(hostDeveloper: host)
-                } else {
-                    InputFormView(developer: $developer)
-                }
+              
+                HomeView(hostDeveloper:developer!)
+               
             }
         }
         .onAppear {

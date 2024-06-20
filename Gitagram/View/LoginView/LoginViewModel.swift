@@ -9,8 +9,12 @@ import SwiftUI
 import FirebaseAuth
 
 class LoginViewModel: ObservableObject {
+    var gitHubLoader = GitHubLoader()
     @State var provider = OAuthProvider(providerID: "github.com")
+    
+    
     func performOAuthLoginFlow() {
+        provider.scopes = ["repo", "read:user"]
         
         provider.getCredentialWith(nil) { credential, error in
             guard error == nil else {
@@ -25,6 +29,25 @@ class LoginViewModel: ObservableObject {
                 return print(error as Any)
             }
             print("ログインできたよ！")
+            if let accessToken = result?.credential as? OAuthCredential {
+                
+                self.gitHubLoader.fetchGitHubUsername(accessToken: accessToken.accessToken!) { username in
+                    if let username = username {
+                        // ユーザー名を使用した処理をここに記述
+                        print("GitHubのユーザー名: \(username)")
+                        Task{
+                            await CreateDeveloperUseCase().execute(githubId: username)
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                    }
+                }
+            }
         }
     }
+    
 }
