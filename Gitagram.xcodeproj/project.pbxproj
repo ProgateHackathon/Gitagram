@@ -10,10 +10,10 @@
 		10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10177A352BFA148500BA6078 /* ProductResponse.swift */; };
 		10177A382BFA3A4500BA6078 /* DeveloperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */; };
 		10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261AFE2BE8FCF2007D1606 /* PostURLView.swift */; };
-		10261B012BE93EC4007D1606 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B002BE93EC4007D1606 /* QRView.swift */; };
-		10261B032BE941C3007D1606 /* RichText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B022BE941C3007D1606 /* RichText.swift */; };
-		10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B042BE9427C007D1606 /* GradationBackView.swift */; };
-		10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B062BE94520007D1606 /* KiraKiraView.swift */; };
+		10261B012BE93EC4007D1606 /* QRTypeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B002BE93EC4007D1606 /* QRTypeOneView.swift */; };
+		10261B032BE941C3007D1606 /* FrankfrtText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B022BE941C3007D1606 /* FrankfrtText.swift */; };
+		10261B052BE9427C007D1606 /* BackTypeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B042BE9427C007D1606 /* BackTypeOneView.swift */; };
+		10261B072BE94520007D1606 /* KiraKiraTypeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B062BE94520007D1606 /* KiraKiraTypeOneView.swift */; };
 		10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10261B092BE94695007D1606 /* AccountViewModel.swift */; };
 		103BF3692BE39C3E00818544 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3682BE39C3E00818544 /* FirebaseDatabase */; };
 		103BF36B2BE39C3E00818544 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF36A2BE39C3E00818544 /* FirebaseDatabaseSwift */; };
@@ -27,10 +27,15 @@
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		233F66BA2C232BEC008A0F69 /* frankfrt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233F66B92C232BEB008A0F69 /* frankfrt.ttf */; };
-		233F66BD2C234B92008A0F69 /* AccountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66BC2C234B92008A0F69 /* AccountCardView.swift */; };
+		233F66BD2C234B92008A0F69 /* AccountCardTypeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66BC2C234B92008A0F69 /* AccountCardTypeOneView.swift */; };
 		233F66C02C252B66008A0F69 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66BF2C252B66008A0F69 /* ColorExtention.swift */; };
 		233F66C22C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233F66C12C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf */; };
-		233F66C42C254E88008A0F69 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66C32C254E88008A0F69 /* CustomImageView.swift */; };
+		238BF09A2C25DEAB00F58588 /* AccountCardTypeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF0992C25DEAA00F58588 /* AccountCardTypeTwoView.swift */; };
+		238BF09D2C25DEF800F58588 /* KiraKiraTypeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF09C2C25DEF800F58588 /* KiraKiraTypeTwoView.swift */; };
+		238BF0A22C25DF7900F58588 /* QRTypeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF0A12C25DF7900F58588 /* QRTypeTwoView.swift */; };
+		238BF0A52C25DFC400F58588 /* NeonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF0A42C25DFC400F58588 /* NeonText.swift */; };
+		238BF0A82C25E01400F58588 /* BackTypeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF0A72C25E01400F58588 /* BackTypeTwoView.swift */; };
+		238BF0AB2C25E07F00F58588 /* ImageHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF0AA2C25E07F00F58588 /* ImageHeartView.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -88,10 +93,10 @@
 		10177A352BFA148500BA6078 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperResponse.swift; sourceTree = "<group>"; };
 		10261AFE2BE8FCF2007D1606 /* PostURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostURLView.swift; sourceTree = "<group>"; };
-		10261B002BE93EC4007D1606 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
-		10261B022BE941C3007D1606 /* RichText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichText.swift; sourceTree = "<group>"; };
-		10261B042BE9427C007D1606 /* GradationBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradationBackView.swift; sourceTree = "<group>"; };
-		10261B062BE94520007D1606 /* KiraKiraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraView.swift; sourceTree = "<group>"; };
+		10261B002BE93EC4007D1606 /* QRTypeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRTypeOneView.swift; sourceTree = "<group>"; };
+		10261B022BE941C3007D1606 /* FrankfrtText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrankfrtText.swift; sourceTree = "<group>"; };
+		10261B042BE9427C007D1606 /* BackTypeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTypeOneView.swift; sourceTree = "<group>"; };
+		10261B062BE94520007D1606 /* KiraKiraTypeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraTypeOneView.swift; sourceTree = "<group>"; };
 		10261B092BE94695007D1606 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,10 +104,15 @@
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		233F66B92C232BEB008A0F69 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
-		233F66BC2C234B92008A0F69 /* AccountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardView.swift; sourceTree = "<group>"; };
+		233F66BC2C234B92008A0F69 /* AccountCardTypeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardTypeOneView.swift; sourceTree = "<group>"; };
 		233F66BF2C252B66008A0F69 /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		233F66C12C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = learning_curve_alt_G_regular_ot_tt.ttf; sourceTree = "<group>"; };
-		233F66C32C254E88008A0F69 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		238BF0992C25DEAA00F58588 /* AccountCardTypeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardTypeTwoView.swift; sourceTree = "<group>"; };
+		238BF09C2C25DEF800F58588 /* KiraKiraTypeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraTypeTwoView.swift; sourceTree = "<group>"; };
+		238BF0A12C25DF7900F58588 /* QRTypeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRTypeTwoView.swift; sourceTree = "<group>"; };
+		238BF0A42C25DFC400F58588 /* NeonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonText.swift; sourceTree = "<group>"; };
+		238BF0A72C25E01400F58588 /* BackTypeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTypeTwoView.swift; sourceTree = "<group>"; };
+		238BF0AA2C25E07F00F58588 /* ImageHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHeartView.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -197,7 +207,7 @@
 		10261B082BE94625007D1606 /* KiraKira */ = {
 			isa = PBXGroup;
 			children = (
-				10261B062BE94520007D1606 /* KiraKiraView.swift */,
+				238BF09B2C25DEE000F58588 /* KiraKiraDesign */,
 				722E84842BE73A29007163D4 /* KiraKiraViewModel.swift */,
 			);
 			path = KiraKira;
@@ -262,7 +272,8 @@
 		233F66BB2C234B64008A0F69 /* CardDesign */ = {
 			isa = PBXGroup;
 			children = (
-				233F66BC2C234B92008A0F69 /* AccountCardView.swift */,
+				233F66BC2C234B92008A0F69 /* AccountCardTypeOneView.swift */,
+				238BF0992C25DEAA00F58588 /* AccountCardTypeTwoView.swift */,
 			);
 			path = CardDesign;
 			sourceTree = "<group>";
@@ -273,6 +284,50 @@
 				233F66BF2C252B66008A0F69 /* ColorExtention.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		238BF09B2C25DEE000F58588 /* KiraKiraDesign */ = {
+			isa = PBXGroup;
+			children = (
+				10261B062BE94520007D1606 /* KiraKiraTypeOneView.swift */,
+				238BF09C2C25DEF800F58588 /* KiraKiraTypeTwoView.swift */,
+			);
+			path = KiraKiraDesign;
+			sourceTree = "<group>";
+		};
+		238BF0A02C25DF5100F58588 /* QRDesign */ = {
+			isa = PBXGroup;
+			children = (
+				10261B002BE93EC4007D1606 /* QRTypeOneView.swift */,
+				238BF0A12C25DF7900F58588 /* QRTypeTwoView.swift */,
+			);
+			path = QRDesign;
+			sourceTree = "<group>";
+		};
+		238BF0A32C25DFA300F58588 /* TextDesign */ = {
+			isa = PBXGroup;
+			children = (
+				10261B022BE941C3007D1606 /* FrankfrtText.swift */,
+				238BF0A42C25DFC400F58588 /* NeonText.swift */,
+			);
+			path = TextDesign;
+			sourceTree = "<group>";
+		};
+		238BF0A62C25DFF400F58588 /* BackgroundDesign */ = {
+			isa = PBXGroup;
+			children = (
+				10261B042BE9427C007D1606 /* BackTypeOneView.swift */,
+				238BF0A72C25E01400F58588 /* BackTypeTwoView.swift */,
+			);
+			path = BackgroundDesign;
+			sourceTree = "<group>";
+		};
+		238BF0A92C25E05D00F58588 /* ImageDesign */ = {
+			isa = PBXGroup;
+			children = (
+				238BF0AA2C25E07F00F58588 /* ImageHeartView.swift */,
+			);
+			path = ImageDesign;
 			sourceTree = "<group>";
 		};
 		722E83FD2BE735EA007163D4 /* Component */ = {
@@ -484,12 +539,12 @@
 		722E84832BE73A29007163D4 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				238BF0A92C25E05D00F58588 /* ImageDesign */,
+				238BF0A62C25DFF400F58588 /* BackgroundDesign */,
+				238BF0A32C25DFA300F58588 /* TextDesign */,
+				238BF0A02C25DF5100F58588 /* QRDesign */,
 				722E84862BE73A29007163D4 /* StrokeBackground.swift */,
 				722E84852BE73A29007163D4 /* ShareSheet.swift */,
-				10261B002BE93EC4007D1606 /* QRView.swift */,
-				10261B022BE941C3007D1606 /* RichText.swift */,
-				10261B042BE9427C007D1606 /* GradationBackView.swift */,
-				233F66C32C254E88008A0F69 /* CustomImageView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -603,29 +658,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				722E84792BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift in Sources */,
-				10261B012BE93EC4007D1606 /* QRView.swift in Sources */,
+				10261B012BE93EC4007D1606 /* QRTypeOneView.swift in Sources */,
 				722E846F2BE7365F007163D4 /* ProductImageClientProtocol.swift in Sources */,
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
+				238BF0A82C25E01400F58588 /* BackTypeTwoView.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
+				238BF0A22C25DF7900F58588 /* QRTypeTwoView.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
-				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
+				10261B052BE9427C007D1606 /* BackTypeOneView.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
+				238BF09A2C25DEAB00F58588 /* AccountCardTypeTwoView.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				233F66C02C252B66008A0F69 /* ColorExtention.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,
+				238BF09D2C25DEF800F58588 /* KiraKiraTypeTwoView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
 				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
-				10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */,
+				10261B072BE94520007D1606 /* KiraKiraTypeOneView.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
+				238BF0A52C25DFC400F58588 /* NeonText.swift in Sources */,
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
 				722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */,
+				238BF0AB2C25E07F00F58588 /* ImageHeartView.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				722E84052BE735EA007163D4 /* CardStackView.swift in Sources */,
 				722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */,
@@ -637,7 +698,7 @@
 				722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */,
 				722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */,
 				722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */,
-				233F66BD2C234B92008A0F69 /* AccountCardView.swift in Sources */,
+				233F66BD2C234B92008A0F69 /* AccountCardTypeOneView.swift in Sources */,
 				722E84162BE73601007163D4 /* PostImageView.swift in Sources */,
 				722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */,
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,
@@ -650,7 +711,7 @@
 				722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */,
 				72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */,
 				728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */,
-				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
+				10261B032BE941C3007D1606 /* FrankfrtText.swift in Sources */,
 				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
 				722E846D2BE7365F007163D4 /* DeveloperClientProtocol.swift in Sources */,
 				722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */,
@@ -659,7 +720,6 @@
 				23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */,
 				722E847A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift in Sources */,
 				722E84902BE73A42007163D4 /* HomeView.swift in Sources */,
-				233F66C42C254E88008A0F69 /* CustomImageView.swift in Sources */,
 				722E84652BE7365F007163D4 /* ProductClient.swift in Sources */,
 				722E84692BE7365F007163D4 /* Product.swift in Sources */,
 				722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */,

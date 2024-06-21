@@ -17,13 +17,6 @@ struct BackTypeOneView: View {
         )
     }
 }
-//グラデーション
-
-struct BackTypeTwoView: View {
-    var body: some View {
-        Color.BackBlueblackColor
-    }
-}
 #Preview{
     BackTypeTwoView()
 }

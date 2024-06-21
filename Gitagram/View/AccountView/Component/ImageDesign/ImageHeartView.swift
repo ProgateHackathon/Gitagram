@@ -1,13 +1,13 @@
 //
-//  CustomImageView.swift
+//  ImageHeartView.swift
 //  Gitagram
 //
-//  Created by 伊藤璃乃 on 2024/06/21.
+//  Created by 伊藤璃乃 on 2024/06/22.
 //
 
 import SwiftUI
 
-struct CustomImageView: View{
+struct ImageHeartView: View {
     var body: some View {
         Image("CardImage_Heart")
             .resizable()
@@ -18,5 +18,5 @@ struct CustomImageView: View{
 }
 
 #Preview {
-    AccountCardTypeTwoView(developer: Developer(githubId: "Rino1011"))
+    ImageHeartView()
 }

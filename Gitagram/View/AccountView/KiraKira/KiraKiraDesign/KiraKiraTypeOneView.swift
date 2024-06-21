@@ -29,24 +29,3 @@ struct KiraKiraTypeOneView: View {
         }
     }
 }
-struct KiraKiraTypeTwoView: View {
-    @StateObject var viewModel = KiraKiraViewModel()
-    
-    var body: some View {
-        ZStack {
-            Image("kirakira")
-                .resizable()
-                .ignoresSafeArea()
-                .cornerRadius(20)
-            BackTypeTwoView()
-                .ignoresSafeArea()
-                .opacity(viewModel.middleImageOpacity)
-                .cornerRadius(20)
-            Image("kirakira")
-                .resizable()
-                .ignoresSafeArea()
-                .opacity(viewModel.frontImageOpacitry)
-                .cornerRadius(20)
-        }
-    }
-}
