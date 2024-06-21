@@ -28,6 +28,9 @@
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		233F66BA2C232BEC008A0F69 /* frankfrt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233F66B92C232BEB008A0F69 /* frankfrt.ttf */; };
 		233F66BD2C234B92008A0F69 /* AccountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66BC2C234B92008A0F69 /* AccountCardView.swift */; };
+		233F66C02C252B66008A0F69 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66BF2C252B66008A0F69 /* ColorExtention.swift */; };
+		233F66C22C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 233F66C12C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf */; };
+		233F66C42C254E88008A0F69 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F66C32C254E88008A0F69 /* CustomImageView.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -97,6 +100,9 @@
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		233F66B92C232BEB008A0F69 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
 		233F66BC2C234B92008A0F69 /* AccountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardView.swift; sourceTree = "<group>"; };
+		233F66BF2C252B66008A0F69 /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
+		233F66C12C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = learning_curve_alt_G_regular_ot_tt.ttf; sourceTree = "<group>"; };
+		233F66C32C254E88008A0F69 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -216,6 +222,7 @@
 		10472EE52BDFAFBB00C179F8 /* Gitagram */ = {
 			isa = PBXGroup;
 			children = (
+				233F66BE2C252B57008A0F69 /* Utils */,
 				23B6E52E2BE7540F0049200B /* Info.plist */,
 				103BF37A2BE3B17000818544 /* GoogleService-Info.plist */,
 				10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */,
@@ -239,6 +246,7 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				233F66C12C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf */,
 				233F66B92C232BEB008A0F69 /* frankfrt.ttf */,
 				23B6E52C2BE73C1D0049200B /* ContentView.swift */,
 				722E84882BE73A29007163D4 /* AccountView */,
@@ -257,6 +265,14 @@
 				233F66BC2C234B92008A0F69 /* AccountCardView.swift */,
 			);
 			path = CardDesign;
+			sourceTree = "<group>";
+		};
+		233F66BE2C252B57008A0F69 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				233F66BF2C252B66008A0F69 /* ColorExtention.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		722E83FD2BE735EA007163D4 /* Component */ = {
@@ -473,6 +489,7 @@
 				10261B002BE93EC4007D1606 /* QRView.swift */,
 				10261B022BE941C3007D1606 /* RichText.swift */,
 				10261B042BE9427C007D1606 /* GradationBackView.swift */,
+				233F66C32C254E88008A0F69 /* CustomImageView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -571,6 +588,7 @@
 			files = (
 				728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */,
 				10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */,
+				233F66C22C254A43008A0F69 /* learning_curve_alt_G_regular_ot_tt.ttf in Resources */,
 				10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */,
 				233F66BA2C232BEC008A0F69 /* frankfrt.ttf in Resources */,
 				103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */,
@@ -596,6 +614,7 @@
 				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
+				233F66C02C252B66008A0F69 /* ColorExtention.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
@@ -640,6 +659,7 @@
 				23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */,
 				722E847A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift in Sources */,
 				722E84902BE73A42007163D4 /* HomeView.swift in Sources */,
+				233F66C42C254E88008A0F69 /* CustomImageView.swift in Sources */,
 				722E84652BE7365F007163D4 /* ProductClient.swift in Sources */,
 				722E84692BE7365F007163D4 /* Product.swift in Sources */,
 				722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */,

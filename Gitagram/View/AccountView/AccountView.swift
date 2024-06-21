@@ -28,11 +28,11 @@ struct AccountView: View {
                         Spacer()
                             .frame(width: 30)
                     }
-                    Picker("What is your favorite color?", selection: $nowCard) {
+                    Picker("", selection: $nowCard) {
                         Text("1").tag(0)
                         Text("2").tag(1)
-                        Text("3").tag(2)
                     }
+                    .frame(width: 300)
                     .pickerStyle(.segmented)
                     
                     Spacer()
@@ -41,9 +41,7 @@ struct AccountView: View {
                 if nowCard == 0 {
                     AccountCardTypeOneView(developer: developer)
                 } else if nowCard == 1 {
-                    Text("two")
-                } else if nowCard == 2 {
-                    Text("three")
+                    AccountCardTypeTwoView(developer: developer)
                 }
             }
             

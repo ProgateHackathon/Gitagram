@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct GradationBackView: View {
+struct BackTypeOneView: View {
     var body: some View {
         LinearGradient(
             gradient: Gradient(colors: [Color.BackPurpleColor,Color.BackPinkColor]),
@@ -17,16 +17,13 @@ struct GradationBackView: View {
         )
     }
 }
+//グラデーション
 
-
-extension Color {
-    static let FramePinkColor = Color("FramePinkColor")
-    static let BackPurpleColor = Color("BackPurpleColor")
-    static let BackPinkColor = Color("BackPinkColor")
-    static let TextPurpleColor = Color("TextPurpleColor")
-    static let TextFrameBrownColor = Color("TextFrameBrownColor")
+struct BackTypeTwoView: View {
+    var body: some View {
+        Color.BackBlueblackColor
+    }
 }
-
-#Preview {
-    GradationBackView()
+#Preview{
+    BackTypeTwoView()
 }

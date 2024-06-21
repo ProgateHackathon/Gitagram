@@ -1,5 +1,5 @@
 //
-//  TakeScreenShotUseCase.swoft.swift
+//  TakeScreenShotUseCase.swift
 //  Gitagram
 //
 //  Created by 伊藤璃乃 on 2024/05/03.

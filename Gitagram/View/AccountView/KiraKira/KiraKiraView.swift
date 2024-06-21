@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct KiraKiraView: View {
+struct KiraKiraTypeOneView: View {
     @StateObject var viewModel = KiraKiraViewModel()
     
     var body: some View {
@@ -17,7 +17,28 @@ struct KiraKiraView: View {
                 .resizable()
                 .ignoresSafeArea()
                 .cornerRadius(20)
-            GradationBackView()
+            BackTypeOneView()
+                .ignoresSafeArea()
+                .opacity(viewModel.middleImageOpacity)
+                .cornerRadius(20)
+            Image("kirakira")
+                .resizable()
+                .ignoresSafeArea()
+                .opacity(viewModel.frontImageOpacitry)
+                .cornerRadius(20)
+        }
+    }
+}
+struct KiraKiraTypeTwoView: View {
+    @StateObject var viewModel = KiraKiraViewModel()
+    
+    var body: some View {
+        ZStack {
+            Image("kirakira")
+                .resizable()
+                .ignoresSafeArea()
+                .cornerRadius(20)
+            BackTypeTwoView()
                 .ignoresSafeArea()
                 .opacity(viewModel.middleImageOpacity)
                 .cornerRadius(20)
