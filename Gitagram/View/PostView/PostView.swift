@@ -13,7 +13,7 @@ struct PostView: View {
     @State var developer : Developer
     var gitHubLoader = GitHubLoader()
     @StateObject  var viewModel = RepositoryViewModel()
-    let username = "am2525nyan"
+  
     var body: some View {
         NavigationView {
             VStack{
@@ -81,6 +81,7 @@ struct PostView: View {
             Task{
                 if let host =  await GetLoginDeveloperUseCase().execute() {
                     developer = host
+               let username =  developer.name
                     
                     viewModel.fetchRepositories(for: username)
                 } else {
