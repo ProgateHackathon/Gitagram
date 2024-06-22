@@ -14,7 +14,7 @@ struct UserInfoView: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack{
-                AsyncImage(url: cardData.developer.imageURL) { image in
+                AsyncImage(url: cardData.loginHost.imageURL) { image in
                     image
                         .resizable()
                         .frame(width: 60,height: 60)
@@ -23,7 +23,7 @@ struct UserInfoView: View {
                     ProgressView()
                 }
                     
-                Text(cardData.developer.name)
+                Text(cardData.loginHost.name)
                     .font(. title)
                     .fontWeight(.semibold)
             }

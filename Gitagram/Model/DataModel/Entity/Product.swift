@@ -38,6 +38,10 @@ struct Product : Identifiable {
         self.hashTags = hashTags
     }
     
+    func setDeveloper(from developer: Developer) -> Self {
+        Self(id: id, title: title, content: content, developerId: developer.id, url: url, hashTags: hashTags)
+    }
+    
     func setTitle(from title: String) -> Self {
         Self(id: id, title: title, content: content, developerId: developerId, url: url, hashTags: hashTags)
     }
