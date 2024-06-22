@@ -64,7 +64,7 @@ struct Product : Identifiable {
     }
     
     static func Empty() -> Product {
-        Product(id: ProductID.Empty(), title: "", content: "", developerId: DeveloperID.Empty(), url: "", hashTags: [])
+        Product(title: "", content: "", developerId: DeveloperID.Empty(), url: "", hashTags: [])
     }
     
     func isEmpty() -> Bool {
