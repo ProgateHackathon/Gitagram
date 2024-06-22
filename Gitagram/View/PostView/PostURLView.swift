@@ -60,7 +60,10 @@ struct PostURLView: View {
                 }
             
                 .onChange(of: url) {
-                    let product = cardData.product.setURL(from: url)
+                    let product = cardData.product
+                        .setURL(from: url)
+                        .set
+                    
                     cardData = cardData.setProduct(from: product)
                 }
             Divider()
