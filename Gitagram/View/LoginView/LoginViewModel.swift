@@ -38,11 +38,7 @@ class LoginViewModel: ObservableObject {
                             await CreateDeveloperUseCase().execute(githubId: username)
                             
                         }
-                        
-                        
-                        
-                        
-                        
+                    
                     }
                 }
             }
