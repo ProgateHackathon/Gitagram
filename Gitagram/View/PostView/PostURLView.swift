@@ -11,9 +11,6 @@ struct PostURLView: View {
     @State var cardData: CardData
     @State var title: String = ""
     @State var developerName: String = ""
-    var githubURL: String {
-        "https://github.com/\(developerName)/\(title)"
-    }
     
     var body: some View {
         VStack{
@@ -35,7 +32,7 @@ struct PostURLView: View {
                 .padding(.leading,10)
                 .font(.system(size: 12, weight: .regular, design: .default))
                 .padding(.bottom,10)
-            Text(githubURL)
+            Text(cardData.product.url)
                 .tint(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -59,7 +56,6 @@ struct PostURLView: View {
                 .padding(.vertical,10)
                 .onChange(of: title) {
                     let product = cardData.product
-                        .setURL(from: githubURL)
                         .setTitle(from: title)
                     cardData = cardData.setProduct(from: product)
                 }
