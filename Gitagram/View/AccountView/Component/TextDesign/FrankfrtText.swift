@@ -12,6 +12,8 @@ struct FrankfrtText: View {
     
     var body: some View {
         Text("@\(inputText)")
+            .lineLimit(1)
+            .minimumScaleFactor(0.1)
             .foregroundColor(Color("TextPurpleColor"))
             .underline()
             .stroke(color: .white, width: 3)
@@ -26,6 +28,6 @@ struct FrankfrtText: View {
 
 #Preview {
     //CoolText(inputText: "Rino1011")
-    AccountCardTypeTwoView(developer: Developer(githubId: "Rino1011"))
+    AccountCardTypeOneView(developer: Developer(githubId: "Rino1011"))
 }
 

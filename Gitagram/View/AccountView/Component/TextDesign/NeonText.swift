@@ -11,6 +11,8 @@ struct CoolText: View {
     let inputText: String
     var body: some View {
         Text("@\(inputText)")
+            .lineLimit(1)
+            .minimumScaleFactor(0.1)
             .kerning(2)
             .foregroundColor(Color(.white))
             .stroke(color: .TextPinkColor, width: 1)
