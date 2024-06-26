@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Lottie
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var developer: Developer? = nil
@@ -21,7 +22,7 @@ struct ContentView: View {
                 if developer != nil{
                     HomeView(hostDeveloper:developer!)
                 }
-
+                
             }
         }
         .onAppear {

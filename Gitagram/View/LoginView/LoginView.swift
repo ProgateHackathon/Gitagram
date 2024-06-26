@@ -9,9 +9,9 @@ import SwiftUI
 import FirebaseAuth
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
-    @State var isUserLoggedIn = Auth.auth().currentUser != nil
+    
     var body: some View {
-        if isUserLoggedIn {
+        if viewModel.isUserLoggedIn {
             ContentView()
         }else{
             ZStack{
@@ -23,7 +23,7 @@ struct LoginView: View {
                 Image("cloud2")
                     .resizable()
                     .frame(width: 110,height: 50)
-                    
+                
                     .position(x: 70,y: 360)
                 Image("heart")
                     .resizable()
