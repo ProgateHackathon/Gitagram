@@ -14,7 +14,7 @@ struct HomeView: View {
         TabView{
             MatchingView()
                 .tabItem {
-                    Image(systemName: "drop")
+                    Image("tab")
                     Text("まっち")//タブバーの①
                 }
             AccountView(developer: hostDeveloper)
