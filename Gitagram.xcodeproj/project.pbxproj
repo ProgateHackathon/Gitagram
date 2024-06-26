@@ -27,6 +27,13 @@
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		10502C6E2C1E850700097342 /* HashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10502C6D2C1E850700097342 /* HashTag.swift */; };
+		10D526252C243731004E66EA /* HashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526242C243726004E66EA /* HashTagResponse.swift */; };
+		10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */; };
+		10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526292C243864004E66EA /* HashTagClient.swift */; };
+		10D5262C2C2439C1004E66EA /* HashTagRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */; };
+		10D5262F2C243A2E004E66EA /* HashTagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5262E2C243A28004E66EA /* HashTagRepository.swift */; };
+		10D526312C243CB6004E66EA /* TagProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526302C243CAE004E66EA /* TagProductClient.swift */; };
+		10D526332C243CE6004E66EA /* HashTagProductClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -95,6 +102,13 @@
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10502C6D2C1E850700097342 /* HashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag.swift; sourceTree = "<group>"; };
+		10D526242C243726004E66EA /* HashTagResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagResponse.swift; sourceTree = "<group>"; };
+		10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClientProtocol.swift; sourceTree = "<group>"; };
+		10D526292C243864004E66EA /* HashTagClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClient.swift; sourceTree = "<group>"; };
+		10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagRepositoryProtocol.swift; sourceTree = "<group>"; };
+		10D5262E2C243A28004E66EA /* HashTagRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagRepository.swift; sourceTree = "<group>"; };
+		10D526302C243CAE004E66EA /* TagProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagProductClient.swift; sourceTree = "<group>"; };
+		10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagProductClientProtocol.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 		10177A342BFA141600BA6078 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				10D526242C243726004E66EA /* HashTagResponse.swift */,
 				10177A352BFA148500BA6078 /* ProductResponse.swift */,
 				10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */,
 			);
@@ -248,6 +263,23 @@
 				722E84042BE735EA007163D4 /* MatchingView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		10D526212C243693004E66EA /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+				10D526302C243CAE004E66EA /* TagProductClient.swift */,
+				10D526292C243864004E66EA /* HashTagClient.swift */,
+			);
+			path = HashTag;
+			sourceTree = "<group>";
+		};
+		10D5262D2C243A15004E66EA /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+				10D5262E2C243A28004E66EA /* HashTagRepository.swift */,
+			);
+			path = HashTag;
 			sourceTree = "<group>";
 		};
 		722E83FD2BE735EA007163D4 /* Component */ = {
@@ -332,6 +364,7 @@
 		722E843E2BE7365F007163D4 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				10D526212C243693004E66EA /* HashTag */,
 				722E843A2BE7365F007163D4 /* Developer */,
 				722E843D2BE7365F007163D4 /* Product */,
 			);
@@ -367,6 +400,7 @@
 		722E844B2BE7365F007163D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */,
 				722E84482BE7365F007163D4 /* DeveloperClientProtocol.swift */,
 				722E84492BE7365F007163D4 /* ProductClientProtocol.swift */,
 				722E844A2BE7365F007163D4 /* ProductImageClientProtocol.swift */,
@@ -385,6 +419,7 @@
 		722E844F2BE7365F007163D4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				10D5262D2C243A15004E66EA /* HashTag */,
 				722E84442BE7365F007163D4 /* Developer */,
 				722E84472BE7365F007163D4 /* Product */,
 				722E844B2BE7365F007163D4 /* Protocol */,
@@ -418,6 +453,8 @@
 		722E845E2BE7365F007163D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */,
+				10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */,
 				722E84592BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift */,
 				722E845A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift */,
 				722E845B2BE7365F007163D4 /* ProductImageRepositoryProtocol.swift */,
@@ -586,11 +623,13 @@
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */,
+				10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
 				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
+				10D526252C243731004E66EA /* HashTagResponse.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				727952E92C1FF0B000788394 /* PickHashTagView.swift in Sources */,
@@ -601,6 +640,7 @@
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
+				10D526332C243CE6004E66EA /* HashTagProductClientProtocol.swift in Sources */,
 				10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
@@ -614,15 +654,19 @@
 				722E840C2BE735EA007163D4 /* MatchingView.swift in Sources */,
 				722E847B2BE7365F007163D4 /* ProductImageRepositoryProtocol.swift in Sources */,
 				722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */,
+				10D5262C2C2439C1004E66EA /* HashTagRepositoryProtocol.swift in Sources */,
 				722E84772BE7365F007163D4 /* GetProductListUseCase.swift in Sources */,
+				10D526312C243CB6004E66EA /* TagProductClient.swift in Sources */,
 				722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */,
 				722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */,
+				10D5262F2C243A2E004E66EA /* HashTagRepository.swift in Sources */,
 				722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */,
 				722E84162BE73601007163D4 /* PostImageView.swift in Sources */,
 				722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */,
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,
 				722E84722BE7365F007163D4 /* CreateDeveloperUseCase.swift in Sources */,
 				722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */,
+				10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */,
 				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
