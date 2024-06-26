@@ -57,7 +57,7 @@ struct PostView: View {
         .onAppear(){
             Task{
                 if let host = await GetLoginDeveloperUseCase().execute() {
-                    cardData = cardData.setDeveloper(from: host)
+                    cardData = cardData.setLoginHost(from: host)
                 } else {
                     ContentView()
                 }
