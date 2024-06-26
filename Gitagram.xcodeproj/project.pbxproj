@@ -26,6 +26,14 @@
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EEB2BDFAFBD00C179F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
+		10502C6E2C1E850700097342 /* HashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10502C6D2C1E850700097342 /* HashTag.swift */; };
+		10D526252C243731004E66EA /* HashTagResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526242C243726004E66EA /* HashTagResponse.swift */; };
+		10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */; };
+		10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526292C243864004E66EA /* HashTagClient.swift */; };
+		10D5262C2C2439C1004E66EA /* HashTagRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */; };
+		10D5262F2C243A2E004E66EA /* HashTagRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D5262E2C243A28004E66EA /* HashTagRepository.swift */; };
+		10D526312C243CB6004E66EA /* TagProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526302C243CAE004E66EA /* TagProductClient.swift */; };
+		10D526332C243CE6004E66EA /* HashTagProductClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */; };
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
@@ -36,14 +44,14 @@
 		722E840C2BE735EA007163D4 /* MatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84022BE735EA007163D4 /* MatchingView.swift */; };
 		722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84032BE735EA007163D4 /* MatchingViewModel.swift */; };
 		722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E840E2BE73601007163D4 /* ImagePickerView.swift */; };
-		722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84102BE73601007163D4 /* PostDiscriptionView.swift */; };
+		722E84152BE73601007163D4 /* PostDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84102BE73601007163D4 /* PostDescriptionView.swift */; };
 		722E84162BE73601007163D4 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84112BE73601007163D4 /* PostImageView.swift */; };
 		722E84172BE73601007163D4 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84122BE73601007163D4 /* PostView.swift */; };
 		722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84182BE7360C007163D4 /* InputFormView.swift */; };
 		722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84392BE7365F007163D4 /* DeveloperClient.swift */; };
 		722E84652BE7365F007163D4 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843B2BE7365F007163D4 /* ProductClient.swift */; };
 		722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843C2BE7365F007163D4 /* ProductImageClient.swift */; };
-		722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843F2BE7365F007163D4 /* CardDataModel.swift */; };
+		722E84672BE7365F007163D4 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843F2BE7365F007163D4 /* CardData.swift */; };
 		722E84682BE7365F007163D4 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84402BE7365F007163D4 /* Developer.swift */; };
 		722E84692BE7365F007163D4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84412BE7365F007163D4 /* Product.swift */; };
 		722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84432BE7365F007163D4 /* DeveloperRepository.swift */; };
@@ -77,6 +85,10 @@
 		728E75B22BFC4A3B003D4C93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 728E75B12BFC4A3B003D4C93 /* Lottie */; };
 		728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E75B32BFC5139003D4C93 /* LottieView.swift */; };
 		728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = 728E75C12BFC7BAE003D4C93 /* LottieProgress.json */; };
+		727952E92C1FF0B000788394 /* PickHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727952E82C1FF0B000788394 /* PickHashTagView.swift */; };
+		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
+		72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */; };
+		72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +105,14 @@
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10502C6D2C1E850700097342 /* HashTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTag.swift; sourceTree = "<group>"; };
+		10D526242C243726004E66EA /* HashTagResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagResponse.swift; sourceTree = "<group>"; };
+		10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClientProtocol.swift; sourceTree = "<group>"; };
+		10D526292C243864004E66EA /* HashTagClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagClient.swift; sourceTree = "<group>"; };
+		10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagRepositoryProtocol.swift; sourceTree = "<group>"; };
+		10D5262E2C243A28004E66EA /* HashTagRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagRepository.swift; sourceTree = "<group>"; };
+		10D526302C243CAE004E66EA /* TagProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagProductClient.swift; sourceTree = "<group>"; };
+		10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagProductClientProtocol.swift; sourceTree = "<group>"; };
 		23B6E52C2BE73C1D0049200B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -104,7 +124,7 @@
 		722E84022BE735EA007163D4 /* MatchingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingView.swift; sourceTree = "<group>"; };
 		722E84032BE735EA007163D4 /* MatchingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingViewModel.swift; sourceTree = "<group>"; };
 		722E840E2BE73601007163D4 /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
-		722E84102BE73601007163D4 /* PostDiscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDiscriptionView.swift; sourceTree = "<group>"; };
+		722E84102BE73601007163D4 /* PostDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDescriptionView.swift; sourceTree = "<group>"; };
 		722E84112BE73601007163D4 /* PostImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		722E84122BE73601007163D4 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		722E84182BE7360C007163D4 /* InputFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
@@ -112,7 +132,7 @@
 		722E84392BE7365F007163D4 /* DeveloperClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		722E843B2BE7365F007163D4 /* ProductClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		722E843C2BE7365F007163D4 /* ProductImageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
-		722E843F2BE7365F007163D4 /* CardDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
+		722E843F2BE7365F007163D4 /* CardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		722E84402BE7365F007163D4 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		722E84412BE7365F007163D4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		722E84432BE7365F007163D4 /* DeveloperRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperRepository.swift; sourceTree = "<group>"; };
@@ -145,6 +165,10 @@
 		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 		728E75B32BFC5139003D4C93 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
+		727952E82C1FF0B000788394 /* PickHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickHashTagView.swift; sourceTree = "<group>"; };
+		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
+		72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagView.swift; sourceTree = "<group>"; };
+		72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +193,10 @@
 		10177A332BFA13EF00BA6078 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				722E843F2BE7365F007163D4 /* CardDataModel.swift */,
+				722E843F2BE7365F007163D4 /* CardData.swift */,
 				722E84402BE7365F007163D4 /* Developer.swift */,
 				722E84412BE7365F007163D4 /* Product.swift */,
+				10502C6D2C1E850700097342 /* HashTag.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -179,6 +204,7 @@
 		10177A342BFA141600BA6078 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				10D526242C243726004E66EA /* HashTagResponse.swift */,
 				10177A352BFA148500BA6078 /* ProductResponse.swift */,
 				10177A372BFA3A4500BA6078 /* DeveloperResponse.swift */,
 			);
@@ -220,6 +246,7 @@
 				722E84632BE7365F007163D4 /* Model */,
 				10472EF42BDFAFD700C179F8 /* View */,
 				10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */,
+				72B3DB462BF50DEC008BE7F9 /* Utils */,
 				10472EEC2BDFAFBD00C179F8 /* Preview Content */,
 			);
 			path = Gitagram;
@@ -248,6 +275,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		10D526212C243693004E66EA /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+				10D526302C243CAE004E66EA /* TagProductClient.swift */,
+				10D526292C243864004E66EA /* HashTagClient.swift */,
+			);
+			path = HashTag;
+			sourceTree = "<group>";
+		};
+		10D5262D2C243A15004E66EA /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+				10D5262E2C243A28004E66EA /* HashTagRepository.swift */,
+			);
+			path = HashTag;
+			sourceTree = "<group>";
+		};
 		722E83FD2BE735EA007163D4 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +300,8 @@
 				722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */,
 				722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */,
 				722E83FC2BE735EA007163D4 /* UserInfoView.swift */,
+				72B3DB402BF2F928008BE7F9 /* HashTagView.swift */,
+				727952E82C1FF0B000788394 /* PickHashTagView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -290,11 +336,12 @@
 		722E84132BE73601007163D4 /* PostView */ = {
 			isa = PBXGroup;
 			children = (
-				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
 				722E840F2BE73601007163D4 /* Component */,
-				722E84102BE73601007163D4 /* PostDiscriptionView.swift */,
-				722E84112BE73601007163D4 /* PostImageView.swift */,
 				722E84122BE73601007163D4 /* PostView.swift */,
+				722E84102BE73601007163D4 /* PostDescriptionView.swift */,
+				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
+				72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */,
+				722E84112BE73601007163D4 /* PostImageView.swift */,
 			);
 			path = PostView;
 			sourceTree = "<group>";
@@ -327,6 +374,7 @@
 		722E843E2BE7365F007163D4 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				10D526212C243693004E66EA /* HashTag */,
 				722E843A2BE7365F007163D4 /* Developer */,
 				722E843D2BE7365F007163D4 /* Product */,
 			);
@@ -362,6 +410,7 @@
 		722E844B2BE7365F007163D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10D526262C2437EF004E66EA /* HashTagClientProtocol.swift */,
 				722E84482BE7365F007163D4 /* DeveloperClientProtocol.swift */,
 				722E84492BE7365F007163D4 /* ProductClientProtocol.swift */,
 				722E844A2BE7365F007163D4 /* ProductImageClientProtocol.swift */,
@@ -380,6 +429,7 @@
 		722E844F2BE7365F007163D4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				10D5262D2C243A15004E66EA /* HashTag */,
 				722E84442BE7365F007163D4 /* Developer */,
 				722E84472BE7365F007163D4 /* Product */,
 				722E844B2BE7365F007163D4 /* Protocol */,
@@ -414,6 +464,8 @@
 		722E845E2BE7365F007163D4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				10D526322C243CE5004E66EA /* HashTagProductClientProtocol.swift */,
+				10D5262B2C24398A004E66EA /* HashTagRepositoryProtocol.swift */,
 				722E84592BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift */,
 				722E845A2BE7365F007163D4 /* DeveloperRepositoryProtocol.swift */,
 				722E845B2BE7365F007163D4 /* ProductImageRepositoryProtocol.swift */,
@@ -483,6 +535,14 @@
 				722E848E2BE73A42007163D4 /* HomeView.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		72B3DB462BF50DEC008BE7F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,13 +636,17 @@
 				722E846F2BE7365F007163D4 /* ProductImageClientProtocol.swift in Sources */,
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
+				72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */,
+				10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */,
 				722E84752BE7365F007163D4 /* GetLoginDeveloperUseCase.swift in Sources */,
 				722E84732BE7365F007163D4 /* GetQRCodeUseCase.swift in Sources */,
 				722E84682BE7365F007163D4 /* Developer.swift in Sources */,
 				722E84062BE735EA007163D4 /* CardView.swift in Sources */,
 				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
+				10D526252C243731004E66EA /* HashTagResponse.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
+				727952E92C1FF0B000788394 /* PickHashTagView.swift in Sources */,
 				722E84172BE73601007163D4 /* PostView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
@@ -590,26 +654,33 @@
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
+				10D526332C243CE6004E66EA /* HashTagProductClientProtocol.swift in Sources */,
 				10261B072BE94520007D1606 /* KiraKiraView.swift in Sources */,
 				722E847E2BE7365F007163D4 /* TakeScreenShotUseCase.swift in Sources */,
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
 				722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				722E84052BE735EA007163D4 /* CardStackView.swift in Sources */,
+				72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */,
 				722E847D2BE7365F007163D4 /* QRCodeProtocol.swift in Sources */,
+				10502C6E2C1E850700097342 /* HashTag.swift in Sources */,
 				10261AFF2BE8FCF2007D1606 /* PostURLView.swift in Sources */,
 				722E840C2BE735EA007163D4 /* MatchingView.swift in Sources */,
 				722E847B2BE7365F007163D4 /* ProductImageRepositoryProtocol.swift in Sources */,
 				722E848A2BE73A2A007163D4 /* AccountView.swift in Sources */,
+				10D5262C2C2439C1004E66EA /* HashTagRepositoryProtocol.swift in Sources */,
 				722E84772BE7365F007163D4 /* GetProductListUseCase.swift in Sources */,
+				10D526312C243CB6004E66EA /* TagProductClient.swift in Sources */,
 				722E841B2BE7360C007163D4 /* InputFormView.swift in Sources */,
 				722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */,
+				10D5262F2C243A2E004E66EA /* HashTagRepository.swift in Sources */,
 				722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */,
 				722E84162BE73601007163D4 /* PostImageView.swift in Sources */,
 				722E847F2BE7365F007163D4 /* UseCaseDI.swift in Sources */,
 				722E84782BE7365F007163D4 /* PostProductUseCase.swift in Sources */,
 				722E84722BE7365F007163D4 /* CreateDeveloperUseCase.swift in Sources */,
 				722E846A2BE7365F007163D4 /* DeveloperRepository.swift in Sources */,
+				10D5262A2C243867004E66EA /* HashTagClient.swift in Sources */,
 				722E848B2BE73A2A007163D4 /* KiraKiraViewModel.swift in Sources */,
 				722E84742BE7365F007163D4 /* GetDeveloperUseCase.swift in Sources */,
 				722E84712BE7365F007163D4 /* RepositoryDI.swift in Sources */,
@@ -618,9 +689,9 @@
 				72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */,
 				728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */,
 				10261B032BE941C3007D1606 /* RichText.swift in Sources */,
-				722E84672BE7365F007163D4 /* CardDataModel.swift in Sources */,
+				722E84672BE7365F007163D4 /* CardData.swift in Sources */,
 				722E846D2BE7365F007163D4 /* DeveloperClientProtocol.swift in Sources */,
-				722E84152BE73601007163D4 /* PostDiscriptionView.swift in Sources */,
+				722E84152BE73601007163D4 /* PostDescriptionView.swift in Sources */,
 				722E846C2BE7365F007163D4 /* ProductRepository.swift in Sources */,
 				722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */,
 				23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */,
@@ -629,6 +700,7 @@
 				722E84652BE7365F007163D4 /* ProductClient.swift in Sources */,
 				722E84692BE7365F007163D4 /* Product.swift in Sources */,
 				722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */,
+				72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,7 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = 98BL22S53Y;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gitagram/Info.plist;
@@ -800,7 +872,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = 98BL22S53Y;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gitagram/Info.plist;

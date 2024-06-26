@@ -12,7 +12,7 @@ class GetProductImageUseCase {
     let productImageRepository = UseCaseDI.productImageRepository
     
     func execute(id: Product.ID) async -> UIImage? {
-     let image =  await productImageRepository.fetchImage(id: id)
-              return image
+        let image = await productImageRepository.fetchImage(id: id)
+        return image
     }
 }

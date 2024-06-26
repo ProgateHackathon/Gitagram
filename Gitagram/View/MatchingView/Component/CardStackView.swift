@@ -13,6 +13,7 @@ struct CardStackView: View {
     @ObservedObject var viewModel: MatchingViewModel
     @State var finish = false
     @State var isShowAlert = false
+    
     var body: some View {
         VStack(spacing:16){
             ZStack{
@@ -33,10 +34,10 @@ struct CardStackView: View {
             } message: {
                 Text("URLがありません")
             }
-            if viewModel.isNotRepositoryEmpty() {
+            
+            if viewModel.isExistRepository() {
                 SwipeActionButtonsView(viewModel: viewModel)
             }
-            
         }
     }
 }

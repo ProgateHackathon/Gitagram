@@ -12,4 +12,5 @@ class UseCaseDI {
     static let productRepository: ProductRepositoryProtocol = ProductRepository()
     static let productImageRepository = ProductImageRepository()
     static let qrRepository: QRCodeProtocol = QRCodeRepository()
+    static let hashTagRepository: HashTagRepositoryProtocol = HashTagRepository()
 }

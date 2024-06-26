@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct UserInfoView: View {
-    let cardData: CardDataModel
+    let cardData: CardData
     @Environment(\.openURL) var openURL
+    
     var body: some View {
         VStack(alignment: .leading){
             HStack{
-                AsyncImage(url: cardData.developer.imageURL) { image in
+                AsyncImage(url: cardData.loginHost.imageURL) { image in
                     image
                         .resizable()
                         .frame(width: 60,height: 60)
@@ -23,12 +24,12 @@ struct UserInfoView: View {
                         .frame(width: 400,height: 400)
                 }
                     
-                Text(cardData.developer.name)
+                Text(cardData.loginHost.name)
                     .font(. title)
                     .fontWeight(.semibold)
             }
             HStack{
-                Text(cardData.title)
+                Text(cardData.product.title)
                     .font(.title)
                     .fontWeight(.heavy)
                 Spacer()
@@ -41,7 +42,7 @@ struct UserInfoView: View {
                 })
             }
             
-            Text(cardData.discription)
+            Text(cardData.product.content)
                 .font(.subheadline)
                 .lineLimit(2)
             Button(action: {
@@ -54,9 +55,7 @@ struct UserInfoView: View {
         }
         .foregroundStyle(.white)
         .padding()
-        .background(
-            LinearGradient(colors: [.clear,.black], startPoint: .top , endPoint: .bottom)
-        )
+        
     }
 }
 
