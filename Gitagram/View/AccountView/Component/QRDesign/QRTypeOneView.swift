@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QRView: View {
+struct QRTypeOneView: View {
     let inputText: String
     let qrGenerator = GetQRCodeUseCase()
     let cornerRadius: CGFloat = 10
@@ -20,8 +20,9 @@ struct QRView: View {
         ZStack{
             Rectangle()
                 .fill(Color.white)
-                .frame(width: 250, height: 250)
-                .cornerRadius(20)
+                .frame(width: 220, height: 220)
+                .cornerRadius(cornerRadius)
+                .stroke(color: .TextFrameBrownColor, width: 2)
             Image(uiImage: qrCode)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -29,5 +30,6 @@ struct QRView: View {
                 .cornerRadius(cornerRadius)
                 .padding()
         }
+        .background(Color("TextFrameBrownColor"))
     }
 }
