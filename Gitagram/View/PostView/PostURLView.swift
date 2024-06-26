@@ -32,6 +32,7 @@ struct PostURLView: View {
                 .padding(.leading,10)
                 .font(.system(size: 12, weight: .regular, design: .default))
                 .padding(.bottom,10)
+            
             Text(cardData.product.url)
                 .tint(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,7 +49,18 @@ struct PostURLView: View {
                     let product = cardData.product.setDeveloper(from: developer)
                     cardData = cardData.setProduct(from: product)
                 }
+                
+            Divider()
             
+            TextField("リポジトリ名を入力しよう!!", text: $title)
+                .frame(alignment: .leading)
+                .padding(.leading,10)
+                .padding(.vertical,10)
+                .onChange(of: title) {
+                    let product = cardData.product
+                        .setTitle(from: title)
+                    cardData = cardData.setProduct(from: product)
+                }
             Divider()
             
             Spacer()
@@ -68,6 +80,7 @@ struct PostURLView: View {
         }
         .onAppear {
             developerName = cardData.loginHost.name
+            title = cardData.product.title
         }
     }
 }

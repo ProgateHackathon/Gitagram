@@ -80,7 +80,7 @@ struct PostView: View {
             Task{
                 if let host = await GetLoginDeveloperUseCase().execute() {
                     cardData = cardData.setLoginHost(from: host)
-                    let username =  cardData.developer.name
+                    let username = cardData.loginHost.name
                     viewModel.fetchRepositories(for: username)
                 } else {
                     ContentView()
