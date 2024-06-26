@@ -11,6 +11,7 @@ import FirebaseAuth
 class LoginViewModel: ObservableObject {
     var gitHubLoader = GitHubLoader()
     let provider = OAuthProvider(providerID: "github.com")
+    @Published var isUserLoggedIn = Auth.auth().currentUser != nil
     
     
     func performOAuthLoginFlow() {
@@ -38,11 +39,6 @@ class LoginViewModel: ObservableObject {
                             await CreateDeveloperUseCase().execute(githubId: username)
                             
                         }
-                        
-                        
-                        
-                        
-                        
                     }
                 }
             }
