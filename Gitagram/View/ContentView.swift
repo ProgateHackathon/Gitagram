@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Lottie
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var developer: Developer? = nil
@@ -17,12 +18,11 @@ struct ContentView: View {
             if isLoading {
                 LottieView(filename: "LottieProgress")
                     .frame(width: 400,height: 400)
-            } else {
-                if let host = developer {
-                    HomeView(hostDeveloper: host)
-                } else {
-                    InputFormView(developer: $developer)
+            } else{
+                if developer != nil{
+                    HomeView(hostDeveloper:developer!)
                 }
+                
             }
         }
         .onAppear {

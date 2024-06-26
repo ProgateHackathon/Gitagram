@@ -10,6 +10,8 @@ import SwiftUI
 struct PostView: View {
     @State var cardData: CardData = .Empty()
     @State var title: String = ""
+    var gitHubLoader = GitHubLoader()
+    @StateObject  var viewModel = RepositoryViewModel()
     
     var body: some View {
         NavigationView {
@@ -21,6 +23,7 @@ struct PostView: View {
                     .scaleEffect(1.3)
                     .padding(.top, 40)
                     .padding(.bottom, 10)
+                
                 
                 Text("リポジトリの名前は？")
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -38,11 +41,30 @@ struct PostView: View {
                 
                 Divider()
                 
+                Text("または下のリストから選択")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading,10)
+                    .padding(.top, 20)
+                    .font(.system(size: 20, weight: .black, design: .default))
+                    .padding(.bottom,5)
+                
+                
+                List(viewModel.repositories) { repository in
+                    Button(action: {
+                        title = repository.name
+                        
+                    }, label: {
+                        Text(repository.name)
+                            .font(.headline)
+                        
+                    })
+                }
+                
                 Spacer()
                 
-                NavigationLink{
+                NavigationLink {
                     PostDescriptionView(cardData: cardData)
-                }label:{
+                } label: {
                     Text("次へ")
                         .padding(.horizontal,120)
                         .padding(.vertical,15)
@@ -58,6 +80,8 @@ struct PostView: View {
             Task{
                 if let host = await GetLoginDeveloperUseCase().execute() {
                     cardData = cardData.setLoginHost(from: host)
+                    let username =  cardData.developer.name
+                    viewModel.fetchRepositories(for: username)
                 } else {
                     ContentView()
                 }
@@ -65,6 +89,7 @@ struct PostView: View {
         }
     }
 }
+
 
 #Preview {
     PostView()

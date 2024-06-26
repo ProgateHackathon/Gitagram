@@ -48,17 +48,7 @@ struct PostURLView: View {
                     let product = cardData.product.setDeveloper(from: developer)
                     cardData = cardData.setProduct(from: product)
                 }
-                
-            Divider()
-            TextField("リポジトリ名を入力しよう!!", text: $title)
-                .frame(alignment: .leading)
-                .padding(.leading,10)
-                .padding(.vertical,10)
-                .onChange(of: title) {
-                    let product = cardData.product
-                        .setTitle(from: title)
-                    cardData = cardData.setProduct(from: product)
-                }
+            
             Divider()
             
             Spacer()

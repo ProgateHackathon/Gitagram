@@ -10,9 +10,8 @@ import SwiftUI
 struct MatchingView: View {
     @State var showAddRepository = false
     @ObservedObject var viewModel = MatchingViewModel()
-    
     @State var pickHashTag = false
-    @State var StringColor = "FFFFFF"//16新数のcolorのstring
+    @State var loginHost: Developer = .Empty()
     
     var body: some View {
         NavigationView {
@@ -21,7 +20,6 @@ struct MatchingView: View {
                     .frame(width: 400,height: 400)
             } else {
                 VStack{
-                    
                     CardStackView(viewModel: viewModel)
                         .toolbar {
                             
@@ -60,19 +58,20 @@ struct MatchingView: View {
             PickHashTagView()
                 .presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.medium])
-            
         }
-        .onAppear(perform: {
+        .onAppear(){
             Task {
+                if let host =  await GetLoginDeveloperUseCase().execute() {
+                    loginHost = host
+                }
                 await viewModel.getRepository()
             }
-        })
-        
+        }
     }
 }
 
 #Preview {
-    MatchingView()
+    MatchingView(loginHost: .Empty())
 }
 
 
