@@ -1,13 +1,13 @@
 //
-//  AccountCardTypeTwoView.swift
+//  AccountCardTypeThreeView.swift
 //  Gitagram
 //
-//  Created by 伊藤璃乃 on 2024/06/22.
+//  Created by 伊藤璃乃 on 2024/06/26.
 //
 
 import SwiftUI
 
-struct AccountCardTypeTwoView: View {
+struct AccountCardTypeThreeView: View {
     private static let cardCornerRadius: CGFloat = 20
     private static let cardSize: CGSize = .init(width: 360, height: 480)
     private let viewModel = AccountViewModel()
@@ -17,18 +17,21 @@ struct AccountCardTypeTwoView: View {
     var body: some View {
         ZStack {
             ZStack {
-                KiraKiraTypeTwoView()
+                KiraKiraTypeThreeView()
                 RoundedRectangle(cornerRadius: Self.cardCornerRadius)
                     .stroke(Color.white, lineWidth: 0)
             }
             .frame(width: Self.cardSize.width, height: Self.cardSize.height)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 5, y: 5)
             
-            QRTypeTwoView(inputText: developer.gitHubURL)
-                .padding()
-            NeonText(inputText: developer.name)
+            ImageRainbowView()
             
-            ImageHeartView()
+            QRTypeOneView(inputText: developer.gitHubURL)
+                .padding()
+            PopText(inputText: developer.name)
+            
+            ImageCloudView()
+            
         }
         .padding()
         .frame(width: 370,height: 490)

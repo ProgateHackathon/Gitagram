@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CoolText: View {
+struct NeonText: View {
     let inputText: String
     var body: some View {
         Text("@\(inputText)")

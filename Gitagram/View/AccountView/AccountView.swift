@@ -14,23 +14,10 @@ struct AccountView: View {
         NavigationView {
             ZStack{
                 VStack{
-                    HStack{
-                        Spacer()
-                        Text("Gitagram")
-                            .font(.title)
-                        Spacer()
-                            .frame(width: 90)
-                        Button(action: {
-                            isSharing.toggle()
-                        }) {
-                            Image(systemName: "square.and.arrow.up")
-                        }
-                        Spacer()
-                            .frame(width: 30)
-                    }
                     Picker("", selection: $nowCard) {
                         Text("1").tag(0)
                         Text("2").tag(1)
+                        Text("3").tag(2)
                     }
                     .frame(width: 300)
                     .pickerStyle(.segmented)
@@ -42,6 +29,17 @@ struct AccountView: View {
                     AccountCardTypeOneView(developer: developer)
                 } else if nowCard == 1 {
                     AccountCardTypeTwoView(developer: developer)
+                } else if nowCard == 2 {
+                    AccountCardTypeThreeView(developer: developer)
+                }
+            }
+            .toolbar {
+                HStack{
+                    Button(action: {
+                        isSharing.toggle()
+                    }) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
                 }
             }
             
