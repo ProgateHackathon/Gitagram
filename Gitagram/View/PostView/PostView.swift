@@ -11,6 +11,9 @@ struct PostView: View {
     @State var title = ""
     @State var next = false
     @State var developer : Developer
+    var gitHubLoader = GitHubLoader()
+    @StateObject  var viewModel = RepositoryViewModel()
+  
     var body: some View {
         NavigationView {
             VStack{
@@ -20,6 +23,7 @@ struct PostView: View {
                     .tint(Color.pink)
                     .cornerRadius(8)
                     .scaleEffect(1.3)
+                
                 
                 Text("リポジトリの名前は？")
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -32,9 +36,33 @@ struct PostView: View {
                     .frame(alignment: .leading)
                     .padding(.leading,10)
                 Divider()
+                Text("または下のリストから選択")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading,10)
+                    .padding(.top, 20)
+                    .font(.system(size: 20, weight: .black, design: .default))
+                    .padding(.bottom,5)
+                
+                
+                List(viewModel.repositories) { repository in
+                    Button(action: {
+                        title = repository.name
+                        
+                    }, label: {
+                        Text(repository.name)
+                            .font(.headline)
+                        
+                    })
+                }
+                
+                
+                
+                
+                
+                
                 Spacer()
                 NavigationLink("", destination: PostDiscriptionView( title: $title),isActive: $next)
-
+                
                 Button(action: {
                     next.toggle()
                 }, label: {
@@ -53,10 +81,16 @@ struct PostView: View {
             Task{
                 if let host =  await GetLoginDeveloperUseCase().execute() {
                     developer = host
+               let username =  developer.name
+                    
+                    viewModel.fetchRepositories(for: username)
                 } else {
                     ContentView()
                 }
             }
         }
     }
+}
+#Preview {
+    PostView(title: "", next: false, developer: Developer(githubId: "am2525nyan"), gitHubLoader: GitHubLoader(), viewModel: RepositoryViewModel())
 }

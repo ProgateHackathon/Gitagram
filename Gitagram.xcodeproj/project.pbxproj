@@ -155,6 +155,9 @@
 		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
 		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 		72BD4A3D2C247CDA00EE2982 /* gitHubLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gitHubLoader.swift; sourceTree = "<group>"; };
+		728E75B32BFC5139003D4C93 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
+		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

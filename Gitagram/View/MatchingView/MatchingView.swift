@@ -10,7 +10,7 @@ import SwiftUI
 struct MatchingView: View {
     @State var showAddRepository = false
     @ObservedObject var viewModel = MatchingViewModel()
-    
+    @State var developer  = Developer(githubId: "")
     var body: some View {
         NavigationView {
             if viewModel.isLoading {
@@ -45,17 +45,24 @@ struct MatchingView: View {
             }
         }
         .sheet(isPresented: $showAddRepository) {
-            PostView(developer: Developer(githubId: "am2525nyan"))
+          
+                PostView(developer: developer)
+            
         }
-        .onAppear(perform: {
+        
+        .onAppear(){
+           
             Task {
+                if let host =  await GetLoginDeveloperUseCase().execute() {
+                    developer = host
+                }
                 await viewModel.getRepository()
             }
-        })
+        }
         
     }
 }
 
 #Preview {
-    MatchingView()
+    MatchingView(developer:Developer(githubId: "am2525nyan"))
 }

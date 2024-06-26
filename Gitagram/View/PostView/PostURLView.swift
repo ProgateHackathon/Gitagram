@@ -16,6 +16,7 @@ struct PostURLView: View {
     @State var next = false
     @State var developer : Developer
     @State var url = ""
+   
     var body: some View {
       
             
@@ -59,6 +60,7 @@ struct PostURLView: View {
         .onAppear(){
             Task{
                 do{
+                   
                     await GetLoginDeveloperUseCase().execute()
                 }
                
