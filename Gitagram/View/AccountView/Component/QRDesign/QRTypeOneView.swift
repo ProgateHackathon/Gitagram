@@ -30,6 +30,6 @@ struct QRTypeOneView: View {
                 .cornerRadius(cornerRadius)
                 .padding()
         }
-        .background(Color("FrameBrownColor"))
+        .background(Color("TextFrameBrownColor"))
     }
 }
