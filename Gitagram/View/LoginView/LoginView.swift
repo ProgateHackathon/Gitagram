@@ -14,6 +14,17 @@ struct LoginView: View {
         if viewModel.isUserLoggedIn {
             ContentView()
         }else{
+            Button(action: {
+                let firebaseAuth = Auth.auth()
+                do {
+                  try firebaseAuth.signOut()
+                } catch let signOutError as NSError {
+                  print("Error signing out: %@", signOutError)
+                }
+            }, label: {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            })
+            
             ZStack{
                 
                 Image("rainbow")
