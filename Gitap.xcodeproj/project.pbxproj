@@ -73,10 +73,10 @@
 		722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* ShareSheet.swift */; };
 		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
-		72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */; };
 		728E75B22BFC4A3B003D4C93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 728E75B12BFC4A3B003D4C93 /* Lottie */; };
 		728E75B42BFC5139003D4C93 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E75B32BFC5139003D4C93 /* LottieView.swift */; };
 		728E75C22BFC7BAE003D4C93 /* LottieProgress.json in Resources */ = {isa = PBXBuildFile; fileRef = 728E75C12BFC7BAE003D4C93 /* LottieProgress.json */; };
+		72A8E00C2C04198500386DDD /* LoadImageFromLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +89,7 @@
 		10261B062BE94520007D1606 /* KiraKiraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraView.swift; sourceTree = "<group>"; };
 		10261B092BE94695007D1606 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10472EE32BDFAFBB00C179F8 /* Gitap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EEA2BDFAFBD00C179F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -142,9 +142,9 @@
 		722E84852BE73A29007163D4 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 		728E75B32BFC5139003D4C93 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		728E75C12BFC7BAE003D4C93 /* LottieProgress.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieProgress.json; sourceTree = "<group>"; };
+		72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageFromLibraryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 		10472EE42BDFAFBB00C179F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				10472EE32BDFAFBB00C179F8 /* Gitagram.app */,
+				10472EE32BDFAFBB00C179F8 /* Gitap.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -488,9 +488,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		10472EE22BDFAFBB00C179F8 /* Gitagram */ = {
+		10472EE22BDFAFBB00C179F8 /* Gitap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10472EF12BDFAFBD00C179F8 /* Build configuration list for PBXNativeTarget "Gitagram" */;
+			buildConfigurationList = 10472EF12BDFAFBD00C179F8 /* Build configuration list for PBXNativeTarget "Gitap" */;
 			buildPhases = (
 				10472EDF2BDFAFBB00C179F8 /* Sources */,
 				10472EE02BDFAFBB00C179F8 /* Frameworks */,
@@ -500,7 +500,7 @@
 			);
 			dependencies = (
 			);
-			name = Gitagram;
+			name = Gitap;
 			packageProductDependencies = (
 				103BF3682BE39C3E00818544 /* FirebaseDatabase */,
 				103BF36A2BE39C3E00818544 /* FirebaseDatabaseSwift */,
@@ -512,7 +512,7 @@
 				728E75B12BFC4A3B003D4C93 /* Lottie */,
 			);
 			productName = Gitagram;
-			productReference = 10472EE32BDFAFBB00C179F8 /* Gitagram.app */;
+			productReference = 10472EE32BDFAFBB00C179F8 /* Gitap.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -530,7 +530,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 10472EDE2BDFAFBB00C179F8 /* Build configuration list for PBXProject "Gitagram" */;
+			buildConfigurationList = 10472EDE2BDFAFBB00C179F8 /* Build configuration list for PBXProject "Gitap" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -547,7 +547,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10472EE22BDFAFBB00C179F8 /* Gitagram */,
+				10472EE22BDFAFBB00C179F8 /* Gitap */,
 			);
 		};
 /* End PBXProject section */
@@ -833,7 +833,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10472EDE2BDFAFBB00C179F8 /* Build configuration list for PBXProject "Gitagram" */ = {
+		10472EDE2BDFAFBB00C179F8 /* Build configuration list for PBXProject "Gitap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10472EEF2BDFAFBD00C179F8 /* Debug */,
@@ -842,7 +842,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		10472EF12BDFAFBD00C179F8 /* Build configuration list for PBXNativeTarget "Gitagram" */ = {
+		10472EF12BDFAFBD00C179F8 /* Build configuration list for PBXNativeTarget "Gitap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10472EF22BDFAFBD00C179F8 /* Debug */,
