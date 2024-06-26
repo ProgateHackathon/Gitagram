@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class LoginViewModel: ObservableObject {
     var gitHubLoader = GitHubLoader()
-    @State var provider = OAuthProvider(providerID: "github.com")
+    let provider = OAuthProvider(providerID: "github.com")
     
     
     func performOAuthLoginFlow() {
