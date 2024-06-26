@@ -1,40 +1,37 @@
 //
-//  Developer.swift
+//  HashTag.swift
 //  Gitagram
 //
-//  Created by 浦山秀斗 on 2024/04/30.
+//  Created by 浦山秀斗 on 2024/06/16.
 //
 
 import Foundation
 
-struct Developer : Identifiable, Codable {
-    typealias DeveloperID = Developer.ID
+struct HashTag : Identifiable {
+    typealias HashTagID = HashTag.ID
     
-    let id: DeveloperID
-    let name: String
-    var gitHubURL: String {
-        "https://github.com/\(name)"
+    var id : HashTagID
+    var name : String
+    var color : String
+    
+    init(name: String, color: String) {
+        self.id = HashTagID(id: UUID())
+        self.name = name
+        self.color = color
     }
-    var imageURL: URL? {
-        URL(string: gitHubURL + ".png")
-    }
-        
-    init(id: DeveloperID, githubId name: String) {
+    
+    init(id: HashTagID, name: String, color: String) {
         self.id = id
         self.name = name
-    }
-    
-    init(githubId name: String) {
-        self.id = DeveloperID(id: UUID())
-        self.name = name
+        self.color = color
     }
     
     static func Empty() -> Self {
-        Self(id: DeveloperID.Empty(), githubId: "")
+        Self(name: "", color: "")
     }
     
     func isEmpty() -> Bool {
-        id.isEmpty() && gitHubURL == ""
+        name == "" && color == ""
     }
     
     struct ID : Identifiable, Hashable, Codable {

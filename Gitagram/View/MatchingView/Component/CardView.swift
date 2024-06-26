@@ -18,21 +18,33 @@ struct CardView: View {
     @State private var degrees: Double = 0
     @Environment(\.openURL) var openURL
     @Binding var isShowAlert: Bool
-
-    let cardData: CardDataModel
+    let cardData: CardData
     
     var body: some View {
         ZStack(alignment: .bottom){
+            
             ZStack(alignment: .top) {
                 Image(uiImage: cardData.productImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
             }
+            VStack(alignment: .leading){
+                
+                UserInfoView(cardData: cardData)
+                HStack(){
+                    HashTagView(tagWord: .constant("swift"))
+                }
+                .padding(.leading, 15)
+                .padding(.bottom, 15)
+                .frame(alignment: .leading)
+            }
+            .background(
+                LinearGradient(colors: [.clear,.black], startPoint: .top , endPoint: .bottom)
+            )
             
-            UserInfoView(cardData: cardData)
         }
       
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
@@ -119,3 +131,4 @@ private extension CardView{
         isRightSwipe ? swipeRight() : swipeLeft()
     }
 }
+

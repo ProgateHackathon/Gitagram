@@ -10,59 +10,68 @@ import SwiftUI
 struct MatchingView: View {
     @State var showAddRepository = false
     @ObservedObject var viewModel = MatchingViewModel()
-    @State var developer  = Developer(githubId: "")
+    @State var pickHashTag = false
+    @State var loginHost: Developer = .Empty()
+    
     var body: some View {
         NavigationView {
             if viewModel.isLoading {
                 LottieView(filename: "LottieProgress")
                     .frame(width: 400,height: 400)
             } else {
-                CardStackView(viewModel: viewModel)
-                    .toolbar {
-                        ToolbarItem(placement: .navigation) {
-                            Image("logo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.vertical, 5)
-                         }
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button {
-                                showAddRepository.toggle()
-                            } label: {
-                                Image(systemName: "plus.circle")
-                            }
-                        }
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button {
-                                Task {
-                                    await viewModel.getRepository()
+                VStack{
+                    CardStackView(viewModel: viewModel)
+                        .toolbar {
+                            
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button {
+                                    showAddRepository.toggle()
+                                } label: {
+                                    Image(systemName: "plus.circle")
                                 }
-                            } label: {
-                                Image(systemName: "repeat.1.ar")
+                            }
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button {
+                                    Task {
+                                        await viewModel.getRepository()
+                                    }
+                                } label: {
+                                    Image(systemName: "repeat.1.ar")
+                                }
+                            }
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button {
+                                    pickHashTag = true
+                                } label:{
+                                    Image(systemName: "tag")
+                                    
+                                }
                             }
                         }
-                    }
+                }
             }
         }
         .sheet(isPresented: $showAddRepository) {
-          
-                PostView(developer: developer)
-            
+            PostView()
         }
-        
+        .sheet(isPresented: $pickHashTag) {
+            PickHashTagView()
+                .presentationBackground(.ultraThinMaterial)
+                .presentationDetents([.medium])
+        }
         .onAppear(){
-           
             Task {
                 if let host =  await GetLoginDeveloperUseCase().execute() {
-                    developer = host
+                    loginHost = host
                 }
                 await viewModel.getRepository()
             }
         }
-        
     }
 }
 
 #Preview {
-    MatchingView(developer:Developer(githubId: "am2525nyan"))
+    MatchingView(loginHost: .Empty())
 }
+
+

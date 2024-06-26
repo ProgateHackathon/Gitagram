@@ -1,5 +1,5 @@
 //
-//  gitHubLoader.swift
+//  GitHubLoader.swift
 //  Gitagram
 //
 //  Created by saki on 2024/06/21.
