@@ -15,16 +15,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button(action: {
-                let firebaseAuth = Auth.auth()
-                do {
-                  try firebaseAuth.signOut()
-                } catch let signOutError as NSError {
-                  print("Error signing out: %@", signOutError)
-                }
-            }, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-            })
             if isLoading {
                 LottieView(filename: "LottieProgress")
                     .frame(width: 400,height: 400)
@@ -32,7 +22,7 @@ struct ContentView: View {
                 if developer != nil{
                     HomeView(hostDeveloper:developer!)
                 }
-
+                
             }
         }
         .onAppear {
