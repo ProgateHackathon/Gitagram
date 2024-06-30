@@ -24,6 +24,7 @@
 		103BF3732BE39C3E00818544 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3722BE39C3E00818544 /* FirebaseStorage */; };
 		103BF3752BE39C3E00818544 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 103BF3742BE39C3E00818544 /* FirebaseStorageCombine-Community */; };
 		103BF37B2BE3B17000818544 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 103BF37A2BE3B17000818544 /* GoogleService-Info.plist */; };
+		1041EFF62C316943002C9BDC /* GetHashTagsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1041EFF52C316934002C9BDC /* GetHashTagsUseCase.swift */; };
 		10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */; };
 		10472EEE2BDFAFBD00C179F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */; };
 		10502C6E2C1E850700097342 /* HashTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10502C6D2C1E850700097342 /* HashTag.swift */; };
@@ -108,6 +109,7 @@
 		10261B062BE94520007D1606 /* KiraKiraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KiraKiraView.swift; sourceTree = "<group>"; };
 		10261B092BE94695007D1606 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		103BF37A2BE3B17000818544 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1041EFF52C316934002C9BDC /* GetHashTagsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHashTagsUseCase.swift; sourceTree = "<group>"; };
 		10472EE32BDFAFBB00C179F8 /* Gitagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10472EE62BDFAFBB00C179F8 /* GitagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitagramApp.swift; sourceTree = "<group>"; };
 		10472EED2BDFAFBD00C179F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -231,6 +233,14 @@
 				722E84842BE73A29007163D4 /* KiraKiraViewModel.swift */,
 			);
 			path = KiraKira;
+			sourceTree = "<group>";
+		};
+		1041EFF42C316900002C9BDC /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+				1041EFF52C316934002C9BDC /* GetHashTagsUseCase.swift */,
+			);
+			path = HashTag;
 			sourceTree = "<group>";
 		};
 		10472EDA2BDFAFBB00C179F8 = {
@@ -492,6 +502,7 @@
 		722E84622BE7365F007163D4 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				1041EFF42C316900002C9BDC /* HashTag */,
 				722E84542BE7365F007163D4 /* Developer */,
 				722E84582BE7365F007163D4 /* Product */,
 				722E845E2BE7365F007163D4 /* Protocol */,
@@ -669,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1041EFF62C316943002C9BDC /* GetHashTagsUseCase.swift in Sources */,
 				722E84792BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift in Sources */,
 				10261B012BE93EC4007D1606 /* QRView.swift in Sources */,
 				722E846F2BE7365F007163D4 /* ProductImageClientProtocol.swift in Sources */,

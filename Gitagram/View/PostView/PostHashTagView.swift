@@ -10,16 +10,8 @@ import SwiftUI
 struct PostHashTagView: View {
     @State var cardData: CardData
     @State var pickHashTag: HashTag = .Empty()
-    @State var hashTags = [
-        HashTag(name: "Swift", color:  "ffc0cb"),
-        HashTag(name: "Kotlin", color:  "fffacd"),
-        HashTag(name: "Flutter", color: "b0c4de"),
-        HashTag(name: "Ruby", color:  "ffdab9"),
-        HashTag(name: "React", color:  "f08080"),
-        HashTag(name: "next.js", color:  "87cefa"),
-        HashTag(name: "Ruby on rails", color:  "e0ffff")
-    ]
-    
+    @State var hashTags: [HashTag] = []
+    @State var isLoadComplete: Bool = false
     let grids = Array(repeating: GridItem(.fixed(80)), count: 4)
     
     var body: some View {
@@ -45,13 +37,17 @@ struct PostHashTagView: View {
             }
             
             LazyVGrid(columns: grids) {
-                ForEach(hashTags) { hashTag in
-                    HashTagComponent(hashTag: hashTag)
-                        .onTapGesture {
-                            pickHashTag = hashTag
-                            let product = cardData.product.setHashTag(from: [hashTag])
-                            cardData = cardData.setProduct(from: product)
-                        }
+                if isLoadComplete {
+                    ForEach(hashTags) { hashTag in
+                        HashTagComponent(hashTag: hashTag)
+                            .onTapGesture {
+                                pickHashTag = hashTag
+                                let product = cardData.product.setHashTag(from: [hashTag])
+                                cardData = cardData.setProduct(from: product)
+                            }
+                    }
+                } else {
+                    ProgressView()
                 }
             }
             
@@ -72,7 +68,8 @@ struct PostHashTagView: View {
         }
         .onAppear {
             Task{
-                ///TODO: ここでハッシュタグを全種類取得する
+                hashTags = await GetHashTagsUseCase().execute()
+                isLoadComplete = true
             }
         }
     }
