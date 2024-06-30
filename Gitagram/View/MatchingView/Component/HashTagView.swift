@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct HashTagView: View {
-    @Binding var tagWord :String
+    let hashTag :HashTag
+    
+    var color: UIColor {
+        UIColor(hex: hashTag.color) ?? UIColor.white
+    }
     
     var body: some View {
         HStack{
             Text("#")
-            Text(tagWord)
+            Text(hashTag.name)
         }
         .padding(4)
         .padding(.horizontal, 5)
-        
-        .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
+        .background(Color(uiColor: color))
         .cornerRadius(50)
-       
     }
-    
 }
 
 #Preview {
-    HashTagView(tagWord: .constant("swift"))
+    HashTagView(hashTag: .Empty())
 }
