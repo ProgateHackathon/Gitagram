@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HashTag : Identifiable {
+struct HashTag : Identifiable, Hashable {
     typealias HashTagID = HashTag.ID
     
     var id : HashTagID
