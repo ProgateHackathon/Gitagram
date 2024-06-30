@@ -31,14 +31,17 @@ struct CardView: View {
                 SwipeActionIndicatorView(xofset: $xoffset)
             }
             VStack(alignment: .leading){
-                
                 UserInfoView(cardData: cardData)
-                HStack(){
-                    HashTagView(tagWord: .constant("swift"))
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(cardData.product.hashTags, id: \.self) { hashTag in
+                            HashTagView(hashTag: hashTag)
+                        }
+                    }
+                    .padding(.horizontal, 15)
+                    .padding(.bottom, 15)
                 }
-                .padding(.leading, 15)
-                .padding(.bottom, 15)
-                .frame(alignment: .leading)
+                .frame(maxHeight: 40)
             }
             .background(
                 LinearGradient(colors: [.clear,.black], startPoint: .top , endPoint: .bottom)
