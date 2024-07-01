@@ -26,6 +26,9 @@ DerivedData/
 timeline.xctimeline
 playground.xcworkspace
 
+.swiftpm
+Package.resolved
+
 .build/
 
 Pods/
