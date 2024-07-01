@@ -87,7 +87,7 @@ class ProductImageClient : ProductImageClientProtocol {
     }
     
     private func convertToJpegData(uiImage: UIImage) -> NSData? {
-        return uiImage.jpegData(compressionQuality: 0.3) as? NSData
+        return uiImage.jpegData(compressionQuality: 0.1) as? NSData
     }
     
     private func startCacheCleaning() {
