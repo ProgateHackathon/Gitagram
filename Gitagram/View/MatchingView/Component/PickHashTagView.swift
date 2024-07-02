@@ -47,7 +47,7 @@ struct PickHashTagView: View {
                     }
                     .padding(.horizontal, 40)
                 } else {
-                    ProgressView ()
+                    ProgressView()
                 }
             }
         }
