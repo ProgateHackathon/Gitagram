@@ -26,8 +26,13 @@ struct AccountCardTypeTwoView: View {
             
             QRTypeTwoView(inputText: developer.gitHubURL)
                 .padding()
-            NeonText(inputText: developer.name)
-            
+            HStack{
+                Spacer()
+                    .frame(width: 10)
+                NeonText(inputText: developer.name)
+                Spacer()
+                    .frame(width: 15)
+            }
             ImageHeartView()
         }
         .padding()
@@ -35,4 +40,8 @@ struct AccountCardTypeTwoView: View {
         .background(Color.white)
         .cornerRadius(20)
     }
+}
+
+#Preview {
+    AccountCardTypeTwoView(developer: Developer(githubId: "Rino1011"))
 }

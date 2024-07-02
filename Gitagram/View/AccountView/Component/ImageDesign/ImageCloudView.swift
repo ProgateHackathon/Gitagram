@@ -13,7 +13,6 @@ struct ImageCloudView: View {
             .resizable()
             .frame(width: 180,height: 120)
             .padding(.top ,300)
-            //.padding(.leading,0)
             .padding(.trailing,190)
     }
 }

@@ -29,13 +29,19 @@ struct AccountCardTypeThreeView: View {
             QRTypeOneView(inputText: developer.gitHubURL)
                 .padding()
             PopText(inputText: developer.name)
-            
-            ImageCloudView()
-            
+            HStack{
+                Spacer()
+                    .frame(width: 25)
+                ImageCloudView()
+            }
         }
         .padding()
         .frame(width: 370,height: 490)
         .background(Color.white)
         .cornerRadius(20)
     }
+}
+
+#Preview {
+    AccountCardTypeThreeView(developer: Developer(githubId: "Rino1011"))
 }

@@ -11,7 +11,7 @@ struct FrankfrtText: View {
     let inputText: String
     
     var body: some View {
-        Text("@\(inputText)")
+        Text(" @\(inputText)")
             .lineLimit(1)
             .minimumScaleFactor(0.1)
             .foregroundColor(Color("TextPurpleColor"))

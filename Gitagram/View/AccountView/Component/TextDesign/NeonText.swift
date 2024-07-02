@@ -10,7 +10,7 @@ import SwiftUI
 struct NeonText: View {
     let inputText: String
     var body: some View {
-        Text("@\(inputText)")
+        Text(" @\(inputText)")
             .lineLimit(1)
             .minimumScaleFactor(0.1)
             .kerning(2)
@@ -24,6 +24,9 @@ struct NeonText: View {
             .shadow(color: Color.TextPinkColor, radius: 3, x: 0, y: 0)
             .shadow(color: Color.TextPinkColor, radius: 2, x: 0, y: 0)
             .shadow(color: Color.TextPinkColor.opacity(0.6), radius: 10, x: 0, y: 0)
-
     }
+}
+
+#Preview {
+    AccountCardTypeTwoView(developer: Developer(githubId: "Rino1011"))
 }
