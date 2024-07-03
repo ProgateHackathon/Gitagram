@@ -9,8 +9,9 @@ import SwiftUI
 
 struct MatchingView: View {
     @State var showAddRepository = false
+    @State var showHashTagSheet = false
     @ObservedObject var viewModel = MatchingViewModel()
-    @State var pickHashTag = false
+    @State var pickHashTag: HashTag = .Empty()
     @State var loginHost: Developer = .Empty()
     
     var body: some View {
@@ -22,7 +23,6 @@ struct MatchingView: View {
                 VStack{
                     CardStackView(viewModel: viewModel)
                         .toolbar {
-                            
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button {
                                     showAddRepository.toggle()
@@ -41,10 +41,15 @@ struct MatchingView: View {
                             }
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Button {
-                                    pickHashTag = true
+                                    showHashTagSheet = true
                                 } label:{
                                     Image(systemName: "tag")
                                     
+                                }
+                            }
+                            ToolbarItem(placement: .principal) {
+                                if (!pickHashTag.isEmpty()) {
+                                    HashTagView(hashTag: pickHashTag)
                                 }
                             }
                         }
@@ -54,8 +59,8 @@ struct MatchingView: View {
         .sheet(isPresented: $showAddRepository) {
             PostView()
         }
-        .sheet(isPresented: $pickHashTag) {
-            PickHashTagView()
+        .sheet(isPresented: $showHashTagSheet) {
+            PickHashTagView(pickHashTag: $pickHashTag)
                 .presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.medium])
         }
