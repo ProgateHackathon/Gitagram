@@ -16,12 +16,7 @@ struct PostHashTagView: View {
     
     var body: some View {
         VStack{
-            ProgressView("", value: 0.8)
-                .tint(Color.pink)
-                .cornerRadius(8)
-                .scaleEffect(1.3)
-                .padding(.bottom, 20)
-            
+
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -30,8 +25,8 @@ struct PostHashTagView: View {
             
             if pickHashTag.isEmpty() {
                 Text("一番あうハッシュタグを選択してください")
-                      .frame(height: 26)
-                      .foregroundStyle(Color.gray)
+                    .frame(height: 26)
+                    .foregroundStyle(Color.gray)
             } else {
                 HashTagComponent(hashTag: pickHashTag)
             }
@@ -53,21 +48,11 @@ struct PostHashTagView: View {
             
             Spacer()
             
-            NavigationLink{
-                PostImageView(cardData: cardData)
-            }label:{
-                Text("次へ")
-                    .padding(.horizontal,120)
-                    .padding(.vertical,15)
-                    .font(.system(size: 10, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
-                    .cornerRadius(30)
-                    .padding(.bottom,20)
-            }
+          
         }
         .onAppear {
             Task{
+                
                 hashTags = await GetHashTagsUseCase().execute()
                 isLoadComplete = true
             }
@@ -77,7 +62,7 @@ struct PostHashTagView: View {
 
 struct HashTagComponent: View {
     let hashTag: HashTag
-
+    
     var color: UIColor {
         UIColor(hex: hashTag.color) ?? UIColor.white
     }

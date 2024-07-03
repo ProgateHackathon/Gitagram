@@ -52,7 +52,7 @@ struct MatchingView: View {
             }
         }
         .sheet(isPresented: $showAddRepository) {
-            PostView()
+            PostGaugeView()
         }
         .sheet(isPresented: $pickHashTag) {
             PickHashTagView()

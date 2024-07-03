@@ -14,17 +14,9 @@ struct PostView: View {
     @StateObject  var viewModel = RepositoryViewModel()
     
     var body: some View {
-        NavigationView {
+       
             VStack{
-                ProgressView("", value: 0.2)
-                    .padding()
-                    .tint(Color.pink)
-                    .cornerRadius(8)
-                    .scaleEffect(1.3)
-                    .padding(.top, 40)
-                    .padding(.bottom, 10)
-                
-                
+               
                 Text("リポジトリの名前は？")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading,10)
@@ -62,19 +54,8 @@ struct PostView: View {
                 
                 Spacer()
                 
-                NavigationLink {
-                    PostDescriptionView(cardData: cardData)
-                } label: {
-                    Text("次へ")
-                        .padding(.horizontal,120)
-                        .padding(.vertical,15)
-                        .font(.system(size: 10, weight: .medium, design: .default))
-                        .foregroundColor(.white)
-                        .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
-                        .cornerRadius(30)
-                        .padding(.bottom,20)
-                }
-            }
+          
+            
         }
         .onAppear(){
             Task{

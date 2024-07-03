@@ -14,12 +14,6 @@ struct PostURLView: View {
     
     var body: some View {
         VStack{
-            ProgressView("", value: 0.6)
-                .tint(Color.pink)
-                .cornerRadius(8)
-                .scaleEffect(1.3)
-                .padding(.bottom, 20)
-            
             Text("リポジトリのリンクは？")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -49,7 +43,7 @@ struct PostURLView: View {
                     let product = cardData.product.setDeveloper(from: developer)
                     cardData = cardData.setProduct(from: product)
                 }
-                
+            
             Divider()
             
             TextField("リポジトリ名を入力しよう!!", text: $title)
@@ -65,22 +59,11 @@ struct PostURLView: View {
             
             Spacer()
             
-            NavigationLink{
-                PostHashTagView(cardData: cardData)
-            }label:{
-                Text("次へ")
-                    .padding(.horizontal,120)
-                    .padding(.vertical,15)
-                    .font(.system(size: 10, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
-                    .cornerRadius(30)
-                    .padding(.bottom,20)
-            }
-        }
-        .onAppear {
-            developerName = cardData.loginHost.name
-            title = cardData.product.title
+            
+                .onAppear {
+                    developerName = cardData.loginHost.name
+                    title = cardData.product.title
+                }
         }
     }
 }

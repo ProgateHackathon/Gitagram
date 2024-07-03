@@ -17,12 +17,8 @@ struct PostImageView: View {
     
     var body: some View {
         VStack{
-            ProgressView("", value: 1)
-                .tint(Color.pink)
-                .cornerRadius(8)
-                .scaleEffect(1.3)
-                .padding(.bottom, 20)
-            
+//            PostGaugeView(value: .constant(1.0))
+//                .padding(.bottom, 20)
             Text("リポジトリの画像を貼ろう")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -63,6 +59,7 @@ struct PostImageView: View {
                     cardData = cardData.setImage(from: loadedImage ?? cardData.productImage)
                 }
             }
+         
             .padding(.bottom,20)
             
             Button(action: {
