@@ -62,9 +62,7 @@ struct MatchingView: View {
         }
         .onAppear(){
             Task {
-                if let host =  await GetLoginDeveloperUseCase().execute() {
-                    viewModel.loginHost = host
-                }
+                await viewModel.getLoginHost()
                 await viewModel.getRepository()
             }
         }

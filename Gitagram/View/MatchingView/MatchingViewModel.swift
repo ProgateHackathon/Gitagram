@@ -40,6 +40,12 @@ class MatchingViewModel: ObservableObject {
         isLoading = false
     }
     
+    public func getLoginHost() async {
+        if let host =  await GetLoginDeveloperUseCase().execute() {
+            loginHost = host
+        }
+    }
+    
     private func fetchCardInfomation() async -> [CardData] {
         var cardList = [CardData]()
         let products = await GetProductListUseCase().execute()
