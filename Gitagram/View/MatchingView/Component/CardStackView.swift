@@ -21,7 +21,8 @@ struct CardStackView: View {
                     Text("全部見終わったよ！\n左上のリロードボタンを押してね！")
                 }
                 
-                ForEach(viewModel.repositories){ repository in
+                ForEach(viewModel.filterdRepository()){ repository in
+                    
                     CardView(viewModel: viewModel, isShowAlert: $isShowAlert, cardData: repository)
                 }
             }

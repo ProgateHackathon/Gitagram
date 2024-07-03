@@ -16,7 +16,12 @@ class MatchingViewModel: ObservableObject {
     @Published var showAddRepository = false
     @Published var showHashTagSheet = false
     @Published var pickHashTag: HashTag = .Empty()
-    @Published var loginHost: Developer = .Empty()
+    
+    init() {
+        Task {
+            await getRepository()
+        }
+    }
 
     func removeCard(_  product: Product){
         Task{
@@ -37,12 +42,21 @@ class MatchingViewModel: ObservableObject {
     public func getRepository() async {
         isLoading = true
         repositories = await fetchCardInfomation()
+        pickHashTag = .Empty()
         isLoading = false
     }
     
-    public func getLoginHost() async {
-        if let host =  await GetLoginDeveloperUseCase().execute() {
-            loginHost = host
+    public func updateHashTag(to hashTag: HashTag) async {
+        pickHashTag = hashTag
+        await getRepository()
+    }
+    
+    public func filterdRepository() -> [CardData] {
+        if pickHashTag.isEmpty() {
+            return repositories
+        }
+        return repositories.filter {
+            $0.product.hashTags.contains(pickHashTag)
         }
     }
     
@@ -51,12 +65,23 @@ class MatchingViewModel: ObservableObject {
         let products = await GetProductListUseCase().execute()
         
         for product in products {
-            guard let developer    = await GetDeveloperUseCase().execute(id: product.developer.id) else { continue }
-            guard let productImage = await GetProductImageUseCase().execute(id: product.id)       else { continue }
-            let cardData = CardData(product: product, productImage: productImage, loginHost: developer)
-            cardList.append(cardData)
+            if pickHashTag.isEmpty() {
+                if let cardData = await createCardData(for: product) {
+                    cardList.append(cardData)
+                }
+            } else if product.hashTags.contains(pickHashTag) {
+                if let cardData = await createCardData(for: product) {
+                    cardList.append(cardData)
+                }
+            }
         }
         
         return cardList
+    }
+    
+    private func createCardData(for product: Product) async -> CardData? {
+        guard let developer    = await GetDeveloperUseCase().execute(id: product.developer.id) else { return nil }
+        guard let productImage = await GetProductImageUseCase().execute(id: product.id) else { return nil }
+        return CardData(product: product, productImage: productImage, loginHost: developer)
     }
 }

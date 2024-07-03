@@ -60,12 +60,6 @@ struct MatchingView: View {
                 .presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.medium])
         }
-        .onAppear(){
-            Task {
-                await viewModel.getLoginHost()
-                await viewModel.getRepository()
-            }
-        }
     }
 }
 
