@@ -13,6 +13,10 @@ class MatchingViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var repositories: [CardData] = []
     @Published var buttonSwipeAction: SwipeAction?
+    @Published var showAddRepository = false
+    @Published var showHashTagSheet = false
+    @Published var pickHashTag: HashTag = .Empty()
+    @Published var loginHost: Developer = .Empty()
 
     func removeCard(_  product: Product){
         Task{

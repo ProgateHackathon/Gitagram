@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct MatchingView: View {
-    @State var showAddRepository = false
-    @State var showHashTagSheet = false
     @ObservedObject var viewModel = MatchingViewModel()
-    @State var pickHashTag: HashTag = .Empty()
-    @State var loginHost: Developer = .Empty()
     
     var body: some View {
         NavigationView {
@@ -25,7 +21,7 @@ struct MatchingView: View {
                         .toolbar {
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button {
-                                    showAddRepository.toggle()
+                                    viewModel.showAddRepository.toggle()
                                 } label: {
                                     Image(systemName: "plus.circle")
                                 }
@@ -41,33 +37,33 @@ struct MatchingView: View {
                             }
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Button {
-                                    showHashTagSheet = true
+                                    viewModel.showHashTagSheet = true
                                 } label:{
                                     Image(systemName: "tag")
                                     
                                 }
                             }
                             ToolbarItem(placement: .principal) {
-                                if (!pickHashTag.isEmpty()) {
-                                    HashTagView(hashTag: pickHashTag)
+                                if (!viewModel.pickHashTag.isEmpty()) {
+                                    HashTagView(hashTag: viewModel.pickHashTag)
                                 }
                             }
                         }
                 }
             }
         }
-        .sheet(isPresented: $showAddRepository) {
+        .sheet(isPresented: $viewModel.showAddRepository) {
             PostView()
         }
-        .sheet(isPresented: $showHashTagSheet) {
-            PickHashTagView(pickHashTag: $pickHashTag)
+        .sheet(isPresented: $viewModel.showHashTagSheet) {
+            PickHashTagView(pickHashTag: $viewModel.pickHashTag)
                 .presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.medium])
         }
         .onAppear(){
             Task {
                 if let host =  await GetLoginDeveloperUseCase().execute() {
-                    loginHost = host
+                    viewModel.loginHost = host
                 }
                 await viewModel.getRepository()
             }
@@ -76,7 +72,7 @@ struct MatchingView: View {
 }
 
 #Preview {
-    MatchingView(loginHost: .Empty())
+    MatchingView()
 }
 
 
