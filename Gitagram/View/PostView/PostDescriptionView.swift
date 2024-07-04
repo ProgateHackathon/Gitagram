@@ -24,8 +24,7 @@ struct PostDescriptionView: View {
                 .frame(alignment: .leading)
                 .padding(.leading,10)
                 .onChange(of: description) {
-                    let product = postViewModel.cardData.product.setContent(from: description)
-                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
+                    postViewModel.setContent(content: postViewModel.setDesctiption(description: description))
                 }
             
             Divider()

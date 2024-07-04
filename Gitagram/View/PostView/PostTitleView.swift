@@ -27,8 +27,7 @@ struct PostTitleView: View {
                 .frame(alignment: .leading)
                 .padding(.leading,10)
                 .onChange(of: title) {
-                    let product = postViewModel.cardData.product.setTitle(from: title)
-                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
+                    postViewModel.setContent(content: postViewModel.setTitle(title: title))
                 }
             
             Divider()
@@ -60,7 +59,7 @@ struct PostTitleView: View {
         .onAppear(){
             Task{
                 if let host = await GetLoginDeveloperUseCase().execute() {
-                    postViewModel.cardData = postViewModel.cardData.setLoginHost(from: host)
+                    postViewModel.setLoginHost(host: host)
                     let username = postViewModel.cardData.loginHost.name
                     viewModel.fetchRepositories(for: username)
                 } else {

@@ -39,9 +39,7 @@ struct PostURLView: View {
                 .padding(.leading,10)
                 .padding(.vertical,10)
                 .onChange(of: developerName) {
-                    let developer = Developer(githubId: developerName)
-                    let product = postViewModel.cardData.product.setDeveloper(from: developer)
-                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
+                    postViewModel.setContent(content: postViewModel.setDeveloper(developer: developerName))
                 }
             
             Divider()
@@ -51,9 +49,7 @@ struct PostURLView: View {
                 .padding(.leading,10)
                 .padding(.vertical,10)
                 .onChange(of: title) {
-                    let product = postViewModel.cardData.product
-                        .setTitle(from: title)
-                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
+                    postViewModel.setContent(content: postViewModel.setURLTitle(title: title))
                 }
             Divider()
             

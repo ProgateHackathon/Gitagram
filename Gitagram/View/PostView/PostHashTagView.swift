@@ -37,8 +37,8 @@ struct PostHashTagView: View {
                         HashTagComponent(hashTag: hashTag)
                             .onTapGesture {
                                 pickHashTag = hashTag
-                                let product = postViewModel.cardData.product.setHashTag(from: [hashTag])
-                                postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
+                                postViewModel.setContent(content: postViewModel.setHashTag(hashTag: [hashTag]))
+                              
                             }
                     }
                 } else {
