@@ -8,16 +8,11 @@
 import SwiftUI
 
 struct PostDescriptionView: View {
-    @State var cardData: CardData
+    @EnvironmentObject var postViewModel: PostViewModel
     @State var description = ""
     
     var body: some View {
         VStack{
-            ProgressView("", value: 0.4)
-                .tint(Color.pink)
-                .cornerRadius(8)
-                .scaleEffect(1.3)
-                .padding(.bottom, 20)
             
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -29,29 +24,18 @@ struct PostDescriptionView: View {
                 .frame(alignment: .leading)
                 .padding(.leading,10)
                 .onChange(of: description) {
-                    let product = cardData.product.setContent(from: description)
-                    cardData = cardData.setProduct(from: product)
+                    postViewModel.setContent(content: postViewModel.setDesctiption(description: description))
                 }
             
             Divider()
             
             Spacer()
             
-            NavigationLink{
-                PostURLView(cardData: cardData)
-            } label: {
-                Text("次へ")
-                    .padding(.horizontal,120)
-                    .padding(.vertical,15)
-                    .font(.system(size: 10, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
-                    .cornerRadius(30)
-            }
+            
         }
     }
 }
 
 #Preview {
-    PostDescriptionView(cardData: .Empty())
+    PostDescriptionView()
 }

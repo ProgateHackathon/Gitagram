@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct PostImageView: View {
-    @State var cardData: CardData
+    @EnvironmentObject var postViewModel: PostViewModel
     @State var showImagePicker = false
     @State var selectedPhoto: PhotosPickerItem?
     @Environment(\.dismiss) private var dismiss
@@ -17,12 +17,6 @@ struct PostImageView: View {
     
     var body: some View {
         VStack{
-            ProgressView("", value: 1)
-                .tint(Color.pink)
-                .cornerRadius(8)
-                .scaleEffect(1.3)
-                .padding(.bottom, 20)
-            
             Text("リポジトリの画像を貼ろう")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -60,15 +54,16 @@ struct PostImageView: View {
                 Task {
                     guard let unwrap = selectedPhoto else { return }
                     let loadedImage = await loadImageFromSelectedPhoto(photo: unwrap)
-                    cardData = cardData.setImage(from: loadedImage ?? cardData.productImage)
+                    postViewModel.setImage(image: loadedImage ?? postViewModel.cardData.productImage)
                 }
             }
+            
             .padding(.bottom,20)
             
             Button(action: {
                 Task {
-                    if cardData.isComplete() {
-                        await PostProductUseCase().execute(product: cardData.product, productImage: cardData.productImage)
+                    if postViewModel.cardData.isComplete() {
+                        await PostProductUseCase().execute(product: postViewModel.cardData.product, productImage: postViewModel.cardData.productImage)
                     }
                 }
                 
@@ -97,5 +92,5 @@ struct PostImageView: View {
 }
 
 #Preview {
-    PostImageView(cardData: .Empty())
+    PostImageView()
 }
