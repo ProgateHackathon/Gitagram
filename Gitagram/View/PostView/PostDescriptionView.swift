@@ -26,7 +26,6 @@ struct PostDescriptionView: View {
                 .onChange(of: description) {
                     let product = postViewModel.cardData.product.setContent(from: description)
                     postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
-                    print(postViewModel.cardData,"BBB")
                 }
             
             Divider()

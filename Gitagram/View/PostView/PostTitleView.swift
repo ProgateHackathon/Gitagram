@@ -29,7 +29,6 @@ struct PostTitleView: View {
                 .onChange(of: title) {
                     let product = postViewModel.cardData.product.setTitle(from: title)
                     postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
-                    print(postViewModel.cardData,"aaa")
                 }
             
             Divider()
@@ -68,9 +67,6 @@ struct PostTitleView: View {
                     ContentView()
                 }
             }
-        }
-        .onDisappear(){
-            print(postViewModel.cardData,"閉じるよ")
         }
     }
 }

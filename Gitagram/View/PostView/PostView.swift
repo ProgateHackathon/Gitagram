@@ -36,7 +36,6 @@ struct PostView: View {
                             withAnimation{
                                 value = 0.2
                             }
-                            print(postViewModel.cardData)
                             
                         }
                     }
@@ -49,7 +48,6 @@ struct PostView: View {
                             withAnimation{
                                 value = 0.4
                             }
-                            print(postViewModel.cardData,"2")
                         }
                         
                     }
@@ -62,7 +60,6 @@ struct PostView: View {
                             withAnimation{
                                 value = 0.6
                             }
-                            print(postViewModel.cardData,"3")
                         }
                     }
                 
@@ -74,7 +71,6 @@ struct PostView: View {
                             withAnimation{
                                 value = 0.8
                             }
-                            print(postViewModel.cardData,"3")
                         }
                         
                     }
@@ -96,7 +92,6 @@ struct PostView: View {
             if selection != 5{
                 Button(action: {
                     selection += 1
-                    print(postViewModel.cardData,"ボタン押されたよ")
                 }, label: {
                     Text("次へ")
                         .padding(.horizontal,120)
