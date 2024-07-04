@@ -48,7 +48,7 @@
 		722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E840E2BE73601007163D4 /* ImagePickerView.swift */; };
 		722E84152BE73601007163D4 /* PostDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84102BE73601007163D4 /* PostDescriptionView.swift */; };
 		722E84162BE73601007163D4 /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84112BE73601007163D4 /* PostImageView.swift */; };
-		722E84172BE73601007163D4 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84122BE73601007163D4 /* PostView.swift */; };
+		722E84172BE73601007163D4 /* PostTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84122BE73601007163D4 /* PostTitleView.swift */; };
 		722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84392BE7365F007163D4 /* DeveloperClient.swift */; };
 		722E84652BE7365F007163D4 /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843B2BE7365F007163D4 /* ProductClient.swift */; };
 		722E84662BE7365F007163D4 /* ProductImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E843C2BE7365F007163D4 /* ProductImageClient.swift */; };
@@ -82,7 +82,8 @@
 		722E848C2BE73A2A007163D4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84852BE73A29007163D4 /* ShareSheet.swift */; };
 		722E848D2BE73A2A007163D4 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84862BE73A29007163D4 /* StrokeBackground.swift */; };
 		722E84902BE73A42007163D4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E848E2BE73A42007163D4 /* HomeView.swift */; };
-		72389D582C34DA840006D44B /* PostGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72389D572C34DA840006D44B /* PostGaugeView.swift */; };
+		72389D582C34DA840006D44B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72389D572C34DA840006D44B /* PostView.swift */; };
+		72389D5A2C36CC0E0006D44B /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72389D592C36CC0E0006D44B /* PostViewModel.swift */; };
 		727952E92C1FF0B000788394 /* PickHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727952E82C1FF0B000788394 /* PickHashTagView.swift */; };
 		727952EC2C214ACB00788394 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 727952EB2C214ACB00788394 /* FirebaseAuth */; };
 		727952EE2C214ACB00788394 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 727952ED2C214ACB00788394 /* FirebaseAuthCombine-Community */; };
@@ -136,7 +137,7 @@
 		722E840E2BE73601007163D4 /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		722E84102BE73601007163D4 /* PostDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDescriptionView.swift; sourceTree = "<group>"; };
 		722E84112BE73601007163D4 /* PostImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
-		722E84122BE73601007163D4 /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		722E84122BE73601007163D4 /* PostTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTitleView.swift; sourceTree = "<group>"; };
 		722E84392BE7365F007163D4 /* DeveloperClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperClient.swift; sourceTree = "<group>"; };
 		722E843B2BE7365F007163D4 /* ProductClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		722E843C2BE7365F007163D4 /* ProductImageClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImageClient.swift; sourceTree = "<group>"; };
@@ -170,7 +171,8 @@
 		722E84852BE73A29007163D4 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		722E84862BE73A29007163D4 /* StrokeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		722E848E2BE73A42007163D4 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		72389D572C34DA840006D44B /* PostGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGaugeView.swift; sourceTree = "<group>"; };
+		72389D572C34DA840006D44B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		72389D592C36CC0E0006D44B /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		727952E82C1FF0B000788394 /* PickHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickHashTagView.swift; sourceTree = "<group>"; };
 		727952F02C21B9ED00788394 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		727952F72C21DA1700788394 /* frankfrt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = frankfrt.ttf; sourceTree = "<group>"; };
@@ -362,13 +364,14 @@
 		722E84132BE73601007163D4 /* PostView */ = {
 			isa = PBXGroup;
 			children = (
+				72389D572C34DA840006D44B /* PostView.swift */,
 				722E840F2BE73601007163D4 /* Component */,
-				722E84122BE73601007163D4 /* PostView.swift */,
+				722E84122BE73601007163D4 /* PostTitleView.swift */,
 				722E84102BE73601007163D4 /* PostDescriptionView.swift */,
 				10261AFE2BE8FCF2007D1606 /* PostURLView.swift */,
 				72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */,
 				722E84112BE73601007163D4 /* PostImageView.swift */,
-				72389D572C34DA840006D44B /* PostGaugeView.swift */,
+				72389D592C36CC0E0006D44B /* PostViewModel.swift */,
 			);
 			path = PostView;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72389D5A2C36CC0E0006D44B /* PostViewModel.swift in Sources */,
 				1041EFF62C316943002C9BDC /* GetHashTagsUseCase.swift in Sources */,
 				722E84792BE7365F007163D4 /* DeveloperImageRepositoryProtocol.swift in Sources */,
 				10261B012BE93EC4007D1606 /* QRView.swift in Sources */,
@@ -699,10 +703,10 @@
 				10261B052BE9427C007D1606 /* GradationBackView.swift in Sources */,
 				10D526252C243731004E66EA /* HashTagResponse.swift in Sources */,
 				722E846E2BE7365F007163D4 /* ProductClientProtocol.swift in Sources */,
-				72389D582C34DA840006D44B /* PostGaugeView.swift in Sources */,
+				72389D582C34DA840006D44B /* PostView.swift in Sources */,
 				722E847C2BE7365F007163D4 /* ProductRepositoryProtocol.swift in Sources */,
 				727952E92C1FF0B000788394 /* PickHashTagView.swift in Sources */,
-				722E84172BE73601007163D4 /* PostView.swift in Sources */,
+				722E84172BE73601007163D4 /* PostTitleView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
 				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
@@ -890,7 +894,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ55RU4U3A;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gitagram/Info.plist;
@@ -928,7 +932,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Gitagram/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ55RU4U3A;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gitagram/Info.plist;

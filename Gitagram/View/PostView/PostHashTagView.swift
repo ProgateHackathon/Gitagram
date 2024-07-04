@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostHashTagView: View {
-    @State var cardData: CardData
+    @EnvironmentObject var postViewModel: PostViewModel
     @State var pickHashTag: HashTag = .Empty()
     @State var hashTags: [HashTag] = []
     @State var isLoadComplete: Bool = false
@@ -16,7 +16,7 @@ struct PostHashTagView: View {
     
     var body: some View {
         VStack{
-
+            
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -37,8 +37,8 @@ struct PostHashTagView: View {
                         HashTagComponent(hashTag: hashTag)
                             .onTapGesture {
                                 pickHashTag = hashTag
-                                let product = cardData.product.setHashTag(from: [hashTag])
-                                cardData = cardData.setProduct(from: product)
+                                let product = postViewModel.cardData.product.setHashTag(from: [hashTag])
+                                postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
                             }
                     }
                 } else {
@@ -48,7 +48,7 @@ struct PostHashTagView: View {
             
             Spacer()
             
-          
+            
         }
         .onAppear {
             Task{
@@ -79,5 +79,5 @@ struct HashTagComponent: View {
 }
 
 #Preview {
-    PostHashTagView(cardData: .Empty())
+    PostHashTagView()
 }

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct PostDescriptionView: View {
-    @State var cardData: CardData
+    @EnvironmentObject var postViewModel: PostViewModel
     @State var description = ""
     
     var body: some View {
         VStack{
-
+            
             Text("どんなリポジトリ？")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -24,19 +24,20 @@ struct PostDescriptionView: View {
                 .frame(alignment: .leading)
                 .padding(.leading,10)
                 .onChange(of: description) {
-                    let product = cardData.product.setContent(from: description)
-                    cardData = cardData.setProduct(from: product)
+                    let product = postViewModel.cardData.product.setContent(from: description)
+                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
+                    print(postViewModel.cardData,"BBB")
                 }
             
             Divider()
             
             Spacer()
             
-
+            
         }
     }
 }
 
 #Preview {
-    PostDescriptionView(cardData: .Empty())
+    PostDescriptionView()
 }

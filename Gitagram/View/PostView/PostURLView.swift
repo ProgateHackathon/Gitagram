@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostURLView: View {
-    @State var cardData: CardData
+    @EnvironmentObject var postViewModel: PostViewModel
     @State var title: String = ""
     @State var developerName: String = ""
     
@@ -27,7 +27,7 @@ struct PostURLView: View {
                 .font(.system(size: 12, weight: .regular, design: .default))
                 .padding(.bottom,10)
             
-            Text(cardData.product.url)
+            Text(postViewModel.cardData.product.url)
                 .tint(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
@@ -40,8 +40,8 @@ struct PostURLView: View {
                 .padding(.vertical,10)
                 .onChange(of: developerName) {
                     let developer = Developer(githubId: developerName)
-                    let product = cardData.product.setDeveloper(from: developer)
-                    cardData = cardData.setProduct(from: product)
+                    let product = postViewModel.cardData.product.setDeveloper(from: developer)
+                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
                 }
             
             Divider()
@@ -51,9 +51,9 @@ struct PostURLView: View {
                 .padding(.leading,10)
                 .padding(.vertical,10)
                 .onChange(of: title) {
-                    let product = cardData.product
+                    let product = postViewModel.cardData.product
                         .setTitle(from: title)
-                    cardData = cardData.setProduct(from: product)
+                    postViewModel.cardData = postViewModel.cardData.setProduct(from: product)
                 }
             Divider()
             
@@ -61,13 +61,13 @@ struct PostURLView: View {
             
             
                 .onAppear {
-                    developerName = cardData.loginHost.name
-                    title = cardData.product.title
+                    developerName = postViewModel.cardData.loginHost.name
+                    title = postViewModel.cardData.product.title
                 }
         }
     }
 }
 
 #Preview {
-    PostURLView(cardData: .Empty())
+    PostURLView()
 }
