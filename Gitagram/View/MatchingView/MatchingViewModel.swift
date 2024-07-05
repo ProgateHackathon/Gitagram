@@ -41,8 +41,8 @@ class MatchingViewModel: ObservableObject {
     
     public func getRepository() async {
         isLoading = true
-        repositories = await fetchCardInfomation()
         pickHashTag = .Empty()
+        repositories = await fetchCardInfomation()
         isLoading = false
     }
     
