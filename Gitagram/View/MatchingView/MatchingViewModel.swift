@@ -65,14 +65,8 @@ class MatchingViewModel: ObservableObject {
         let products = await GetProductListUseCase().execute()
         
         for product in products {
-            if pickHashTag.isEmpty() {
-                if let cardData = await createCardData(for: product) {
-                    cardList.append(cardData)
-                }
-            } else if product.hashTags.contains(pickHashTag) {
-                if let cardData = await createCardData(for: product) {
-                    cardList.append(cardData)
-                }
+            if let cardData = await createCardData(for: product) {
+                cardList.append(cardData)
             }
         }
         
