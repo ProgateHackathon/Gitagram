@@ -39,7 +39,6 @@
 		23B6E52D2BE73C1D0049200B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6E52C2BE73C1D0049200B /* ContentView.swift */; };
 		722E84052BE735EA007163D4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F82BE735EA007163D4 /* CardStackView.swift */; };
 		722E84062BE735EA007163D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83F92BE735EA007163D4 /* CardView.swift */; };
-		722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */; };
 		722E84082BE735EA007163D4 /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */; };
 		722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E83FC2BE735EA007163D4 /* UserInfoView.swift */; };
 		722E840B2BE735EA007163D4 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E84002BE735EA007163D4 /* SizeConstants.swift */; };
@@ -128,7 +127,6 @@
 		23B6E52E2BE7540F0049200B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722E83F82BE735EA007163D4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
 		722E83F92BE735EA007163D4 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionButtonsView.swift; sourceTree = "<group>"; };
 		722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		722E83FC2BE735EA007163D4 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		722E84002BE735EA007163D4 /* SizeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 			children = (
 				722E83F82BE735EA007163D4 /* CardStackView.swift */,
 				722E83F92BE735EA007163D4 /* CardView.swift */,
-				722E83FA2BE735EA007163D4 /* SwipeActionButtonsView.swift */,
 				722E83FB2BE735EA007163D4 /* SwipeActionIndicatorView.swift */,
 				722E83FC2BE735EA007163D4 /* UserInfoView.swift */,
 				72B3DB402BF2F928008BE7F9 /* HashTagView.swift */,
@@ -709,7 +706,6 @@
 				722E84172BE73601007163D4 /* PostTitleView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
-				722E84072BE735EA007163D4 /* SwipeActionButtonsView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
