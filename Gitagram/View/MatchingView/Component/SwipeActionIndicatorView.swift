@@ -26,7 +26,7 @@ struct SwipeActionIndicatorView: View {
 
 
             Spacer()
-            Text("NOPE")
+            Text("Next")
                .font(.title)
                .fontWeight(.heavy)
                .foregroundColor(.red)
@@ -45,5 +45,5 @@ struct SwipeActionIndicatorView: View {
 }
 
 #Preview {
-    SwipeActionIndicatorView(xofset: .constant(20) )
+    SwipeActionIndicatorView(xofset: .constant(-120) )
 }
