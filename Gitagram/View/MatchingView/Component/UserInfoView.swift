@@ -33,12 +33,6 @@ struct UserInfoView: View {
                     .font(.title)
                     .fontWeight(.heavy)
                 Spacer()
-                Button(action: {
-                }, label: {
-                    Image(systemName: "arrow.up.circle")
-                        .fontWeight(.bold)
-                        .imageScale(.large)
-                })
             }
             
             Text(cardData.product.content)
