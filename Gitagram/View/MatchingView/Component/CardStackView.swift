@@ -34,10 +34,6 @@ struct CardStackView: View {
             } message: {
                 Text("URLがありません")
             }
-            
-            if viewModel.isExistRepository() {
-                SwipeActionButtonsView(viewModel: viewModel)
-            }
         }
     }
 }

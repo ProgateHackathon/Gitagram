@@ -34,7 +34,6 @@ struct UserInfoView: View {
                     .fontWeight(.heavy)
                 Spacer()
                 Button(action: {
-                    print("ボタン")
                 }, label: {
                     Image(systemName: "arrow.up.circle")
                         .fontWeight(.bold)
