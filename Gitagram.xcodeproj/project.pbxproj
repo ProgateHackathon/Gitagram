@@ -98,6 +98,8 @@
 		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
 		72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */; };
 		72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */; };
+		72E3FBFB2C38C649002A6C2C /* ZLSwipeableViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E3FBFA2C38C649002A6C2C /* ZLSwipeableViewWrapper.swift */; };
+		72E3FBFE2C38C68A002A6C2C /* ZLSwipeableViewSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 72E3FBFD2C38C68A002A6C2C /* ZLSwipeableViewSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +185,7 @@
 		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagView.swift; sourceTree = "<group>"; };
 		72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
+		72E3FBFA2C38C649002A6C2C /* ZLSwipeableViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViewWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,7 @@
 				10334AA12C2A6AD6004364B1 /* Kingfisher in Frameworks */,
 				103BF36F2BE39C3E00818544 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				727952EC2C214ACB00788394 /* FirebaseAuth in Frameworks */,
+				72E3FBFE2C38C68A002A6C2C /* ZLSwipeableViewSwift in Frameworks */,
 				103BF3692BE39C3E00818544 /* FirebaseDatabase in Frameworks */,
 				103BF36D2BE39C3E00818544 /* FirebaseFirestore in Frameworks */,
 				103BF3732BE39C3E00818544 /* FirebaseStorage in Frameworks */,
@@ -275,6 +279,7 @@
 				72B3DB462BF50DEC008BE7F9 /* Utils */,
 				727953102C21E4D200788394 /* Assets.xcassets */,
 				10472EEC2BDFAFBD00C179F8 /* Preview Content */,
+				72E3FBFA2C38C649002A6C2C /* ZLSwipeableViewWrapper.swift */,
 			);
 			path = Gitagram;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				727952EB2C214ACB00788394 /* FirebaseAuth */,
 				727952ED2C214ACB00788394 /* FirebaseAuthCombine-Community */,
 				10334AA02C2A6AD6004364B1 /* Kingfisher */,
+				72E3FBFD2C38C68A002A6C2C /* ZLSwipeableViewSwift */,
 			);
 			productName = Gitagram;
 			productReference = 10472EE32BDFAFBB00C179F8 /* Gitagram.app */;
@@ -652,6 +658,7 @@
 				103BF3672BE39C3E00818544 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				728E75B02BFC4A3B003D4C93 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				10334A9F2C2A6AD6004364B1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				72E3FBFC2C38C68A002A6C2C /* XCRemoteSwiftPackageReference "ZLSwipeableViewSwift" */,
 			);
 			productRefGroup = 10472EE42BDFAFBB00C179F8 /* Products */;
 			projectDirPath = "";
@@ -706,6 +713,7 @@
 				722E84172BE73601007163D4 /* PostTitleView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
+				72E3FBFB2C38C649002A6C2C /* ZLSwipeableViewWrapper.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
@@ -1006,6 +1014,14 @@
 				minimumVersion = 4.4.3;
 			};
 		};
+		72E3FBFC2C38C68A002A6C2C /* XCRemoteSwiftPackageReference "ZLSwipeableViewSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zhxnlai/ZLSwipeableViewSwift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1063,6 +1079,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 728E75B02BFC4A3B003D4C93 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		72E3FBFD2C38C68A002A6C2C /* ZLSwipeableViewSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72E3FBFC2C38C68A002A6C2C /* XCRemoteSwiftPackageReference "ZLSwipeableViewSwift" */;
+			productName = ZLSwipeableViewSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

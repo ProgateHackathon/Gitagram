@@ -19,6 +19,8 @@ struct CardView: View {
     @Environment(\.openURL) var openURL
     @Binding var isShowAlert: Bool
     let cardData: CardData
+    @State private var randomFloat: Float = Float.random(in: -0.5..<0.5)
+    
     
     var body: some View {
         ZStack(alignment: .bottom){
@@ -28,6 +30,7 @@ struct CardView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
             }
@@ -49,13 +52,14 @@ struct CardView: View {
             )
             
         }
-      
+        
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)
         })
         .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .offset(x: xoffset)
+        .rotationEffect(.degrees(Double(randomFloat)), anchor: .center)
         .rotationEffect(.degrees(degrees))
         .animation(.snappy,value: xoffset)
         .gesture(
@@ -63,7 +67,14 @@ struct CardView: View {
                 .onChanged(onDragchanged)
                 .onEnded(onDragEnded)
         )
-  
+        .onChange(of: randomFloat){
+            print(randomFloat)
+        }
+        .onAppear(){
+            randomFloat =  Float.random(in: -4..<4)
+        }
+        
+        
     }
 }
 
@@ -90,6 +101,9 @@ private extension CardView {
             viewModel.removeCard(cardData.product)
         }
     }
+    private func regenerateRandomFloat() {
+        randomFloat = Float.random(in: -4..<4)
+    }
     
     func onReceiveSwipeAction(_ action: SwipeAction? ){
         guard let action else { return }
@@ -115,7 +129,7 @@ private extension CardView{
         }else{
             isShowAlert = true
         }
-       
+        
     }
     func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value) {
         xoffset = value.translation.width
