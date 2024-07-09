@@ -10,4 +10,5 @@ import Foundation
 protocol DeveloperClientProtocol {
     func create(developer: DeveloperResponse) async
     func get(developer_id: UUID) async -> DeveloperResponse?
+    func get(name: String) async -> DeveloperResponse?
 }

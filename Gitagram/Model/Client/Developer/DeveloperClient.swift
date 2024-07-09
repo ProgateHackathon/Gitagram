@@ -31,4 +31,18 @@ class DeveloperClient : DeveloperClientProtocol {
         
         return nil
     }
+    
+    func get(name: String) async -> DeveloperResponse? {
+        let query = db.collection(COLLECTION).whereField("name", isEqualTo: name)
+        do {
+            let snapshot = try await query.getDocuments()
+            if let document = snapshot.documents.first {
+                return try document.data(as: DeveloperResponse.self)
+            }
+        } catch {
+            print("Error decoding developer: \(error)")
+        }
+        
+        return nil
+    }
 }
