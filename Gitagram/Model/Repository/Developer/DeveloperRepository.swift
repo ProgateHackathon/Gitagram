@@ -25,6 +25,14 @@ class DeveloperRepository : DeveloperRepositoryProtocol {
         return nil
     }
     
+    func get(name: String) async -> Developer? {
+        if let response = await developerClient.get(name: name) {
+            return response.toDeveloper()
+        }
+        
+        return nil
+    }
+    
     func getLoginDeveloper() async -> Developer? {
         guard let uuidString = UserDefaults.standard.string(forKey: SIGNIN_DEVELOPER_KEY) else { return nil }
         guard let uuid = UUID(uuidString: uuidString) else {
