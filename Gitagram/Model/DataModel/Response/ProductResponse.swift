@@ -18,11 +18,11 @@ struct ProductResponse : Identifiable, Codable {
         self.id = product.id.toUUID
         self.title = product.title
         self.content = product.content
-        self.developerId = product.developerId.toUUID
+        self.developerId = product.developer.id.toUUID
         self.url = product.url
     }
     
     func toProduct() -> Product {
-        return Product(id: Product.ID(id: id), title: title, content: content, developerId: Developer.ID(id: developerId), url: url)
+        return Product(id: Product.ID(id: id), title: title, content: content, developer: Developer(id: Developer.ID(id: developerId), githubId: ""), hashTags: [])
     }
 }

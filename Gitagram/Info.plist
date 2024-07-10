@@ -2,11 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>app-1-946131618857-ios-538ce71de83abc44b5a038</string>
+			</array>
+		</dict>
+	</array>
+	<key>FBundleURLTypes</key>
+	<string>com.googleusercontent.apps.Ov23ctqGZ4uVBUtXgYbe</string>
+	<key>IUserInterfaceStyle</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>frankfrt.ttf</string>
+<<<<<<< HEAD
 		<string>learning_curve_alt_G_regular_ot_tt.ttf</string>
 		<string>ARIBLK.TTF</string>
+=======
+		<string>Shrikhand-Regular.otf</string>
+>>>>>>> main
 	</array>
 </dict>
 </plist>

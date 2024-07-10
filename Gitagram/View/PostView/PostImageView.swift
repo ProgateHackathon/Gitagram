@@ -9,35 +9,22 @@ import SwiftUI
 import PhotosUI
 
 struct PostImageView: View {
-    
-    @State var next = false
-    @State var developer: Developer
+    @EnvironmentObject var postViewModel: PostViewModel
     @State var showImagePicker = false
-    @State var image: UIImage?
-    @State private var selectedPhoto: PhotosPickerItem?
-    @Binding var title: String
-    @Binding var discription: String
-    @Binding var url: String
+    @State var selectedPhoto: PhotosPickerItem?
     @Environment(\.dismiss) private var dismiss
     @State var selectImage: Image? = nil
     
     var body: some View {
         VStack{
-            ProgressView("", value: 1)
-            
-            
-                .tint(Color.pink)
-            
-                .cornerRadius(8)
-                .scaleEffect(1.3)
-            
             Text("リポジトリの画像を貼ろう")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,10)
-                .padding(.top, 80)
                 .font(.system(size: 30, weight: .black, design: .default))
                 .padding(.bottom,30)
+            
             Spacer()
+            
             if let image = selectImage {
                 image
                     .resizable()
@@ -47,47 +34,42 @@ struct PostImageView: View {
                     .padding()
                 
             }
+            
             PhotosPicker(selection: $selectedPhoto,matching: .images){
-                
                 HStack{
                     Image(systemName: "photo.badge.plus")
                     Text("画像のアップロード")
                 }
                 .padding(.horizontal,40)
                 .padding(.vertical,15)
-                
                 .foregroundColor(.black)
                 .background(Color.white)
-                
                 .cornerRadius(35)
                 .overlay(
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(Color(Color(red: 0.82, green: 0.6, blue: 0.97)), lineWidth: 3)
                 )
             }
-            .onChange(of: selectedPhoto) { selectedPhoto in
-                if let selectedPhoto = selectedPhoto{
-                    Task {
-                        self.image = await LoadImageFromLibraryUseCase().execute(selectedPhoto)
-                    }
-                    Task {
-                        if let data = try? await selectedPhoto.loadTransferable(type: Data.self),
-                           let uiImage = UIImage(data: data) {
-                            selectImage = Image(uiImage: uiImage)
-                        }
-                    }
+            .onChange(of: selectedPhoto) {
+                Task {
+                    guard let unwrap = selectedPhoto else { return }
+                    let loadedImage = await loadImageFromSelectedPhoto(photo: unwrap)
+                    postViewModel.setImage(image: loadedImage ?? postViewModel.cardData.productImage)
                 }
             }
+            
             .padding(.bottom,20)
             
-            
             Button(action: {
-                next.toggle()
-                UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+                Task {
+                    if postViewModel.cardData.isComplete() {
+                        await PostProductUseCase().execute(product: postViewModel.cardData.product, productImage: postViewModel.cardData.productImage)
+                    }
+                }
                 
+                UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
             }, label: {
                 Text("保存")
-                
                     .padding(.horizontal,120)
                     .padding(.vertical,15)
                     .font(.system(size: 10, weight: .medium, design: .default))
@@ -95,41 +77,20 @@ struct PostImageView: View {
                     .background(Color(Color(red: 0.82, green: 0.6, blue: 0.97)))
                     .cornerRadius(30)
                     .padding(.bottom,20)
-                
             })
         }
-        .onChange(of: next){
-            //ここで保存だよ
-            Task{
-                do{
-                    await PostProductUseCase().execute(product: Product(title: title, content: discription, developerId: developer.id, url: url), productImage: (image ?? UIImage(named: "back"))!
-                    )}
-            }
-            
-        }
         
-        
-        .onAppear(){
-            Task{
-                do{
-                    
-                    developer = await GetLoginDeveloperUseCase().execute()!
-                }
-                
-            }
-            
-        }
-        
-        
-    }
-    private func loadImageFromSelectedPhoto(photo: PhotosPickerItem?) async {
-        if let data = try? await photo?.loadTransferable(type: Data.self) {
-            self.image = UIImage(data: data)
-        }
     }
     
+    private func loadImageFromSelectedPhoto(photo: PhotosPickerItem) async -> UIImage? {
+        if let data = try? await photo.loadTransferable(type: Data.self) {
+            return UIImage(data: data)
+        }
+        
+        return nil
+    }
 }
 
 #Preview {
-    PostImageView(developer: Developer(githubId: "am2525nyan"), title: .constant(""), discription: .constant(""), url: .constant(""))
+    PostImageView()
 }

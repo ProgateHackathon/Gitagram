@@ -1,42 +1,97 @@
 //
-//  PostView.swift
+//  PostGaugeView.swift
 //  Gitagram
 //
-//  Created by saki on 2024/05/04.
+//  Created by saki on 2024/07/03.
 //
 
 import SwiftUI
+import Combine
 
 struct PostView: View {
-    @State var title = ""
-    @State var next = false
-    @State var developer : Developer
+    @State private var value: Double = 0.2
+    @State var selection = 1
+    @StateObject var postViewModel = PostViewModel()
+    let gadient = Gradient(colors: [.pink,.purple])
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
-        NavigationView {
-            VStack{
-                ProgressView("", value: 0.3)
-                    .padding(.top,37)
-                    .padding()
-                    .tint(Color.pink)
-                    .cornerRadius(8)
-                    .scaleEffect(1.3)
+        
+        VStack{
+            Gauge(value:value){
                 
-                Text("リポジトリの名前は？")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading,10)
-                    .padding(.top, 80)
-                    .font(.system(size: 30, weight: .black, design: .default))
-                    .padding(.bottom,30)
+            }
+            .padding(.bottom, 50)
+            .padding(.top, 80)
+            .tint(gadient)
+            
+            
+            TabView(selection: $selection) {
+                PostTitleView()
+                    .tag(1)
+                    .environmentObject(postViewModel)
+                    .onChange(of: selection) { newValue in
+                        if newValue == 1 {
+                            withAnimation{
+                                value = 0.2
+                            }
+                            
+                        }
+                    }
                 
-                TextField("リポジトリの名前を入力してね", text: $title)
-                    .frame(alignment: .leading)
-                    .padding(.leading,10)
-                Divider()
-                Spacer()
-                NavigationLink("", destination: PostDiscriptionView( title: $title),isActive: $next)
-
+                PostDescriptionView()
+                    .tag(2)
+                    .environmentObject(postViewModel)
+                    .onChange(of: selection) { newValue in
+                        if newValue == 2 {
+                            withAnimation{
+                                value = 0.4
+                            }
+                        }
+                        
+                    }
+                
+                PostURLView()
+                    .tag(3)
+                    .environmentObject(postViewModel)
+                    .onChange(of: selection) { newValue in
+                        if newValue == 3 {
+                            withAnimation{
+                                value = 0.6
+                            }
+                        }
+                    }
+                
+                PostHashTagView()
+                    .tag(4)
+                    .environmentObject(postViewModel)
+                    .onChange(of: selection) { newValue in
+                        if newValue == 4 {
+                            withAnimation{
+                                value = 0.8
+                            }
+                        }
+                        
+                    }
+                
+                PostImageView()
+                    .environmentObject(postViewModel)
+                    .tag(5)
+                    .onChange(of: selection) { newValue in
+                        if newValue == 5 {
+                            withAnimation{
+                                value = 1.0
+                            }
+                        }
+                    }
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .tabViewStyle(.page)
+            
+            if selection != 5{
                 Button(action: {
-                    next.toggle()
+                    selection += 1
                 }, label: {
                     Text("次へ")
                         .padding(.horizontal,120)
@@ -49,14 +104,10 @@ struct PostView: View {
                 })
             }
         }
-        .onAppear(){
-            Task{
-                if let host =  await GetLoginDeveloperUseCase().execute() {
-                    developer = host
-                } else {
-                    ContentView()
-                }
-            }
-        }
     }
+    
+}
+
+#Preview {
+    PostView()
 }
