@@ -18,9 +18,9 @@ struct CardView: View {
     @State private var degrees: Double = 0
     @Environment(\.openURL) var openURL
     @Binding var isShowAlert: Bool
-    let cardData: CardData
-    @State private var randomFloat: Float = Float.random(in: -0.5..<0.5)
     
+    let cardData: CardData
+    let cardIndex: Int
     
     var body: some View {
         ZStack(alignment: .bottom){
@@ -52,14 +52,18 @@ struct CardView: View {
             )
             
         }
+        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous)
+            .strokeBorder(Color.white.opacity(0.4), lineWidth: 9)
+        )
+        
         
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)
         })
         .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-        .offset(x: xoffset)
-        .rotationEffect(.degrees(Double(randomFloat)), anchor: .center)
+        .offset(x: xoffset + CGFloat(cardIndex) * -3, y: CGFloat(cardIndex) * -3)
+        
         .rotationEffect(.degrees(degrees))
         .animation(.snappy,value: xoffset)
         .gesture(
@@ -67,15 +71,9 @@ struct CardView: View {
                 .onChanged(onDragchanged)
                 .onEnded(onDragEnded)
         )
-        .onChange(of: randomFloat){
-            print(randomFloat)
-        }
-        .onAppear(){
-            randomFloat =  Float.random(in: -4..<4)
-        }
-        
         
     }
+    
 }
 
 private extension CardView {
@@ -85,24 +83,25 @@ private extension CardView {
     }
     func swipeRight(){
         withAnimation {
-            xoffset = 500
-            degrees = 12
+            xoffset = 650
+            degrees = 30
         } completion: {
-            viewModel.removeCard(cardData.product)
+            withAnimation {
+                viewModel.removeCard(cardData.product)
+            }
             openLink(url: cardData.product.url)
         }
     }
     
     func swipeLeft(){
         withAnimation {
-            xoffset = -500
-            degrees = -12
+            xoffset = -650
+            degrees = 30
         } completion: {
-            viewModel.removeCard(cardData.product)
+            withAnimation {
+                viewModel.removeCard(cardData.product)
+            }
         }
-    }
-    private func regenerateRandomFloat() {
-        randomFloat = Float.random(in: -4..<4)
     }
     
     func onReceiveSwipeAction(_ action: SwipeAction? ){
@@ -132,8 +131,17 @@ private extension CardView{
         
     }
     func onDragchanged(_ value:  _ChangedGesture<DragGesture>.Value) {
-        xoffset = value.translation.width
-        degrees = Double(value.translation.width / 25)
+        xoffset = value.translation.width - 90
+        let width = value.translation.width
+        let isRightSwipe = width >= SizeConstants.screenCutof
+        if isRightSwipe{
+            xoffset = value.translation.width - 90
+            degrees = Double( -value.translation.width / 20)
+        }else{
+            xoffset = value.translation.width + 90
+            degrees = Double( value.translation.width / 20)
+        }
+        
         
     }
     
@@ -142,6 +150,7 @@ private extension CardView{
         let isRightSwipe = width >= SizeConstants.screenCutof
         
         if abs(width) <= abs(SizeConstants.screenCutof) {
+            
             returnToCenter()
         }
         

@@ -22,9 +22,14 @@ struct CardStackView: View {
                     Text("全部見終わったよ！\n左上のリロードボタンを押してね！")
                 }
                 
-                ForEach(viewModel.repositories){ repository in
-                    CardView(viewModel: viewModel, isShowAlert: $isShowAlert, cardData: repository)
+                ForEach(Array(zip(viewModel.repositories.indices, viewModel.repositories)), id: \.1.id) { index, cardData in
+                    CardView(viewModel: viewModel,
+                             isShowAlert: $isShowAlert,
+                             cardData: cardData,
+                             cardIndex: index)
+                  
                     
+
                 }
             }
             .onChange(of: finish){

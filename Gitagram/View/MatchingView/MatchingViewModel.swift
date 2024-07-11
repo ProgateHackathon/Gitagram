@@ -7,24 +7,30 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 @MainActor
 class MatchingViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var repositories: [CardData] = []
     @Published var buttonSwipeAction: SwipeAction?
-
+    @Published var topCardAngle: Float = 0.0
+    @Published var isSwipingTopCard = false
+       @Published var topCardOffset: CGSize = .zero
+    
     func removeCard(_  product: Product){
         Task{
-           try await Task.sleep(nanoseconds: 500_000_000)
+            try await Task.sleep(nanoseconds: 500_000_000)
             guard let index = repositories.firstIndex(where: { $0.product.id == product.id }) else { return }
             repositories.remove(at: index)
+            
         }
     }
     
     public func getLastRepository() -> CardData? {
         repositories.last
     }
+
     
     public func isExistRepository() -> Bool {
         !repositories.isEmpty
@@ -49,4 +55,14 @@ class MatchingViewModel: ObservableObject {
         
         return cardList
     }
+    func startSwipingTopCard() {
+        isSwipingTopCard = true
+    }
+    
+    func stopSwipingTopCard() {
+        isSwipingTopCard = false
+    }
+    
+ 
+    
 }
