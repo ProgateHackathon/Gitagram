@@ -62,7 +62,7 @@ struct CardView: View {
         })
         .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-        .offset(x: xoffset + CGFloat(cardIndex) * -3, y: CGFloat(cardIndex) * -3)
+        .offset(x: xoffset + CGFloat(cardIndex) * -1, y: CGFloat(cardIndex) * -1)
         
         .rotationEffect(.degrees(degrees))
         .animation(.snappy,value: xoffset)

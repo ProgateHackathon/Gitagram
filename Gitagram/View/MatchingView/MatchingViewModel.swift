@@ -14,10 +14,7 @@ class MatchingViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var repositories: [CardData] = []
     @Published var buttonSwipeAction: SwipeAction?
-    @Published var topCardAngle: Float = 0.0
-    @Published var isSwipingTopCard = false
-       @Published var topCardOffset: CGSize = .zero
-    
+ 
     func removeCard(_  product: Product){
         Task{
             try await Task.sleep(nanoseconds: 500_000_000)
@@ -55,14 +52,5 @@ class MatchingViewModel: ObservableObject {
         
         return cardList
     }
-    func startSwipingTopCard() {
-        isSwipingTopCard = true
-    }
-    
-    func stopSwipingTopCard() {
-        isSwipingTopCard = false
-    }
-    
  
-    
 }

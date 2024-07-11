@@ -32,9 +32,6 @@ struct CardStackView: View {
 
                 }
             }
-            .onChange(of: finish){
-                
-            }
             
             .alert("エラー", isPresented: $isShowAlert) {
                 Button("OK") {
