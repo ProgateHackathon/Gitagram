@@ -41,7 +41,6 @@ struct CardStackView: View {
             }
         }
     }
-    
 }
 
 #Preview {
