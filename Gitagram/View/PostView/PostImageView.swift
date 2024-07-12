@@ -54,7 +54,7 @@ struct PostImageView: View {
                 Task {
                     guard let unwrap = selectedPhoto else { return }
                     let loadedImage = await loadImageFromSelectedPhoto(photo: unwrap)
-                    postViewModel.setImage(image: loadedImage ?? postViewModel.cardData.productImage)
+                
                 }
             }
             
@@ -63,7 +63,7 @@ struct PostImageView: View {
             Button(action: {
                 Task {
                     if postViewModel.cardData.isComplete() {
-                        await PostProductUseCase().execute(product: postViewModel.cardData.product, productImage: postViewModel.cardData.productImage)
+                     
                     }
                 }
                 

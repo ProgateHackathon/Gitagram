@@ -30,18 +30,29 @@ class ProductImageClient : ProductImageClientProtocol {
     }
     
     func downloadImage(product_id: String) async -> UIImage? {
-        if let cachedImage = await getCachedImage(with: product_id) {
-            return cachedImage
-        }
-        
-        if let fetchedImage = await fetchImage(with: product_id){
-            cacheImage(forKey: product_id, image: fetchedImage)
-            return fetchedImage
-        }
+//        if let cachedImage = await getCachedImage(with: product_id) {
+//            return cachedImage
+//        }
+//        
+//        if let fetchedImage = await fetchImage(with: product_id){
+//            cacheImage(forKey: product_id, image: fetchedImage)
+//            return fetchedImage
+//        }
         
         return nil
     }
     
+    func downloadImageURL(product_id: String) async -> URL? {
+        let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
+        
+        do {
+            let url = try await ref.downloadURL()
+            return url
+        } catch {
+            print("Error downloading image URL: \(error.localizedDescription)")
+            return nil
+        }
+    }
     private func getCachedImage(with product_id: String) async -> UIImage? {
         if cache.isCached(forKey: product_id) {
             var image: UIImage?
@@ -66,24 +77,24 @@ class ProductImageClient : ProductImageClientProtocol {
     }
 
     private func fetchImage(with product_id: String) async -> UIImage? {
-        let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
-        
-        do {
-            let data = try await withUnsafeThrowingContinuation { (continuation: UnsafeContinuation<Data, Error>) in
-                ref.getData(maxSize: 100 * 1024 * 1024) { data, error in
-                    if let error = error {
-                        continuation.resume(throwing: error)
-                    } else if let data = data {
-                        continuation.resume(returning: data)
-                    }
-                }
-            }
-            
-            return UIImage(data: data)
-        } catch {
-            print("Error occurred! : \(error)")
+//        let ref = storage.reference(forURL: STORAGE_URL).child(product_id)
+//        
+//        do {
+//            let data = try await withUnsafeThrowingContinuation { (continuation: UnsafeContinuation<Data, Error>) in
+//                ref.getData(maxSize: 100 * 1024 * 1024) { data, error in
+//                    if let error = error {
+//                        continuation.resume(throwing: error)
+//                    } else if let data = data {
+//                        continuation.resume(returning: data)
+//                    }
+//                }
+//            }
+//            
+//            return UIImage(data: data)
+//        } catch {
+//            print("Error occurred! : \(error)")
             return nil
-        }
+//        }
     }
     
     private func convertToJpegData(uiImage: UIImage) -> NSData? {

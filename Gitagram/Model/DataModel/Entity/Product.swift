@@ -15,51 +15,54 @@ struct Product : Identifiable {
     let content: String
     let developer: Developer
     let hashTags: [HashTag]
+    let prodactUrl: URL
     var url: String {
         "https://github.com/\(developer.name)/\(title)"
     }
     
     //既にIDが生成されている場合のイニシャライザ
-    init(id: ProductID, title: String, content: String, developer: Developer, hashTags: [HashTag]) {
+    init(id: ProductID, title: String, content: String, developer: Developer, hashTags: [HashTag], prodactUrl: URL) {
         self.id = id
         self.title = title
         self.content = content
         self.developer = developer
         self.hashTags = hashTags
+        self.prodactUrl = prodactUrl
     }
     
     //新規Productのイニシャライザ
-    init(title: String, content: String, developer: Developer, hashTags: [HashTag]) {
+    init(title: String, content: String, developer: Developer, hashTags: [HashTag], prodactUrl: URL) {
         self.id = ProductID(id: UUID())
         self.title = title
         self.content = content
         self.developer = developer
         self.hashTags = hashTags
+        self.prodactUrl = prodactUrl
     }
     
     func setDeveloper(from developer: Developer) -> Self {
-        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags)
+        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags, prodactUrl: prodactUrl)
     }
     
     func setTitle(from title: String) -> Self {
-        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags)
+        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags, prodactUrl: prodactUrl)
     }
     
     func setContent(from content: String) -> Self {
-        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags)
+        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags, prodactUrl: prodactUrl)
     }
     
     func setHashTag(from hashTags: [HashTag]) -> Self {
-        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags)
+        Self(id: id, title: title, content: content, developer: developer, hashTags: hashTags, prodactUrl: prodactUrl)
     }
     
     func addHashTag(from hashTag: HashTag) -> Self {
         let tags = hashTags + [hashTag]
-        return Self(id: id, title: title, content: content, developer: developer, hashTags: tags)
+        return Self(id: id, title: title, content: content, developer: developer, hashTags: tags, prodactUrl: prodactUrl)
     }
     
     static func Empty() -> Product {
-        Product(title: "", content: "", developer: Developer.Empty(), hashTags: [])
+        Product(title: "", content: "", developer: Developer.Empty(), hashTags: [], prodactUrl: URL(string: "")!)
     }
     
     func isEmpty() -> Bool {
