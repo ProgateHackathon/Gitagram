@@ -16,7 +16,3 @@ struct ImageCloudView: View {
             .padding(.trailing,190)
     }
 }
-
-#Preview {
-    AccountCardTypeThreeView(developer: Developer(githubId: "Rino1011"))
-}

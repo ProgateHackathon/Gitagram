@@ -17,6 +17,3 @@ struct BackTypeOneView: View {
         )
     }
 }
-#Preview{
-    BackTypeTwoView()
-}

@@ -24,9 +24,3 @@ struct FrankfrtText: View {
             .padding(.top, 0)
     }
 }
-
-
-#Preview {
-    //CoolText(inputText: "Rino1011")
-    AccountCardTypeOneView(developer: Developer(githubId: "Rino1011"))
-}

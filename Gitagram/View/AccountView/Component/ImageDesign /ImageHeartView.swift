@@ -16,7 +16,3 @@ struct ImageHeartView: View {
             .padding(.leading,200)
     }
 }
-
-#Preview {
-    ImageHeartView()
-}

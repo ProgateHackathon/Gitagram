@@ -17,6 +17,3 @@ struct BackTypeThreeView: View {
         )
     }
 }
-#Preview{
-    BackTypeThreeView()
-}

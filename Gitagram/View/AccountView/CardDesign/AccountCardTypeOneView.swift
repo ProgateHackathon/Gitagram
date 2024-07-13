@@ -28,6 +28,3 @@ struct AccountCardTypeOneView :View {
         .cornerRadius(20)
     }
 }
-#Preview {
-    AccountCardTypeTwoView(developer: Developer(githubId: "Rino1011"))
-}

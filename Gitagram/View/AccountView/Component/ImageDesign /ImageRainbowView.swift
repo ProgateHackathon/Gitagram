@@ -16,7 +16,3 @@ struct ImageRainbowView: View {
             .padding(.leading,120)
     }
 }
-
-#Preview {
-    AccountCardTypeThreeView(developer: Developer(githubId: "Rino1011"))
-}

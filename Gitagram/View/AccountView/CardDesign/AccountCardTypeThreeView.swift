@@ -41,7 +41,3 @@ struct AccountCardTypeThreeView: View {
         .cornerRadius(20)
     }
 }
-
-#Preview {
-    AccountCardTypeThreeView(developer: Developer(githubId: "Rino1011"))
-}

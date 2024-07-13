@@ -23,7 +23,3 @@ struct PopText: View {
             .padding(.leading,10)
     }
 }
-
-#Preview {
-    AccountCardTypeThreeView(developer: Developer(githubId: "Urassh"))
-}

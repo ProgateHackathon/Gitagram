@@ -21,7 +21,6 @@ struct AccountView: View {
                     }
                     .frame(width: 300)
                     .pickerStyle(.segmented)
-                    
                     Spacer()
                 }
                 
@@ -42,7 +41,6 @@ struct AccountView: View {
                     }
                 }
             }
-            
             Spacer()
                 .frame(height: 580)
         }
@@ -50,8 +48,4 @@ struct AccountView: View {
             ShareSheet(activityItems: [viewModel.captureViewAsImage()])
         })
     }
-}
-
-#Preview {
-    AccountView(developer: Developer(githubId: "Rino1011"))
 }

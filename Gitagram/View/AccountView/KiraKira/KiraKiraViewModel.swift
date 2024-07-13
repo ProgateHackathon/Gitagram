@@ -15,8 +15,6 @@ class KiraKiraViewModel: ObservableObject {
     @Published var frontImageOpacitry: CGFloat = 0
     
     private let motionManager = CMMotionManager()
-    
-    ///  基準にする角度
     private let baseDegrees: CGFloat = 40
     
     init() {
@@ -26,23 +24,18 @@ class KiraKiraViewModel: ObservableObject {
     }
     
     private func startUpdatingLenticulation() {
-        // 1秒間に80回アップデートする
         motionManager.deviceMotionUpdateInterval = 1.0 / 80.0
         motionManager.startDeviceMotionUpdates(to: OperationQueue.current!) { (deviceMotion, error) in
             guard let deviceMotion = deviceMotion,
                   error == nil
             else { return }
             
-            // ラジアンを角度に変換
             let degree = deviceMotion.attitude.roll.convertedRadianToDegree()
-            // 角度から姿勢状態に変換
             let attitudeState = DeviceAttitudeState(degree)
-            // 姿勢の状態に応じてImageOpacityの値を更新
             self.updateImageOpacity(with: attitudeState)
         }
     }
     
-    /// デバイスの姿勢状態に応じてImageOpacityの値を更新
     private func updateImageOpacity(with attributeState: DeviceAttitudeState) {
         
         switch attributeState {
