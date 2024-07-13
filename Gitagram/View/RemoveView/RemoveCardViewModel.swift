@@ -19,7 +19,6 @@ class RemoveCardViewModel: ObservableObject {
                 guard let productImage = await GetProductImageUseCase().execute(id: product.id)  else { continue }
                 let cardData = CardData(product: product, productImage: productImage, loginHost: host)
                 myRepositories.append(cardData)
-                print("A")
             }
 
     }

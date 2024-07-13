@@ -68,7 +68,6 @@ class ProductClient : ProductClientProtocol {
         do {
             let snapshot = try await ref.getDocuments()
             print("Product Successfully Retrieved!")
-            print(snapshot.documents.compactMap { try? $0.data(as: ProductResponse.self) })
             return snapshot.documents.compactMap { try? $0.data(as: ProductResponse.self) }
         } catch {
             print("Error Retrieving Document: \(error)")
