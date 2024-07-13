@@ -1,40 +1,40 @@
-//
-//  AccountQRView.swift
-//  Gitagram
-//
-//  Created by 伊藤璃乃 on 2024/05/03.
-//
-
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
 struct AccountView: View {
     private static let cardCornerRadius: CGFloat = 20
-    private static let cardSize: CGSize = .init(width: 367, height: 512)
+    private static let cardSize: CGSize = .init(width: 360, height: 480)
     private let viewModel = AccountViewModel()
     
     @State private var isSharing: Bool = false
     @State var developer: Developer
+    @State private var nowCard = 0
     
     var body: some View {
         NavigationView {
-            ZStack {
-                ZStack {
-                    KiraKiraView()
-                    RoundedRectangle(cornerRadius: Self.cardCornerRadius)
-                        .stroke(Color.white, lineWidth: 1)
+            ZStack{
+                VStack{
+                    Picker("", selection: $nowCard) {
+                        Text("1").tag(0)
+                        Text("2").tag(1)
+                        Text("3").tag(2)
+                    }
+                    .frame(width: 300)
+                    .pickerStyle(.segmented)
+                    
+                    Spacer()
                 }
-                .frame(width: Self.cardSize.width, height: Self.cardSize.height)
-                .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0, y: 20)
                 
-                QRView(inputText: developer.gitHubURL)
-                    .padding()
-                
-                RichText(inputText: developer.name)
+                if nowCard == 0 {
+                    AccountCardTypeOneView(developer: developer)
+                } else if nowCard == 1 {
+                    AccountCardTypeTwoView(developer: developer)
+                } else if nowCard == 2 {
+                    AccountCardTypeThreeView(developer: developer)
+                }
             }
-            .padding(50)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                HStack{
                     Button(action: {
                         isSharing.toggle()
                     }) {
@@ -42,11 +42,16 @@ struct AccountView: View {
                     }
                 }
             }
-            .sheet(isPresented: $isSharing, content: {
-                ShareSheet(activityItems: [viewModel.captureViewAsImage()])
-            })
+            
+            Spacer()
+                .frame(height: 580)
         }
+        .sheet(isPresented: $isSharing, content: {
+            ShareSheet(activityItems: [viewModel.captureViewAsImage()])
+        })
     }
 }
 
-
+#Preview {
+    AccountView(developer: Developer(githubId: "Rino1011"))
+}

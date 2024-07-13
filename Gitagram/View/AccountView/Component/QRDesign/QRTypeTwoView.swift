@@ -1,13 +1,13 @@
 //
-//  QRView.swift
+//  QRTypeTwoView.swift
 //  Gitagram
 //
-//  Created by 浦山秀斗 on 2024/05/07.
+//  Created by 伊藤璃乃 on 2024/06/22.
 //
 
 import SwiftUI
 
-struct QRView: View {
+struct QRTypeTwoView: View {
     let inputText: String
     let qrGenerator = GetQRCodeUseCase()
     let cornerRadius: CGFloat = 10
@@ -20,8 +20,9 @@ struct QRView: View {
         ZStack{
             Rectangle()
                 .fill(Color.white)
-                .frame(width: 250, height: 250)
-                .cornerRadius(20)
+                .frame(width: 220, height: 220)
+                .cornerRadius(cornerRadius)
+                .stroke(color: .white, width: 2)
             Image(uiImage: qrCode)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -30,4 +31,7 @@ struct QRView: View {
                 .padding()
         }
     }
+}
+#Preview {
+    QRTypeTwoView(inputText: "Rino1011")
 }

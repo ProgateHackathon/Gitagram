@@ -12,7 +12,7 @@ import SwiftUI
 class AccountViewModel {
     func captureViewAsImage() -> UIImage {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let hostingController = UIHostingController(rootView: KiraKiraView())
+        let hostingController = UIHostingController(rootView: KiraKiraTypeOneView())
     
         window.rootViewController = hostingController
         window.makeKeyAndVisible()
