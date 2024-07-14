@@ -73,5 +73,3 @@ struct MatchingView: View {
 #Preview {
     MatchingView(loginHost: .Empty())
 }
-
-
