@@ -18,11 +18,13 @@ struct KiraKiraTypeOneView: View {
                 .ignoresSafeArea()
                 .cornerRadius(20)
             BackTypeOneView()
-                .ignoresSafeArea().opacity(viewModel.middleImageOpacity)
+                .ignoresSafeArea()
+                .opacity(viewModel.middleImageOpacity)
                 .cornerRadius(20)
             Image("kirakira")
                 .resizable()
-                .ignoresSafeArea().opacity(viewModel.frontImageOpacitry)
+                .ignoresSafeArea()
+                .opacity(viewModel.frontImageOpacitry)
                 .cornerRadius(20)
         }
     }
