@@ -1,14 +1,13 @@
 //
-//  KiraKiraView.swift
+//  KiraKiraTypeThreeView.swift
 //  Gitagram
 //
-//  Created by 浦山秀斗 on 2024/05/07.
+//  Created by 伊藤璃乃 on 2024/06/26.
 //
 
-import Foundation
 import SwiftUI
 
-struct KiraKiraView: View {
+struct KiraKiraTypeThreeView: View {
     @StateObject var viewModel = KiraKiraViewModel()
     
     var body: some View {
@@ -17,7 +16,7 @@ struct KiraKiraView: View {
                 .resizable()
                 .ignoresSafeArea()
                 .cornerRadius(20)
-            GradationBackView()
+            BackTypeThreeView()
                 .ignoresSafeArea()
                 .opacity(viewModel.middleImageOpacity)
                 .cornerRadius(20)
