@@ -42,17 +42,23 @@ class MatchingViewModel: ObservableObject {
         let products = await GetProductListUseCase().execute()
         
         for product in products {
-            async let developer = GetDeveloperUseCase().execute(id: product.developer.id)
-            async let productURL = GetProductImageUseCase().urlexecute(id: product.id)
-            
-            if let developer = await developer, let productURL = await productURL {
-                let cardData = CardData(product: product, loginHost: developer, url: productURL)
-                cardList.append(cardData)
+            try? await withThrowingTaskGroup(of: (Developer?, URL?).self) { group in
+                group.addTask {
+                    async let developer = GetDeveloperUseCase().execute(id: product.developer.id)
+                    async let productURL = GetProductImageUseCase().urlexecute(id: product.id)
+                    return (await developer, await productURL)
+                }
                 
+                for try await (developer, productURL) in group {
+                    if let developer = developer, let productURL = productURL {
+                        let cardData = CardData(product: product, loginHost: developer, url: productURL)
+                        cardList.append(cardData)
+                    }
+                }
             }
         }
         
         return cardList
     }
-    
+
 }
