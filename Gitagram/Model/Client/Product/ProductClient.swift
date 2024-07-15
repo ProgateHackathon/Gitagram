@@ -17,8 +17,8 @@ class ProductClient : ProductClientProtocol {
         do {
             print("Product Successfully Written!")
             return try await ref.getDocuments()
-                        .documents
-                        .compactMap { try? $0.data(as: ProductResponse.self)}
+                .documents
+                .compactMap { try? $0.data(as: ProductResponse.self)}
         } catch {
             print("Error Writing Document: \(error)")
         }
@@ -60,5 +60,20 @@ class ProductClient : ProductClientProtocol {
     func delete(product_id: UUID) {
         let docRef = db.collection(COLLECTION).document(product_id.uuidString)
         docRef.delete()
+    }
+    
+    func getMyAll(developerID: Developer) async -> [ProductResponse] {
+        let ref = db.collection(COLLECTION).whereField("developerId", isEqualTo: developerID.id.toString)
+        
+        do {
+            let snapshot = try await ref.getDocuments()
+            print("Product Successfully Retrieved!")
+            print(snapshot.documents.compactMap { try? $0.data(as: ProductResponse.self) })
+            return snapshot.documents.compactMap { try? $0.data(as: ProductResponse.self) }
+        } catch {
+            print("Error Retrieving Document: \(error)")
+        }
+        
+        return []
     }
 }

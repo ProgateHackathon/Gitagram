@@ -13,4 +13,5 @@ protocol ProductRepositoryProtocol {
     func get(id: Product.ID) async -> Product?
     func update(id: Product.ID, with newProduct: Product)
     func delete(id: Product.ID)
+    func getMe(developer: Developer) async -> [Product]
 }

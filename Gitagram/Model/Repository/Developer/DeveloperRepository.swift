@@ -27,6 +27,7 @@ class DeveloperRepository : DeveloperRepositoryProtocol {
     
     func getLoginDeveloper() async -> Developer? {
         guard let uuidString = UserDefaults.standard.string(forKey: SIGNIN_DEVELOPER_KEY) else { return nil }
+        print(uuidString)
         guard let uuid = UUID(uuidString: uuidString) else {
             print("uuid変換ができませんでした")
             return nil

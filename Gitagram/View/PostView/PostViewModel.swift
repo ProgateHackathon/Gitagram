@@ -24,10 +24,10 @@ class PostViewModel: ObservableObject {
     func setDesctiption(description: String) -> Product{
         return cardData.product.setContent(from: description)
     }
-    
-    func setDeveloper(developer: String) -> Product{
+
+    func setDeveloperName(developer: String) -> Product{
         let developerName = cardData.loginHost.name
-        let developer = Developer(githubId: developerName)
+        let developer = cardData.loginHost
         return cardData.product.setDeveloper(from: developer)
     }
     

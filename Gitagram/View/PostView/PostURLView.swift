@@ -39,7 +39,7 @@ struct PostURLView: View {
                 .padding(.leading,10)
                 .padding(.vertical,10)
                 .onChange(of: developerName) {
-                    postViewModel.setContent(content: postViewModel.setDeveloper(developer: developerName))
+                    postViewModel.setContent(content: postViewModel.setDeveloperName(developer: developerName))
                 }
             
             Divider()

@@ -61,6 +61,8 @@ struct PostTitleView: View {
                 if let host = await GetLoginDeveloperUseCase().execute() {
                     postViewModel.setLoginHost(host: host)
                     let username = postViewModel.cardData.loginHost.name
+                    print("koko",username)
+           //         postViewModel.setDeveloperName(developer: username)
                     viewModel.fetchRepositories(for: username)
                 } else {
                     ContentView()
