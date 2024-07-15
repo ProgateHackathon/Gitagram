@@ -39,7 +39,6 @@ class MatchingViewModel: ObservableObject {
     private func fetchCardInfomation() async -> [CardData] {
         var cardList = [CardData]()
         let products = await GetProductListUseCase().execute()
-        
         for product in products {
             guard let developer    = await GetDeveloperUseCase().execute(id: product.developer.id) else { continue }
             guard let productImage = await GetProductImageUseCase().execute(id: product.id)       else { continue }
