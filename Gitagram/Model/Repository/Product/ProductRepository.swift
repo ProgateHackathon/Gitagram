@@ -65,7 +65,6 @@ class ProductRepository : ProductRepositoryProtocol {
         
         for tagId in hashTagIDs {
             guard let hashTagResponse = await tagClient.get(hashtag_id: tagId) else { continue }
-            
             attachedTagProduct = attachedTagProduct.addHashTag(from: hashTagResponse.toHashTag())
         }
         
