@@ -7,24 +7,30 @@
 
 import Foundation
 import SwiftUI
+
+@MainActor
 class PostViewModel: ObservableObject {
     @Published var cardData: CardData = .Empty()
+    @Environment(\.displayScale) private var displayScale
     
     func setContent(content: Product){
         cardData = cardData.setProduct(from: content)
     }
+    
     func setTitle(title: String) -> Product{
         return cardData.product.setTitle(from: title)
     }
+    
     func setDesctiption(description: String) -> Product{
         return cardData.product.setContent(from: description)
     }
+    
     func setDeveloper(developer: String) -> Product{
         let developerName = cardData.loginHost.name
         let developer = Developer(githubId: developerName)
         return cardData.product.setDeveloper(from: developer)
-        
     }
+    
     func setURLTitle(title: String) -> Product{
         return  cardData.product.setTitle(from: title)
     }
@@ -32,6 +38,7 @@ class PostViewModel: ObservableObject {
     func setHashTag(hashTag: [HashTag]) -> Product{
         return  cardData.product.setHashTag(from: hashTag)
     }
+    
     func setImage(image: UIImage){
         cardData = cardData.setImage(from: image)
     }
@@ -39,5 +46,8 @@ class PostViewModel: ObservableObject {
         cardData = cardData.setLoginHost(from: host)
     }
     
-    
+    func convertViewToImage<Content: View>(from view: Content) -> UIImage? {
+        let renderer = ImageRenderer(content: view)
+        return renderer.uiImage
+    }
 }
