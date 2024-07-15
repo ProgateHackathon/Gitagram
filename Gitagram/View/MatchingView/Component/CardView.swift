@@ -24,10 +24,19 @@ struct CardView: View {
         ZStack(alignment: .bottom){
             
             ZStack(alignment: .top) {
-                Image(uiImage: cardData.productImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+
+                         AsyncImage(url: cardData.url) { image in
+                             image
+                                 .resizable()
+                                 .scaledToFill()
+                                 .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+
+                         } placeholder: {
+                          
+                             ProgressView()
+                         }
+                     
+            
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
             }

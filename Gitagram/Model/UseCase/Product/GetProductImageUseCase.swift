@@ -11,8 +11,9 @@ import UIKit
 class GetProductImageUseCase {
     let productImageRepository = UseCaseDI.productImageRepository
     
-    func execute(id: Product.ID) async -> UIImage? {
-        let image = await productImageRepository.fetchImage(id: id)
-        return image
+
+    func urlexecute(id: Product.ID) async -> URL? {
+        let url = await productImageRepository.getURL(id: id)
+        return url
     }
 }

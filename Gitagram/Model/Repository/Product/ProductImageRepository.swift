@@ -18,4 +18,8 @@ class ProductImageRepository : ProductImageRepositoryProtocol {
     func fetchImage(id: Product.ID) async -> UIImage? {
         await client.downloadImage(product_id: id.toString)
     }
+    func getURL(id: Product.ID) async -> URL?{
+        await  client.downloadImageURL(product_id: id.toString)
+    }
+   
 }

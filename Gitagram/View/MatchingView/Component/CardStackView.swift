@@ -62,6 +62,7 @@ struct CardStackView: View {
             } message: {
                 Text("URLがありません")
             }
+           
         }
     }
 }
