@@ -11,7 +11,6 @@ import FirebaseStorage
 
 class GetProductImageUseCase {
     private static let STORAGE_URL = "gs://gitagram-ef516.appspot.com/products"
-    let productImageRepository = UseCaseDI.productImageRepository
     
     private func path(for id: Product.ID) -> String {
         return "\(Self.STORAGE_URL)/\(id)"
