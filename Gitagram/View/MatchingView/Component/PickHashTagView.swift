@@ -22,7 +22,7 @@ struct PickHashTagView: View {
         }
     }
     @Environment(\.dismiss) private var dismiss
-    @State var tapTag = ""
+    @Binding var pickHashTag: HashTag
     
     var body: some View {
         NavigationView {
@@ -39,7 +39,7 @@ struct PickHashTagView: View {
                                     .foregroundColor(.black)
                                     .padding()
                                     .onTapGesture {
-                                        tapTag = hashTag.name
+                                        pickHashTag = hashTag
                                         dismiss()
                                     }
                             }
@@ -64,6 +64,6 @@ struct PickHashTagView: View {
 }
 
 #Preview {
-    PickHashTagView()
+    PickHashTagView(pickHashTag: .constant(.Empty()))
 }
 

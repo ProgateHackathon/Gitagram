@@ -49,7 +49,8 @@ struct CardStackView: View {
                     }
                 }
                 
-                ForEach(viewModel.repositories){ repository in
+                ForEach(viewModel.filterdRepository()){ repository in
+                    
                     CardView(viewModel: viewModel, isShowAlert: $isShowAlert, cardData: repository)
                 }
             }
