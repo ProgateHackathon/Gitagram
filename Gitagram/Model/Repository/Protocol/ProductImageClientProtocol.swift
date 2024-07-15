@@ -10,5 +10,4 @@ import UIKit
 
 protocol ProductImageClientProtocol {
     func uploadImage(product_id: String, image: UIImage)
-    func downloadImage(product_id: String) async -> UIImage?
 }
