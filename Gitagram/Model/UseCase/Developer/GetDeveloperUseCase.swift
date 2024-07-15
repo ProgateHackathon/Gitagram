@@ -13,4 +13,8 @@ class GetDeveloperUseCase {
     func execute(id: Developer.ID) async -> Developer? {
         await developerRepository.get(id: id)
     }
+    
+    func execute(username: String) async -> Developer? {
+        await developerRepository.get(name: username)
+    }
 }
