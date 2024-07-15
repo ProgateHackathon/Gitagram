@@ -11,6 +11,7 @@ struct MatchingView: View {
     @State var showAddRepository = false
     @ObservedObject var viewModel = MatchingViewModel()
     @State var pickHashTag = false
+    @State var isMypage = false
     @State var loginHost: Developer = .Empty()
     
     var body: some View {
@@ -22,12 +23,20 @@ struct MatchingView: View {
                 VStack{
                     CardStackView(viewModel: viewModel)
                         .toolbar {
-                            
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button {
                                     showAddRepository.toggle()
                                 } label: {
                                     Image(systemName: "plus.circle")
+                                }
+                            }
+                            
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button {
+                                    isMypage.toggle()
+                                  
+                                } label: {
+                                    Image(systemName: "person.circle")
                                 }
                             }
                             ToolbarItem(placement: .navigationBarLeading) {
@@ -58,6 +67,9 @@ struct MatchingView: View {
             PickHashTagView()
                 .presentationBackground(.ultraThinMaterial)
                 .presentationDetents([.medium])
+        }
+        .sheet(isPresented: $isMypage) {
+            RemoveCardView(developer: loginHost)
         }
         .onAppear(){
             Task {

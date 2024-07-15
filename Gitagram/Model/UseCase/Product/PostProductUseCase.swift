@@ -15,7 +15,7 @@ class PostProductUseCase {
     
     func execute(product: Product, productImage: UIImage) async {
         imageRepository.storeImage(id: product.id, uiImage: productImage)
-        await developerRepository.create(object: product.developer)
         return repository.create(object: product)
     }
+   
 }

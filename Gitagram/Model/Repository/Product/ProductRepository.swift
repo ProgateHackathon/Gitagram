@@ -65,11 +65,18 @@ class ProductRepository : ProductRepositoryProtocol {
         
         for tagId in hashTagIDs {
             guard let hashTagResponse = await tagClient.get(hashtag_id: tagId) else { continue }
-           
             attachedTagProduct = attachedTagProduct.addHashTag(from: hashTagResponse.toHashTag())
         }
         
         return attachedTagProduct
+    }
+    
+    func getMe(developer: Developer) async -> [Product] {
+        do {
+            let productResponses = await repositoryClient.getMyAll(developerID: developer)
+            let products = productResponses.map { $0.toProduct() }
+            return products
+        }
     }
 }
 

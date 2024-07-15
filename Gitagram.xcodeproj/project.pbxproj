@@ -114,6 +114,9 @@
 		72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB402BF2F928008BE7F9 /* HashTagView.swift */; };
 		72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */; };
 		72B3DB482BF50E34008BE7F9 /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */; };
+		72C1F9BA2C4248A700A81E32 /* RemoveCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1F9B92C4248A700A81E32 /* RemoveCardView.swift */; };
+		72C1F9BC2C42B70E00A81E32 /* GetMyProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1F9BB2C42B70E00A81E32 /* GetMyProductUseCase.swift */; };
+		72C1F9BE2C42BEF200A81E32 /* RemoveCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1F9BD2C42BEF200A81E32 /* RemoveCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -215,6 +218,9 @@
 		72B3DB402BF2F928008BE7F9 /* HashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagView.swift; sourceTree = "<group>"; };
 		72B3DB422BF42D2F008BE7F9 /* PostHashTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHashTagView.swift; sourceTree = "<group>"; };
 		72B3DB472BF50E34008BE7F9 /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
+		72C1F9B92C4248A700A81E32 /* RemoveCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardView.swift; sourceTree = "<group>"; };
+		72C1F9BB2C42B70E00A81E32 /* GetMyProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyProductUseCase.swift; sourceTree = "<group>"; };
+		72C1F9BD2C42BEF200A81E32 /* RemoveCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,7 @@
 		10472EF42BDFAFD700C179F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				72C1F9B82C42484600A81E32 /* RemoveView */,
 				727952EF2C21B9DC00788394 /* LoginView */,
 				23B6E52C2BE73C1D0049200B /* ContentView.swift */,
 				722E84882BE73A29007163D4 /* AccountView */,
@@ -567,6 +574,7 @@
 				722E84562BE7365F007163D4 /* GetProductListUseCase.swift */,
 				722E84572BE7365F007163D4 /* PostProductUseCase.swift */,
 				72A8E00B2C04198500386DDD /* LoadImageFromLibraryUseCase.swift */,
+				72C1F9BB2C42B70E00A81E32 /* GetMyProductUseCase.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -687,6 +695,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		72C1F9B82C42484600A81E32 /* RemoveView */ = {
+			isa = PBXGroup;
+			children = (
+				72C1F9B92C4248A700A81E32 /* RemoveCardView.swift */,
+				72C1F9BD2C42BEF200A81E32 /* RemoveCardViewModel.swift */,
+			);
+			path = RemoveView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -790,6 +807,7 @@
 				722E84702BE7365F007163D4 /* QRCodeRepository.swift in Sources */,
 				722E840D2BE735EA007163D4 /* MatchingViewModel.swift in Sources */,
 				72B3DB412BF2F928008BE7F9 /* HashTagView.swift in Sources */,
+				72C1F9BC2C42B70E00A81E32 /* GetMyProductUseCase.swift in Sources */,
 				10D526272C2437F0004E66EA /* HashTagClientProtocol.swift in Sources */,
 				23EF64552C4245CE001572BD /* ShareSheet.swift in Sources */,
 				23EF643D2C424440001572BD /* AccountCardTypeThreeView.swift in Sources */,
@@ -808,6 +826,7 @@
 				722E84172BE73601007163D4 /* PostTitleView.swift in Sources */,
 				10177A362BFA148500BA6078 /* ProductResponse.swift in Sources */,
 				722E84762BE7365F007163D4 /* GetProductImageUseCase.swift in Sources */,
+				72C1F9BA2C4248A700A81E32 /* RemoveCardView.swift in Sources */,
 				722E84142BE73601007163D4 /* ImagePickerView.swift in Sources */,
 				10261B0A2BE94695007D1606 /* AccountViewModel.swift in Sources */,
 				722E846B2BE7365F007163D4 /* ProductImageRepository.swift in Sources */,
@@ -816,6 +835,7 @@
 				722E84642BE7365F007163D4 /* DeveloperClient.swift in Sources */,
 				722E84092BE735EA007163D4 /* UserInfoView.swift in Sources */,
 				23EF64572C4245F9001572BD /* StrokeBackground.swift in Sources */,
+				72C1F9BE2C42BEF200A81E32 /* RemoveCardViewModel.swift in Sources */,
 				10472EE72BDFAFBB00C179F8 /* GitagramApp.swift in Sources */,
 				722E84052BE735EA007163D4 /* CardStackView.swift in Sources */,
 				72B3DB432BF42D2F008BE7F9 /* PostHashTagView.swift in Sources */,
