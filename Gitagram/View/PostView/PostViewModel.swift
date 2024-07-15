@@ -10,7 +10,8 @@ import SwiftUI
 
 @MainActor
 class PostViewModel: ObservableObject {
-    @Published var cardData: CardData = .Empty()
+    @Published var cardData: RepositoryCardData = .Empty()
+    @Published var postRepositoryImage: UIImage?
     @Environment(\.displayScale) private var displayScale
     
     func setContent(content: Product){
@@ -40,7 +41,7 @@ class PostViewModel: ObservableObject {
     }
     
     func setImage(image: UIImage){
-        cardData = cardData.setImage(from: image)
+        postRepositoryImage = image
     }
     func setLoginHost(host: Developer){
         cardData = cardData.setLoginHost(from: host)

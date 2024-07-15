@@ -16,7 +16,7 @@ class GetProductImageUseCase {
         return "\(Self.STORAGE_URL)/\(id)"
     }
     
-    func getImageURL(from id: Product.ID) async throws -> URL {
+    func execute(from id: Product.ID) async throws -> URL {
         return try await withCheckedThrowingContinuation { continuation in
             let storage = Storage.storage()
             let storageRef = storage.reference(withPath: path(for: id))

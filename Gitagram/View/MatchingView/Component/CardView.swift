@@ -18,16 +18,38 @@ struct CardView: View {
     @State private var degrees: Double = 0
     @Environment(\.openURL) var openURL
     @Binding var isShowAlert: Bool
-    let cardData: CardData
+    let cardData: RepositoryCardData
+    @State private var imageURL: URL?
     
     var body: some View {
         ZStack(alignment: .bottom){
             
             ZStack(alignment: .top) {
-                Image(uiImage: cardData.productImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                if let unwrappedUrl = imageURL {
+                    AsyncImage(url: unwrappedUrl) { phase in
+                        if let image = phase.image {
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: SizeConstants.cardWidth,height: SizeConstants.cardHeight)
+                        } else if phase.error != nil {
+                            Text("Error loading image")
+                        } else {
+                            ProgressView()
+                        }
+                    }
+                } else {
+                    ProgressView()
+                        .onAppear {
+                            Task {
+                                do {
+                                    imageURL = try await GetProductImageUseCase().execute(from: cardData.product.id)
+                                } catch {
+                                    print("Error loading image URL: \(error.localizedDescription)")
+                                }
+                            }
+                        }
+                }
                 
                 SwipeActionIndicatorView(xofset: $xoffset)
             }
@@ -49,7 +71,6 @@ struct CardView: View {
             )
             
         }
-      
         .onReceive(viewModel.$buttonSwipeAction, perform: { action in
             onReceiveSwipeAction(action)
         })
