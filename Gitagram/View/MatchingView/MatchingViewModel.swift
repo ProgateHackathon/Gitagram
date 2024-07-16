@@ -11,7 +11,7 @@ import UIKit
 @MainActor
 class MatchingViewModel: ObservableObject {
     @Published var isLoading = true
-    @Published var repositories: [CardData] = []
+    @Published var repositories: [RepositoryCardData] = []
     @Published var buttonSwipeAction: SwipeAction?
 
     func removeCard(_  product: Product){
@@ -22,7 +22,7 @@ class MatchingViewModel: ObservableObject {
         }
     }
     
-    public func getLastRepository() -> CardData? {
+    public func getLastRepository() -> RepositoryCardData? {
         repositories.last
     }
     
@@ -36,13 +36,12 @@ class MatchingViewModel: ObservableObject {
         isLoading = false
     }
     
-    private func fetchCardInfomation() async -> [CardData] {
-        var cardList = [CardData]()
+    private func fetchCardInfomation() async -> [RepositoryCardData] {
+        var cardList = [RepositoryCardData]()
         let products = await GetProductListUseCase().execute()
         for product in products {
             guard let developer    = await GetDeveloperUseCase().execute(id: product.developer.id) else { continue }
-            guard let productImage = await GetProductImageUseCase().execute(id: product.id)       else { continue }
-            let cardData = CardData(product: product, productImage: productImage, loginHost: developer)
+            let cardData = RepositoryCardData(product: product, loginHost: developer)
             cardList.append(cardData)
         }
         

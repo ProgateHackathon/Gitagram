@@ -8,14 +8,13 @@
 import Foundation
 import UIKit
 
-struct CardData : Identifiable {
+struct RepositoryCardData : Identifiable {
     var id: UUID = UUID()
     let product : Product
-    let productImage: UIImage
     let loginHost : Developer
     
     static func Empty() -> Self {
-        Self(product: Product.Empty(), productImage: UIImage(named: "back")!, loginHost: Developer.Empty())
+        Self(product: Product.Empty(), loginHost: Developer.Empty())
     }
     
     func isComplete() -> Bool {
@@ -24,14 +23,10 @@ struct CardData : Identifiable {
     }
     
     func setLoginHost(from developer: Developer) -> Self {
-        Self(product: product, productImage: productImage, loginHost: developer)
+        Self(product: product, loginHost: developer)
     }
     
     func setProduct(from product: Product) -> Self {
-        Self(product: product, productImage: productImage, loginHost: loginHost)
-    }
-    
-    func setImage(from image: UIImage) -> Self {
-        Self(product: product, productImage: image, loginHost: loginHost)
+        Self(product: product, loginHost: loginHost)
     }
 }

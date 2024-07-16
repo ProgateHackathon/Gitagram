@@ -9,6 +9,5 @@ import Foundation
 import UIKit
 
 protocol ProductImageRepositoryProtocol {
-    func fetchImage(id: Product.ID) async -> UIImage?
     func storeImage(id: Product.ID, uiImage: UIImage)
 }
