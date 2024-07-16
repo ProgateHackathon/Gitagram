@@ -25,9 +25,9 @@ struct Developer : Identifiable, Codable {
     }
     
     init(githubId name: String) {
-        self.id = DeveloperID(id: UUID())
-        self.name = name
-    }
+           self.id = DeveloperID(id: String())
+           self.name = name
+       }
     
     static func Empty() -> Self {
         Self(id: DeveloperID.Empty(), githubId: "")
@@ -38,26 +38,19 @@ struct Developer : Identifiable, Codable {
     }
     
     struct ID : Identifiable, Hashable, Codable {
-        let id: UUID
+        let id: String
         
-        var toUUID: UUID {
-            id
-        }
-        
-        var toString: String {
-            return id.uuidString
-        }
-        
-        init(id uuid: UUID) {
-            self.id = uuid
+       
+        init(id string: String) {
+            self.id = string
         }
         
         static func Empty() -> Self {
-            return Self(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!)
+            return Self(id: "00000000-0000-0000-0000-000000000000")
         }
         
         func isEmpty() -> Bool {
-            return id.uuidString == "00000000-0000-0000-0000-000000000000"
+            return id == "00000000-0000-0000-0000-000000000000"
         }
     }
 }

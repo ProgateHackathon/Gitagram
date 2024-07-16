@@ -11,14 +11,14 @@ struct ProductResponse : Identifiable, Codable {
     let id: UUID
     let title: String
     let content: String
-    let developerId: UUID
+    let developerId: String
     let url: String
     
     init(from product: Product) {
         self.id = product.id.toUUID
         self.title = product.title
         self.content = product.content
-        self.developerId = product.developer.id.toUUID
+        self.developerId = product.developer.id.id
         self.url = product.url
     }
     
