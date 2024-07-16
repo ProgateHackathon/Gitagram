@@ -15,7 +15,7 @@ class GetProductListUseCase {
         var products = await repository.getAll()
         
         for (index, product) in products.enumerated() {
-            guard let developer = await developerRepository.get(id: product.developer.id) else { continue }
+            guard let developer = await developerRepository.get(id: product.developer.id.id) else { continue }
             products[index] = product.setDeveloper(from: developer)
         }
         

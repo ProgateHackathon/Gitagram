@@ -63,7 +63,7 @@ class ProductClient : ProductClientProtocol {
     }
     
     func getMyAll(developerID: Developer) async -> [ProductResponse] {
-        let ref = db.collection(COLLECTION).whereField("developerId", isEqualTo: developerID.id.toString)
+        let ref = db.collection(COLLECTION).whereField("developerId", isEqualTo: developerID.id.id)
         
         do {
             let snapshot = try await ref.getDocuments()

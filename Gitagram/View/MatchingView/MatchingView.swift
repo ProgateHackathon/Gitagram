@@ -74,6 +74,7 @@ struct MatchingView: View {
         .onAppear(){
             Task {
                 if let host =  await GetLoginDeveloperUseCase().execute() {
+           print(host)
                     loginHost = host
                 }
                 await viewModel.getRepository()

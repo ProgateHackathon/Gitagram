@@ -11,6 +11,6 @@ class GetDeveloperUseCase {
     private let developerRepository = UseCaseDI.developerRepository
     
     func execute(id: Developer.ID) async -> Developer? {
-        await developerRepository.get(id: id)
+        await developerRepository.get(id: id.id)
     }
 }

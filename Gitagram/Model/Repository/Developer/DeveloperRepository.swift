@@ -6,19 +6,21 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class DeveloperRepository : DeveloperRepositoryProtocol {
     private let developerClient = RepositoryDI.developerClient
     private let SIGNIN_DEVELOPER_KEY = "signin"
+    private let uid = Auth.auth().currentUser?.uid
+
     typealias DeveloperID = Developer.DeveloperID
     
     func create(object: Developer) async {
-        UserDefaults.standard.set(object.id.toString, forKey: SIGNIN_DEVELOPER_KEY)
         await developerClient.create(developer: DeveloperResponse(from: object))
     }
     
-    func get(id: Developer.ID) async -> Developer? {
-        if let response = await developerClient.get(developer_id: id.toUUID) {
+    func get(id: String) async -> Developer? {
+        if let response = await developerClient.get(developer_id: uid ?? "") {
             return response.toDeveloper()
         }
         
@@ -26,12 +28,7 @@ class DeveloperRepository : DeveloperRepositoryProtocol {
     }
     
     func getLoginDeveloper() async -> Developer? {
-        guard let uuidString = UserDefaults.standard.string(forKey: SIGNIN_DEVELOPER_KEY) else { return nil }
-        guard let uuid = UUID(uuidString: uuidString) else {
-            print("uuid変換ができませんでした")
-            return nil
-        }
-        guard let developer = await get(id: DeveloperID(id: uuid)) else { return nil }
+        guard let developer = await get(id: uid ?? "") else { return nil }
         return developer
     }
     
