@@ -14,6 +14,7 @@ struct CardStackView: View {
     @State var finish = false
     @State var isShowAlert = false
     
+    
     var body: some View {
         VStack(spacing:16){
             ZStack{
@@ -49,13 +50,17 @@ struct CardStackView: View {
                     }
                 }
                 
-                ForEach(viewModel.repositories){ repository in
-                    CardView(viewModel: viewModel, isShowAlert: $isShowAlert, cardData: repository)
+                ForEach(Array(zip(viewModel.repositories.indices, viewModel.repositories)), id: \.1.id) { index, cardData in
+                    CardView(viewModel: viewModel,
+                             isShowAlert: $isShowAlert,
+                             cardData: cardData,
+                             cardIndex: index)
+                  
+                    
+
                 }
             }
-            .onChange(of: finish){
-                
-            }
+            
             .alert("エラー", isPresented: $isShowAlert) {
                 Button("OK") {
                 }
